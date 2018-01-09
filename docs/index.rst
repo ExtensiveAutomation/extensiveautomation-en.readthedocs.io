@@ -12,7 +12,7 @@ Welcome to ExtensiveTesting's documentation!
    :maxdepth: 2
    :caption: About ExtensiveTesting
 
-   about\authors
+   about/authors
    
 .. _user-docs:
 
@@ -20,7 +20,7 @@ Welcome to ExtensiveTesting's documentation!
    :maxdepth: 2
    :caption: User Documentation
 
-   user\getting_started
+   user/getting_started
    
 .. _admin-docs:
 
@@ -28,7 +28,7 @@ Welcome to ExtensiveTesting's documentation!
    :maxdepth: 2
    :caption: Admin Documentation
 
-   admin\install
+   admin/install
 
 .. _feature-docs:
 
@@ -36,7 +36,7 @@ Welcome to ExtensiveTesting's documentation!
    :maxdepth: 2
    :caption: Feature Documentation
 
-   features\environment
+   features/environment
    
 .. _dev-docs:
 
@@ -44,4 +44,4 @@ Welcome to ExtensiveTesting's documentation!
    :maxdepth: 2
    :caption: Developer Documentation
 
-   developer\contributing
+   developer/contributing
