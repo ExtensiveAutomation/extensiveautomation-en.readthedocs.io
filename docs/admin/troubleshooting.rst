@@ -1,10 +1,10 @@
-Dépannage
+Troubleshooting
 =========
 
 Récupération des logs
 ---------------------
 
-Serveur
+Server
 ~~~~~~~
 
 Les logs serveurs sont stockés sur ``/opt/xtc/current/Var/Logs/``.
@@ -29,7 +29,7 @@ Le niveau DEBUG peut être activé depuis les préférences du client.
 
 .. image:: /_static/images/client/client_logs.png
 
-Boîtes à outils
+Toolbox
 ~~~~~~~~~~~~~~
 
 Les logs de la boîte à outils sont disponibles dans ``<Program Files>/Extensive Testing Toolbox/Logs/``

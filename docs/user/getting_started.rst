@@ -1,4 +1,4 @@
-Première utilisation (script)
+Get started
 =============================
 
 Connexion du client au serveur

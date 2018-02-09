@@ -1,7 +1,7 @@
 ﻿Administration
 =============
 
-Arrêt/relance du serveur
+Start/Stop of the server
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Le serveur peut être contrôlé en utilisant la commande ``xtctl``.
@@ -44,8 +44,8 @@ Pour arrêter le serveur il faut utiliser la commande ``xtctl stop``.
     2014-12-06 10:58:51,810 - INFO - Stopping server
     2014-12-06 10:58:51,911 - INFO - Extensive Testing successfully stopped!
   
-
-Status du serveur
+  
+Server status's
 ~~~~~~~~~~~~~~~~~~~~~~
 
 La commande permet de vérifier le status du serveur, il y a 3 status possible

@@ -1,4 +1,4 @@
-Les fondamentaux
+The fundamentals
 ================
 
 Le framework de test fournit un cadre permettant de normaliser la création des cas de tests.

@@ -1,4 +1,4 @@
-Utilisateurs
+Users
 ============
 
 La solution peut être utilisée en mode multi-utilisateur.
@@ -9,7 +9,7 @@ Des utilisateurs suivants existent par défaut:
 
 .. note:: Ne pas oublier de désactiver les comptes par défaut dans un environnement de production.
 
-Ajout d'un utilisateur
+Add user
 ----------------------
 
 L'ajout d'un utilisateur peut se faire avec un compte administrateur. 
@@ -23,7 +23,7 @@ La création d'un utilisateur nécessite à minima les paramètres suivants et p
 
 .. note:: Il est possible de configurer plusieurs adresses email pour un utilisateur en les séparants avec ``;``
 
-Suppression d'un utilisateur
+Delete a user
 ----------------------
 
 La suppression d'un utilisateur peut se faire avec un compte administrateur. 

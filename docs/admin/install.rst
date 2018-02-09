@@ -1,10 +1,10 @@
 Installation
 ============
 
-Serveur
+Server
 -------
 
-Installation automatique
+Automatic mode
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. warning::
@@ -78,7 +78,7 @@ Il est possible d'utiliser les comptes pas défauts pour se connecter:
 .. warning:: Ne pas oublier de changer les mots de passe des comptes par défaut ou de désactiver les comptes.
 
 	
-Installation personnalisée
+Custom mode
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. warning:: Ce mode d'installation n'est recommandé que pour les utilisateurs avancés.
@@ -169,7 +169,7 @@ Pour initialiser la base de donnée, il faut exécuter le scripts "add-bdd.py" d
 
 Il faut exécuter le scripts ``python run`` disponible à la racine du répertoire ``/opt/xtc/vXXX/``.
 
-Mise à jour
+Update
 ~~~~~~~~~~~
 
 La mise à jour du serveur est possible en exécutant le script ``./update.sh``
@@ -231,7 +231,7 @@ Les anciens tests, adaptateurs et utilisateurs sont automatiquement migrés.
 
 .. note:: La mise à jour est refusée si aucune version du produit n'est détectée.
 
-Retour arrière
+Rollback
 ~~~~~~~~~~~
 
 Le retour arrière est possible vers les versions antérieures déjà installées sur le serveur.
@@ -254,7 +254,7 @@ Exécuter le script ``rollback.sh`` avec la version précédente.
 	- Rollback completed successfully!
 	=========================================================================
 
-Désinstallation
+Uninstall
 ~~~~~~~~~~~~~~
 
 La désinstallation du produit peut se faire en utilisant le script ``./uninstall.sh`` présent dans le paquet d'installation.
@@ -403,8 +403,8 @@ Mise à jour
 La mise à jour de la boîte à outils est à faire manuellement.
 Il faut récupérer le paquet depuis le site internet ou bien depuis le serveur de test.
 
-La mise à jour nécessite
- - supprimer la version courante
- - ajouter la nouvelle version et reconfigurer les agents ou sondes à redémarrer.
+La mise à jour nécessite:
+ - de supprimer la version courante
+ - d'ajouter la nouvelle version et reconfigurer les agents ou sondes à redémarrer.
  
 .. note:: La mise à jour automatique n'est pas encore supportée.

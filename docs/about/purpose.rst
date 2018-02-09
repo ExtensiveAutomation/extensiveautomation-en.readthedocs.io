@@ -32,13 +32,13 @@ La solution couvre plusieurs usages et peut être utilisée pour les cas suivant
 
 .. note:: Il est possible d'intégrer facilement vos scripts existants en python (ou autre) dans la solution.
 
-Licence
+License
 -------
 
 L'environnement est open source et sous licence ``LGPL 2.1``.
 Le code source est disponible sur github (https://github.com/ExtensiveTesting).
 
-Auteur
+Author
 ------
 
 Le projet a été initialisé en 2010. Il est dévelopé et maintenu par ``Denis Machard``.

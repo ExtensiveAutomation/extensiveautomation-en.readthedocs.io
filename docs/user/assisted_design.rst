@@ -1,4 +1,4 @@
-Conception assistée
+Assisted designs
 ===================
 
 Le client lourd comporte un assistant qui permet de créer des tests sans avoir de connaissances en développement. 

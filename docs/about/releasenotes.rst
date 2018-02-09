@@ -1,7 +1,7 @@
-Notes de version
+Changes Logs
 ================
 
-Version courante
+Current version
 ---------------
 
 .. note::
@@ -16,7 +16,7 @@ Version courante
 
 La release notes détaillée est disponible dans le paquet d'installation.
 
-Versions précédentes
+Previous versions
 -------------------
 
 ..
