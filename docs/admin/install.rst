@@ -137,7 +137,7 @@ Il est possible d'utiliser les comptes par défaut pour se connecter:
 
 .. warning:: Ne pas oublier de changer les mots de passe des comptes par défaut ou de désactiver les comptes.
 
-Installation depuis les sources
+From sources
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. warning:: Ce mode d'installation n'est recommandé que pour les utilisateurs avancés.
@@ -288,7 +288,7 @@ La désinstallation du produit peut se faire en utilisant le script ``./uninstal
 Client
 ------
 
-Installation Windows
+Windows Installation
 ~~~~~~~~~~~~~~~~~~~~
 
 Il existe 2 modes d'installation:
@@ -303,7 +303,7 @@ Ensuite il faut le décompresser et exécuter le fichier `ExtensiveTestingClient
 	
 .. image:: /_static/images/client/client_portable.png
     
-Installation Linux
+Linux Installation
 ~~~~~~~~~~~~~~~~~~
 
 Il n'y a pas de version pré-compilée pour Linux.
@@ -313,7 +313,7 @@ Il faut récupérer les sources depuis github, installer les paquets manquants e
 
 	python Main.py
 	
-Mise à jour
+Update
 ~~~~~~~~~~~
 
 La mise à jour du client est possible en mode automatique (si présent sur le serveur) ou manuel.
@@ -323,10 +323,10 @@ Depuis le client lourd il est possible de vérifier la présence d'une mise à j
 
 .. note:: Si la version proposée est une version majeure alors la mise à jour est obligatoire.
 	
-Boîte à outils
+Toolbox
 --------------
 
-Installation Windows
+Windows Installation
 ~~~~~~~~~~~~~~~~~~~~
 
 Il existe 2 modes d'installation:
@@ -341,7 +341,7 @@ Ensuite il faut le décompresser et exécuter le fichier ``ExtensiveTestingToolb
 	
 .. image:: /_static/images/toolbox/toolbox_portable.png
     
-Installation Linux
+Linux Installation
 ~~~~~~~~~~~~~~~~~~
 
 La boîte à outils peut être récupérée depuis le site internet https://www.extensivetesting.org ou bien depuis le serveur de test.
@@ -397,7 +397,7 @@ La boîte à outils peut être récupérée depuis le site internet https://www.
     [proxy-port]: proxy port. This option is optional.
     
 
-Mise à jour
+Update
 ~~~~~~~~~~~
 
 La mise à jour de la boîte à outils est à faire manuellement.

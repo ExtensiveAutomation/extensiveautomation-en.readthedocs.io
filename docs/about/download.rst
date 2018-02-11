@@ -1,28 +1,27 @@
 Download
 ==============
 
-Une version complète de la solution est générée tous les 2 à 3 mois environ. 
-Elle contient l'ensemble des composants nécessaires au bon fonctionnement du serveur.
-La solution est faite de plusieurs composants pouvant être téléchargés séparément ou de manière intégrée.
+A complete release is generated every two months or less and each component can also evolve at its own rate. 
+The solution is made of several components.
 
-La solution peut être téléchargée depuis le site internet https://www.extensivetesting.org
+The solution can be downloaded from the website https://www.extensivetesting.org
 
-Le serveur est disponible sour la forme d'un fichier ``tar.gz``, il intègre:
- - le client graphique portable
- - les adaptateurs et librairies
+The server is available throught a ``tar.gz`` file, the following package are also integrated:
+ - graphical client (in portable mode only)
+ - Adapters and libraries
 
-Le client lourd est disponible sous deux formes:
- - version portable
- - version en mode installation
+The graphical client is available in 2 modes:
+ - portable version 
+ - installation in program files
 
-La boîte à outils est disponible sous trois formes:
- - version portable
- - version en mode installation
- - version non compilée, en mode ligne de commande
+The toolbox is available in 3 modes:
+ - portable version
+ - installation in program files
+ - command line
  
-.. note:: Le client et la boîte à outils sont compatibles Windows et Linux, en mode 64bits seulement.
+.. note:: Client and toolbox can be run on Windows and Linux, in 64bits only.
 
-.. warning:: Le serveur doit être exécuté sur un serveur Linux (CentOS7 ou RedHat7).
+.. warning:: The server must be executed in Linux (CentOS7 or RedHat7).
  
-.. warning:: Le client ou la boîte à outils en mode installation peuvent nécessiter des droits d'administration.
+.. warning:: Administrators rights can be necessary to execute properly the client or the toolbox.
  

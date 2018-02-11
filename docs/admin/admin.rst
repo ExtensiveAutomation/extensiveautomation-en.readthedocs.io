@@ -4,14 +4,14 @@
 Start/Stop of the server
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Le serveur peut être contrôlé en utilisant la commande ``xtctl``.
-Cette commande permet 
- - de démarrer ou arrêter le serveur
- - de vérifier le status du serveur
- - de mettre à disposition un nouveau client graphique ou la boite à outils
- - d'afficher la version du serveur.
+The server can be controled with the following command``xtctl``.
+This command enables to
+ - start or stop the server
+ - check the status
+ - deploy a new graphical client or toolbox
+ - display the version
 
-Pour démarrer le serveur il faut utiliser la commande ``xtctl start``.
+Use the following command to start the server ``xtctl start``.
  
 .. code-block:: bash
   
@@ -22,7 +22,7 @@ Pour démarrer le serveur il faut utiliser la commande ``xtctl start``.
   Starting Extensive Testing                                 [  OK  ]
   
   
-Pour arrêter le serveur il faut utiliser la commande ``xtctl stop``.
+Use the following command to stop the server ``xtctl stop``.
 
 .. code-block:: bash
   
@@ -34,7 +34,7 @@ Pour arrêter le serveur il faut utiliser la commande ``xtctl stop``.
 
 .. tip::
 
-   Il est possible de vérifier dans les logs si le serveur est correctement démarré ou arrêté.
+   More details in logs about the start or stop procedure.
    
   .. code-block:: bash
     
@@ -48,15 +48,15 @@ Pour arrêter le serveur il faut utiliser la commande ``xtctl stop``.
 Server status's
 ~~~~~~~~~~~~~~~~~~~~~~
 
-La commande permet de vérifier le status du serveur, il y a 3 status possible
- - ``starting``: le serveur est en cours de démarrage
- - ``running``: le serveur est en cours d'exécution
- - ``stopped``: le serveur est arrêté.
+``xtctl`` enable to check the status of the server, 3 states exists:
+ - ``starting``: the server is starting
+ - ``running``: the server is running properly
+ - ``stopped``: the server is stopped
 
 .. tip:: 
-  Vérifier aussi le status du serveur ``httpd`` et la base de donnée ``mysql``.
+  Don't forget to check the status of ``httpd`` and ``mysql`` services.
   
-Déploiement nouveaux paquets
+New packages deployment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 La solution permet de mettre à disposition des utilisateurs les paquets suivants pour faciliter la diffusion:
@@ -91,11 +91,11 @@ pour prendre en compte le nouveau client déployé.
   Deploying portable clients... (No client)
   Deploying portable tools... (No client)
 
-Configuration du serveur
+Server settings
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Le fichier ``settings.ini`` contient l'ensemble des paramètres de configuration du serveur.
-Les paramètres de configuration sont découpés en plusieurs sections:
+The file ``settings.ini`` contains all parameters to configure the server.
+Parameters are separated in several sections:
  - Boot
  - Notifications
  - Client_Channel
@@ -120,7 +120,7 @@ Les paramètres de configuration sont découpés en plusieurs sections:
  - Supervision
  - Users_Session
   
-Sauvegardes automatiques
+Automatic backups
 ~~~~~~~~~~~~~~~~~~~~~~
   
 Par défaut la solution sauvegarder l'ensemble des tests, adaptateurs et libraries chaques jours.

@@ -1,53 +1,57 @@
 Extensive Testing
 =================
 
-Bienvenue sur le projet Extensive Testing.
+Welcome on the Extensive Testing project.
 
 Concepts
 --------
 
-L'ojectif de la solution est de fournir un environnement de création de tests automatiques, complet et clé en main.
-L'installation est simplifiée et intègre d'autres produits open source existants.
+ExtensiveTesting is a test and deployment automation framework for integration, regression and end-to-end usages.
+The framework provided a rich and collaborative workspace environment.
+The installation is also simplified and some others great tools are integrated on it (selenium, sikuli)
 
-Le projet a plusieurs objectifs depuis sa création:
- - Unifier les différents outils de test dans un seul environnement
- - Simplifier l'écriture, l'exécution et l'analyse des tests automatiques
- - Partager les tests automatiques et permettre l'exécution depuis n'importe où
- - Fournir un environnement de travail agréable
- - Fournir un tableau de bord
- 
+The project have several purposes since the creation:
+ - Unify all testing tools in one environnement
+ - Provide a complete testing dashboard
+ - Make testing easy
+ - Testing everything from anywhere.
+ - Provide a user friendly environment.
+
 .. image:: /_static/images/concept.png
 
 Usages
 ------
 
-La solution couvre plusieurs usages et peut être utilisée pour les cas suivants:
- - automatiser les tests dans les environnements d'intégration
- - automatiser les tests de non-régression et fonctionnels
- - automatiser les tests de bout-en-bout
- - automatiser le déploiement de serveurs
- - automatiser le déploiement d'applications
+This solution is designed to make a lot of thing like:
+ - test automation in integration environment
+ - regression test automation
+ - end to end test automation
+ - deployment automation of virtual or physical machines
+ - deployment automation of software application
 
-.. note:: La solution est développée en ``Python`` ainsi que l'ensemble des tests.
-
-.. note:: Il est possible d'intégrer facilement vos scripts existants en python (ou autre) dans la solution.
+.. note:: The solution is written in ``Python`` and also all tests.
 
 License
 -------
 
-L'environnement est open source et sous licence ``LGPL 2.1``.
-Le code source est disponible sur github (https://github.com/ExtensiveTesting).
+
+This environment is open source, and is freely available under the LGPL 2.1 version.
+All source code is available in github (https://github.com/ExtensiveTesting).
 
 Author
 ------
 
-Le projet a été initialisé en 2010. Il est dévelopé et maintenu par ``Denis Machard``.
+Started since 2010, the solution was developed by ``Denis Machard``.
+This project is an effort, driven in my spare time.
+
+If you want to sponsor me then I am accepting donations via PayPal.
+The money received will be used to cover web site costs, domain name reservation and more :wink:.
 
 Contact
 -------
 
-Pour entrer en contact:
- - par email d.machard@gmail.com
- - depuis twitter https://twitter.com/Extensive_Tests
- - depuis le forum google https://groups.google.com/forum/#!forum/extensive-testing-users
- - depuis github https://github.com/ExtensiveTesting 
+If you have any questions, you can contact me with:
+ - email d.machard@gmail.com
+ - twitter https://twitter.com/Extensive_Tests
+ - from the google forum https://groups.google.com/forum/#!forum/extensive-testing-users
+ - github https://github.com/ExtensiveTesting 

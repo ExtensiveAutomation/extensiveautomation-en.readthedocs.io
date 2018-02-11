@@ -1,7 +1,7 @@
 Troubleshooting
 =========
 
-Récupération des logs
+Logs
 ---------------------
 
 Server

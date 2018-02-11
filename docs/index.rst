@@ -10,7 +10,7 @@ Bienvenue sur la documentation ExtensiveTesting!
 
 .. toctree::
    :maxdepth: 2
-   :caption: A propos de
+   :caption: About
 
    about/purpose
    about/download
@@ -20,7 +20,7 @@ Bienvenue sur la documentation ExtensiveTesting!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Guide utilisateur
+   :caption: User Guide
 
    user/builtin_client
    user/builtin_toolbox
@@ -36,7 +36,7 @@ Bienvenue sur la documentation ExtensiveTesting!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Guide administrateur
+   :caption: Admin Guide
 
    admin/install
    admin/admin
@@ -48,7 +48,7 @@ Bienvenue sur la documentation ExtensiveTesting!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Guide des fonctionnalités
+   :caption: Features Guide
 
    features/testdefinition
    features/testlibrary
@@ -61,7 +61,7 @@ Bienvenue sur la documentation ExtensiveTesting!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Guide développeur
+   :caption: Developer Guide
 
    developer/requirements
    developer/architecture

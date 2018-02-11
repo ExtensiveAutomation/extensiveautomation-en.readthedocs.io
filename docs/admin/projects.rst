@@ -1,15 +1,15 @@
 Projects
 =======
 
-La solution peut être utilisée en mode multi-projet. Il est donc possible d'organiser les tests par projets et d'accorder des droits d'accès pour les 
+The solution is multi-project. Il est donc possible d'organiser les tests par projets et d'accorder des droits d'accès pour les 
 utilisateurs.
 
-.. note:: Le projet ``Common`` existe par défaut, il est accessible par l'ensemble des utilisateurs et ne peux pas être supprimé.
+.. note:: The ``Common`` project exists by default, il est accessible par l'ensemble des utilisateurs et ne peux pas être supprimé.
 
 Add a project
 -----------------
 
-L'ajout d'un projet peut se faire avec un compte administrateur. 
+Only an administrator can add a new project. 
 La création d'un projet nécessite de préciser son nom et peut se faire via l'interface web ou bien l'API
 
 .. image:: /_static/images/webinterface/add_project.png
@@ -17,8 +17,8 @@ La création d'un projet nécessite de préciser son nom et peut se faire via l'
 Delete a project
 ----------------------
 
-La suppression d'un projet peut se faire avec un compte administrateur.
-Cette action peut se faire à travers l'interface web ou bien l'API.
+Only an administrator can remove a project. 
+This action can be done throught the web interface or the web api.
 
 .. image:: /_static/images/webinterface/delete_project.png
 

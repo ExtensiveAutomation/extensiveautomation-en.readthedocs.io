@@ -1,18 +1,17 @@
 Users
 ============
 
-La solution peut être utilisée en mode multi-utilisateur.
-Des utilisateurs suivants existent par défaut:
+The solution is multi-user, 3 users exists by default:
  - ``Admin``
  - ``Tester``
  - ``Monitor``
 
-.. note:: Ne pas oublier de désactiver les comptes par défaut dans un environnement de production.
+.. note:: Don't forget to disable default account in a production environment.
 
 Add user
 ----------------------
 
-L'ajout d'un utilisateur peut se faire avec un compte administrateur. 
+Only an administrator can add a new user. 
 La création d'un utilisateur nécessite à minima les paramètres suivants et peut se faire via l'interface web ou bien l'API
  - nom d'utilisateur
  - mot de passe
@@ -26,7 +25,6 @@ La création d'un utilisateur nécessite à minima les paramètres suivants et p
 Delete a user
 ----------------------
 
-La suppression d'un utilisateur peut se faire avec un compte administrateur. 
-Cette action peut se faire à travers l'interface web ou bien l'API.
+Only an administrator can remove a user. This action can be done throught the web interface or the web api.
 
 .. image:: /_static/images/webinterface/delete_user.png
