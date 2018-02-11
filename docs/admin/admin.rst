@@ -59,29 +59,28 @@ Server status's
 New packages deployment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-La solution permet de mettre à disposition des utilisateurs les paquets suivants pour faciliter la diffusion:
- - le client lourd
- - la boîte à outils
- - les différents plugins.
+The solutions make available all additionnals package needed for users:
+ - The graphical client
+ - The toolbox
+ - Plugins
 
-Lorsqu'un nouveau client est disponible, il est possible de le déposer sur le serveur pour automatiquement 
-notifier les utilisateurs de la mise à jour.
+When a new client is available, it's possible to put it in the server and notify 
+all users of this new package.
 
-Les paquets sont à déposer dans le répertoire ``<INSTALL_PATH>/current/Packages/``
+Packages must be uploaded in the following folder ``<INSTALL_PATH>/current/Packages/``
 
 +-----------------+-------------------------------------------------+
-|Client           | Contients la version portable et installation   |
+|Client           | Portable version and installation               |
 +-----------------+-------------------------------------------------+
-|ClientPlugins    |  Contients les plugins                          |
+|ClientPlugins    | Plugins                                         |
 +-----------------+-------------------------------------------------+
-|Toolbox          |  Contients la version portable et installation  |
+|Toolbox          | Portable version and installation               |
 +-----------------+-------------------------------------------------+
-|ToolboxPlugins   |  Contients les plugins                          |
+|ToolboxPlugins   | Plugins                                         |
 +-----------------+-------------------------------------------------+
 
-Après dépôt, les paquets logiciels sont automatiquement disponibles depuis l'interface web.
-Pour la mise à jour en mode automatique du client, il faut exécuter la commande ``xtctl deploy`` sur le serveur
-pour prendre en compte le nouveau client déployé.
+Packages are automatically available from the web interface. It's possible to execute the command ``xtctl deploy`` in the server
+to make it available to all.
 
 .. code-block:: bash
   
@@ -123,10 +122,10 @@ Parameters are separated in several sections:
 Automatic backups
 ~~~~~~~~~~~~~~~~~~~~~~
   
-Par défaut la solution sauvegarder l'ensemble des tests, adaptateurs et libraries chaques jours.
-Les sauvegardes sont disponibles dans ``opt/xtc/current/Var/Backups``.
+The solution make a backup of all tests, adapters and libraries every days.
+Backups are stored in the folder ``opt/xtc/current/Var/Backups``.
 
-La périodicité peut être configuré dans la section ``Backups`` du fichier ``settings.ini``.
+The interval of backup can be configured from the section ``Backups`` in the file ``settings.ini``.
 
 .. code-block:: bash
   
@@ -137,9 +136,9 @@ La périodicité peut être configuré dans la section ``Backups`` du fichier ``
   ; backup zip name
   tests-name=tests-automatic-backup
   ; backup weekly on sunday at 23:40:00
-  tests-at=5|23,40,00
+  tests-at=6|23,40,00
   
-Rythme de sauvegarde disponible:
- - 6: une fois par semaine
- - 5: une fois par jour
- - 4: une fois par heure
+Scheduler type:
+ - 7: weekly
+ - 6: daily
+ - 5: hourly
