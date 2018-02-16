@@ -23,3 +23,10 @@ This action can be done throught the web interface or the web api.
 .. image:: /_static/images/webinterface/delete_project.png
 
 .. note:: Si le projet est associé à un utilisateur, la suppression n'est pas autorisée.
+
+
+Link a project to a user
+------------------------
+
+A user can access to several projects. From the profile of a user, you can select 
+all the projects authorized. It's possible to define the default one.
