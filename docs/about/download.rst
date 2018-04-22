@@ -4,7 +4,7 @@ Download
 A complete release is generated every two months or less and each component can also evolve at its own rate. 
 The solution is made of several components.
 
-The solution can be downloaded from the website https://www.extensivetesting.org
+The solution can be downloaded from the website https://www.extensiveautomation.org
 
 The server is available throught a ``tar.gz`` file, the following package are also integrated:
  - graphical client (in portable mode only)

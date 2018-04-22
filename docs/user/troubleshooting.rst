@@ -1,48 +1,47 @@
 Troubleshooting
 ================
 
-Code erreurs
+Errors codes
 ------------
 
-**Erreurs liées au moteur d'exécution**
+**Framework error code**
 
 +----------------------+-------------------------------------------------------------+
-| Code erreur          | Description                                                 |
+| Error code           | Description                                                 |
 +----------------------+-------------------------------------------------------------+
-| ERR_TE_000           | Erreur générique au niveau de l'exécution du test           |
+| ERR_TE_000           | Generic error during test execution                         |
 +----------------------+-------------------------------------------------------------+
-| ERR_TE_001           | Erreur générique au niveau de l'exécution du cas de test    |
+| ERR_TE_001           | Generic error during testcase execution                     |
 +----------------------+-------------------------------------------------------------+
-| ERR_TE_500           | Erreur générique au niveau de l'exécution du script         |
-+----------------------+-------------------------------------------------------------+
-
-**Erreurs liées aux étapes de tests**
-
-+----------------------+-------------------------------------------------------------+
-| Code erreur          | Description                                                 |
-+----------------------+-------------------------------------------------------------+
-| ERR_STP_001          | L'étape est déjà démarrée, la fonction `start()`            |
-|                      | est appelée plusieurs fois dans le test pour une même étape.|
-+----------------------+-------------------------------------------------------------+
-| ERR_STP_005          | Le testeur essaye de positionner un résultat sur l'étape    |
-|                      | alors que la fonction `start()` n'a pas été utilisé en amont|
+| ERR_TE_500           | Generic error during script execution                       |
 +----------------------+-------------------------------------------------------------+
 
-**Erreurs liées à l'accès aux paramètres de test**
+**Steps errors**
+
++----------------------+-------------------------------------------------------------+
+| Error code           | Description                                                 |
++----------------------+-------------------------------------------------------------+
+| ERR_STP_001          | The step is already started, the function `start()`         |
+|                      | is called several time in the test.                         |
++----------------------+-------------------------------------------------------------+
+| ERR_STP_005          | The test try to set the result bu the step is not started   |
++----------------------+-------------------------------------------------------------+
+
+**Test properties errors**
 
 +----------------------+--------------------------------------------------------------------------+
-| Code erreur          | Description                                                              |
+| Error code           | Description                                                              |
 +----------------------+--------------------------------------------------------------------------+
-| ERR_PRO_004          | Le paramètre demandé dans la fonction `input` n'existe pas dans le test  |
+| ERR_PRO_004          | The parameter name for `input` function does not exits                   |
 +----------------------+--------------------------------------------------------------------------+
 
-FAQ
----
+How to fix
+---------
 
-Impossible de générer la description HTML d'un test
+Unable to generate the test design of a test
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-L'impossibilité de générer la description d'un test peut venir de plusiers choses:
- - la version des adaptateurs ou librairies utilisées dans le test n'est pas bon
- - une erreur de syntaxe existe dans un test
- - un appel au cache est utilisé dans la définition des étapes de tests
+The generation of the description of a test does not works in some cases:
+ - bad version for adapters and libraries
+ - syntax error in the test
+ - the cache is used in the step definition

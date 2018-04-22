@@ -1,32 +1,31 @@
 Reusable variables
 =======================
 
-Les variables réutilisables sont principalement utilisées pour décrire son environnement de tests.
-Elles sont accessibles depuis un test en utilisant le paramètre de test de type ``shared`` ou ``shared-list``.
+Reusable variables (or shared variables) are sued to describe test environment.
+Variables are accesible from a test from the pamarater of the type ``shared`` or ``shared-list``.
 
-Ajout/suppression d'une variable
+Add/delete a variable
 -----------------
 
-L'ajout ou la suppression d'une variable peut se faire à travers l'interface web ou bien depuis l'api.
-Le format attendu est de type ``JSON``. Elles sont accessibles automatiquement au niveau de chaque test depuis les propriétés.
+The adding or removing of a variable can be done from the web interface or the REST API.
+``JSON`` must be used in variable. There are autommatically availables from tests in properties.
 
 .. image:: /_static/images/webinterface/read_variable.png
 
 
-Description environnement de test
+Describe environment test
 --------------------------
 
-La description d'un environnement de test doit respecter le formalisme décrit ci-dessous.
-Ce type de déclaration est à utiliser avec le test réutilisable qui initialise l'environnement 
-et le met à disposition dans le cache.
+The description of a test environment must be respect the following rules.
+This type of init must be used with the reusable test ``/Snippets/Do/03_Initialize.tux`` 
 
-Déclaration d'un noeud ``SAMPLE_NODE``:
+Node declaration ``SAMPLE_NODE``:
 
 .. code-block:: python
 
  {
 	"COMMON": {
-		"HOSTNAME": "extensivetesting"
+		"HOSTNAME": "extensiveautomation"
 	},
 	"INSTANCES": {
 		"SSH": {
@@ -46,8 +45,8 @@ Déclaration d'un noeud ``SAMPLE_NODE``:
 		}
 	}
  }
- 
-Déclaration d'une donnée de test ``SAMPLE_DATASET_AUTH``:
+
+Data test declaration ``SAMPLE_DATASET_AUTH``:
 
 .. code-block:: python
 
@@ -56,7 +55,7 @@ Déclaration d'une donnée de test ``SAMPLE_DATASET_AUTH``:
 		 "password":      ""
  }
 
-Déclaration de l'environnement ``SAMPLE_ENVIRONMENT``:
+Environment declaration ``SAMPLE_ENVIRONMENT``:
 
 .. code-block:: python
 
@@ -72,9 +71,9 @@ Déclaration de l'environnement ``SAMPLE_ENVIRONMENT``:
  }
 
 
-Import/export des variables
+Import/export variables
 ---------------------------
 
-Il est possible d'exporter ou d'importer en masse l'ensemble des variables depuis l'interface web au format CSV.
+It's possible to export or import in mass the variables from the web interface in CSV format
 
-.. warning:: Les différentes variables sont encodées en base64.
+.. warning:: Variables are encoded in base64.

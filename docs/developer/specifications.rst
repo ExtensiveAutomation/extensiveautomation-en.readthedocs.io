@@ -1,26 +1,26 @@
 Specifications
 =============
 
-Cycle des versions
+Version cycle
 -------------------
 
-L'ensemble des paquets logiciels de la solution respecte les rêgles suivantes pour le nommage des versions.
+The set of software packages for the solution follows the following rules for naming versions.
 
-La version se découpe en 3 chiffres (A.B.C)
- - A: le 1er chiffre indique la version majeure. L'incrémentation de ce chiffre implique 
-    - l'ajout de fonctionnalités majeures (avec pottentiellement une perte de compatibilité avec la version précédente)
-    - l'ajout de fonctionnalités mineures
-    - la correction de bug
- - B: Le 2ième chiffre indique une version mineure. L'incrémentation de ce chiffre indique
-    - l'ajout de fonctionnalités mineures
-    - la correction de bug
- - C: le 3ième chiffre indique une version de maintenance. L'incrémentation de ce chiffre indique
-    - la correction de bug
+The version is divided into 3 digits (A.B.C)
+  - A: the 1st digit indicates the major version. Incrementation of this figure implies
+     - the addition of major features (with potentially a loss of compatibility with the previous version)
+     - adding minor features
+     - bug fix
+  - B: The 2nd digit indicates a minor version. Incrementing this number indicates
+     - adding minor features
+     - bug fix
+  - C: the 3rd digit indicates a maintenance version. Incrementing this number indicates
+     - bug fix
 
-Arborescence du serveur
+Server tree
 -------------------
 
-L'ensemble des fichiers manipulés par le serveur sont stockés dans le répertoire ``/opt/xtc/current/``.
+All files handled by the server are stored in the `` / opt / xtc / current / `` directory.
 
 ::
   
@@ -40,68 +40,68 @@ L'ensemble des fichiers manipulés par le serveur sont stockés dans le réperto
   Web/
   
 
-Les tests sont stockés dans le répertoire ``/opt/xtc/current/Var/Tests/``, ils sont organisés par identifiant de projet.
+The tests are stored in the `` / opt / xtc / current / Var / Tests / `` directory, they are organized by project ID.
 
-Modèle de données
+Data model
 -------------------
 
-Une base de donnée est utilisée par le serveur pour stocker :
- - les utilisateurs de la solution
- - la liste des projets
- - les données de tests (variables projets)
- - des statistiques
- - l'historique des exécutions
+A database is used by the server to store:
+  - the users of the solution
+  - the list of projects
+  - test data (project variables)
+  - statistics
+  - the history of executions
 
-+-------------------------+-----------------------------------------------+
-|  Tables                 |    Description                                |
-+-------------------------+-----------------------------------------------+
-|  xtc-agents             | Non utilisé                                   |
-+-------------------------+-----------------------------------------------+
-|  xtc-agents-stats       | Non utilisé                                   |
-+-------------------------+-----------------------------------------------+
-|  xtc-probes             | Non utilisé                                   |
-+-------------------------+-----------------------------------------------+
-|  xtc-probes-stats       | Non utilisé                                   |
-+-------------------------+-----------------------------------------------+
-|  xtc-config             | Configuration du serveur                      |
-+-------------------------+-----------------------------------------------+
-|  xtc-projects           | Liste des projets                             |
-+-------------------------+-----------------------------------------------+
-|  xtc-relations-projects | Relation entre les projets et les utilisateurs|
-+-------------------------+-----------------------------------------------+
-|  xtc-users              | Liste des utilisateurs                        |
-+-------------------------+-----------------------------------------------+
-|  xtc-users-stats        | Statistiques de connexions                    |
-+-------------------------+-----------------------------------------------+
-|  xtc-test-environment   | Liste des variables au format JSON            |
-+-------------------------+-----------------------------------------------+
-|  xtc-tasks-history      | Historique des tâches exécutées sur le serveur|
-+-------------------------+-----------------------------------------------+
-|  xtc-scripts-stats      | Statistiques sur les tests exécutés           |
-+-------------------------+-----------------------------------------------+
-|  xtc-testabstracts-stats| Statistiques sur les tests exécutés           |
-+-------------------------+-----------------------------------------------+
-|  xtc-testcases-stats    | Statistiques sur les tests exécutés           |
-+-------------------------+-----------------------------------------------+
-|  xtc-testsuites-stats   | Statistiques sur les tests exécutés           |
-+-------------------------+-----------------------------------------------+
-|  xtc-testunits-stats    | Statistiques sur les tests exécutés           |
-+-------------------------+-----------------------------------------------+
-|  xtc-testplans-stats    | Statistiques sur les tests exécutés           |
-+-------------------------+-----------------------------------------------+
-|  xtc-testglobals-stats  | Statistiques sur les tests exécutés           |
-+-------------------------+-----------------------------------------------+
-|  xtc-writing-stats      | Statistiques sur la durée d'écriture des tests|
-+-------------------------+-----------------------------------------------+
++ ------------------------- + ----------------------- ------------------------ +
+| Tables | Description |
++ ------------------------- + ----------------------- ------------------------ +
+| xtc-agents | Not used |
++ ------------------------- + ----------------------- ------------------------ +
+| xtc-agents-stats | Not used |
++ ------------------------- + ----------------------- ------------------------ +
+| xtc-probes | Not used |
++ ------------------------- + ----------------------- ------------------------ +
+| xtc-probes-stats | Not used |
++ ------------------------- + ----------------------- ------------------------ +
+| xtc-config | Server Configuration |
++ ------------------------- + ----------------------- ------------------------ +
+| xtc-projects | List of projects |
++ ------------------------- + ----------------------- ------------------------ +
+| xtc-relations-projects | Relationship between projects and users |
++ ------------------------- + ----------------------- ------------------------ +
+| xtc-users | List of users |
++ ------------------------- + ----------------------- ------------------------ +
+| xtc-users-stats | Connection Statistics |
++ ------------------------- + ----------------------- ------------------------ +
+| xtc-test-environment | List of variables in JSON format |
++ ------------------------- + ----------------------- ------------------------ +
+| xtc-tasks-history | History of tasks running on the server |
++ ------------------------- + ----------------------- ------------------------ +
+| xtc-scripts-stats | Statistics on tests run |
++ ------------------------- + ----------------------- ------------------------ +
+| XTC-testabstracts-stats | Statistics on tests run |
++ ------------------------- + ----------------------- ------------------------ +
+| xtc-testcases-stats | Statistics on tests run |
++ ------------------------- + ----------------------- ------------------------ +
+| xtc-testsuites-stats | Statistics on tests run |
++ ------------------------- + ----------------------- ------------------------ +
+| xtc-testunits-stats | Statistics on tests run |
++ ------------------------- + ----------------------- ------------------------ +
+| xtc-testplans-stats | Statistics on tests run |
++ ------------------------- + ----------------------- ------------------------ +
+| xtc-testglobals-stats | Statistics on tests run |
++ ------------------------- + ----------------------- ------------------------ +
+| xtc-writing-stats | Statistics on the duration of writing tests |
++ ------------------------- + ----------------------- ------------------------ +
 
 
-Gestion des mots de passes
+Passwords management
 -------------------
 
-Aucun mot de passe (en clair) est stocké dans la base de donnée. L'utilisation d'un hash est par contre utilisé.
-Le hash du mot de passe est stocké dans la table `xtc-users`.
+No password (in plain text) is stored in the database. Using a hash is however used.
+The hash of the password is stored in the `xtc-users` table.
 
-L'algorithme utilisé:
+The algorithm used:
 
 .. code-block::
   
@@ -110,17 +110,17 @@ L'algorithme utilisé:
 
 .. image:: /_static/images/server/server_table_pwd.png
 
-Format des fichiers
+File format
 -------------------
 
-Les tests sont au format ``XML`` zippés. Il existe plusieurs formats de tests:
- - Test Abstract Xml
- - Test Unit Xml
- - Test Suite Xml
- - Test Plan Xml
- - Test Global Xml
+The tests are in zipped `` XML`` format. There are several test formats:
+  - Test Abstract Xml
+  - Xml Test Unit
+  - Xml Test Suite
+  - Xml Test Plan
+  - Global Xml Test
 
-**Structure XML partagée**
+** Common XML Structure **
 
 .. code-block:: xml
 
@@ -254,17 +254,17 @@ Les tests sont au format ``XML`` zippés. Il existe plusieurs formats de tests:
     </file>
     
 
-Stockage des résultats de tests
+Storage of test results
 -------------------------------
 
-Les résultats de tests sont stockés sur le serveur dans le répertoire ``/opt/xtc/current/Var/TestsResult``.
+The test results are stored on the server in the `` / opt / xtc / current / Var / TestsResult`` directory.
 
-Les résultats sont stockés:
- - par l'id des projets de test
- - par la date du jour d'exécution du test
- - et finalement par la date et heure d'exécutions des tests.
+The results are stored:
+  - by the id of the test projects
+  - by the date of the day of execution of the test
+  - and finally by the date and time of the tests.
  
-Organisation des résultats:
+Organization of the results:
 
 .. code-block:: bash
 
@@ -285,110 +285,109 @@ Organisation des résultats:
                 - Fichier: <testname>_<replayid>.trvx
     
 
-Description des fichiers:
+Description of files:
 
- - ``TESTPATH`` contient le chemin d'accès complet pour le résultat de test
- - ``test.out`` contient les logs interne du test, à utiliser pour débugger le framework de test
- - ``test.ini`` contient des paramètres spécifiques au test
- - ``<testname>_<replayid>.hdr`` réprésente l'entête du résultat de test
- - ``<testname>_<replayid>_<result>_<nbcomments>.trv`` contient l'ensemble des évènements générés pendant l'exécution du tests
- - ``<testname>_<replayid>.tbrp`` contient le rapport basique au format html
- - ``<testname>_<replayid>.trp`` contient le rapport complet au format html
- - ``<testname>_<replayid>.trv`` contient le rapport des résultats au format csv
-
-
-Contrôle Agents
+  - `` TESTPATH`` contains the full path for the test result
+  - `` test.out`` contains the internal logs of the test, to be used to debug the test framework
+  - `` test.ini`` contains test-specific parameters
+  - `` <testname> _ <replayid> .hdr`` represents the header of the test result
+  - `` <testname> _ <replayid> _ <result> _ <nbcomments> .trv` contains all the events generated during the execution of the tests
+  - `` <testname> _ <replayid> .tbrp`` contains the basic report in html format
+  - `` <testname> _ <replayid> .trp`` contains the full report in html
+  - `` <testname> _ <replayid> .trv`` contains the results report in csv format
+  
+Control Agents
 ---------------
 
-Le pilotage des agents depuis un test s'effectue à travers:
- - les adaptateurs
- - et le serveur
+The control of the agents since a test is carried out through:
+  - the adapters
+  - and the server
 
-La communication s'effectue avec l'échange de quelques messages spécifiques:
- - ``init``: permet d'initialiser un agent
- - ``notify``: permet d'envoyer un message à l'agent sans attendre de réponse
- - ``reset``: permet de faire un reset de l'agent
- - ``error``: permet à l'agent d'envoyer une erreur à l'adaptateur
- - ``data``: permet à l'agent d'envoyer des données à l'adaptateur
+The communication takes place with the exchange of some specific messages:
+  - `` init``: allows to initialize an agent
+  - `` notify``: send a message to the agent without waiting for a response
+  - `` reset``: allows to reset the agent
+  - `` error``: allows the agent to send an error to the adapter
+  - `` data``: allows the agent to send data to the adapter
 
-Sens de communications disponibles:
- - Agent -> serveur -> adaptateur -> test
- - Test -> adaptateur -> serveur -> agent
+Direction of available communications:
+  - Agent -> server -> adapter -> test
+  - Test -> adapter -> server -> agent
  
-+---------------------------------+--------------------------------------------+
-|                                 |               Agent                        |
-|                                 +----------------------+---------------------+
-|                                 |    Fonction          |   Callback          |
-+---------------------------------+----------------------+---------------------+
-| Envoie d'un message "error"     | def sendError        |                     |
-|                                 |    * request         |                     |
-|                                 |    * data            |                     |
-+---------------------------------+----------------------+---------------------+
-| Envoie d'un message "notify"    | def sendNotify       |                     |
-|                                 |    * request         |                     |
-|                                 |    * data            |                     |
-+---------------------------------+----------------------+---------------------+
-| Envoie d'un message "data"      | def sendData         |                     |
-|                                 |    * request         |                     |
-|                                 |    * data            |                     |
-+---------------------------------+----------------------+---------------------+
-| Réception d'un message "init"   |                      |  def onAgentInit    |
-|                                 |                      |    * client         |
-|                                 |                      |    * tid            |
-|                                 |                      |    * request        |
-+---------------------------------+----------------------+---------------------+
-| Réception d'un message "reset"  |                      |  def onAgentNotify  |
-|                                 |                      |    * client         |
-|                                 |                      |    * tid            |
-|                                 |                      |    * request        |
-+---------------------------------+----------------------+---------------------+
-| Réception d'un message "notify" |                      |  def onAgentReset   |
-|                                 |                      |    * client         |
-|                                 |                      |    * tid            |
-|                                 |                      |    * request        |
-+---------------------------------+----------------------+---------------------+
++ --------------------------------- + --------------- + -----------------------------
+| | Agent |
+| + ---------------------- + --------------------- +
+| | Function | Callback |
++ --------------------------------- + --------------- ------- + --------------------- +
+| Send an error message | def sendError | |
+| | * request | |
+| | * data | |
++ --------------------------------- + --------------- ------- + --------------------- +
+| Send a "notify" message | def sendNotify | |
+| | * request | |
+| | * data | |
++ --------------------------------- + --------------- ------- + --------------------- +
+| Send a "data" message | def sendData | |
+| | * request | |
+| | * data | |
++ --------------------------------- + --------------- ------- + --------------------- +
+| Receiving an "init" message | | def onAgentInit |
+| | | * customer |
+| | | * tid |
+| | | * request |
++ --------------------------------- + --------------- ------- + --------------------- +
+| Receiving a "reset" message | | def onAgentNotify |
+| | | * customer |
+| | | * tid |
+| | | * request |
++ --------------------------------- + --------------- ------- + --------------------- +
+| Receiving a "notify" message | | def onAgentReset |
+| | | * customer |
+| | | * tid |
+| | | * request |
++ --------------------------------- + --------------- ------- + --------------------- +
 
 
-+---------------------------------+-------------------------------------------------------+
-|                                 |             Adaptateur                                |
-|                                 +------------------------+------------------------------+
-|                                 |    Fonction            |   Callback                   |
-+---------------------------------+------------------------+------------------------------+
-| Réception d'un message "error"  |                        |  def receivedErrorFromAgent  |
-|                                 |                        |        * data                |
-+---------------------------------+------------------------+------------------------------+
-| Réception d'un message "notify" |                        |  def receivedNotifyFromAgent |
-|                                 |                        |        * data                |
-+---------------------------------+------------------------+------------------------------+
-| Réception d'un message "data"   |                        |  def receivedDataFromAgent   |
-|                                 |                        |         * data               |
-+---------------------------------+------------------------+------------------------------+
-| Envoie d'un message "init"      |  def initAgent         |                              |
-|                                 |     * data             |                              |
-+---------------------------------+------------------------+------------------------------+
-| Envoie d'un message "reset"     |  def resetAgent        |                              |
-+---------------------------------+------------------------+------------------------------+
-| Envoie d'un message "notify"    | def sendNotifyToAgent  |                              |
-|                                 |     * data             |                              |
-+---------------------------------+------------------------+------------------------------+
++ --------------------------------- + --------------- ---------------------------------------- +
+| | Adapter |
+| + ------------------------ + ------------------------ ------ +
+| | Function | Callback |
++ --------------------------------- + --------------- --------- + ------------------------------ +
+| Receiving an error message | | def receivedErrorFromAgent |
+| | | * data |
++ --------------------------------- + --------------- --------- + ------------------------------ +
+| Receiving a "notify" message | | def receivedNotifyFromAgent |
+| | | * data |
++ --------------------------------- + --------------- --------- + ------------------------------ +
+| Receiving a "data" message | | def receivedDataFromAgent |
+| | | * data |
++ --------------------------------- + --------------- --------- + ------------------------------ +
+| Send an "init" message | def initAgent | |
+| | * data | |
++ --------------------------------- + --------------- --------- + ------------------------------ +
+| Send a "reset" message | def resetAgent | |
++ --------------------------------- + --------------- --------- + ------------------------------ +
+| Send a "notify" message | def sendNotifyToAgent | |
+| | * data | |
++ --------------------------------- + --------------- --------- + ------------------------------ +
 
-Les logs serveurs
+The server logs
 ----------------
 
-Les logs du serveur sont localisés dans le répertoire ``/opt/xtc/current/Var/logs/``.
+The server logs are located in the `` / opt / xtc / current / Var / logs / `` directory.
 
-+--------------------+---------------------------------------------------------+
-| access_rp.log      | logs apache pour l'accès reverse                        |
-+--------------------+---------------------------------------------------------+
-| access_ssl_rp.log  | logs apache pour l'accès reverse ssl                    |
-+--------------------+---------------------------------------------------------+
-| access_web.log     | logs apache pour l'accès web interface                  |
-+--------------------+---------------------------------------------------------+
-| error_rp.log       | logs erreurs apache pour l'accès reverse                |
-+--------------------+---------------------------------------------------------+
-| error_ssl_rp.log   | logs erreurs apache pour l'accès reverse ssl            |
-+--------------------+---------------------------------------------------------+
-| error_web.log      | logs erreurs apache pour l'accès web interface          |
-+--------------------+---------------------------------------------------------+
-| output.log         | logs serveurs                                           |
-+--------------------+---------------------------------------------------------+
++ -------------------- + ---------------------------- + -----------------------------
+| access_rp.log | apache logs for reverse access |
++ -------------------- + ---------------------------- + -----------------------------
+| access_ssl_rp.log | apache logs for reverse ssl access |
++ -------------------- + ---------------------------- + -----------------------------
+| access_web.log | apache logs for web interface access |
++ -------------------- + ---------------------------- + -----------------------------
+| error_rp.log | apache error logs for reverse access |
++ -------------------- + ---------------------------- + -----------------------------
+| error_ssl_rp.log | apache error logs for reverse ssl access |
++ -------------------- + ---------------------------- + -----------------------------
+| error_web.log | apache errors log for web interface access |
++ -------------------- + ---------------------------- + -----------------------------
+| output.log | server logs |
++ -------------------- + ---------------------------- + -----------------------------

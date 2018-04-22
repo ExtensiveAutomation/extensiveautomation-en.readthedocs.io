@@ -43,8 +43,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'ExtensiveTesting'
-copyright = u'2018, ExtensiveTesting'
+project = u'ExtensiveAutomation'
+copyright = u'2018, ExtensiveAutomation'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -179,7 +179,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'ExtensiveTestingdoc'
+htmlhelp_basename = 'ExtensiveAutomationDoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -203,8 +203,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'ExtensiveTesting.tex', u'Read the ExtensiveTesting Documentation',
-   u'ExtensiveTesting', 'manual'),
+  ('index', 'ExtensiveAutomation.tex', u'Read the ExtensiveAutomation Documentation',
+   u'ExtensiveAutomation', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -233,8 +233,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'extensivetesting', u'Read the ExtensiveTesting Documentation',
-     [u'ExtensiveTesting'], 1)
+    ('index', 'extensiveautomation', u'Read the ExtensiveAutomation Documentation',
+     [u'ExtensiveAutomation'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -247,8 +247,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'ExtensiveTesting', u'Read the ExtensiveTesting Documentation',
-   u'Read the Docs', 'ExtensiveTesting', 'One line description of project.',
+  ('index', 'ExtensiveAutomation', u'Read the ExtensiveAutomation Documentation',
+   u'Read the Docs', 'ExtensiveAutomation', 'One line description of project.',
    'Miscellaneous'),
 ]
 

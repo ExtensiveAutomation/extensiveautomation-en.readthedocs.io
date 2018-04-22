@@ -1,21 +1,21 @@
 ﻿Advanced examples
 ===================
 
-Adaptateur SSH
+SSH adapter
 --------------
 
-L'adaptateur ``SSH`` permet de se connecter sur des serveurs distants en utilisant le protocole SSH.
+The `` SSH`` adapter allows you to connect to remote servers using the SSH protocol.
 
-La configuration de l'adaptateur consiste à indiquer à minima:
- - l'adresse ip du serveur distant 
- - le port du serveur distant (par défaut 22)
- - le compte utilisateur
+The configuration of the adapter consists of indicating at least:
+  - the ip address of the remote server
+  - the remote server port (default 22)
+  - the user account
  
-L'adaptateur supporte les fonctionnalités suivantes:
- - authentification par nom d'utilisateur et mot de passe
- - authentification par échange de clé
+The adapter supports the following features:
+  - authentication by username and password
+  - key exchange authentication
  
-Exemple de configuration de l'adaptateur dans la section ``prepare`` du test.
+Example of configuring the adapter in the `` prepared`` section of the test.
 
 .. code-block:: python
   
@@ -29,7 +29,7 @@ Exemple de configuration de l'adaptateur dans la section ``prepare`` du test.
                                         agentSupport=input('SUPPORT_AGENT')
                                     )
 
-Exemple pour se connecter, s'authentifier sur un serveur distant et se déconnecter:
+Example to connect, to authenticate on a remote server and to disconnect:
 
 .. code-block:: python
   
@@ -45,7 +45,7 @@ Exemple pour se connecter, s'authentifier sur un serveur distant et se déconnec
   self.info("SSH disconnection OK" )
   
   
-Exemple pour envoyer une commande sur une machine distante:
+Example to send a command on a remote machine:
 
 .. code-block:: python
   
@@ -58,28 +58,28 @@ Exemple pour envoyer une commande sur une machine distante:
   if rsp is None: self.abort("run command failed")
   self.warning( rsp )
   
-.. warning:: 
-  Les réponses SSH peuvent être découpées en plusieurs évènements (celà dépend du réseau). 
-  Il faut donc faire attention quand on attend une réponse spécifique, l'utilisation d'un buffer peut être nécessaire dans ce cas là.
+.. warning ::
+   SSH replies can be split into several events (this depends on the network).
+   We must be careful when waiting for a specific response, the use of a buffer may be necessary in this case.
 
-.. note:: Des exemples sont disponibles dans l'échantillon ``/Samples/Tests_Adapters/05_SSH.tsx``.
+.. note :: Examples are available in the `` / Samples / Tests_Adapters / 05_SSH.tsx`` sample.
 
-Adaptateur HTTP
+HTTP adapter
 --------------
 
-L'adaptateur ``HTTP`` permet d'envoyer des requêtes et d'inspecter les réponses associés vers un serveur Web.
+The `` HTTP`` adapter is used to send requests and inspect associated responses to a web server.
 
-La configuration de l'adaptateur consiste à indiquer à minima:
- - l'adresse ip du serveur distant 
- - le port du serveur distant (par défaut 80)
+The configuration of the adapter consists of indicating at least:
+  - the ip address of the remote server
+  - the remote server port (default 80)
  
-L'adaptateur supporte les fonctionnalités suivantes:
- - le chiffrement ``tls`` de la communication
- - l'utilisation de proxy ``socks4, 5`` et http
- - l'authentification ``digest`` ou ``basic``
- - le réassemblage des réponses ``chunked`` 
+The adapter supports the following features:
+  - encryption `` tls`` of the communication
+  - the use of `` socks4, 5`` proxy and http
+  - `` digest`` or `` basic`` authentication
+  - reassembly of responses `` chunked``
  
-Exemple de configuration de l'adaptateur dans la section ``prepare`` du test.
+Example of configuring the adapter in the `` prepared`` section of the test.
 
 .. code-block:: python
   
@@ -93,7 +93,7 @@ Exemple de configuration de l'adaptateur dans la section ``prepare`` du test.
                                             agentSupport=input('SUPPORT_AGENT')
                                         )
 
-Exemple pour envoyer une réquête de type ``GET`` et d'une réponse avec le code ``200``.
+Example to send a `` GET`` type query and a response with the `` 200`` code.
 
 .. code-block:: python
   
@@ -108,13 +108,13 @@ Exemple pour envoyer une réquête de type ``GET`` et d'une réponse avec le cod
   else:
     self.step1.setPassed(actual="http response OK") 
   
-Exemple pour envoyer une réquête de type ``GET`` et attendre une réponse répondant aux critères suivants:
- - la version doit se terminer par 1.1
- - le code ne doit pas contenir la valeur 200
- - la phrase ne doit pas contenir le texte `Testing`
- - le corps de la réponse doit contenir le texte `google`
- - la réponse doit contenir une entête contenant le texte `server`, peut importe la valeur
-
+Example to send a `` GET`` type query and wait for a response that meets the following criteria:
+  - the version must end with 1.1
+  - the code must not contain the value 200
+  - the sentence must not contain the text `Testing`
+  - the body of the answer must contain the text `google`
+  - the response must contain a header containing the text `server`, regardless of the value
+  
 .. code-block:: python
   
   headersExpected = { TestOperators.Contains(needle='server'): TestOperators.Any() }
@@ -134,16 +134,16 @@ Exemple pour envoyer une réquête de type ``GET`` et attendre une réponse rép
   else:
     self.step1.setPassed(actual="http response OK") 
 
-Adaptateur Telnet
+Telnet adapter
 --------------
 
-L'adaptateur ``Telnet`` permet de se connecter sur des machines disposant une interface telnet.
+The `` Telnet`` adapter is used to connect to machines with a telnet interface.
 
-La configuration de l'adaptateur consiste à indiquer à minima:
- - l'adresse ip du serveur distant 
- - le port du serveur distant (par défaut 23)
+The configuration of the adapter consists of indicating at least:
+  - the ip address of the remote server
+  - the remote server port (default 23)
  
-Exemple de configuration de l'adaptateur dans la section ``prepare`` du test.
+Example of configuring the adapter in the `` prepared`` section of the test.
 
 .. code-block:: python
   
@@ -156,7 +156,7 @@ Exemple de configuration de l'adaptateur dans la section ``prepare`` du test.
                                             )
    
    
-Exemple pour se connecter ou se déconnecter du serveur distant
+Example to connect or disconnect from the remote server
 
 .. code-block:: python
   
@@ -169,7 +169,7 @@ Exemple pour se connecter ou se déconnecter du serveur distant
   if not disconnected: Test(self).interrupt( 'unable to disconnect' )
   
 
-Exemple montrant comment attendre la réception d'un texte en particulier.
+Example showing how to wait for the receipt of a particular text.
 
 .. code-block:: python
   
@@ -180,31 +180,31 @@ Exemple montrant comment attendre la réception d'un texte en particulier.
   if rsp is None: Test(self).interrupt( 'Password prompt not found' )
   
 
-Exemple pour envoyer des données au serveur distant
+Example to send data to the remote server
 
 .. code-block:: python
   
   tpl = self.ADP_TELNET.sendData(dataRaw="exemple")
   
 
-.. warning: les réponses telnet peuvent être splittées en plusieurs évènements, il faut donc faire attention quand on
-recherche un texte en particulier. Pour se prémunir de ce problème, il faut ajouter un buffer intermédiare, il y a un
-exemple complet avec l'adaptateur ``Catalyst``.
+.. warning: telnet responses can be split into multiple events, so be careful when
+search for a particular text. To guard against this problem, we must add an intermediary buffer, there is a
+complete example with the `` Catalyst`` adapter.
 
-.. note:: Un exemple est disponible dans les échantillons de tests ``/Samples/Tests_Adapters/12_Telnet.tsx``.
-    
-Adaptateur MySQL
+.. note :: An example is available in the test samples `` / Samples / Tests_Adapters / 12_Telnet.tsx``.
+
+MySQL adapter
 --------------
 
-L'adaptateur ``MySQL`` permet de se connecter sur une base donnée distante.
+The `` MySQL`` adapter allows you to connect to a remote database.
 
-La configuration de l'adaptateur consiste à indiquer à minima:
- - l'adresse ip du serveur distant 
- - le port du serveur distant (par défaut 3306)
- - le nom d'utilisateur
- - le mot de passe associé
+The configuration of the adapter consists of indicating at least:
+  - the ip address of the remote server
+  - the remote server port (by default 3306)
+  - the user name
+  - the associated password
  
-Exemple de configuration de l'adaptateur dans la section ``prepare`` du test.
+Example of configuring the adapter in the `` prepared`` section of the test.
 
 .. code-block:: python
   
@@ -220,7 +220,7 @@ Exemple de configuration de l'adaptateur dans la section ``prepare`` du test.
                                         )
   
 
-Exemple pour se connecter ou se déconnecter du serveur distant:
+Example to connect or disconnect from the remote server:
 
 .. code-block:: python
   
@@ -229,7 +229,7 @@ Exemple pour se connecter ou se déconnecter du serveur distant:
   self.ADP_MYSQL.disconnect()
   
 
-Exemple pour exécuter une requête SQL dans la base de donnée:
+Example to execute an SQL query in the database:
 
 .. code-block:: python
   
@@ -238,18 +238,18 @@ Exemple pour exécuter une requête SQL dans la base de donnée:
   rsp = self.ADP_MYSQL.hasReceivedRow(timeout=input('TIMEOUT'))
   
 
-.. note:: Un exemple est disponible dans les échantillons de tests ``/Samples/Tests_Adapters/15_Database.tsx``.
- 
-Adaptateur SNMP
+.. note :: An example is available in the `` / Samples / Tests_Adapters / 15_Database.tsx`` test samples.
+
+SNMP adapter
 --------------
 
-L'adaptateur ``SNMP`` permet de recevoir des alarmes SNMP v1 ou v2.
+The SNMP adapter allows you to receive SNMP v1 or v2 alarms.
 
-La configuration de l'adaptateur consiste à indiquer à minima:
- - l'adresse d'écoute
- - le port d'écoute
+The configuration of the adapter consists of indicating at least:
+  - the listening address
+  - the listening port
  
-Exemple de configuration de l'adaptateur dans la section ``prepare`` du test.
+Example of configuring the adapter in the `` prepared`` section of the test.
 
 .. code-block:: python
   
@@ -263,7 +263,7 @@ Exemple de configuration de l'adaptateur dans la section ``prepare`` du test.
                                                 )
   
 
-Exemple pour démarrer l'écoute du serveur
+Example to start listening to the server
 
 .. code-block:: python
   
@@ -272,7 +272,7 @@ Exemple pour démarrer l'écoute du serveur
   if not listening: Test(self).interrupt( 'UDP not listening' )
   
 
-Exemple pour attendre la réception d'une alarme:
+Example to wait for the reception of an alarm:
 
 .. code-block:: python
   
@@ -292,25 +292,25 @@ Exemple pour attendre la réception d'une alarme:
   if trap is None:  Test(self).interrupt("trap expected not received")
   
 
-.. note:: Un exemple est disponible dans les échantillons de tests ``/Samples/Tests_Adapters/18_SNMP.tsx``.
+.. note :: An example is available in the `` / Samples / Tests_Adapters / 18_SNMP.tsx`` test samples.
 
     
-Adaptateur FTP(s)
+FTP adapter (s)
 --------------
 
-L'adaptateur ``FTP`` permet de se connecter sur des serveurs distants et supporte les fonctions suivantes:
- - Connection en TLS
- - Téléchargement ou récupation de fichiers ou répertoires
- - Ajout/suppression et renommage de fichiers ou répertoires
- - Lister le contenu d'un répertoires
- - Détecter l'apparition d'un fichier ou répertoire avec le support des expressions régulières.
+The `` FTP`` adapter allows you to connect to remote servers and supports the following functions:
+  - TLS connection
+  - Download or recover files or directories
+  - Add / delete and rename files or directories
+  - List the contents of a directory
+  - Detect the appearance of a file or directory with the support of regular expressions.
 
-La configuration de l'adaptateur consiste à indiquer à minima:
- - l'adresse ip du serveur distant
- - le nom d'utilisateur pour se connecter
- - le mot de passe
+The configuration of the adapter consists of indicating at least:
+  - the ip address of the remote server
+  - the username to login
+  - the password
  
-Exemple de configuration de l'adaptateur dans la section ``prepare`` du test.
+Example of configuring the adapter in the `` prepared`` section of the test.
 
 .. code-block:: python
   
@@ -325,7 +325,7 @@ Exemple de configuration de l'adaptateur dans la section ``prepare`` du test.
   
 
 
-Exemple pour se connecter ou déconnecter du serveur FTP:
+Example to connect or disconnect from the FTP server:
 
 .. code-block:: python
   
@@ -347,7 +347,7 @@ Exemple pour se connecter ou déconnecter du serveur FTP:
   Trace(self).info("FTP disconnection OK" )
   
 
-Exemple pour lister le contenu d'un répertoire:
+Example to list the contents of a directory:
 
 .. code-block:: python
   
@@ -356,7 +356,7 @@ Exemple pour lister le contenu d'un répertoire:
       Trace(self).error("unable to get listing folder")
   
 
-Exemple pour détecter un fichier dans un répertoire avec une expression régulière:
+Example to detect a file in a directory with a regular expression:
 
 .. code-block:: python
   
@@ -375,24 +375,24 @@ Exemple pour détecter un fichier dans un répertoire avec une expression régul
   if found is None: Trace(self).error("file not found")
   
 
-.. note:: Un exemple est disponible dans les échantillons de tests ``/Samples/Tests_Adapters/21_Ftp.tsx``.
+.. note :: An example is available in the test samples `` / Samples / Tests_Adapters / 21_Ftp.tsx``.
 
-Adaptateur SFTP
+SFTP adapter
 ---------------
 
-L'adaptateur ``SFTP`` permet de se connecter sur des serveurs disposants d'une interface SSH.
-Les fonctionnalités suivantes sont supportées:
- - Téléchargement ou récupation de fichiers ou répertoires
- - Ajout/suppression et renommage de fichiers ou répertoires
- - Lister le contenu d'un répertoires
- - Détecter l'apparition d'un fichier ou répertoire avec le support des expressions régulières.
+The `` SFTP`` adapter allows you to connect to servers with an SSH interface.
+The following features are supported:
+  - Download or recover files or directories
+  - Add / delete and rename files or directories
+  - List the contents of a directory
+  - Detect the appearance of a file or directory with the support of regular expressions.
  
-La configuration de l'adaptateur consiste à indiquer à minima:
- - l'adresse ip du serveur distant
- - le nom d'utilisateur pour se connecter
- - le mot de passe
+The configuration of the adapter consists of indicating at least:
+  - the ip address of the remote server
+  - the username to login
+  - the password
  
-Exemple de configuration de l'adaptateur dans la section ``prepare`` du test.
+Example of configuring the adapter in the `` prepared`` section of the test.
 
 .. code-block:: python
   
@@ -407,7 +407,7 @@ Exemple de configuration de l'adaptateur dans la section ``prepare`` du test.
                                         )
   
 
-Exemple pour se connecter et déconnecter du serveur:
+Example to connect and disconnect from the server:
 
 .. code-block:: python
   
@@ -420,7 +420,7 @@ Exemple pour se connecter et déconnecter du serveur:
   self.info("SFTP disconnection OK" )
   
 
-Exemple pour lister le contenu d'un répertoire:
+Example to list the contents of a directory:
 
 .. code-block:: python
   
@@ -435,7 +435,7 @@ Exemple pour lister le contenu d'un répertoire:
   self.warning( rsp.get("SFTP", "result") )
   
 
-Exemple pour détecter un fichier dans un répertoire avec une expression régulière:
+Example to detect a file in a directory with a regular expression:
 
 .. code-block:: python
   
@@ -454,24 +454,23 @@ Exemple pour détecter un fichier dans un répertoire avec une expression régul
   if found is None: Trace(self).error("file not found")
   
 
-.. note:: Un exemple est disponible dans les échantillons de tests ``/Samples/Tests_Adapters/22_Sftp.tsx``.
+.. note :: An example is available in the test samples `` / Samples / Tests_Adapters / 22_Sftp.tsx``.
 
-
-Librairie ChartJS
+ChartJS librairies
 -------------------
 
-L'adaptateur ``ChartJs``, basé sur la librairie javascript du même nom, permet de
-générer des graphiques pouvant être intégré dans une page html.
-L'intérêt principal de cette librairie est de pouvoir intégrer des graphiques dans le rapport de test.
+The `` ChartJs`` adapter, based on the javascript library of the same name, allows you to
+generate graphics that can be integrated into an html page.
+The main interest of this library is to be able to integrate graphs in the test report.
 
-Exemple de configuration de la librairie dans la section ``prepare`` du test.
+Example configuration of the library in the `` prepared`` section of the test.
 
 .. code-block:: python
   
   self.LIB_CHART = SutLibraries.Media.ChartJS(parent=self, name=None, debug=False)
   
 
-Exemple pour générer un graphique de type barre et l'intégrer dans le rapport
+Example to generate a bar chart and integrate it into the report
 
 .. code-block:: python
   
@@ -499,105 +498,105 @@ Exemple pour générer un graphique de type barre et l'intégrer dans le rapport
   self.step1.setPassed(actual="chart", chart=myChart)
   
 
-Le graphique est inséré automatiquement dans le rapport avancé.
+The chart is automatically inserted into the advanced report.
 
 .. image:: /_static/images/examples/report_chart.png
 
   
-Paramètre de tests "custom"
+Custom test parameter
 -------------------
 
-Le paramètre de type ``custom`` permet de construire des valeurs appelant d'autres variables.
+The `` custom`` parameter is used to construct values calling other variables.
 
-Prenons l'exemple d'un test contenant les 2 variables suivantes:
- - DEST_IP avec la valeur 192.168.1.1
- - DEST_PORT avec la valeur 8080
+For example, consider a test containing the following 2 variables:
+  - DEST_IP with the value 192.168.1.1
+  - DEST_PORT with the value 8080
 
-.. image:: /_static/images/examples/custom_inputs.png
+.. image :: /_static/images/examples/custom_inputs.png
  
-Le type ``custom`` va nous permettre de construire une 3ième variable 
- - DEST_URL avec la valeur 
+The `` custom`` type will allow us to build a 3rd variable
+  - DEST_URL with the value
  
-   .. image:: /_static/images/examples/custom_config.png
+    .. image :: /_static/images/examples/custom_config.png
 
-Le mot clé ``[!INPUT:<NOM_VARIABLE_ENTRANTE:]`` permet d'appeler une autre variable entrante.
-Le framework remplacera au moment de l'exécution du test les différents mots clés avec la valeur associée.
-On obtiendra comme valeur https://192.168.1.1:8080/welcome pour la variable DEST_URL.
+The keyword `` [! INPUT: <VARIABLE_NAME:] `` allows calling another incoming variable.
+The framework will replace at the time of execution of the test the various keywords with the associated value.
+We will obtain the value https://192.168.1.1:8080/welcome for the variable DEST_URL.
 
 .. image:: /_static/images/examples/custom_example.png
 
-Pour aller plus loin, il est aussi possible d'ajouter une valeur disponible depuis le cache.
-Partant du principe que la valeur "welcome?user=hello" est dans le cache et accessible via la clé "url_params".
-Il est possible de l'intégration dans le paramètre comme ci-dessous
+To go further, it is also possible to add a value available from the cache.
+Assuming that the value "welcome? User = hello" is in the cache and accessible via the key "url_params".
+It is possible to integrate in the parameter as below
 
 .. image:: /_static/images/examples/custom_config_cache.png
 
-Exemple de résultat après exécution:
+Example of result after execution:
 
 .. image:: /_static/images/examples/custom_example_cache.png
 
 
-Paramètre de tests "alias"
+Parameter of "alias" tests
 -------------------
 
-Le paramètre de type ``alias`` peut être utilisé pour définir un nouveau nom pour un paramètre déjà existant.
-Ce mécanisme peut être utilisé dans les ``test plan`` pour éviter de surcharger tout les paramètres ayant le même nom.
+The `` alias`` parameter can be used to define a new name for an already existing parameter.
+This mechanism can be used in `` plan test`` to avoid overloading all parameters with the same name.
 
-Exemple d'utilisation
+Example of use
 
- 1. Avant exécution
+ 1. Before execution
    ::
     
-    Scénario (TIMEOUT_A(int)=2 secondes)
-     ---> Test 1 (TIMEOUT_A(int)=10 secondes)
-     ---> Test 2 (TIMEOUT_A(int)=30 secondes)
-     ---> Test 3 (TIMEOUT_A(int)=20 secondes)
+    Scenario (TIMEOUT_A(int)=2 seconds)
+     ---> Test 1 (TIMEOUT_A(int)=10 seconds)
+     ---> Test 2 (TIMEOUT_A(int)=30 seconds)
+     ---> Test 3 (TIMEOUT_A(int)=20 seconds)
  
- 2. Après exécution du test
+ 2. After running the test
    
    ::
      
-     Scénario (TIMEOUT_A(int)=2 secondes)
-       ---> Test 1 (TIMEOUT_A(int)=2 secondes)
-       ---> Test 2 (TIMEOUT_A(int)=2 secondes)
-       ---> Test 3 (TIMEOUT_A(int)=2 secondes)
+     Scenario (TIMEOUT_A(int)=2 seconds)
+       ---> Test 1 (TIMEOUT_A(int)=2 seconds)
+       ---> Test 2 (TIMEOUT_A(int)=2 seconds)
+       ---> Test 3 (TIMEOUT_A(int)=2 seconds)
      
      
-Quand on exécute le scénario ci-dessus, le test 1, 2 et 3 ont automatiquement la valeur 2 secondes pour le paramètre TIMEOUT_A.
-C'est le comportement apporté par le framework de test.
+When executing the above scenario, test 1, 2 and 3 are automatically set to 2 seconds for the TIMEOUT_A parameter.
+This is the behavior provided by the test framework.
 
-**Comment faire si on souhaite que le test 2 garde la valeur 30 secondes par contre le test 1 et 2 hérite de la valeur du scénario ?**
+** How to do if you want the test 2 to keep the value 30 seconds against the test 1 and 2 inherit the value of the scenario? **
 
-Il faut utiliser un paramètre de type ``alias``, ils ne sont pas surchargés par le framework.
+You have to use an `` alias`` parameter, they are not overloaded by the framework.
 
- 1. Avant exécution
+  1. Before execution
    ::
     
-    Scénario (TIMEOUT_A(int)=2 secondes et TIMEOUT_B(int)=30 secondes)
-     ---> Test 1 (TIMEOUT_A(int)=10 secondes)
-     ---> Test 2 (TIMEOUT_A(alias)=TIMEOUT_B et TIMEOUT_B(int) = 0 secondes)
-     ---> Test 3 (TIMEOUT_A(int)=20 secondes)
+    Scenario (TIMEOUT_A(int)=2 seconds et TIMEOUT_B(int)=30 seconds)
+     ---> Test 1 (TIMEOUT_A(int)=10 seconds)
+     ---> Test 2 (TIMEOUT_A(alias)=TIMEOUT_B et TIMEOUT_B(int) = 0 seconds)
+     ---> Test 3 (TIMEOUT_A(int)=20 seconds)
  
- 2. Après exécution du test
+ 2. After running the test
    
    ::
      
-    Scénario (TIMEOUT_A(int)=2 secondes et TIMEOUT_B(int)=30 secondes)
-     ---> Test 1 (TIMEOUT_A(int)=2 secondes)
-     ---> Test 2 (TIMEOUT_A(alias)=TIMEOUT_B et TIMEOUT_B(int)= 30 secondes)
-     ---> Test 3 (TIMEOUT_A(int)=2 secondes)
+    Scenario (TIMEOUT_A(int)=2 seconds et TIMEOUT_B(int)=30 seconds)
+     ---> Test 1 (TIMEOUT_A(int)=2 seconds)
+     ---> Test 2 (TIMEOUT_A(alias)=TIMEOUT_B et TIMEOUT_B(int)= 30 seconds)
+     ---> Test 3 (TIMEOUT_A(int)=2 seconds)
      
 
 
-Paramètre de tests "dataset"
+Dataset test parameter
 -------------------
 
-Le paramètre de type ``dataset`` permet d'importer des fichiers ``tdx``.
-Un fichier ``dataset`` est juste un fichier texte, il est possible de le créer à partir du client graphique et de le sauvegarder dans le dépôt des tests distants.
+The `` dataset`` parameter is used to import `` tdx`` files.
+A `` dataset`` file is just a text file, it can be created from the graphical client and saved to the remote test repository.
 
 .. image:: /_static/images/client/client_new_tdx.png 
 
-Exemple de contenu d'un fichier dataset avec le format csv
+Sample content of a dataset file with the csv format
 
 .. code-block:: python
   
@@ -605,72 +604,71 @@ Exemple de contenu d'un fichier dataset avec le format csv
   b;2;tester
     
 
-Ce fichier peut être utilisé dans un test l'important dans les paramètres.
+This file can be used in a test that is important in the settings.
 
 .. image:: /_static/images/examples/client_testdata.png
 
 
-Exemple pour lire la variable:
+Example to read the variable:
 
 .. code-block:: python
   
   for d in input('DATA').splitlines():
       Trace(self).info( d ) 
   
-Paramètre de tests "shared"
+"Shared" test setting
 -------------------
 
-Les paramètres de type ``shared`` s'ajoutent depuis l'interface web ou depuis l'api REST.
-Ils sont partagés et accessibles par l'ensemble des tests d'un même projet. La valeur attendue 
-pour ce paramètre est de type ``JSON``.
+The `` shared`` parameters are added from the web interface or from the REST API.
+They are shared and accessible by all the tests of the same project. The expected value
+for this parameter is of `` JSON`` type.
 
-Une fenêtre de sélection dans le client graphique permet de sélectionner le paramètre à utiliser dans le test.
+A selection window in the graphical client allows you to select the parameter to be used in the test.
 
 .. image:: /_static/images/examples/client_params_shared.png
 
-Dans l'exemple ci-dessous, le paramètre de test ``MY_SERVER`` contient la valeur de la clé ``IP`` présente dans la variable 
-partagée ``MY_SERVER`` qui est elle-même présente dans le projet ``Common``.
+In the example below, the `` MY_SERVER`` test parameter contains the value of the `` IP`` key present in the variable
+shared `` MY_SERVER`` which is itself present in the `` Common`` project.
 
 .. image:: /_static/images/examples/client_param_shared.png
 
-.. tip:: Pour avoir un paramètre de test qui contient une liste d'éléments, il faut utiliser le type ``list-shared``.
+.. tip :: To have a test parameter that contains a list of elements, use the `` list-shared`` type.
 
-Utilisation d'une sonde
+Using a probe
 -------------------
 
-
-Pour utiliser une sonde, il faut 2 choses:
- - Déployer la boite à outils et démarrer la sonde souhaitée.
- - Déclarer la sonde dans le test.
+To use a probe, you need 2 things:
+  - Deploy the toolbox and start the desired probe.
+  - Declare the probe in the test.
  
-Pour sélectionner la sonde dans le test, il faut l'activer et la configurer dans le test (onglet ``Miscellaneous > Probes``)
+To select the probe in the test, it must be activated and configured in the test (tab `` Miscellaneous> Probes``)
 
 .. image:: /_static/images/examples/probe_tab.png
 
-Lors qu'une sonde est activée sur un test, l'exécution du test intialise automatiquement la sonde.
+When a probe is activated on a test, running the test automatically initializes the probe.
 
 .. image:: /_static/images/examples/probe_starting.png
 
-Après exécution, l'ensemble des fichiers collectés par la sonde sont téléchargés dans le serveur et accessible depuis le client graphique.
+After execution, all the files collected by the probe are downloaded to the server and accessible from the graphical client.
 
 .. image:: /_static/images/examples/probe_test_archives.png
 
-.. note:: Il est possible d'utiliser plusieurs sondes dans un test.
+.. note :: It is possible to use multiple probes in one test.
 
-Utilisation d'un agent
+Using an agent
 -------------------
 
-Pour utiliser un agent, il faut deux choses:
- - Déployer la boite à outils et sélectionner l'agent souhaité.
- - Déclarer l'agent dans le test
- - Configurer l'adaptateur pour utiliser l'agent.
+To use an agent, you need two things:
+  - Deploy the toolbox and select the desired agent.
+  - Declare the agent in the test
+  - Configure the adapter to use the agent.
 
-Les agents sont à déclarer depuis le client dans l'onglet ``Miscellaneous > Agents`` 
+Agents are to be declared from the client in the tab `` Miscellaneous> Agents``
 
 .. image:: /_static/images/examples/client_properties_agent.png
 
 
-L'activation du mode agent sur les adaptateurs se fait avec les arguments ``agentSupport`` et ``agent``.
+Enabling agent mode on adapters is done with the `` agentSupport`` and `` agent`` arguments.
 
 .. code-block:: python
   
@@ -692,11 +690,11 @@ L'activation du mode agent sur les adaptateurs se fait avec les arguments ``agen
    
    
 
-Dans la fenêtre d'analyse, il est possible de voir l'agent utilisé pour chaque évènement:
+In the analysis window, it is possible to see the agent used for each event:
 
 .. image:: /_static/images/examples/client_events_logger_agent.png
 
 .. note:: 
-  Il est conseillé de mettre en paramètre de test l'usage du mode agent.
+  It is advisable to put in test parameter the use of the agent mode.
   
   .. image:: /_static/images/examples/client_agent_support.png

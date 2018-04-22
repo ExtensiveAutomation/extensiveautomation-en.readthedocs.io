@@ -7,23 +7,23 @@ Logs
 Server
 ~~~~~~~
 
-Les logs serveurs sont stockés sur ``/opt/xtc/current/Var/Logs/``.
-Les logs sont configurés en mode ``INFO`` par défaut.
-Le niveau DEBUG peut être activé depuis le fichier ``settings.ini``.
+The server logs are stored on `` / opt / xtc / current / Var / Logs / ``.
+The logs are set in `` INFO`` mode by default.
+The DEBUG level can be activated from the `` settings.ini`` file.
 
 .. code-block::
     [Trace]
     level=DEBUG
 
-.. note:: Il est possible de changer le niveau de logs à chaud en faisant un ``xtcl reload``
+.. note :: It is possible to change the level of logs by doing an `` xtcl reload``
 
 Client
 ~~~~~~~
 
-Les logs du client sont disponibles dans ``<Program Files>/Extensive Testing Client/Logs/`` 
-Les logs sont configurés en mode ``INFO`` par défaut.
+The client logs are available in `` <Program Files> / Extensive Testing Client / Logs / ``
+The logs are set in `` INFO`` mode by default.
 
-Le niveau DEBUG peut être activé depuis les préférences du client.
+The DEBUG level can be activated from the client preferences.
 
 .. image:: /_static/images/client/preferences_application_logs.png
 
@@ -32,10 +32,10 @@ Le niveau DEBUG peut être activé depuis les préférences du client.
 Toolbox
 ~~~~~~~~~~~~~~
 
-Les logs de la boîte à outils sont disponibles dans ``<Program Files>/Extensive Testing Toolbox/Logs/``
-Les logs sont configurés en mode ``INFO`` par défaut.
+The logs in the toolbox are available in `` <Program Files> / Extensive Testing Toolbox / Logs / ``
+The logs are set in `` INFO`` mode by default.
 
-Le niveau DEBUG peut être activé depuis le fichier ``settings.ini``.
+The DEBUG level can be activated from the `` settings.ini`` file.
 
 .. code-block::
     [Trace]
@@ -43,28 +43,28 @@ Le niveau DEBUG peut être activé depuis le fichier ``settings.ini``.
     
 .. image:: /_static/images/client/toolbox_logs.png
     
-.. note:: Un redémarrage de la boîte à outils est nécessaire pour prendre en compte le changement
+.. note :: A restart of the toolbox is necessary to take into account the change
 
-FAQ
----
+Frequently Asked Questions
+--------------------------
 
-Comment changer le port d'écoute (tcp/443) du serveur ?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+How to change the listening port (tcp / 443) of the server?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~
 
-Editer le fichier ``/etc/httpd/conf.d/extensivetesting.conf`` et modifier le port d'écoute du virtual host 443.
-Ne pas oublier de modifier le fichier ``/etc/httpd/conf/httpd.conf`` pour ajouter le nouveau port d'écoute.
+Edit the `` / etc / httpd / conf.d / extensivetesting.conf`` file and change the listening port of the virtual host 443.
+Do not forget to modify the `` /etc/httpd/conf/httpd.conf`` file to add the new listening port.
 
-.. note:: Un redémarrage d'apache est nécessaire.
+.. note :: An apache restart is needed.
 
-Comment changer le port de connexion du client ?
+How to change the connection port of the client?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Le port de destination peut être modifié depuis les préférences du client.
-Ou bien directement depuis le fichier ``settings.ini``.
+The destination port can be changed from the client preferences.
+Or directly from the `` settings.ini`` file.
 
 .. image:: /_static/images/client/preferences_network_ports.png
 
-Afficher la version du serveur?
+View the server version?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
@@ -72,33 +72,33 @@ Afficher la version du serveur?
     ./xtctl version
     Server version: 18.0.0
     
-Quoi faire si l'installation du serveur ne fonctionne pas?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+What to do if the server installation does not work?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~
 
-Le déroulement de l'installation du serveur est loggué dans un fichier ``install.log`` présent dans le répertoire après extraction du paquet.
-Il faut rechercher les messages d'erreurs présents dans le fichier.
+The server installation process is logged in an `` install.log`` file in the directory after extracting the package.
+It is necessary to look for the error messages present in the file.
 
-Quoi faire si ma connection au serveur ne fonctionne pas?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+What if my connection to the server does not work?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~
 
-Si la connection depuis le client au serveur ne fonctionne pas, une analyse est nécessaire.
+If the connection from the client to the server does not work, an analysis is necessary.
 
-Le 1er reflex à avoir est de se connecter sur le serveur en SSH et d'exécuter la commande ``xtctl status`` pour vérifier si le serveur tourne.
+The first SLR to have is to connect to the server in SSH and execute the `` xtctl status`` command to check if the server is running.
 
-1. Si le serveur est en cours d'exécution alors il faut vérifier:
- - la connectivité réseau en le client et le serveur
- - un parefeu bloquant le flux https (443)
+1. If the server is running then check:
+  - network connectivity in the client and the server
+  - a firewall blocking the https flow (443)
 
-2. Si la connectivité réseau est bonne et que le serveur fonctionne (ou pas), il faut vérifier les logs.
-Le fichier est disponible dans le répertoire ``/opt/xtc/current/Var/Logs/output.log``. Il faut rechercher les messages de type ``ERROR``
+2. If the network connectivity is good and the server is working (or not), check the logs.
+The file is available in the `` / opt / xtc / current / Var / Logs / output.log`` directory. You must look for messages of type `` ERROR``
 
-Comment corriger l'erreur "hping3 n'est pas installé" ?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+How to fix the error "hping3 is not installed"?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~
 
-Cette erreur apparait durant l'exécution d'un test quand l'adaptateur ``Pinger`` est utilisé.
-En effet nécessite d'avoir la librairie système hping3 d'installée sur le serveur.
+This error occurs while running a test when the `` Pinger`` adapter is used.
+Indeed requires to have the hping3 system library installed on the server.
 
-Il faut récupérer les sources depuis https://github.com/antirez/hping et les compiler:
+You have to retrieve the sources from https://github.com/antirez/hping and compile them:
 
 .. code-block:: bash
   
@@ -109,24 +109,24 @@ Il faut récupérer les sources depuis https://github.com/antirez/hping et les c
   make
   make install
   
-Comment installer le serveur dans un répertoire spécifique?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+How to install the server in a specific directory?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~
 
-Par défaut, le serveur s'installe dans le répertoire ``/opt/xtc/``, il est possible de changer ce répertoire
-au moment de l'installation en modifiant la clé ``INSTALL`` dans le fichier ``default.cfg``
+By default, the server installs in the directory `` / opt / xtc / ``, it is possible to change this directory
+at installation time by changing the `` INSTALL`` key in the `` default.cfg`` file
 
 .. code-block:: bash
   
   INSTALL=/opt/xtc/
 
-L'installation du serveur reste bloquée sur l'ajout des librairies externes
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Server installation remains stuck on adding external libraries
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Avant de lancer l'installation du serveur, il faut vérifier que le service yum n'est pas déjà en cours d'exécution.
-Si oui alors, le script d'installation restera bloqué tant que ``yum`` n'est pas disponible. Ce problème 
-arrive généralement lorsque le serveur est installé en mode graphique.
+Before starting the server installation, check that the yum service is not already running.
+If so, the installation script will remain blocked until `` yum`` is available. This issue
+Usually happens when the server is installed in graphical mode.
 
-Dans les logs , on peut observer l'erreur suivante:
+In the logs, we can observe the following error:
 
 .. code-block:: bash
   
@@ -137,10 +137,10 @@ Dans les logs , on peut observer l'erreur suivante:
       Started: Tue Nov  1 11:09:25 2016 - 00:42 ago
       State  : Sleeping, pid: 3293
 
-Pour résoudre ce problème, il faut arrêter le programme qui utilise déjà ``yum``.
+To solve this problem, you must stop the program that already uses `` yum``.
 
-Impossible de naviguer dans l'interface web
+Can not navigate in the web interface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Si vous arrivez à vous connecter sur l'interface web mais qu'il est impossible de naviguer dans les menus.
-Le cookie généré par le serveur peut être expiré, il faut vérifier que le serveur est bien à l'heure.
+If you can connect to the web interface but can not navigate the menus.
+The cookie generated by the server may be expired, it must be verified that the server is on time.

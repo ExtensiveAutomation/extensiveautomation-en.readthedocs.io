@@ -1,388 +1,385 @@
 Assisted designs
 ===================
 
-Le client lourd comporte un assistant qui permet de créer des tests sans avoir de connaissances en développement. 
-On peut s'en servir pour:
- - Utiliser les fonctions basiques du framework
- - Exécuter des commandes systèmes (ssh)
- - Tester des applications avec un client lourd
- - Tester des applications web
- - Exécuter des actions sur un mobile Android
+The client contains a automation assistant to create tests without knownledge in development.
+The assistant can be used for:
+ - Use the basic functions of the framework
+ - Execute system commands (ssh)
+ - Test applications with a heavy client
+ - Test web applications
+ - Run actions on an Android mobile
 
-Le test se compose d'un enchaînement d'actions à réaliser.
-L'assistant génère automatiquement un ``test unit`` ou un ``test suite``. 
-Un test (script) existant peut être mis à jour depuis l'assistant aussi.
+The test consists of a sequence of actions to perform.
+The wizard automatically generates a ``test unit`` or ``test suite``.
+An existing test (script) can be updated from the wizard too.
 
-Pour ajouter une action dans l'assitant, il faut 
- - sélectionner l'action à réaliser 
- - la configurer
- - enregistrer l'action
+To add an action in the assistant, you have to
+  - select the action to perform
+  - configure it
+  - save the action
 
  
-L'assistant supporte nativement l'utilisation du cache. Il est donc possible 
-de sauvegarder ou récupérer des valeurs depuis le cache.
+The wizard natively supports the use of the cache. It is therefore possible
+save or retrieve values from the cache.
 
 .. image:: /_static/images/client_assistant/aa_basic_log.png
 
 .. note:: Il est possible de mélanger les différents types d'actions.
 
 .. important:: 
-  L'assistant permet de générer des tests en mode automatique mais il est aussi possible d'ajouter son propre code à l'intérieur 
-  avec l'action ``USERCODE``.
+  The wizard allows to generate tests in automatic mode but it is also possible to add its own code inside with the ``USERCODE`` action.
 
-Onglet Framework
+Framework Tabulation
 ------------------
 
-L'onglet ``framework`` permet d'utiliser les fonctions de base du framework de test.
+The ``framework`` tab allows you to use the basic functions of the test framework.
 
-Exemple de test réalisé avec l'assistant:
- 1. Affiche le message "bonjour" dans le test
- 2. Demande à l'utilisateur durant l'exécution son prénom et l'enregistre dans le cache avec la clé ``prenom``
- 3. Affiche le prénom dans le log du test
- 4. Vérifie depuis le cache si le prénom contient une valeur spécifique.
+Example of a test done with the assistant:
+  1. Display the message "hello" in the test
+  2. Ask the user during the execution his first name and save it in the cache with the ``firstname`` key
+  3. Display the first name in the test log
+  4. Check from the cache if the first name contains a specific value.
 
-.. image:: /_static/images/client_assistant/aa_basic_test.png
+.. image :: /_static/images/client_assistant/aa_basic_test.png
 
-Liste des actions disponibles:
+List of available actions:
 
-.. note:: En rouge, les actions indispensables.
+.. note :: In red, the essential actions.
 
-+--------------------+-----------------------------------------------------------------+
-| ``LOG MESSAGE``    |  Affiche un message d'information durant l'exécution du test    |
-+--------------------+-----------------------------------------------------------------+
-| LOG WARNING        |  Affiche un message d'attention durant l'exécution du test      |
-+--------------------+-----------------------------------------------------------------+
-| ``SET VALUE``      |  Sauvegarde une donnée dans le cache                            |
-+--------------------+-----------------------------------------------------------------+
-| RESET CACHE        |  Vide complètement le cache                                     |
-+--------------------+-----------------------------------------------------------------+
-| USERCODE           |  Permet d'ajouter du code personnalisé dans le test             |
-+--------------------+-----------------------------------------------------------------+
-| WAIT DURING        |  Attend pendant xx secondes                                     |
-+--------------------+-----------------------------------------------------------------+
-| ``CHECK IF VALUE`` |  Vérifie si la value contient un texte spécifique               |
-+--------------------+-----------------------------------------------------------------+
-| ASK SOMETHING      |  Demande une valeur à l'utilisateur (mode interaction)          |
-+--------------------+-----------------------------------------------------------------+
++ -------------------- + ---------------------------- ------------------------------------- +
+| `` LOG MESSAGE``     | Displays an informational message during test execution            |
++ -------------------- + ---------------------------- ------------------------------------- +
+| LOG WARNING          | Display a warning message during test execution                    |
++ -------------------- + ----------------------------------------------------------------- +
+| `` SET VALUE``       | Saves a data in the cache                                          |
++ -------------------- + ----------------------------------------------------------------- +
+| RESET CACHE          | Blank the cache completely                                         |
++ -------------------- + ----------------------------------------------------------------- +
+| USERCODE             | Add custom code in the test                                        |
++ -------------------- + ----------------------------------------------------------------- +
+| WAIT DURING          | Wait for xx seconds                                                |
++ -------------------- + ----------------------------------------------------------------- +
+| `` CHECK IF VALUE``  | Check if the value contains a specific text                        |
++ -------------------- + ----------------------------------------------------------------- +
+| ASK SOMETHING        | Request a value to the user (interaction mode)                     |
++ -------------------- + ----------------------------------------------------------------- +
 
-Onglet Système
+System tab
 -----------------
 
-L'onglet ``système`` permet d'exécuter des commandes sur un serveur distant disponible via SSH.
+The `` system`` tab allows you to execute commands on a remote server available via SSH.
 
-Exemple de test réalisé avec l'assistant:
- 1. Ouverture de la session ssh sur la machine distante 192.186.1.251
- 2. Envoi du texte `su -`
- 3. Attend de détecter le texte `Password:` à l'écran
- 4. Demande à l'utilisateur le mot de passe root et le stocke dans le cache avec la clé `pwd`
- 5. Envoi le mot de passe root en utilisant la valeur stockée dans le cache
- 6. Attend de détecter à l'écran le prompt de connexion
- 7. Ferme la connexion SSH.
+Example of a test done with the assistant:
+ 1. Opening the ssh session on the remote machine 192.186.1.251
+ 2. Sending the text `su -`
+ 3. Waits to detect the text `Password:` on the screen
+ 4. Ask the user for the root password and store it in the cache with the `pwd` key
+ 5. Send the root password using the value stored in the cache
+ 6. Waiting to detect on the screen the connection prompt
+ 7. Close the SSH connection.
  
-.. image:: /_static/images/client_assistant/aa_sys_example.png
+.. image :: /_static/images/client_assistant/aa_sys_example.png
 
-Liste des actions disponibles: 
+List of available actions:
 
-.. note:: En rouge, les actions indispensables.
+.. note :: In red, the essential actions.
 
-+------------------------+-----------------------------------------------------------------+
-| ``OPEN SSH SESSION``   |  Ouvre une session SSH                                          |
-+------------------------+-----------------------------------------------------------------+
-| CLOSE SESSION          |  Ferme la session                                               |
-+------------------------+-----------------------------------------------------------------+
-| CLEAR SCREEN           |  Vide l'écran                                                   |
-+------------------------+-----------------------------------------------------------------+
-| ``SEND TEXT``          |  Envoi une chaîne de caractères                                 |
-+------------------------+-----------------------------------------------------------------+
-| SEND SHORTCUT          |  Envoi un raccourci clavier (pour interrompre une action)       |
-+------------------------+-----------------------------------------------------------------+
-| ``CHECKING IF SCREEN`` |  Vérifie si l'écran contient un texte spécifique                |
-+------------------------+-----------------------------------------------------------------+
++ ------------------------ + ------------------------ ----------------------------------------- +
+| `` OPEN SSH SESSION`` | Open an SSH session |
++ ------------------------ + ------------------------ ----------------------------------------- +
+| CLOSE SESSION | Close the session |
++ ------------------------ + ------------------------ ----------------------------------------- +
+| CLEAR SCREEN | Blank screen |
++ ------------------------ + ------------------------ ----------------------------------------- +
+| `` SEND TEXT`` | Send a string of characters |
++ ------------------------ + ------------------------ ----------------------------------------- +
+| SEND SHORTCUT | Sending a keyboard shortcut (to interrupt an action) |
++ ------------------------ + ------------------------ ----------------------------------------- +
+| `` CHECKING IF SCREEN`` | Check if the screen contains specific text |
++ ------------------------ + ------------------------ ----------------------------------------- +
 
-.. note:: L'utilisation de l'action ``OPEN SSH SESSION`` est obligatoire avant de pouvoir utiliser les autres disponibles.
+.. note :: Using the `` OPEN SSH SESSION`` action is mandatory before you can use the others available.
 
-Onglet Application
+Tabulation application
 ------------------
 
-L'onglet ``application`` permet d'automatiser des applications riches en permettant:
- - de simuler le clavier
- - de simuler la souris
- - de rechercher des élements graphiques à l'écran
- - de rechercher du texte
+The `` application`` tab allows you to automate rich applications by allowing:
+ - to simulate the keyboard
+ - to simulate the mouse
+ - search for graphic elements on the screen
+ - to search for text
 
-.. warning:: un agent ``sikulix-server`` est nécessaire pour utiliser les actions.
+.. warning :: an agent `` sikulix-server`` is needed to use the actions.
 
-Exemple de test réalisé avec l'assistant:
- 1. Envoie le raccourci clavier `Win+R` pour ouvrir la fenêtre exécuter
- 2. Écrit le texte `cmd`
- 3. Envoie le raccourci clavier `Enter` pour ouvrir une fenêtre cmd.
- 4. Attend de détecter l'icône de la fenêtre cmd
- 5. Écrit le texte `cls & ver` pour afficher la version de Windows
- 6. Envoie le raccourci clavier `Enter` pour valider
- 7. Envoie le raccourci clavier `Ctrl+A` pour sélectionner le texte dans la fenêtre
- 8. Envoie le raccourci clavier `Ctrl+C` pour copier le texte sélectionné dans le presse-papier
- 9. Récupère le texte du presse papier et l'enregistre dans le cache
- 10. Affiche le texte copié depuis le cache
- 11. Écrit le texte `exit` dans la fenêtre cmd
- 12. Envoie le raccourci clavier `Enter` pour fermer la fenêtre.
+Example of a test done with the assistant:
+ 1. Send the keyboard shortcut `Win + R` to open the run window
+ 2. Write the text `cmd`
+ 3. Send the `Enter` keyboard shortcut to open a cmd window.
+ 4. Waiting to detect the icon of the cmd window
+ 5. Write the text `cls & ver` to display the version of Windows
+ 6. Send the `Enter` keyboard shortcut to validate
+ 7. Send the keyboard shortcut `Ctrl + A` to select the text in the window
+ 8. Send the keyboard shortcut `Ctrl + C` to copy the selected text to the clipboard
+ 9. Get the text from the clipboard and save it in the cache
+ 10. Displays the text copied from the cache
+ 11. Write the `exit` text in the cmd window
+ 12. Send the `Enter` keyboard shortcut to close the window.
 
-.. image:: /_static/images/client_assistant/aa_app_example.png
+.. image :: /_static/images/client_assistant/aa_app_example.png
 
-Liste des actions disponibles:
+List of available actions:
 
-.. note:: En rouge, les actions indispensables.
+.. note :: In red, the essential actions.
 
-**Contrôle de la souris** 	
+** Mouse control **
 
-+---------------------------+-----------------------------------------------------------------+
-| ``CLICK ON POSITION``     |  Clic sur la position (x,y)                                     |
-+---------------------------+-----------------------------------------------------------------+
-| DOUBLE CLICK ON POSITION  |  Double clic sur la position (x,y)                              |
-+---------------------------+-----------------------------------------------------------------+
-| RIGHT CLICK ON POSITION   |  Clic droit sur la position (x,y)                               |
-+---------------------------+-----------------------------------------------------------------+
-| MOUSE WHEEL DOWN          |  Tourne la molette de la souris vers le bas                     |
-+---------------------------+-----------------------------------------------------------------+
-| MOUSE WHEEL UP            |  Tourne la molette de la souris vers le haut                    |
-+---------------------------+-----------------------------------------------------------------+
-| MOVE TO POSITION          |  Déplace le curseur sur la position (x,y)                       |
-+---------------------------+-----------------------------------------------------------------+
++ --------------------------- + --------------------- -------------------------------------------- +
+| `` CLICK ON POSITION`` | Click on the position (x, y) |
++ --------------------------- + --------------------- -------------------------------------------- +
+| DOUBLE CLICK ON POSITION | Double click on the position (x, y) |
++ --------------------------- + --------------------- -------------------------------------------- +
+| RIGHT CLICK ON POSITION | Right click on the position (x, y) |
++ --------------------------- + --------------------- -------------------------------------------- +
+| MOUSE WHEEL DOWN | Turn the mouse wheel down |
++ --------------------------- + --------------------- -------------------------------------------- +
+| MOUSE WHEEL UP | Turn the mouse wheel up |
++ --------------------------- + --------------------- -------------------------------------------- +
+| MOVE TO POSITION | Move the cursor to the position (x, y) |
++ --------------------------- + --------------------- -------------------------------------------- +
  
-**Contrôle du clavier** 	
+** Keyboard control **
 
-+---------------------------+-----------------------------------------------------------------+
-| ``TYPE TEXT``             |  Écrit du texte                                                 |
-+---------------------------+-----------------------------------------------------------------+
-| TYPE PATH                 |  Écrit du texte (à utiliser pour les chemins d'accès)           |
-+---------------------------+-----------------------------------------------------------------+
-| TYPE PASSWORD             |  Écrit du texte (à utiliser pour taper un mot de passe)         |
-+---------------------------+-----------------------------------------------------------------+
-| GET TEXT FROM CLIPBOARD   |  Récupère le texte présent dans le presse-papier                |
-+---------------------------+-----------------------------------------------------------------+
-| ``KEYBOARD SHORTCUT``     |  Permet de taper un raccourci clavier                           |
-+---------------------------+-----------------------------------------------------------------+
++ --------------------------- + --------------------- -------------------------------------------- +
+| `` TYPE TEXT`` | Writes text |
++ --------------------------- + --------------------- -------------------------------------------- +
+| TYPE PATH | Writes text (to use for paths) |
++ --------------------------- + --------------------- -------------------------------------------- +
+| TYPE PASSWORD | Writes text (to be used to type a password) |
++ --------------------------- + --------------------- -------------------------------------------- +
+| GET TEXT FROM CLIPBOARD | Retrieves the text present in the clipboard |
++ --------------------------- + --------------------- -------------------------------------------- +
+| `` KEYBOARD SHORTCUT`` | Allows you to type a keyboard shortcut |
++ --------------------------- + --------------------- -------------------------------------------- +
 
-**Contrôle chaîne de caractères** 	
+** String control **
 
-+---------------------------+-----------------------------------------------------------------+
-| CLICK ON WORD             |  Recherche un mot à l'écran et clic dessus                      |
-+---------------------------+-----------------------------------------------------------------+
-| DOUBLE CLICK ON WORD      |  Recherche un mot à l'écran et double-clic dessus               |
-+---------------------------+-----------------------------------------------------------------+
-| RIGHT CLICK ON WORD       |  Recherche un mot à l'écran et effectue un clic-droit dessus    |
-+---------------------------+-----------------------------------------------------------------+
-| WAIT WORD                 |  Recherche un mot jusqu'à ce qu'il apparaisse                   |
-+---------------------------+-----------------------------------------------------------------+
-| WAIT AND CLICK ON WORD    |  Recherche un mot jusqu'à ce qu'il apparaisse et clic dessus    |
-+---------------------------+-----------------------------------------------------------------+	
- 
-**Contrôle d'images**
++ --------------------------- + --------------------- -------------------------------------------- +
+| CLICK ON WORD | Search a word on the screen and click on it |
++ --------------------------- + --------------------- -------------------------------------------- +
+| DOUBLE CLICK ON WORD | Search for a word on the screen and double-click on it |
++ --------------------------- + --------------------- -------------------------------------------- +
+| RIGHT CLICK ON WORD | Search for a word on the screen and right-click on it |
++ --------------------------- + --------------------- -------------------------------------------- +
+| WAIT WORD | Search a word until it appears |
++ --------------------------- + --------------------- -------------------------------------------- +
+| WAIT AND CLICK ON WORD | Search a word until it appears and click on it |
++ --------------------------- + --------------------- -------------------------------------------- +
 
-+-----------------------------+----------------------------------------------------------------------------+
-| CLICK ON IMAGE              |  Recherche une image et clic dessus                                        |
-+-----------------------------+----------------------------------------------------------------------------+
-| DOUBLE CLICK ON IMAGE       |  Recherche une image et double-clic dessus                                 |
-+-----------------------------+----------------------------------------------------------------------------+
-| RIGHT CLICK ON IMAGE        |  Recherche une image et effectue un clic-droit dessus                      |
-+-----------------------------+----------------------------------------------------------------------------+
-| WAIT IMAGE                  |  Recherche une image jusqu'à la voir apparaître à l'écran                  |
-+-----------------------------+----------------------------------------------------------------------------+
-| ``WAIT AND CLICK ON IMAGE`` |  Recherche une image jusqu'à la voir apparaître à l'écran et clic dessus   |
-+-----------------------------+----------------------------------------------------------------------------+
-| HOVER MOUSE ON              |  Recherche une image et déplace le curseur de la souris dessus             |
-+-----------------------------+----------------------------------------------------------------------------+
-| DRAG IMAGE AND DROP TO      |  Recherche une image et effectue un drag and drop vers la position (x,y)   |
-+-----------------------------+----------------------------------------------------------------------------+
+** Image Control **
 
-Onglet Navigateur
++ ----------------------------- + ------------------- -------------------------------------------------- ------- +
+| CLICK ON IMAGE | Search an image and click on it |
++ ----------------------------- + ------------------- -------------------------------------------------- ------- +
+| DOUBLE CLICK ON IMAGE | Search an image and double-click on it |
++ ----------------------------- + ------------------- -------------------------------------------------- ------- +
+| RIGHT CLICK ON IMAGE | Search an image and right-click on it |
++ ----------------------------- + ------------------- -------------------------------------------------- ------- +
+| WAIT IMAGE | Search an image until you see it on the screen |
++ ----------------------------- + ------------------- -------------------------------------------------- ------- +
+| `` WAIT AND CLICK ON IMAGE`` | Search an image until you see it on the screen and click on it |
++ ----------------------------- + ------------------- -------------------------------------------------- ------- +
+| HOVER MOUSE ON | Find an image and move the mouse cursor over it |
++ ----------------------------- + ------------------- -------------------------------------------------- ------- +
+| DRAG IMAGE AND DROP TO | Find an image and drag and drop to position (x, y) |
++ ----------------------------- + ------------------- -------------------------------------------------- ------- +
+
+Browser Tabulation
 ----------------
 
-L'onglet ``navigateur`` permet d'automatiser des applications web en permettant:
- - de piloter les navigateurs (firefox, internet explorer, chrome, edge)
- - de simuler le clavier
+The `` browser`` tab allows you to automate web applications by allowing:
+ - to control browsers (firefox, internet explorer, chrome, edge)
+ - to simulate the keyboard
 
-.. warning:: un agent ``selenium3-server`` ou ``selenium2-server`` est nécessaire pour utiliser les actions.
+.. warning :: an agent `` selenium3-server`` or `` selenium2-server`` is needed to use the actions.
 
-.. tip:: 
- Pour cliquer sur un élement HTML, il est conseillé d'utiliser systématiquement 
- la fonction ``WAIT VISIBLE AND CLICK ON HTML ELEMENT``.
+.. tip ::
+ To click on an HTML element, it is advisable to use systematically
+ the `` WAIT VISIBLE AND CLICK ON HTML ELEMENT`` function.
 
-Exemple de test réalisé avec l'assistant:
- 1. Récupère depuis le cache le prénom et l'envoie dans l'élément HTML trouvé par le xpath
- 2. Clic sur l'élément HTML trouvé par le xpath
- 3. Recherche l'élément HTML trouvé par le xpath et clic dessus dès qu'il est visible à l'écran.
+Example of a test done with the assistant:
+ 1. Get the name from the cache and send it to the HTML element found by the xpath
+ 2. Click on the HTML element found by the xpath
+ 3. Find the HTML element found by the xpath and click on it as soon as it is visible on the screen.
  
-.. image:: /_static/images/client_assistant/aa_web_example.png
+.. image :: /_static/images/client_assistant/aa_web_example.png
 
-.. note:: 
-  Il est possible d'ouvrir plusieurs navigateur en parallèle sur le même poste à définissant une nouvelle session.
-  La nom se la session se définit sur l'action ``OPEN BROWSER``.
-  Il faut ensuite utiliser l'action ``SWITCH TO SESSION`` pour changer de session.
+.. note ::
+  It is possible to open multiple browsers in parallel on the same extension to define a new session.
+  The name of the session is defined by the `` OPEN BROWSER`` action.
+  Then use the `` SWITCH TO SESSION`` action to switch sessions.
 
-Liste des actions disponibles:
+Available actions:
 
-.. note:: En rouge, les actions indispensables.
+.. note :: In red, the essential actions.
 
-**Contrôle navigateur** 
+** Browser Control **
 
-+---------------------------+-----------------------------------------------------------------+
-| ``OPEN BROWSER``          |  Ouvre le navigateur et charge l'url spécifié                   |
-+---------------------------+-----------------------------------------------------------------+
-| ``CLOSE BROWSER``        |  Ferme le navigateur                                            |
-+---------------------------+-----------------------------------------------------------------+
-| MAXIMIZE BROWSER          |  Aggrandit la fenêtre du navigateur                             |
-+---------------------------+-----------------------------------------------------------------+		
++ --------------------------- + --------------------- -------------------------------------------- +
+| `` OPEN BROWSER`` | Open the browser and load the specified url |
++ --------------------------- + --------------------- -------------------------------------------- +
+| `` CLOSE BROWSER`` | Closes the browser |
++ --------------------------- + --------------------- -------------------------------------------- +
+| MAXIMIZE BROWSER | Enlarges the browser window |
++ --------------------------- + --------------------- -------------------------------------------- +
+** Navigation actions **
+
++ --------------------------- + --------------------- -------------------------------------------- +
+| REFRESH PAGE | Refresh the page |
++ --------------------------- + --------------------- -------------------------------------------- +
+| GO BACK | Backspace |
++ --------------------------- + --------------------- -------------------------------------------- +
+| GO FORWARD | Go forward |
++ --------------------------- + --------------------- -------------------------------------------- +
+| ACCEPT ALERT | Validate the javascript alert |
++ --------------------------- + --------------------- -------------------------------------------- +
+| DISMISS ALERT | Dismiss the javascript alert |
++ --------------------------- + --------------------- -------------------------------------------- +
+| CLOSE CURRENT WINDOW | Closes the current window |
++ --------------------------- + --------------------- -------------------------------------------- +
+| SWITCH TO NEXT WINDOW | Toggle on next window |
++ --------------------------- + --------------------- -------------------------------------------- +
+| SWITCH TO FRAME | Toggle on the next frame |
++ --------------------------- + --------------------- -------------------------------------------- +
+| SWITCH TO SESSION | Toggles to another selenium session |
++ --------------------------- + --------------------- -------------------------------------------- +
+| SWITCH TO WINDOW | Toggle on the next frame |
++ --------------------------- + --------------------- -------------------------------------------- +
  
-**Actions de navigation**	
+** javascript actions **
 
-+---------------------------+-----------------------------------------------------------------+
-| REFRESH PAGE              |  Rafraîchissement de la page                                    |
-+---------------------------+-----------------------------------------------------------------+
-| GO BACK                   |  Retour arrière                                                 |
-+---------------------------+-----------------------------------------------------------------+
-| GO FORWARD                |  Go forward                                                     |
-+---------------------------+-----------------------------------------------------------------+
-| ACCEPT ALERT              |  Valide l'alerte javascript                                     |
-+---------------------------+-----------------------------------------------------------------+
-| DISMISS ALERT             |  Dismiss the javascript alert                                   |
-+---------------------------+-----------------------------------------------------------------+
-| CLOSE CURRENT WINDOW      |  Ferme la fenêtre courante                                      |
-+---------------------------+-----------------------------------------------------------------+
-| SWITCH TO NEXT WINDOW     |  Bascule sur la fenêtre suivante                                |
-+---------------------------+-----------------------------------------------------------------+
-| SWITCH TO FRAME           |  Bascule sur la frame suivante                                  |
-+---------------------------+-----------------------------------------------------------------+
-| SWITCH TO SESSION         |  Bascule sur une autre session selenium                         |
-+---------------------------+-----------------------------------------------------------------+
-| SWITCH TO WINDOW          |  Bascule sur la frame suivante                                  |
-+---------------------------+-----------------------------------------------------------------+
++ ------------------------------------ + ------------ -------------------------------------------------- --- +
+| EXECUTE JAVASCRIPT ON HTML ELEMENT | Allows you to inject javascript script on an html element |
++ ------------------------------------ + ------------ -------------------------------------------------- --- +
 
- 
-**Actions javascript**	
+** Actions on html elements **
 
-+------------------------------------+-----------------------------------------------------------------+
-| EXECUTE JAVASCRIPT ON HTML ELEMENT |  Permet d'injecter du javascript script sur un élement html     |
-+------------------------------------+-----------------------------------------------------------------+
++ ------------------------------------------- + ----- -------------------------------------------------- --------------- +
+| WAIT HTML ELEMENT | Wait for the appearance of a precise HTML element |
++ ------------------------------------------- + ----- -------------------------------------------------- --------------- +
+| WAIT AND CLICK ON HTML ELEMENT | Wait for the appearance of a precise HTML element and click on it |
++ ------------------------------------------- + ----- -------------------------------------------------- --------------- +
+| WAIT VISIBLE HTML ELEMENT | Wait for an HTML element to be visible to the user |
++ ------------------------------------------- + ----- -------------------------------------------------- --------------- +
+| WAIT NOT VISIBLE HTML ELEMENT | Wait until an HTML element is not visible to the user |
++ ------------------------------------------- + ----- -------------------------------------------------- --------------- +
+| `` WAIT VISIBLE AND CLICK ON HTML ELEMENT`` | Wait for an HTML element to be visible to the user and click on it |
++ ------------------------------------------- + ----- -------------------------------------------------- --------------- +
+| HOVER ON HTML ELEMENT | Move the mouse cursor over a specific HTML element |
++ ------------------------------------------- + ----- -------------------------------------------------- --------------- +
+| CLICK ON HTML ELEMENT | Click on a specific HTML element |
++ ------------------------------------------- + ----- -------------------------------------------------- --------------- +
+| DOUBLE CLICK ON HTML ELEMENT | Double click on a specific HTML element |
++ ------------------------------------------- + ----- -------------------------------------------------- --------------- +
+| CLEAR TEXT ON HTML ELEMENT | Empty the text on a specific HTML element |
++ ------------------------------------------- + ----- -------------------------------------------------- --------------- +
+| `` SELECT ITEM BY TEXT`` | Select item according to the text (for combolist or list) |
++ ------------------------------------------- + ----- -------------------------------------------------- --------------- +
+| `` SELECT ITEM BY VALUE`` | Select item according to the value attribute (for combolist or list) |
++ ------------------------------------------- + ----- -------------------------------------------------- --------------- +
 
-**Actions sur les éléments html**
+** Text Recovery **
 
-+-------------------------------------------+----------------------------------------------------------------------+
-| WAIT HTML ELEMENT                         | Attend l'apparition d'un élément HTML précis                         |
-+-------------------------------------------+----------------------------------------------------------------------+
-| WAIT AND CLICK ON HTML ELEMENT            | Attend l'apparition d'un élément HTML précis et clic dessus          |
-+-------------------------------------------+----------------------------------------------------------------------+
-| WAIT VISIBLE HTML ELEMENT                 | Attend qu'un élément HTML soit visible à l'utilisateur               |
-+-------------------------------------------+----------------------------------------------------------------------+
-| WAIT NOT VISIBLE HTML ELEMENT             | Attend qu'un élément HTML ne soit pas visible à l'utilisateur        |
-+-------------------------------------------+----------------------------------------------------------------------+
-| ``WAIT VISIBLE AND CLICK ON HTML ELEMENT``| Attend qu'un élément HTML soit visible à l'utilisateur et clic dessus|
-+-------------------------------------------+----------------------------------------------------------------------+
-| HOVER ON HTML ELEMENT                     | Déplace le curseur de la souris sur un élement HTML précis           |
-+-------------------------------------------+----------------------------------------------------------------------+
-| CLICK ON HTML ELEMENT                     | Clic sur un élément HTML précis                                      | 
-+-------------------------------------------+----------------------------------------------------------------------+
-| DOUBLE CLICK ON HTML ELEMENT              | Double clic sur un élément HTML précis                               |
-+-------------------------------------------+----------------------------------------------------------------------+
-| CLEAR TEXT ON HTML ELEMENT                | Vide le texte sur un élément HTML précis                             |
-+-------------------------------------------+----------------------------------------------------------------------+
-| ``SELECT ITEM BY TEXT``                   |  Select item according to the text (for combolist or list)           |
-+-------------------------------------------+----------------------------------------------------------------------+
-| ``SELECT ITEM BY VALUE``                  | Select item according to the value attribute (for combolist or list) |
-+-------------------------------------------+----------------------------------------------------------------------+
++ -------------------------------- + ---------------- ------------------------------------------------- +
+| GET TEXT ALERT | Retrieves the text of an alert message javascript |
++ -------------------------------- + ---------------- ------------------------------------------------- +
+| `` GET TEXT FROM HTML ELEMENT`` | Retrieves the text an exact html element |
++ -------------------------------- + ---------------- ------------------------------------------------- +
+| GET PAGE TITLE | Retrieves the title of the page |
++ -------------------------------- + ---------------- ------------------------------------------------- +
+| GET PAGE URL | Get the URL of the page |
++ -------------------------------- + ---------------- ------------------------------------------------- +
+| GET PAGE SOURCE CODE | Get the source code page |
++ -------------------------------- + ---------------- ------------------------------------------------- +
 
-**Récupération de texte** 
+** Keyboard simulation **
 
-+--------------------------------+-----------------------------------------------------------------+
-| GET TEXT ALERT                 |  Récupère le texte d'un message alerte javascript               |
-+--------------------------------+-----------------------------------------------------------------+
-| ``GET TEXT FROM HTML ELEMENT`` |  Récupère le texte un élément html précis                       |
-+--------------------------------+-----------------------------------------------------------------+
-| GET PAGE TITLE                 |  Récupère le titre de la page                                   |
-+--------------------------------+-----------------------------------------------------------------+
-| GET PAGE URL                   |  Récupère l'url de la page                                      |
-+--------------------------------+-----------------------------------------------------------------+
-| GET PAGE CODE SOURCE           |  Récupère le code source la page                                |
-+--------------------------------+-----------------------------------------------------------------+			
++ ------------------------------- + ----------------- ------------------------------------------------ +
+| TYPE KEYBOARD SHORTCUT | Sends a keyboard shortcut to a specific HTML element |
++ ------------------------------- + ----------------- ------------------------------------------------ +
+| `` TYPE TEXT ON HTML ELEMENT`` | Sends text on a specific HTML element |
++ ------------------------------- + ----------------- ------------------------------------------------ +
 
-**Simulation clavier** 	
-
-+-------------------------------+-----------------------------------------------------------------+
-| TYPE KEYBOARD SHORTCUT        |  Envoie un raccourci clavier sur un élément HTML précis         |
-+-------------------------------+-----------------------------------------------------------------+
-| ``TYPE TEXT ON HTML ELEMENT`` |  Envoie du texte sur un élément HTML précis                     |
-+-------------------------------+-----------------------------------------------------------------+	
-
-Onglet Android
+Android Tabulation
 --------------
 
-L'onglet ``android`` permet d'automatiser des applications mobiles en permettant:
- - de simuler le clavier
- - de simuler l'utilisation du doigts sur l'écran
- - de piloter le système et les applications 
+The `` android`` tab allows you to automate mobile applications by enabling:
+  - to simulate the keyboard
+  - to simulate the use of the fingers on the screen
+  - to control the system and the applications
 
-.. warning:: un agent ``adb`` est nécessaire pour utiliser les actions.
+.. warning :: an adb agent is needed to use the actions.
 
-Aperçu de l'agent
+Overview of the agent
 
-.. image:: /_static/images/client_assistant/aa_mob_preview.png
+.. image :: /_static/images/client_assistant/aa_mob_preview.png
 
-Exemple de test réalisé avec l'assistant:
- 1. Réveille l'appareil
- 2. Débloque l'appareil
- 3. Clic sur le bouton `HOME`
- 4. Arrête l'application
- 5. Clic sur l'application `Play Store` pour l'ouvrir
- 6. Attend que l'application s'ouvre et recherche le menu `APPS & GAMES`
- 7. Clic sur le texte `ENTERTAINMENT`
- 8. Clic sur le menu `MOVIES & TV`
- 9. Attend pendant 5 secondes
- 10. Recherche l'image
- 11. Mise en veille de l'appareil.
+Example of a test done with the assistant:
+  1. Wake up the device
+  2. Unlock the device
+  3. Click on the `HOME` button
+  4. Stop the application
+  5. Click on the 'Play Store` app to open it
+  6. Wait for the application to open and search the `APPS & GAMES` menu
+  7. Click on the text `ENTERTAINMENT`
+  8. Click on the menu 'MOVIES & TV`
+  9. Wait for 5 seconds
+  10. Research the image
+  11. Put the device to sleep.
 
 .. image:: /_static/images/client_assistant/aa_sys_mobile.png
 
-Liste des actions disponibles:
+Available actions:
 
-.. note:: En rouge, les actions indispensables.
+.. note:: In red, mandatory actions.
 
-**Contrôle du mobile**
+**Mobile controls**
 	
-+---------------------------+-----------------------------------------------------------------+
-| ``WAKE UP AND UNLOCK``    |  Réveille et débloque l'appareil                                |
-+---------------------------+-----------------------------------------------------------------+
-| REBOOT                    |  Redémarrage de l'appareil                                      |
-+---------------------------+-----------------------------------------------------------------+
-| SLEEP                     |  Mise en veille                                                 |
-+---------------------------+-----------------------------------------------------------------+
++ --------------------------- + --------------------- -------------------------------------------- +
+| `` WAKE UP AND UNLOCK`` | Wake up and unlock the device |
++ --------------------------- + --------------------- -------------------------------------------- +
+| REBOOT | Restarting the device |
++ --------------------------- + --------------------- -------------------------------------------- +
+| SLEEP | Paused |
++ --------------------------- + --------------------- -------------------------------------------- +
 
-**Textes** 	
+**Texts** 	
 
-+------------------------------+-----------------------------------------------------------------+
-| ``TYPE SHORTCUT``            |  Simule un raccourci                                            |
-+------------------------------+-----------------------------------------------------------------+
-| ``TYPE TEXT ON XML ELEMENT`` |  Envoie du texte sur un élément précis de l'interface           |
-+------------------------------+-----------------------------------------------------------------+
-| GET TEXT FROM XML ELEMENT    |  Récupère le texte d'un élément précis de l'interface           |
-+------------------------------+-----------------------------------------------------------------+
- 
++ ------------------------------ + ------------------ ----------------------------------------------- +
+| `` TYPE SHORTCUT`` | Simulates a shortcut |
++ ------------------------------ + ------------------ ----------------------------------------------- +
+| `` TYPE TEXT ON XML ELEMENT`` | Sends text on a specific element of the interface |
++ ------------------------------ + ------------------ ----------------------------------------------- +
+| GET TEXT FROM XML ELEMENT | Retrieves the text of a specific element of the interface |
++ ------------------------------ + ------------------ ----------------------------------------------- +
+
 **Contrôles des éléments XML**
 
-+-----------------------------------+--------------------------------------------------------------------------------+
-| CLEAR XML ELEMENT                 |  Supprime le texte d'un élément précis de l'interface                          |
-+-----------------------------------+--------------------------------------------------------------------------------+
-| CLICK ON XML ELEMENT              |  Clic sur un élément précis de l'interface                                     |
-+-----------------------------------+--------------------------------------------------------------------------------+
-| LONG CLICK ON XML ELEMENT         |  Clic longue-durée sur un élément précis de l'interface                        |
-+-----------------------------------+--------------------------------------------------------------------------------+
-| ``WAIT AND CLICK ON XML ELEMENT`` |  Attend l'apparition d'un élément précis de l'interface et clic dessus         |
-+-----------------------------------+--------------------------------------------------------------------------------+		
- 
-**Tap sur l'écran** 
++ ----------------------------------- + ------------- -------------------------------------------------- ----------------- +
+| CLEAR XML ELEMENT | Removes text from a specific element of the interface |
++ ----------------------------------- + ------------- -------------------------------------------------- ----------------- +
+| CLICK ON XML ELEMENT | Click on a specific element of the interface |
++ ----------------------------------- + ------------- -------------------------------------------------- ----------------- +
+| LONG CLICK ON XML ELEMENT | Long-term click on a specific element of the interface |
++ ----------------------------------- + ------------- -------------------------------------------------- ----------------- +
+| `` WAIT AND CLICK ON XML ELEMENT`` | Wait for the appearance of a specific element of the interface and click on it |
++ ----------------------------------- + ------------- -------------------------------------------------- ----------------- +
 
-+---------------------------+-----------------------------------------------------------------+
-| ``CLICK TO POSITION``     |  Clic sur la position x,y                                       |
-+---------------------------+-----------------------------------------------------------------+
-| DRAG FROM POSITION        |  Drag depuis la position x1,y1 vers x2,y2                       |
-+---------------------------+-----------------------------------------------------------------+
-| SWIPE FROM POSITION       |  Swipe depuis la position x1,y1 vers x2,y2                      |
-+---------------------------+-----------------------------------------------------------------+
+**Tap on screen** 
+
++ --------------------------- + --------------------- -------------------------------------------- +
+| `` CLICK TO POSITION`` | Click on the position x, y |
++ --------------------------- + --------------------- -------------------------------------------- +
+| DRAG FROM POSITION | Drag from position x1, y1 to x2, y2 |
++ --------------------------- + --------------------- -------------------------------------------- +
+| SWIPE FROM POSITION | Swipe from position x1, y1 to x2, y2 |
++ --------------------------- + --------------------- -------------------------------------------- +

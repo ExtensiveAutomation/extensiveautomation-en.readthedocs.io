@@ -12,15 +12,15 @@ Add user
 ----------------------
 
 Only an administrator can add a new user. 
-La création d'un utilisateur nécessite à minima les paramètres suivants et peut se faire via l'interface web ou bien l'API
- - nom d'utilisateur
- - mot de passe
+The creation of a user requires at least the following parameters and can be done via the web interface or the API
+  - username
+  - password
 
 .. image:: /_static/images/webinterface/add_user.png
 
-.. note:: L'email est utilisée par la solution pour envoyer les rapports de tests et résultats.
+.. note :: Email is used by the solution to send test reports and results.
 
-.. note:: Il est possible de configurer plusieurs adresses email pour un utilisateur en les séparants avec ``;``
+.. note :: It is possible to configure multiple email addresses for a user by separating them with ``; ``
 
 Delete a user
 ----------------------

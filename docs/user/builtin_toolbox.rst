@@ -1,48 +1,48 @@
 Toolbox
 ==============
 
-La boite à outils permet de démarrer des agents ou des sondes sur des postes dédiés.
+The toolbox allows you to start agents or probes on dedicated workstations.
 
- - Les agents sont indispensables pour exécuter des tests avec Selenium sur des postes dédiés ou bien pour déporter l'exécution d'un test.
- - Les sondes peuvent être utilisées pour récupérer des logs automatiquement durant l'exécution d'un test.
+  - Agents are required to run tests with Selenium on dedicated workstations or to deport the execution of a test.
+  - Probes can be used to retrieve logs automatically during the execution of a test.
 
-.. image:: /_static/images/toolbox/toolbox.png
+.. image :: /_static/images/toolbox/toolbox.png
    
-Déploiement
+Deployment
 -----------
 
-Cette fenêtre permet de choisir l'agent ou la sonde à démarrer. Le type d'agent ou sonde à démarrer peut être choisi 
-dans la liste déroulante. Enfin un agent ou sonde nécessite d'être enregistré auprès du serveur de test pour pouvoir l'utiliser.
+This window allows you to choose the agent or probe to start. The type of agent or probe to start can be chosen
+in the drop-down list. Finally, an agent or probe needs to be registered with the test server in order to use it.
 
-Un agent va permettre de faire une exécution distribuée de vos tests. 
-Par exemple, un agent déployé sur plusieurs machines va permettre d'exécuter le même test sur différent environnement à tester ou piloter.
+An agent will allow you to perform a distributed run of your tests.
+For example, an agent deployed on several machines will allow to run the same test on different environment to test or pilot.
 
-La liste complète des agents et sondes disponibles sont décrits dans le chapitre `Compléments Serveur > Agents ou Sondes`.
+The complete list of available agents and probes are described in the `Server Add-ons> Agents or Probes` chapter.
 
-.. note:: Le nom de l'agent ou la sonde doit être unique pour réussir l'enregistrement.
+.. note :: The agent name or probe must be unique for successful registration.
 
-.. tip:: 
-  Pour une meilleure visibilité des agents ou sondes disponibles, il est conseillé de respecter le formalisme suivant
-  pour les noms:
-    [agent|sonde].[environnement].[prénom_testeur].[nom][numéro_instance]
+.. tip ::
+   For a better visibility of the agents or probes available, it is advisable to respect the following formalism
+   for the names:
+     [Agent | probe] [Environment] [prénom_testeur] [name] [instance-number]...
     
-    Exemple:
-        agent.win.denis.socket01
+     Example:
+         agent.win.denis.socket01
 
-Exemple d'un agent déployé et en cours d'exécution:
+Example of a deployed and running agent:
 
-.. image:: /_static/images/toolbox/agent_deployed.png
+.. image :: /_static/images/toolbox/agent_deployed.png
 
-Compléments
+More
 -----------
 
-La boite à outils peut être enrichie avec de nouveaux plugins.
+The toolbox can be enriched with new plugins.
 
-Pour ce faire il faut suivre la procédure décrite dans le chapitre `Contributions > Développement plugins > Boites à outils`.
-Les plugins sont à déposer dans le répertoire ``Plugins``.
+To do this, follow the procedure described in the chapter `Contributions> Development plugins> Toolboxes`.
+Plugins are to be dropped into the `` Plugins`` directory.
 
-.. image:: /_static/images/toolbox/toolbox_plugins_install.png
+.. image :: /_static/images/toolbox/toolbox_plugins_install.png
 
-Après redémarrage de la boite à outils, le complément apparait dans la liste des agents ``external``
+After restarting the toolbox, the add-in appears in the list of "external" agents
 
-.. image:: /_static/images/toolbox/toolbox_plugins.png
+.. image :: /_static/images/toolbox/toolbox_plugins.png

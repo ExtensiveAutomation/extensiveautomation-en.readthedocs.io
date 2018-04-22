@@ -86,27 +86,27 @@ Description of most important functions:
 **Authentication**
 
 +-------------------------+-----------------------------------------------------------------------------------------------------------------+
-|/rest/session/login      | `Details <https://demo.extensivetesting.org/web/common-api-rest/index.html#api-Session-sessionLogin>`_          |
+|/rest/session/login      | `Details <https://demo.extensiveautomation.org/web/common-api-rest/index.html#api-Session-sessionLogin>`_          |
 +-------------------------+-----------------------------------------------------------------------------------------------------------------+
-|/rest/session/logout     | `Details <https://demo.extensivetesting.org/web/common-api-rest/index.html#api-Session-sessionLogout>`_         |
+|/rest/session/logout     | `Details <https://demo.extensiveautomation.org/web/common-api-rest/index.html#api-Session-sessionLogout>`_         |
 +-------------------------+-----------------------------------------------------------------------------------------------------------------+
 
 **Execute a test**
 
 +-------------------------+-----------------------------------------------------------------------------------------------------------------+
-|/rest/tests/schedule     | `Details <https://demo.extensivetesting.org/web/tester-api-rest/index.html#api-Tests-testsSchedule>`_           |
+|/rest/tests/schedule     | `Details <https://demo.extensiveautomation.org/web/tester-api-rest/index.html#api-Tests-testsSchedule>`_           |
 +-------------------------+-----------------------------------------------------------------------------------------------------------------+
-|/rest/tests/schedule/tpg | `Details <https://demo.extensivetesting.org/web/tester-api-rest/index.html#api-Tests-testsScheduleTpg>`_        |
+|/rest/tests/schedule/tpg | `Details <https://demo.extensiveautomation.org/web/tester-api-rest/index.html#api-Tests-testsScheduleTpg>`_        |
 +-------------------------+-----------------------------------------------------------------------------------------------------------------+
 
 **Read the result of a test executed**
 
 +-------------------------+-----------------------------------------------------------------------------------------------------------------+
-|/rest/results/reports    | `Details <https://demo.extensivetesting.org/web/tester-api-rest/index.html#api-Reports-resultsReports>`_        |
+|/rest/results/reports    | `Details <https://demo.extensiveautomation.org/web/tester-api-rest/index.html#api-Reports-resultsReports>`_        |
 +-------------------------+-----------------------------------------------------------------------------------------------------------------+
-|/rest/results/status     | `Details <https://demo.extensivetesting.org/web/tester-api-rest/index.html#api-Results-resultsStatus>`_         |
+|/rest/results/status     | `Details <https://demo.extensiveautomation.org/web/tester-api-rest/index.html#api-Results-resultsStatus>`_         |
 +-------------------------+-----------------------------------------------------------------------------------------------------------------+
-|/rest/results/verdict    | `Details <https://demo.extensivetesting.org/web/tester-api-rest/index.html#api-Results-resultsVerdict>`_        |
+|/rest/results/verdict    | `Details <https://demo.extensiveautomation.org/web/tester-api-rest/index.html#api-Results-resultsVerdict>`_        |
 +-------------------------+-----------------------------------------------------------------------------------------------------------------+
 
 

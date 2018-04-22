@@ -3,43 +3,43 @@ Web interface
 
 .. image:: /_static/images/webinterface/tests_center_main_page.png
 
-Partie tests
+Tests part
 ------------
 
-Variables réutilisables
+Shared variables
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Les variables réutilisables permettent de décrire un jeux de données. Le format ``JSON`` doit être utilisé.
-Ils sont accessibles automatiquement au niveau de chaque test depuis les propriétés.
+The shared variables enable to describe your dataset. ``JSON`` format must be used.
+These variables are reachable from all tests.
 
-Partie administration
+Admin part
 ---------------------
 
-Utilisateurs
+Users
 ~~~~~~~~~~~~
 
-La solution nécessite de créer des comptes utilisateurs.
-La création peut se faire à travers l'interface Web ou bien directement depuis l'API.
+Users account must be created to use properly the product.
+The creation of users can be done through the web interface or from the rest api.
 
-La création d'un utilisateur nécessite à minima de préciser: 
- - un nom d'utilisateur
- - un mot de passe
- - son niveau d'accès (administrateur, testeur)
- - les projets autorisés
+Some parameters must be provided: 
+ - username
+ - password
+ - privilegies (admin, monitor, tester)
+ - authorized projects
 
-.. note:: Si une adresse email est précisée, alors il est possible de recevoir les résultats des tests automatiquement dans sa boite mail.
+.. note:: Tests results can be received by email if the account is configured with an email.
 
-.. warning: Ne pas oublier de modifier les mots de passes des utilisateurs ``admin`` et ``tester``, par défaut ils n'ont pas de mot de passe.
+.. warning: Don't forget to change default passwords for ``admin`` and ``tester`` users.
 
-Projets
+Projects
 ~~~~~~~
 
-Les tests peuvent être organisés par projet.
-L'ajout ou la suppression de projet peut se faire depuis l'interface web ou directement depuis l'api REST.
+Tests files can be organized per project.
+The adding or removing of a project can be done from the web interface or the REST api.
 
-.. note:: Le projet ``Common`` existe par défaut et est accessible par l'ensemble des utilisateurs, il ne peut pas être supprimé.
+.. note:: The ``Common`` project exists by default and can be read from all users, this project cannot be removed.
 
-Partie système
+System part
 --------------
 
-La partie système permet de voir le statut du serveur.
+The system part enable to see the status of the server.

@@ -1,47 +1,47 @@
 Architecture
 ============
 
-La solution est basée sur un mode client/serveur.
-Les tests et adaptateurs sont centralisés dans un serveur qui permet de fournir rapidement le même 
-environnement de test à l'ensemble des utilisateurs.
+The solution is based on a client / server mode.
+The tests and adapters are centralized in a server that allows to quickly provide the same
+test environment to all users.
 
-La solution se compose de plusieurs composants:
- - Un serveur
- - Un client graphique
- - Des agents
- - Des sondes
+The solution consists of several components:
+  - A waiter
+  - A graphical client
+  - Agents
+  - Probes
  
 .. image:: /_static/images/testlibrary/archi-extensivetesting.png
 
-Serveur
+Server
 -------
 
-Le serveur se compose :
- - d'un reverse proxy (apache)
- - d'un ordonnanceur 
- - d'une serveur API REST
- - du framework de test
- - des adaptateurs et librairies 
- - des extensions outils
- - d'une interface web
+The server consists of:
+  - a reverse proxy (apache)
+  - a scheduler
+  - a REST API server
+  - the test framework
+  - adapters and libraries
+  - tool extensions
+  - a web interface
 
-Client Graphique
+Graphic Client
 ----------------
 
-Le client graphique utilise un seul flux tcp/443 (https) entre le client et le serveur.
-Le flux est bidirectionnel et le client peut:
- - effectuer des appels vers l'API REST du serveur
- - recevoir des évènements du serveur via des WebSockets.
-
+The graphical client uses a single tcp / 443 (https) stream between the client and the server.
+The stream is bidirectional and the client can:
+  - make calls to the server's REST API
+  - receive events from the server via WebSockets.
+  
 Agents
 ------
 
-Un agent est obligatoirement contrôlé par un adaptateur via l'intermédiare du serveur de test.
-Il permet de déporter le point de communication avec le système à tester ou piloter.
-Les agents utilisent un seul flux tcp/443 (https) pour communiquer avec le serveur.
+An agent is compulsorily controlled by an adapter via the test server intermediary.
+It allows to deport the communication point with the system to test or control.
+Agents use a single tcp / 443 (https) stream to communicate with the server.
 
-Sondes
+Probes
 ------
 
-Les sondes permettent de récupérer durant l'exécution d'un test des traces réseaux, fichiers de configurations ou logs.
-La communication avec le serveur s'effectue uniquement sur le port tcp/443 (https).
+The probes make it possible to recover during the execution of a test the network traces, configuration files or logs.
+Communication with the server only takes place on port tcp / 443 (https).

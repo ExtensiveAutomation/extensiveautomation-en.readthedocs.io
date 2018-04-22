@@ -1,303 +1,300 @@
 Client
 ============
 
-Le client lourd permet d'écrire et d'exécuter des tests automatiques mais aussi d'analyser
-les résultats en temps réel ou différé. Il permet aussi de partager les tests de manière simple et efficace.
-Pour utiliser le client, il faut obligatoirement un compte utilisateur et pouvoir se connecter au serveur de test (tcp/443).
+The client allows to write and execute automatic tests but also to analyze
+the results in real time or deferred. It also allows you to share tests in a simple and effective way.
+To use the client, you must have a user account and be able to connect to the test server (tcp / 443).
 
-Le client peut aussi être utilisé pour effectuer le développement des extensions (adaptateurs et librairies) 
-permettant de communiquer avec le système à tester ou piloter.
+The client can also be used to develop extensions (adapters and libraries)
+to communicate with the system to be tested or piloted.
 
-Enfin l'interface graphique change en fonction du niveau d'accès:
- - niveau testeur: écriture/exécution de tests, et analyse des résultats
- - niveau admin: accès à l'ensemble des fonctionnalités
+Finally the graphical interface changes according to the level of access:
+  - tester level: write / execute tests, and analyze the results
+  - admin level: access to all features
 
-L'interface se divise en 3 parties principales:
- - l'espace de travail
- - l'analyseur
- - l'explorateur
+The interface is divided into 3 main parts:
+  - the workspace
+  - the analyzer
+  - the Explorer
 
-.. image:: /_static/images/client/workspace.png
+.. image :: /_static/images/client/workspace.png
    
-.. note:: Le client est disponible sur Windows et Linux, en mode 64bits
+.. note :: The client is available on Windows and Linux, in 64bits mode
 
-L'espace de travail
+The workspace
 -------------------
 
-L'espace de travail se décompose en 3 parties principales:
- - l'accès à l'ensemble des dépôts de fichiers
- - l'accès à la conception des tests
- - la documentation en ligne
+The workspace is composed of 3 main parts:
+  - access to all file repositories
+  - access to test design
+  - online documentation
 
 .. image:: /_static/images/client/workspace_comments.png
 
-Dépôt des tests
+Deposit of tests
 ~~~~~~~~~~~~~~~
 
-Le client permet d'accéder aux deux dépôts de tests: distant et local.
+The client provides access to the two test repositories: remote and local.
 
-Le ``dépôt distant`` permet de stocker ses tests sur le serveur de tests, donc de les partager avec les autres utilisateurs.
-L'arborescence se compose de fichiers et répertoires. La gestion des tests peut se faire depuis le client.
-Les tests peuvent être organisés par projet si nécessaire.
+The `` remote repository`` allows to store its tests on the test server, so to share them with other users.
+The tree consists of files and directories. Test management can be done from the client.
+The tests can be organized by project if necessary.
 
-.. image:: /_static/images/client/workspace_remote_tests.png
+.. image :: /_static/images/client/workspace_remote_tests.png
 
-.. note:: Le projet ``Common`` contient les tests réutisables et divers exemples.
+.. note :: The `` Common`` project contains re-usable tests and various examples.
 
-.. note:: Les répertoires ``Recycle`` et ``Sandbox`` sont des répertoires réservés, les supprimer est impossible.
+.. note :: The directories `` Recycle`` and `` Sandbox`` are reserved directories, delete them is impossible.
 
-.. note:: Il est possible d'ouvrir un test en faisant un drag and drop du fichier vers l'espace d'écriture.
+.. note :: It is possible to open a test by dragging and dropping the file to the writing space.
 
-Le **dépôt local** donne la possibilité de stocker ses tests sur son poste, donc non partagé.
-Cette fonctionnalité n'est pas activée par défaut car ce n'est pas dans la philosophie de la solution de l'utiliser.
-Néanmoins le dépôt peut être activé à travers les préférences du client.
+The ** local repository ** gives the possibility to store his tests on his post, so not shared.
+This feature is not enabled by default because it is not in the philosophy of the solution to use it.
+Nevertheless the deposit can be activated through the customer's preferences.
 
-.. warning:: Certaines fonctionnalités sont manquantes dans le dépôt local, son utilisation n'est pas conseillée!
+.. warning :: Some features are missing in the local repository, its use is not recommended!
 
-
-Dépôt des extensions
+Depositing extensions
 ~~~~~~~~~~~~~~~~~~~~
 
-Le client permet l'accès aux dépôts des extensions (adaptateurs et librairies) et peut aussi être utilisé pour en développer des nouvelles, 
-qui seront stockées là aussi. Ces extensions sont organisées par version.
+The client allows access to the depots of the extensions (adapters and libraries) and can also be used to develop new ones,
+which will be stored there too. These extensions are organized by version.
 
-.. image:: /_static/images/client/workspace_remote_adapters.png
+.. image :: /_static/images/client/workspace_remote_adapters.png
 
-.. note:: Les extensions sont développées en ``Python``.
+.. note :: The extensions are developed in `` Python``.
 
 ..
-	Il faut une explication des raisons pour créer une nouvelle extension, comment faire, 
-	et comment l'intégrer au dépôt, comment les gérer (versions), les règles de nomenclature
+  You need an explanation of the reasons for creating a new extension, how to do it,
+  and how to integrate it in the repository, how to manage them (versions), the rules of nomenclature
 
-Propriétés d'un test
+Tests properties
 ~~~~~~~~~~~~~~~~~~~~
 
-Les tests peuvent être enrichis avec un certain nombre de propriétés. 
-Les propriétés disponibles sont: 
- - la description du test (auteur, date de création, etc...)
- - les variables entrantes et sortantes
- - la définition des agents et sondes utilisées par le test
+The tests can be enriched with a number of properties.
+Available properties are:
+  - the description of the test (author, date of creation, etc ...)
+  - incoming and outgoing variables
+  - the definition of agents and probes used by the test
  
-La fenêtre ``Test properties > Test Data > Inputs`` contient la liste des variables accessibles depuis le test.
-L'ajout de variable peut se faire en faisant un clic droit 'Add parameter'.
+The `` Test properties> Test Data> Inputs`` window contains the list of variables accessible from the test.
+Adding variables can be done by right clicking 'Add parameter'.
 
-.. image:: /_static/images/client/workspace_tests_properties_inputs.png
+.. image :: /_static/images/client/workspace_tests_properties_inputs.png
 
-.. note:: Pour insérer un paramètre dans un test, il suffit de faire un drag & drop.
+.. note :: To insert a parameter into a test, just drag & drop.
 
-.. note:: 
- Il est possible de choisir la version des adaptateurs et librairies à utiliser pour le test
+.. note ::
+  It is possible to choose the version of the adapters and libraries to use for the test
  
- .. image:: /_static/images/client/workspace_tests_properties.png
-
-Conception graphique
+  .. image :: /_static/images/client/workspace_tests_properties.png
+  
+Graphic design
 ~~~~~~~~~~~~~~~~~~~~
 
-La conception d'un test sous forme graphique est possible avec le test de type ``abstract``.
-Ce mode de conception ne nécessite aucune connaissance en développement. 
+The design of a test in graphical form is possible with the `` abstract`` type test.
+This design mode does not require any knowledge in development.
 
-.. image:: /_static/images/client/workspace_new_test_abstract.png
+.. image :: /_static/images/client/workspace_new_test_abstract.png
 
-Un clic droit sur la zone de dessin permet de choisir l'élement à ajouter.
+Right click on the drawing area to choose the element to add.
 
-.. image:: /_static/images/client/workspace_test_abstract.png
+.. image :: /_static/images/client/workspace_test_abstract.png
 
-
-Conception textuelle
+Textual design
 ~~~~~~~~~~~~~~~~~~~~
 
-La conception d'un test en mode ``scripting`` est possible avec led testd de type ``unit`` et ``suite``. 
-Ce mode de conception nécessite des connaissances en développement, i.e. python.
+The design of a `` scripting`` test is possible with `` unit`` testd and `` continued``.
+This design mode requires knowledge in development, i.e. python.
 
-.. image:: /_static/images/client/workspace_new_test_unit_suite.png
+.. image :: /_static/images/client/workspace_new_test_unit_suite.png
 
-Le test de type ``unit`` représente un cas de test. Il se découpe en 4 sections appelées automatiquement par le framework.
+The `` unit`` test is a test case. It is divided into 4 sections automatically called by the framework.
 
-.. image:: /_static/images/client/workspace_test_unit.png
+.. image :: /_static/images/client/workspace_test_unit.png
 
-Le test de type "suite" représente un ou plusieurs cas de test. Ce type de test permet d'exécuter plusieurs fois le même 
-cas de test en changeant les paramètres d'entrées.
+The "suite" test represents one or more test cases. This type of test allows you to run the same
+test case by changing the input parameters.
 
-.. image:: /_static/images/client/workspace_test_suite.png
+.. image :: /_static/images/client/workspace_test_suite.png
 
-.. note:: Le raccourci ``Ctrl+F`` permet de rechercher du texte dans vos tests.
+.. note :: The `` Ctrl + F`` shortcut allows you to search for text in your tests.
 
-Conception assistée
+Assisted design
 ~~~~~~~~~~~~~~~~~~~
 
-L'assistant de conception permet d'écrire des tests sans connaissances en développement.
-Il couvre les différentes actions suivantes:
- - Appel aux fonctions de base du framework de test
- - Test SSH
- - Test d'application avec capture d'écran (basé sur le projet Sikuli)
- - Test de site internet (basé sur le projet Selenium)
- - Test d'application mobile Android
+The design wizard allows you to write tests without knowledge in development.
+It covers the following actions:
+  - Call to the basic functions of the test framework
+  - SSH test
+  - Application test with screenshot (based on the Sikuli project)
+  - Website test (based on the Selenium project)
+  - Android mobile app test
 
-L'assistant consiste à décrire les actions à effectuer, et si désiré les exporter vers un test unit ou suite.
+The wizard is to describe the actions to perform, and if desired export them to a test unit or suite.
 
-.. image:: /_static/images/client/workspace_assistant.png
+.. image :: /_static/images/client/workspace_assistant.png
 
-Conception conditionnelle
+Conditional design
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-La conception conditionnelle permet de construire des scénarios ou des campagnes de tests.
-Cette approche ne nécessite pas de connaissances en développement. 
-Pour réaliser ce type de test, il est nécessaire de créer un nouveau test ``plan`` ou ``global``.
+Conditional design allows you to build scenarios or test campaigns.
+This approach does not require developing knowledge.
+To perform this type of test, it is necessary to create a new `` plan`` or `` global`` test.
 
-.. image:: /_static/images/client/workspace_new_test_plan_global.png
+.. image :: /_static/images/client/workspace_new_test_plan_global.png
 
-Le test "plan" permet d'écrire des scénarios de test en incluant des tests de type "abstract", "unit" ou "suite".
+The test "plan" makes it possible to write test scenarios by including tests of the type "abstract", "unit" or "suite".
 
-.. image:: /_static/images/client/workspace_test_plan.png
+.. image :: /_static/images/client/workspace_test_plan.png
 
-Le test "global" permet de décrire des campagnes de tests en incluant des tests "plan", "abstract", "unit" ou "suite".
+The "global" test is used to describe test campaigns by including tests "plan", "abstract", "unit" or "suite".
 
-.. note:: Il est possible de surcharger les paramètres de tests.
+.. note :: It is possible to override the test parameters.
 
-Documentations en ligne
+Online documentations
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-La documentation en ligne est générée par le serveur, elle décrit l'ensemble des fonctions disponibles 
-dans le framework de test et les différentes extensions.
+The online documentation is generated by the server, it describes the set of available functions
+in the test framework and the different extensions.
 
-.. image:: /_static/images/client/workspace_help_online.png
+.. image :: /_static/images/client/workspace_help_online.png
 
-.. note:: Un drag & drop depuis la documentation sur un test insère automatiquement le squelette de la fonction.
+.. note :: A drag & drop from the documentation on a test automatically inserts the skeleton of the function.
 
-L'analyseur
+The analyzer
 -----------
 
-L'analyseur permet de suivre l'exécution d'un test en temps réél ou différé. 
-Il permet d'afficher l'ensemble des évènements du test et de faciliter l'analyse du bon déroulement ou des erreurs.
+The analyzer makes it possible to follow the execution of a test in real time or deferred.
+It makes it possible to display all the events of the test and to facilitate the analysis of the good progress or the errors.
 
-.. image:: /_static/images/client/analyseur.png
+.. image :: /_static/images/client/analyseur.png
 
-Visualisation des évènements
+Visualization of events
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Différents types d'évènements sont possibles (colonne event type):
+Different types of events are possible (column event type):
 
- - DEBUG
- - INFO
- - WARNING
- - ERROR
+  - DEBUG
+  - INFO
+  - WARNING
+  - ERROR
  
- - SEND
- - RECEIVED
+  - SEND
+  - RECEIVED
  
- - STEP-STARTED
- - STEP-PASSED
- - STEP-FAILED
+  - STEP-STARTED
+  - STEP-PASSED
+  - STEP-FAILED
  
- - MATCH-STARTED
- - MATCH-INFO
- - MATCH-STOPPED
- - MATCH-EXCEEDED
+  - MATCH-STARTED
+  - MATCH-INFO
+  - MATCH-STOPPED
+  - MATCH-EXCEEDED
 
-.. note:: Filtrer sur l'évènement ``ERROR`` permet de voir rapidement pourquoi le test est en erreur. 
+.. note :: Filtering on the `` ERROR`` event allows you to quickly see why the test is in error.
 
-.. note:: Le filtre ``SEND|RECEIVED`` permet d'afficher les messages envoyés ou reçus par le système à tester/piloter. 
+.. note :: The `` SEND | RECEIVED`` filter is used to display messages sent or received by the system to be tested / piloted.
 
-Vue détaillée
+Detailed view
 ~~~~~~~~~~~~~
 
-Sélectionner un évènement dans la liste permet d'afficher la vue détaillée.
-La vue détaillée affiche le contenu de l'évènement et plus encore.
+Selecting an event from the list displays the detailed view.
+The detailed view displays the content of the event and more.
 
-.. image:: /_static/images/client/analyseur_details.png
+.. image :: /_static/images/client/analyseur_details.png
 
-L'explorateur
+Server Explorer
 -------------
 
-Visualisation des résultats
+Visualization of the results
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-L'historique complet des résultats de tests est disponible depuis le client.
-Ils sont triés par date et heure d'exécution. 
-Le client permet d'afficher les rapports et télécharger les logs générés durant l'exécution du test.
+The complete history of test results is available from the client.
+They are sorted by date and time of execution.
+The client can display the reports and download the logs generated during the execution of the test.
 
-.. image:: /_static/images/client/explorer_historique.png
+.. image :: /_static/images/client/explorer_historique.png
 
-Visualisation des rapports de tests
+Visualization of test reports
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Les rapports de tests sont visibles directement depuis le client. 
-Deux types de rapports sont disponibles:
- - rapport avancé
- - rapport simple
+Test reports are visible directly from the client.
+Two types of reports are available:
+  - advanced report
+  - simple report
  
-.. image:: /_static/images/client/explorer_rapport.png
+.. image :: /_static/images/client/explorer_rapport.png
 
-.. note:: Les rapports sont exportables aux formats html, xml et csv.
+.. note :: The reports are exportable in html, xml and csv formats.
 
-Préférences de configuration
+Settings
 ----------------------------
 
-Le comportement du client peut être modifié à travers les préférences du client.
+Customer behavior can be changed through the customer's preferences.
 
-.. image:: /_static/images/client/preferences.png
+.. image :: /_static/images/client/preferences.png
 
-.. note:: Les préférences sont stockées dans le fichier ``settings.ini`` .
+.. note :: Preferences are stored in the `` settings.ini`` file.
 
-Compléments
+Complements
 -----------
 
-Il est possible d'ajouter des plugins dans le client. Les plugins sont à ajouter dans le répertoire ``Plugins``.
+It is possible to add plugins in the client. Plugins are to be added to the `` Plugins`` directory.
 
-.. image:: /_static/images/client/plugins_client_install.png
+.. image :: /_static/images/client/plugins_client_install.png
 
-Les plugins sont accessibles dans le menu ``Plugins`` après redémarrage du client.
+Plugins are accessible in the `` Plugins`` menu after restarting the client.
 
-.. image:: /_static/images/client/ite_plugins_menu.png
+.. image :: /_static/images/client/ite_plugins_menu.png
 
-.. note:: Il est nécessaire de redémarrer le client pour prendre en compte les plugins déployés.
+.. note :: It is necessary to restart the client to take into account the plugins deployed.
 
-Plugin HP ALM
+HP ALM plugin
 ~~~~~~~~~~~~~~
 
-Le plugin ``HP ALM`` permet d'exporter les tests et résultats depuis le client Extensive vers HP ALM QualityCenter.
-Cette approche permet d'être autonome vis à vis de QC.
+The `` HP ALM`` plugin allows you to export tests and results from the Extensive Client to HP ALM QualityCenter.
+This approach makes it possible to be independent with respect to QC.
 
-La configuration du plugin se fait dans la page ``Settings``, il faut configurer à minima:
- - nom d'utilisateur
- - le mot de passe
- - le domaine
- - le projet
+The configuration of the plugin is done in the page `` Settings``, it is necessary to configure at least:
+  - username
+  - the password
+  - the domain
+  - the project
 
-Pour exporter un test, il faut générer le design d'un test depuis le client et cliquer sur le plugin HP ALM disponible dans la barre d'outils.
+To export a test, you must generate the test design from the client and click on the HP ALM plugin available on the toolbar.
 
-.. image:: /_static/images/client/qc_plugin.png
+.. image :: /_static/images/client/qc_plugin.png
 
-L'export des résultats peut se faire depuis la fenêtre exploration des archives,
-Le plugin doit être disponible dans la barre d'outil lors qu'un rapport de test est chargé.
+The export of the results can be done from the archive exploration window,
+The plugin must be available in the toolbar when a test report is loaded.
  
-.. note:: Le plugin est compatible avec un HP ALM QC >= 12, l'api REST est utilisée.
+.. note :: The plugin is compatible with an HP ALM QC> = 12, the REST API is used.
 
-Plugin Jenkins
+Jenkins plugin
 ~~~~~~~~~~~~~~
 
-Le plugin ``Jenkins`` ne fait pas grand chose dans cette version...
-Il fournit juste un lien vers l'interface web de son Jenkins préféré.
+The Jenkins plugin does not do much in this version ...
+It just provides a link to the web interface of its favorite Jenkins.
 
-
-Plugin Shell Recorder
+Shell Recorder Plugin
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Le plugin ``Shell Recorder`` permet d'importer une séquence de commandes shell dans l'assistant de conception et de générer le test associé.
-Il permet donc de rejouer facilement une séquence de commandes.
+The `` Shell Recorder`` plugin allows you to import a sequence of shell commands into the design wizard and generate the associated test.
+It allows to replay easily a sequence of commands.
 
-La 1ière étape consiste à importer une session ssh (depuis un terminal putty par exemple) depuis le presse papier
-ou en important directement un fichier texte contenant la séquence des commandes shell.
+The first step is to import an ssh session (from a putty terminal for example) from the clipboard
+or by directly importing a text file containing the sequence of shell commands.
 
-Le plugin détecte automatiquement le prompt dans la séquence pour parser les commandes et résultats associés.
-Si le prompt n'est pas détecté, il est possible de le modifier manuellement.
+The plugin automatically detects the prompt in the sequence to parse the associated commands and results.
+If the prompt is not detected, it can be changed manually.
 
-.. image:: /_static/images/client_plugins/plugin_shell_recorder.png
+.. image :: /_static/images/client_plugins/plugin_shell_recorder.png
 
-Plugin SeleniumIDE
+SeleniumIDE Plugin
 ~~~~~~~~~~~~~~~~~~
 
-L'utilisation du plugin ``SeleniumIDE`` implique une utilisation basique. Il permet de convertir un fichier enregistré avec le plugin SeleniumIDE de firefox 
-dans l'assistant de conception.
+The use of the `` SeleniumIDE`` plugin involves basic use. It can convert a file saved with the SeleniumIDE plugin of firefox
+in the design assistant.
 
-.. tip:: Il est plus efficace d'utiliser l'assistant en direct pour être en phase avec la philosophie de la solution.
+.. tip :: It is more efficient to use the live assistant to be in tune with the philosophy of the solution.

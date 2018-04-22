@@ -7,17 +7,17 @@ Server
 Automatic mode
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. warning::
-  Configuration de base à respecter avant de lancer l'installation:
-    - l'interface réseau est correctement configurée sur le serveur
-    - l'accès aux dépôts officiels est disponible
-    - utilisation d'un système Linux CentOS 6/7 ou RedHat
+.. warning ::
+   Basic configuration to respect before starting the installation:
+     - the network interface is correctly configured on the server
+     - access to official repositories is available
+     - using a Linux CentOS 6/7 or RedHat system
+     
+Installation of the solution can be done using the `` install.sh`` script in the tar.gz.
+If the prerequisites are respected then the installation will be done in automatic mode, that is to say that the missing packets
+will be recovered automatically.
 
-L'installation de la solution peut se faire en utilisant le script ``install.sh`` présent dans le tar.gz.
-Si les prérequis sont respectés alors l'installation se fera en mode automatique, c'est à dire que les paquets manquants 
-seronts récupérés automatiquement.
-
-Exemple d'installation en mode automatique
+Example of installation in automatic mode
 
 .. code-block:: bash
 
@@ -59,7 +59,7 @@ Exemple d'installation en mode automatique
 	=========================================================================
 
 
-Exemple pour vérifier si le serveur fonctionne correctement.
+Example to check if the server is working properly.
 
 .. code-block:: bash
 
@@ -67,25 +67,24 @@ Exemple pour vérifier si le serveur fonctionne correctement.
 	Extensive Testing is running
 	
 
-Le serveur est accessible à l'adresse indiquée à la fin de l'installation.
-Il est possible d'utiliser les comptes pas défauts pour se connecter:
- - utilisateur ``admin``
- - utilisateur ``tester``
- - utilisateur ``monitor``
+The server is accessible at the address indicated at the end of the installation.
+It is possible to use no fault accounts to connect:
+  - user `` admin``
+  - user `` test``
+  - user `` monitor``
  
-.. note:: Les comptes par défaut n'ont pas de mot de passe.
+.. note :: The default accounts do not have a password.
 
-.. warning:: Ne pas oublier de changer les mots de passe des comptes par défaut ou de désactiver les comptes.
+.. warning :: Do not forget to change the default account passwords or disable the accounts.
 
-	
 Custom mode
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. warning:: Ce mode d'installation n'est recommandé que pour les utilisateurs avancés.
+.. warning :: This installation mode is only recommended for advanced users.
 
-Ce mode est utilisé pour changer la destination de l'installation ou spécifier certains paramètres (voir l'exemple).
+This mode is used to change the destination of the installation or to specify certain parameters (see the example).
 
-Exemple d'installation en mode personnalisé (ici, la destination de xtc)
+Example of installation in custom mode (here, the destination of xtc)
 
 .. code-block:: bash
 
@@ -120,32 +119,32 @@ Exemple d'installation en mode personnalisé (ici, la destination de xtc)
 	* Do you want to configure selinux automatically? [No]?
 	* What is the path of the openssl binary? [/usr/bin/openssl]
 	
-Exemple pour vérifier si le serveur fonctionne correctement.
+Example to check if the server is working properly.
 
 .. code-block:: bash
 
 	xtctl status
 	Extensive Testing is running
 
-Le serveur est accessible à l'adresse indiquée à la fin de l'installation.
-Il est possible d'utiliser les comptes par défaut pour se connecter:
- - utilisateur ``admin``
- - utilisateur ``tester``
- - utilisateur ``monitor``
+The server is accessible at the address indicated at the end of the installation.
+It is possible to use the default accounts to log in:
+  - user `` admin``
+  - user `` test``
+  - user `` monitor``
  
-.. note:: Les comptes par défaut n'ont pas de mot de passe.
+.. note :: The default accounts do not have a password.
 
-.. warning:: Ne pas oublier de changer les mots de passe des comptes par défaut ou de désactiver les comptes.
+.. warning :: Do not forget to change the default account passwords or disable the accounts.
 
 From sources
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. warning:: Ce mode d'installation n'est recommandé que pour les utilisateurs avancés.
+.. warning :: This installation mode is only recommended for advanced users.
 
-Il faut dans un premier temps installer les libraries systèmes et python nécessaire au bon fonctionnement 
-du programme, la liste complète est disponible dans la chapitre contribution.
+First, you need to install the system and python libraries necessary for the proper functioning
+of the program, the complete list is available in the contribution chapter.
 
-Après voir récupérer les sources depuis github il faut recomposer les différents répertoire
+After retrieving the sources from github you have to recompose the different directories
 
 +------------------+-------------------------------+
 | core-server      | /opt/xtc/vXXX                 |
@@ -161,19 +160,19 @@ Après voir récupérer les sources depuis github il faut recomposer les différ
 | web-client       | </opt..>/Web                  |
 +------------------+-------------------------------+
 
-**Préparation de la base de donnée**
+** Preparation of the database **
 
-Pour initialiser la base de donnée, il faut exécuter le scripts "add-bdd.py" disponible dans le répertoire ``Scripts/database``.
+To initialize the database, execute the "add-bdd.py" scripts available in the `` Scripts / database`` directory.
 
-**Démarrage du serveur**
+** Starting the server **
 
-Il faut exécuter le scripts ``python run`` disponible à la racine du répertoire ``/opt/xtc/vXXX/``.
+Run the `` python run`` scripts available at the root of the `` / opt / xtc / vXXX / `` directory.
 
 Update
 ~~~~~~~~~~~
 
-La mise à jour du serveur est possible en exécutant le script ``./update.sh``
-Les anciens tests, adaptateurs et utilisateurs sont automatiquement migrés.
+The server update is possible by running the script ``. / Update.sh``
+Old tests, adapters and users are automatically migrated.
 
 .. code-block:: bash
     ./update.sh
@@ -229,13 +228,13 @@ Les anciens tests, adaptateurs et utilisateurs sont automatiquement migrés.
     - Continue and go to the web interface (https://xxxxxxxxx/web/index.php)
     =========================================================================
 
-.. note:: La mise à jour est refusée si aucune version du produit n'est détectée.
+.. note :: The update is refused if no version of the product is detected.
 
 Rollback
 ~~~~~~~~~~~
 
-Le retour arrière est possible vers les versions antérieures déjà installées sur le serveur.
-Exécuter le script ``rollback.sh`` avec la version précédente.
+Backtracking is possible to earlier versions already installed on the server.
+Run the `` rollback.sh`` script with the previous version.
 
 .. code-block:: bash
 
@@ -257,7 +256,7 @@ Exécuter le script ``rollback.sh`` avec la version précédente.
 Uninstall
 ~~~~~~~~~~~~~~
 
-La désinstallation du produit peut se faire en utilisant le script ``./uninstall.sh`` présent dans le paquet d'installation.
+Uninstalling the product can be done using the ``. / Uninstall.sh`` script in the installation package.
 
 .. code-block:: bash
 
@@ -282,8 +281,7 @@ La désinstallation du produit peut se faire en utilisant le script ``./uninstal
 	- Uninstallation completed successfully!
 	=========================================================================
 
-.. note:: Il est possible d'utiliser le mode ``force`` en cas d'erreur durant la désinstallation. 
-	
+.. note :: It is possible to use the `` force`` mode if an error occurs during the uninstallation.
 
 Client
 ------
@@ -291,23 +289,23 @@ Client
 Windows Installation
 ~~~~~~~~~~~~~~~~~~~~
 
-Il existe 2 modes d'installation:
- - mode portable (version recommandée)
- - mode installation
+There are 2 installation modes:
+  - portable mode (recommended version)
+  - installation mode
 
-Le client peut être récupéré depuis le site internet https://www.extensivetesting.org ou bien depuis le serveur de test.
+The client can be retrieved from the website https://www.extensiveautomation.org or from the test server.
 
 .. image:: /_static/images/webinterface/web_overview_pkgs2.png
 
-Ensuite il faut le décompresser et exécuter le fichier `ExtensiveTestingClient.exe`
-	
+Then you have to unzip it and run the `ExtensiveTestingClient.exe` file
+
 .. image:: /_static/images/client/client_portable.png
     
 Linux Installation
 ~~~~~~~~~~~~~~~~~~
 
-Il n'y a pas de version pré-compilée pour Linux.
-Il faut récupérer les sources depuis github, installer les paquets manquants et exécuter le fichier suivant
+There is no pre-compiled version for Linux.
+It is necessary to recover the sources since github, to install the missing packets and to execute the following file
 
 .. code-block:: bash
 
@@ -316,12 +314,12 @@ Il faut récupérer les sources depuis github, installer les paquets manquants e
 Update
 ~~~~~~~~~~~
 
-La mise à jour du client est possible en mode automatique (si présent sur le serveur) ou manuel.
-Depuis le client lourd il est possible de vérifier la présence d'une mise à jour.
+The update of the client is possible in automatic mode (if present on the server) or manual.
+From the client it is possible to verify the presence of an update.
 
 .. image:: /_static/images/client/client_update.png
 
-.. note:: Si la version proposée est une version majeure alors la mise à jour est obligatoire.
+.. note :: If the proposed version is a major release then the update is mandatory.
 	
 Toolbox
 --------------
@@ -329,23 +327,23 @@ Toolbox
 Windows Installation
 ~~~~~~~~~~~~~~~~~~~~
 
-Il existe 2 modes d'installation:
- - mode portable (version recommandée)
- - mode installation
+There are 2 installation modes:
+  - portable mode (recommended version)
+  - installation mode
 
-La boîte à outils peut être récupérée depuis le site internet https://www.extensivetesting.org ou bien depuis le serveur de test.
+The toolbox can be retrieved from the website https://www.extensiveautomation.org or from the test server.
 
 .. image:: /_static/images/webinterface/web_overview_pkgs3.png
 
-Ensuite il faut le décompresser et exécuter le fichier ``ExtensiveTestingToolbox.exe``
-	
+Then you have to decompress it and run the `` ExtensiveTestingToolbox.exe`` file
+
 .. image:: /_static/images/toolbox/toolbox_portable.png
     
 Linux Installation
 ~~~~~~~~~~~~~~~~~~
 
-La boîte à outils peut être récupérée depuis le site internet https://www.extensivetesting.org ou bien depuis le serveur de test.
-2 scripts sont disponibles pour démarrer un agent ou une sonde.
+The toolbox can be retrieved from the website https://www.extensiveautomation.org or from the test server.
+2 scripts are available to start an agent or probe.
  - ./toolagent
  - ./toolprobe
 
@@ -400,11 +398,11 @@ La boîte à outils peut être récupérée depuis le site internet https://www.
 Update
 ~~~~~~~~~~~
 
-La mise à jour de la boîte à outils est à faire manuellement.
-Il faut récupérer le paquet depuis le site internet ou bien depuis le serveur de test.
+The update of the toolbox is to be done manually.
+You have to get the package from the website or from the test server.
 
-La mise à jour nécessite:
- - de supprimer la version courante
- - d'ajouter la nouvelle version et reconfigurer les agents ou sondes à redémarrer.
+The update requires:
+  - delete the current version
+  - add the new version and reconfigure the agents or probes to restart.
  
-.. note:: La mise à jour automatique n'est pas encore supportée.
+.. note :: The automatic update is not supported yet.

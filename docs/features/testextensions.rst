@@ -1,483 +1,477 @@
 Interoperability
 ===================
 
-Adaptateurs
+Adapters
 -----------
 
-Les adaptateurs permettent de communiquer avec le système à tester ou piloter. La solution embarque plusieurs adaptateurs par défaut dans différents domaines:
- - support de protocoles réseaux
- - support de protocoles niveau application
- - communication avec les bases de données
- - interaction systèmes
- - interaction avec les interfaces graphiques
- - support de protocoles télécom
+The adapters allow communication with the system to be tested or piloted. The solution embeds several default adapters in different domains:
+  - network protocol support
+  - application level protocol support
+  - communication with databases
+  - systems interaction
+  - interaction with graphic interfaces
+  - telecom protocol support
 
-Les adaptateurs ont deux modes d'utilisation:
- - un mode direct: la communication se fait directement depuis le serveur de test vers le système à contrôler.
- - un mode agent: la communication avec le système à contrôler se fait par l'intermédiaire d'un agent communiquant avec le serveur de test.
+Adapters have two modes of use:
+  - a direct mode: communication is done directly from the test server to the system to be controlled.
+  - an agent mode: the communication with the system to be controlled is done through an agent communicating with the test server.
 
-.. note:: Le mode ``Verbose`` est activé par défaut sur tous les adapateurs. Ce mode peut être désactivé pour réduire le nombre d'évènements durant un test.
+.. note :: The `` Verbose`` mode is enabled by default on all adapters. This mode can be disabled to reduce the number of events during a test.
 
-.. note:: Le mode ``Debug`` n'est pas activé par défaut. Il peut être activé en cas de problème.
+.. note :: The `` Debug`` mode is not enabled by default. It can be activated in case of problem.
 
-.. note:: 
-  Des exemples sont disponibles dans les échantillons de tests ``Samples/Tests_Adapters``
+.. note ::
+   Examples are available in test samples `` Samples / Tests_Adapters``
   
-Liste des adaptateurs disponibles par défaut:
+List of adapters available by default:
 
-Protocoles réseaux
+Network Protocols
 ~~~~~~~~~~~~~~~~~~~~
 
-+--------------+--------------+-----------------------------------------------------------------------------+
-| Adaptateurs  | Agents       | Descriptions                                                                |
-+--------------+--------------+-----------------------------------------------------------------------------+	
-| ARP          | socket       | Sniffer permettant d'envoyer et recevoir des packets ARP                    |
-+--------------+--------------+-----------------------------------------------------------------------------+
-| ICMP         | socket       | Sniffer permettant d'envoyer et recevoir des packets ICMP                   |
-+--------------+--------------+-----------------------------------------------------------------------------+
-| Ethernet     | socket       | Sniffer permettant d'envoyer et recevoir des frames Ethernet                |
-+--------------+--------------+-----------------------------------------------------------------------------+
-| IP           | socket       | Sniffer permettant d'envoyer et recevoir des packets IPv4                   |
-+--------------+--------------+-----------------------------------------------------------------------------+
-| Pinger       | non supporté | Tests de vie de machines via ICMP, TCP ou une URL                           |
-+--------------+--------------+-----------------------------------------------------------------------------+
-| UDP/TCP      | socket       | Sniffer et client UDP et TCP                                                |
-+--------------+--------------+-----------------------------------------------------------------------------+
-| NTP          | socket       | Client permetttant de requêter un serveur NTP                               |
-+--------------+--------------+-----------------------------------------------------------------------------+
-| DNS          | non supporté | Client résolveur                                                            |
-+--------------+--------------+-----------------------------------------------------------------------------+	
-| SNMP         | socket       | Réception d'alarmes SNMPv2                                                  |
-+--------------+--------------+-----------------------------------------------------------------------------+						
++ -------------- + -------------- + ------------------- -------------------------------------------------- -------- +
+| Adapters | Agents | Descriptions |
++ -------------- + -------------- + ------------------- -------------------------------------------------- -------- +
+| ARP | socket | Sniffer to send and receive ARP packets |
++ -------------- + -------------- + ------------------- -------------------------------------------------- -------- +
+| ICMP | socket | Sniffer to send and receive ICMP packets |
++ -------------- + -------------- + ------------------- -------------------------------------------------- -------- +
+| Ethernet | socket | Sniffer for sending and receiving Ethernet frames |
++ -------------- + -------------- + ------------------- -------------------------------------------------- -------- +
+| IP | socket | Sniffer for sending and receiving IPv4 packets |
++ -------------- + -------------- + ------------------- -------------------------------------------------- -------- +
+| Pinger | not supported | Machine life tests via ICMP, TCP or URL |
++ -------------- + -------------- + ------------------- -------------------------------------------------- -------- +
+| UDP / TCP | socket | Sniffer and UDP client and TCP |
++ -------------- + -------------- + ------------------- -------------------------------------------------- -------- +
+| NTP | socket | Client to request an NTP server |
++ -------------- + -------------- + ------------------- -------------------------------------------------- -------- +
+| DNS | not supported | Resolver Customer |
++ -------------- + -------------- + ------------------- -------------------------------------------------- -------- +
+| SNMP | socket | Receiving SNMPv2 Alarms |
++ -------------- + -------------- + ------------------- -------------------------------------------------- -------- +
 
-Protocoles réseaux applications
+Network Protocols Applications
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-+--------------+--------------+-----------------------------------------------------------------------------+
-| Adaptateurs  | Agents       | Descriptions                                                                |
-+--------------+--------------+-----------------------------------------------------------------------------+
-| HTTP         | socket       | Serveur et client avec le support TLS et proxy                              |
-+--------------+--------------+-----------------------------------------------------------------------------+
-| SOAP         | socket       | Client avec le support TLS et proxy                                         |
-+--------------+--------------+-----------------------------------------------------------------------------+
-| REST         | socket       | Client avec le support TLS et proxy                                         |
-+--------------+--------------+-----------------------------------------------------------------------------+
-| WebSocket    | socket       | Client websocket                                                            |
-+--------------+--------------+-----------------------------------------------------------------------------+
-| SoapUI       | soapui       | Client permettant d'exécuter des campagnes SoapUI                           |
-+--------------+--------------+-----------------------------------------------------------------------------+				
++ -------------- + -------------- + ------------------- -------------------------------------------------- -------- +
+| Adapters | Agents | Descriptions |
++ -------------- + -------------- + ------------------- -------------------------------------------------- -------- +
+| HTTP | socket | Server and client with TLS support and proxy |
++ -------------- + -------------- + ------------------- -------------------------------------------------- -------- +
+| SOAP | socket | Client with TLS support and proxy |
++ -------------- + -------------- + ------------------- -------------------------------------------------- -------- +
+| REST | socket | Client with TLS support and proxy |
++ -------------- + -------------- + ------------------- -------------------------------------------------- -------- +
+| WebSocket | socket | Websocket client |
++ -------------- + -------------- + ------------------- -------------------------------------------------- -------- +
+| SoapUI | soapui | Client to run SoapUI campaigns |
++ -------------- + -------------- + ------------------- -------------------------------------------------- -------- +
 
-Commandes systèmes
+System commands
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-+--------------+--------------+-----------------------------------------------------------------------------+
-| Adaptateurs  | Agents       | Descriptions                                                                |
-+--------------+--------------+-----------------------------------------------------------------------------+	
-| Dig          |              | Client dig                                                                  |
-+--------------+--------------+-----------------------------------------------------------------------------+			
-| Curl         |              | Client curl                                                                 |
-+--------------+--------------+-----------------------------------------------------------------------------+				
-| Nmap         |              | Client nmap                                                                 |
-+--------------+--------------+-----------------------------------------------------------------------------+				
-| Ncat         |              | Client ncat                                                                 |
-+--------------+--------------+-----------------------------------------------------------------------------+				
-| Openssl      |              | Client openssl                                                              |
-+--------------+--------------+-----------------------------------------------------------------------------+				
++ -------------- + -------------- + ------------------- -------------------------------------------------- -------- +
+| Adapters | Agents | Descriptions |
++ -------------- + -------------- + ------------------- -------------------------------------------------- -------- +
+| Dig | | Customer dig |
++ -------------- + -------------- + ------------------- -------------------------------------------------- -------- +
+| Curl | | Customer curl |
++ -------------- + -------------- + ------------------- -------------------------------------------------- -------- +
+| Nmap | | Nmap client |
++ -------------- + -------------- + ------------------- -------------------------------------------------- -------- +
+| Ncat | | Customer ncat |
++ -------------- + -------------- + ------------------- -------------------------------------------------- -------- +
+| Openssl | | Openssl client |
++ -------------- + -------------- + ------------------- -------------------------------------------------- -------- +
 
-Interfaces utilisateurs
+User Interfaces
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-+--------------+--------------------------------------+-------------------------------------------+
-| Adaptateurs  | Agents                               | Descriptions                              |
-+--------------+--------------------------------------+-------------------------------------------+
-| Adb          | adb                                  | Intégration avec la passerelle Android    |
-+--------------+--------------------------------------+-------------------------------------------+
-| Selenium     | selenium2-server ou selenium3-server | Intégration avec le projet Selenium       |
-+--------------+--------------------------------------+-------------------------------------------+	
-| Sikuli       | sikulix-server                       | Intégration avec le projet SikuliX        |
-+--------------+--------------------------------------+-------------------------------------------+					
++ -------------- + ---------------------------------- ---- + ------------------------------------------- +
+| Adapters | Agents | Descriptions |
++ -------------- + ---------------------------------- ---- + ------------------------------------------- +
+| Adb | adb | Integration with the Android Gateway |
++ -------------- + ---------------------------------- ---- + ------------------------------------------- +
+| Selenium | selenium2-server or selenium3-server | Integration with the Selenium project |
++ -------------- + ---------------------------------- ---- + ------------------------------------------- +
+| Sikuli | sikulix-server | Integration with the SikuliX project |
++ -------------- + ---------------------------------- ---- + ------------------------------------------- +
 
-Bases de données
+Data base
 ~~~~~~~~~~~~~~~~
 
-+---------------+--------------+-----------------------------------------------------------------------------+
-| Adaptateurs   | Agents       | Descriptions                                                                |
-+---------------+--------------+-----------------------------------------------------------------------------+
-| Microsoft SQL | database     | Communication avec une base de type Microsoft SQL                           |
-+---------------+--------------+-----------------------------------------------------------------------------+
-| MySQL         | database     | Communication avec une base de type MySQL/MariaDB                           |
-+---------------+--------------+-----------------------------------------------------------------------------+	
-| PostgreSQL    | database     | Communication avec une base de type PostgreSQL                              |
-+---------------+--------------+-----------------------------------------------------------------------------+			
++ --------------- + -------------- + ------------------ -------------------------------------------------- --------- +
+| Adapters | Agents | Descriptions |
++ --------------- + -------------- + ------------------ -------------------------------------------------- --------- +
+| Microsoft SQL | database | Communication with a base of type Microsoft SQL |
++ --------------- + -------------- + ------------------ -------------------------------------------------- --------- +
+| MySQL | database | Communication with a MySQL / MariaDB database |
++ --------------- + -------------- + ------------------ -------------------------------------------------- --------- +
+| PostgreSQL | database | Communication with a PostgreSQL database |
++ --------------- + -------------- + ------------------ -------------------------------------------------- --------- +
 
-Contrôles systèmes	
+System controls
 ~~~~~~~~~~~~~~~~~~~
-+----------------+--------------+-----------------------------------------------------------------------------+
-| Adaptateurs    | Agents       | Descriptions                                                                |
-+----------------+--------------+-----------------------------------------------------------------------------+
-| SSH/SFTP       | ssh          | Console SSH                                                                 |
-+----------------+--------------+-----------------------------------------------------------------------------+
-| TELNET         | socket       | Client permettant d'envoyer et recevoir du texte                            |
-+----------------+--------------+-----------------------------------------------------------------------------+	
-| FTP            | ftp          | Client avec support TLS                                                     |
-+----------------+--------------+-----------------------------------------------------------------------------+	
-| System File    | file         | Permet l'interaction avec les fichiers systèmes Linux ou Windows            |
-+----------------+--------------+-----------------------------------------------------------------------------+	
-| System Win/Unix| command      | Permet de contrôler les systèmes Linux et Windows (wmic)                    |
-+----------------+--------------+-----------------------------------------------------------------------------+	
-| Cisco Catalyst | ssh          | Client de configuration, basé sur l'adaptateur Telnet                       |
-+----------------+--------------+-----------------------------------------------------------------------------+	
++ ---------------- + -------------- + ----------------- -------------------------------------------------- ---------- +
+| Adapters | Agents | Descriptions |
++ ---------------- + -------------- + ----------------- -------------------------------------------------- ---------- +
+| SSH / SFTP | ssh | SSH console |
++ ---------------- + -------------- + ----------------- -------------------------------------------------- ---------- +
+| TELNET | socket | Customer to send and receive text |
++ ---------------- + -------------- + ----------------- -------------------------------------------------- ---------- +
+| FTP | ftp | Customer with TLS support |
++ ---------------- + -------------- + ----------------- -------------------------------------------------- ---------- +
+| System File | file | Allows interaction with Linux or Windows system files |
++ ---------------- + -------------- + ----------------- -------------------------------------------------- ---------- +
+| System Win / Unix | command | Lets you control Linux and Windows systems (wmic) |
++ ---------------- + -------------- + ----------------- -------------------------------------------------- ---------- +
+| Cisco Catalyst | ssh | Configuration Client, based on the Telnet adapter |
++ ---------------- + -------------- + ----------------- -------------------------------------------------- ---------- +
 
-Protocoles Télécoms
+Telecom Protocols
 ~~~~~~~~~~~~~~~~~~~~~
 
-+--------------+--------------+-----------------------------------------------------------------------------+
-| Adaptateurs  | Agents       | Descriptions                                                                |
-+--------------+--------------+-----------------------------------------------------------------------------+
-| SMS Gateway  | gateway-sms  |  Permet de recevoir ou d'envoyer des SMS en utilisant un smartphone Android |
-+--------------+--------------+-----------------------------------------------------------------------------+	
-| SIP          | socket       |  Téléphone SIP                                                              |
-+--------------+--------------+-----------------------------------------------------------------------------+
-| RTP          | socket       |  Module permettant d'envoyer et recevoir des flux audios et vidéos          |
-+--------------+--------------+-----------------------------------------------------------------------------+		
-
-Librairies
++ -------------- + -------------- + ------------------- -------------------------------------------------- -------- +
+| Adapters | Agents | Descriptions |
++ -------------- + -------------- + ------------------- -------------------------------------------------- -------- +
+| SMS Gateway | gateway-sms | Receive or send SMS using an Android smartphone |
++ -------------- + -------------- + ------------------- -------------------------------------------------- -------- +
+| SIP | socket | SIP Phone |
++ -------------- + -------------- + ------------------- -------------------------------------------------- -------- +
+| RTP | socket | Module for sending and receiving audio and video streams |
++ -------------- + -------------- + ------------------- -------------------------------------------------- -------- +
+Bookstores
 ----------
 
-Une librairie permet de mettre à disposition rapidement des fonctions pour 
- - supporter les méthodes de chiffrement de données
- - supporter les formats de compression existants
- - supporter les fonctions d'authentification
- - manipuler les différents format de date, heure et unités
- - supporter les codecs (XML, JSON, etc...)
- - supporter les fonctions de hash de données
+A library makes it possible to quickly make available functions for
+  - support data encryption methods
+  - support existing compression formats
+  - support authentication functions
+  - manipulate the different format of date, time and units
+  - support codecs (XML, JSON, etc ...)
+  - support data hash functions
 
-Une librairie ne communique pas en direct avec le système à tester ou piloter. Elle est utilisée:
- - directement depuis les tests
- - depuis les adaptateurs.
+A library does not communicate directly with the system to be tested or piloted. It is used:
+  - directly from the tests
+  - from the adapters.
 
-.. tip:: Si plusieurs adaptateurs ont besoin des mêmes fonctions, il est conseillé de les factoriser dans une librairie.
+.. tip :: If several adapters need the same functions, it is advisable to factor them in a library.
 
-Liste des librairies disponibles par défauts:
+List of libraries available by default:
 
-Chiffrement
+Encryption
 ~~~~~~~~~~
 
-+-----------+---------------------------------------+
-|  AES      | Support chiffrement ou déchiffrement  |
-+-----------+---------------------------------------+
-|  Blowfish |  Support chiffrement ou déchiffrement |
-+-----------+---------------------------------------+
-|  OpenSSL  |  Permet d'exécuter la commande SSL    |
-+-----------+---------------------------------------+
-|  RC4      |  Support chiffrement ou déchiffrement |
-+-----------+---------------------------------------+
-|  XOR      |  Support chiffrement ou déchiffrement |
-+-----------+---------------------------------------+
-|  RSA      |  Générateur clé RSA                   |
-+-----------+---------------------------------------+
++ ----------- + ------------------------------------- - +
+| AES | Encryption or decryption support |
++ ----------- + ------------------------------------- - +
+| Blowfish | Encryption or decryption support |
++ ----------- + ------------------------------------- - +
+| OpenSSL | Execute the SSL |
++ ----------- + ------------------------------------- - +
+| RC4 | Encryption or decryption support |
++ ----------- + ------------------------------------- - +
+| XOR | Encryption or decryption support |
++ ----------- + ------------------------------------- - +
+| RSA | RSA Key Generator |
++ ----------- + ------------------------------------- - +
 
 .. note:: 
-  Un exemple est disponible dans les échantillons de tests ``/Samples/Tests_Libraries/02_Ciphers``
-
+  An example is available in test samples ``/Samples/Tests_Libraries/02_Ciphers``
+  
 Codecs
 ~~~~~~
 
-+--------------+-----------------------------------------------+
-| Base64       |  Encode ou décode au format base64            |
-+--------------+-----------------------------------------------+	
-| Excel        |  Lecture de fichier excel                     |
-+--------------+-----------------------------------------------+
-| G711A        |  Encode ou décode le codec audio              |
-+--------------+-----------------------------------------------+
-| G711U        |  Encode ou décode le codec audio              |
-+--------------+-----------------------------------------------+
-| JSON         |  Encode ou décode du texte au format JSON     |
-+--------------+-----------------------------------------------+
-| XML          |  Encode ou décode du texte au format XML      |
-+--------------+-----------------------------------------------+
++ -------------- + ---------------------------------- ------------- +
+| Base64 | Encode or decode in base64 format |
++ -------------- + ---------------------------------- ------------- +
+| Excel | Excel file reading |
++ -------------- + ---------------------------------- ------------- +
+| G711A | Encode or decode the audio codec |
++ -------------- + ---------------------------------- ------------- +
+| G711U | Encode or decode the audio codec |
++ -------------- + ---------------------------------- ------------- +
+| JSON | Encode or decode text in JSON format |
++ -------------- + ---------------------------------- ------------- +
+| XML | Encode or decode text in XML format |
++ -------------- + ---------------------------------- ------------- +
 
 .. note:: 
-  Un exemple est disponible dans les échantillons de tests ``/Samples/Tests_Libraries/03_Codecs``
+  An example is available in test samples ``/Samples/Tests_Libraries/03_Codecs``
 
 Compression
 ~~~~~~~~~~
 
-+--------+-------------------------------------------------+
-| GZIP   | Compression ou décompression au format GZIP     |
-+--------+-------------------------------------------------+	
++ -------- + ---------------------------------------- --------- +
+| GZIP | Compression or decompression in GZIP format |
++ -------- + ---------------------------------------- --------- +
 
 .. note:: 
-  Un exemple est disponible dans les échantillons de tests ``/Samples/Tests_Libraries/09_Compression``
+  An example is available in test samples ``/Samples/Tests_Libraries/09_Compression``
   
-Hashing	
+Hashing
 ~~~~~~~~~~
 
-+----------+------------------------------------------+
-| Checksum | Générateur de checksum                   |
-+----------+------------------------------------------+
-| HMAC     | Création d'un hash md5, sha1 et sha256   |
-+----------+------------------------------------------+
-| MD5      | Création d'un hash md5                   |
-+----------+------------------------------------------+
-| SHA      | Création d'un hash sha1, sha256 et sha512|
-+----------+------------------------------------------+
-| CRC32    | Générateur de checksum                   |
-+----------+------------------------------------------+
++ ---------- + -------------------------------------- ---- +
+| Checksum | Checksum Generator |
++ ---------- + -------------------------------------- ---- +
+| HMAC | Creating a hash md5, sha1 and sha256 |
++ ---------- + -------------------------------------- ---- +
+| MD5 | Creating a md5 hash |
++ ---------- + -------------------------------------- ---- +
+| SHA | Creating a hash sha1, sha256 and sha512 |
++ ---------- + -------------------------------------- ---- +
+| CRC32 | Checksum Generator |
++ ---------- + -------------------------------------- ---- +
 
 .. note:: 
-  Un exemple est disponible dans les échantillons de tests ``/Samples/Tests_Libraries/05_Hashing``
+  An example is available in test samples ``/Samples/Tests_Libraries/05_Hashing``
   
 Identifiant
 ~~~~~~~~~~
 
-+------------------+-------------------------------------------------------+
-| SessionID        |  Générateur de session ID                             |
-+------------------+-------------------------------------------------------+
-| UUIDS            |  Générateur de UUID (Universally Unique IDentifier)   |
-+------------------+-------------------------------------------------------+
++ ------------------ + ------------------------------ + -------------------------
+| SessionID | Session Builder ID |
++ ------------------ + ------------------------------ + -------------------------
+| UUIDS | UUID Generator (Universally Unique IDentifier) |
++ ------------------ + ------------------------------ + -------------------------
 
 .. note:: 
-  Un exemple est disponible dans les échantillons de tests ``/Samples/Tests_Libraries/07_Identifiers``
+  An example is available in test samples ``/Samples/Tests_Libraries/07_Identifiers``
   
 Média
 ~~~~~
 
-+--------------+---------------------------------------------------------------+
-| ChartsJS     |  Générateur de graphique visible dans les rapports de test    |
-+--------------+---------------------------------------------------------------+
-| DialTones    |  Générateur de tonalité                                       |
-+--------------+---------------------------------------------------------------+
-| Image        |  Manipulation des images                                      |
-+--------------+---------------------------------------------------------------+
-| Noise        |  Générateur de bruit                                          |
-+--------------+---------------------------------------------------------------+
-| SDP          |  Décode ou encode des messages SDP                            |
-+--------------+---------------------------------------------------------------+
-| WavContainer |  Création de fichier audio de type WAV                        |
-+--------------+---------------------------------------------------------------+
-| Waves        |  Générateur d'ondes simples                                   |
-+--------------+---------------------------------------------------------------+
++ -------------- + ---------------------------------- + -----------------------------
+| ChartsJS | Visible graph generator in test reports |
++ -------------- + ---------------------------------- + -----------------------------
+| DialTones | Tone generator |
++ -------------- + ---------------------------------- + -----------------------------
+| Image | Manipulation of images |
++ -------------- + ---------------------------------- + -----------------------------
+| Noise | Noise generator |
++ -------------- + ---------------------------------- + -----------------------------
+| SDP | Decodes or encodes SDP messages |
++ -------------- + ---------------------------------- + -----------------------------
+| WavContainer | Creating audio file type WAV |
++ -------------- + ---------------------------------- + -----------------------------
+| Waves | Simple wave generator |
++ -------------- + ---------------------------------- + -----------------------------
 
 .. note:: 
-  Un exemple est disponible dans les échantillons de tests ``/Samples/Tests_Libraries/04_Media``
+  An example is available in test samples ``/Samples/Tests_Libraries/04_Media``
 
 Date
 ~~~~
 
-+------------------+---------------------------------------+
-| Today            |   Permet de récupérer la date du jour |
-+------------------+---------------------------------------+
++ ------------------ + ------------------------------ --------- +
+| Today | Retrieves today's date |
++ ------------------ + ------------------------------ --------- +
 
 .. note:: 
-  Un exemple est disponible dans les échantillons de tests ``/Samples/Tests_Libraries/11_Date``
+  An example is available in test samples ``/Samples/Tests_Libraries/11_Date``
   
-Sécurité
+Security
 ~~~~~~~~~~
 
-+-------------+------------------------------------------------------+
-| Basic       |  Décode ou encode l'autorisation                     |
-+-------------+------------------------------------------------------+
-| Digest      |  Décode ou encode l'autorisation                     |
-+-------------+------------------------------------------------------+
-| Hmac        |  Décode ou encode l'autorisation                     |
-+-------------+------------------------------------------------------+
-| Oauth       |  Décode ou encode l'autorisation                     |
-+-------------+------------------------------------------------------+
-| Wsse        |  Décode ou encode l'autorisation                     |
-+-------------+------------------------------------------------------+
-| Certificate |  Décode les certificats dans un format lisible       |
-+-------------+------------------------------------------------------+
-| JWT         |  Décode ou encode des tokens                         |
-+-------------+------------------------------------------------------+
++ ------------- + ----------------------------------- ------------------- +
+| Basic | Decode or encode the authorization |
++ ------------- + ----------------------------------- ------------------- +
+| Digest | Decode or encode the authorization |
++ ------------- + ----------------------------------- ------------------- +
+| Hmac | Decode or encode the authorization |
++ ------------- + ----------------------------------- ------------------- +
+| Oauth | Decode or encode the authorization |
++ ------------- + ----------------------------------- ------------------- +
+| Wsse | Decode or encode the authorization |
++ ------------- + ----------------------------------- ------------------- +
+| Certificate | Decodes certificates in a readable format |
++ ------------- + ----------------------------------- ------------------- +
+| JWT | Decode or encode tokens |
++ ------------- + ----------------------------------- ------------------- +
 
 .. note:: 
-  Un exemple est disponible dans les échantillons de tests ``/Samples/Tests_Libraries/01_Security``
+  An example is available in test samples ``/Samples/Tests_Libraries/01_Security``
   
-Temps
+Time
 ~~~~~
 
-+------------------+-------------------------------------------------------------------------+
-| Timestamp        |  Permet de générer un timestamp ou de convertir en valeur lisible       |
-+------------------+-------------------------------------------------------------------------+
++ ------------------ + ------------------------------ ------------------------------------------- +
+| Timestamp | Generate a timestamp or convert to a readable value |
++ ------------------ + ------------------------------ ------------------------------------------- +
 
 .. note:: 
-  Un exemple est disponible dans les échantillons de tests ``/Samples/Tests_Libraries/06_Time``
+  An example is available in test samples ``/Samples/Tests_Libraries/06_Time``
   
-Unités	
+Units
 ~~~~~~
 
-+------------------+------------------------------------------------------------+
-| Bytes            |  Permet de convertir des bytes en valeur lisibles          |
-+------------------+------------------------------------------------------------+
++ ------------------ + ------------------------------ ------------------------------ +
+| Bytes | Convert fromtes to readable |
++ ------------------ + ------------------------------ ------------------------------ +
 
 .. note:: 
-  Un exemple est disponible dans les échantillons de tests ``/Samples/Tests_Libraries/08_Units``
+  An example is available in test samples ``/Samples/Tests_Libraries/08_Units``
   
-Outils tiers
+Third party tools
 ---------------
 
-Le produit vient à la base avec un certain nombre de plugins pour s'interfacer avec 
-d'autre d'outils existants (suivi de défauts, managements de tests, etc..).
+The product comes at the base with a number of plugins to interface with
+other existing tools (defect tracking, test management, etc.).
 
-Ces plugins peuvent être utilisés directement depuis un test.
+These plugins can be used directly from a test.
 
-Liste des outils supportés:
+List of supported tools:
 
-+------------------+------------------------------------------------------------+
-| Git              |  Clone/commit de fichier sur un dépôt distant              |
-+------------------+------------------------------------------------------------+
-| Jira             |  Création de ticket                                        |
-+------------------+------------------------------------------------------------+
-| HP ALM QC        |  Exécution de test, création de ticket. Version 12 minimum |
-+------------------+------------------------------------------------------------+
-| ExtensiveTesting |  Exécution de test, création de variable                   |
-+------------------+------------------------------------------------------------+
-| Jenkins          |  Exécution de tests avant ou après un build                |
-+------------------+------------------------------------------------------------+
-| VSphere          | Création ou supression de machine virtuelle sur VMware     |
-+------------------+------------------------------------------------------------+
-
++ ------------------ + ------------------------------ ------------------------------ +
+| Git | Clone / commit file on remote repository |
++ ------------------ + ------------------------------ ------------------------------ +
+| Jira | Ticket creation |
++ ------------------ + ------------------------------ ------------------------------ +
+| HP ALM QC | Test run, ticket creation. Version 12 minimum |
++ ------------------ + ------------------------------ ------------------------------ +
+| ExtensiveTesting | Test execution, variable creation |
++ ------------------ + ------------------------------ ------------------------------ +
+| Jenkins | Running tests before or after a build |
++ ------------------ + ------------------------------ ------------------------------ +
+| VSphere | VM creation or supression on VMware |
++ ------------------ + ------------------------------ ------------------------------ +
 
 .. note:: 
-    La solution dispose d'une API REST, elle peut être pilotée aussi par ces outils.
-     - Plugin ``Jenkins``: https://wiki.jenkins.io/display/JENKINS/ExtensiveTesting+Plugin
+    The solution has a REST API, it can be driven also by these tools.
+      - Jenkins Plugin: https://wiki.jenkins.io/display/JENKINS/ExtensiveTesting+Plugin
 
 HP ALM
 ~~~~~~
 
-Ce plugin permet d'exporter des résultats de tests dans l'outil HP ALM.
-Il peut etre utilisé depuis un etst pour exporter des résultats sans intervention utilisateur.
+This plugin allows you to export test results in the HP ALM tool.
+It can be used from an etst to export results without user intervention.
 
-Exemple d'utilisation:
+Example of use:
 
 ::
-
-    HP ALM ------> Appel REST API -----> ET 
-    ^                                    |
-    |                                    v
-    |                             Exécution du test demandé
-    |                                    v
-    +<-------- Push du résultat ---------+
+HP ALM ------> Call REST API -----> AND
+     ^ |
+     | v
+     | Execution of the requested test
+     | v
+     + <-------- Push the result --------- +
     
     
-.. note:: 
-  Un exemple est disponible dans les échantillons de tests ``/Samples/Tests_Interop/02_HP_QC``
-  
+.. note ::
+   An example is available in the test samples `` / Samples / Tests_Interop / 02_HP_QC``
+   
 Jenkins
 ~~~~~~
 
-Ce plugin permet de lancer un build depuis la solution Extensive.
+This plugin allows to launch a build from the Extensive solution.
 
-.. note:: 
-  Un exemple est disponible dans les échantillons de tests ``/Samples/Tests_Interop/06_Jenkins``
+.. note ::
+   An example is available in test samples ``/Samples/Tests_Interop/06_Jenkins``
   
 VSphere
 ~~~~~~
 
-Ce plugin permet de piloter un environnement virtuel VMware. Il peut être utilisé pour:
- - créer des machines virtuelles en mode automatiquement
- - supprimer des machines
+This plugin allows you to control a VMware virtual environment. It can be used for:
+  - create virtual machines automatically
+  - remove machines
 
-.. note:: 
-  Un exemple est disponible dans les échantillons de tests ``/Samples/Tests_Interop/05_VSphere``
+.. note ::
+   An example is available in test samples ``/Samples/Tests_Interop/05_VSphere``
 
 ExtensiveTesting
 ~~~~~~~~~~~~~~~~
 
-Ce plugin permet de faire un lien entre plusieurs environnement (dev, intégration, qualification) en permettant 
-d'exécuter des tests d'un environnement à l'autre.
+This plugin makes it possible to make a link between several environment (dev, integration, qualification) by allowing
+to run tests from one environment to another.
 
-.. note:: 
-  Un exemple est disponible dans les échantillons de tests ``/Samples/Tests_Interop/03_ExtensiveTesting``
+.. note ::
+   An example is available in test samples ``/Samples/Tests_Interop/03_ExtensiveTesting``
 
 Jira
 ~~~~
 
-Ce plugin permet de créer des tickets suite à l'exécution d'un test dans l'outil Jira.
+This plugin makes it possible to create tickets following the execution of a test in the tool Jira.
 
-.. note:: 
-  Un exemple est disponible dans les échantillons de tests ``/Samples/Tests_Interop/01_Jira``
+.. note ::
+   An example is available in test samples ``/Samples/Tests_Interop/01_Jira``
 
 Git
 ~~~~
 
-Ce plugin permet de récupérer ou pousser des fichiers depuis un dépôt de sources.
-Il peut être utilisé en prérequis d'un test.
+This plugin allows you to recover or push files from a source repository.
+It can be used as a prerequisite for a test.
 
-.. note:: 
-  Un exemple est disponible dans les échantillons de tests ``/Samples/Tests_Interop/04_Git``
+.. note ::
+   An example is available in test samples ``/Samples/Tests_Interop/04_Git``
 
 Agents
 ------
 
-Les agents sont disponibles depuis la boîte à outils. Il sont à utiliser conjointement avec les adaptateurs 
- - pour communiquer avec le système à tester ou piloter lorsque qu'il n'est pas accessible en direct par le serveur de test (ex: une page web)
- - exécuter un test sur plusieurs environnements différents.
+Agents are available from the toolbox. They are to be used together with the adapters
+  - to communicate with the system to test or control when it is not accessible live by the test server (ex: a web page)
+  - run a test on several different environments.
  
-.. note:: L'agent ``dummy`` est à utiliser comme base pour le développement d'un nouvel agent.
+.. note :: The `` dummy`` agent is to be used as a basis for developing a new agent.
 
-.. tip: Il est conseillé de limiter l'usage des agents car la mise en place des tests se retrouve plus complexe.
+.. tip: It is advisable to limit the use of agents because the implementation of tests is more complex.
 
 
-Protocoles réseaux
+Network Protocols
 ~~~~~~~~~~~~~~~~~~
 
-+------------------+--------------------------------------------------------------------------------------+
-| socket           |  Permet de démarrer des sockets TCP/UDP                                              |
-+------------------+--------------------------------------------------------------------------------------+
-| ftp              |  Permet de se connecter sur un serveur FTP(S)                                        |
-+------------------+--------------------------------------------------------------------------------------+
-| database         |  Permet de requêter les bases de données (MySQL, Microsoft SQL et PostgreSQL)        |
-+------------------+--------------------------------------------------------------------------------------+
-| ssh              |  Permet de se connecter sur des machines via SSH ou SFTP                             |
-+------------------+--------------------------------------------------------------------------------------+
++ ------------------ + ------------------------------ -------------------------------------------------- ------ +
+| socket | Lets you start TCP / UDP sockets |
++ ------------------ + ------------------------------ -------------------------------------------------- ------ +
+| ftp | Connect to an FTP server (S) |
++ ------------------ + ------------------------------ -------------------------------------------------- ------ +
+| database | Queries databases (MySQL, Microsoft SQL and PostgreSQL) |
++ ------------------ + ------------------------------ -------------------------------------------------- ------ +
+| ssh | Connect to machines via SSH or SFTP |
++ ------------------ + ------------------------------ -------------------------------------------------- ------ +
 
-Systèmes
+Systems
 ~~~~~~~
 
-+------------------+--------------------------------------------------------------------------------------+
-| command          |  Permet d'exécuter des commandes systèmes sur Windows ou Linux                       |
-+------------------+--------------------------------------------------------------------------------------+
-| file             |  Permet de récupérer des fichiers sur les systèmes Windows ou Linux                  |
-+------------------+--------------------------------------------------------------------------------------+
++ ------------------ + ------------------------------ -------------------------------------------------- ------ +
+| command | Execute system commands on Windows or Linux |
++ ------------------ + ------------------------------ -------------------------------------------------- ------ +
+| file | Allows you to recover files on Windows or Linux systems |
++ ------------------ + ------------------------------ -------------------------------------------------- ------ +
 
-
-Outils tiers
+Third party tools
 ~~~~~~~~~~~~
 
-+------------------+--------------------------------------------------------------------------------------+
-| sikulix-server   |  Intéractions avec les applications lourdes                                          |
-+------------------+--------------------------------------------------------------------------------------+
-| selenium3-server |  Permet de piloter les navigateurs web dernières générations                         |
-+------------------+--------------------------------------------------------------------------------------+
-| selenium2-server |  Permet de piloter les navigateurs web                                               |
-+------------------+--------------------------------------------------------------------------------------+
-| soapui           |  Permet d'exécuter des tests SoapUI                                                  |
-+------------------+--------------------------------------------------------------------------------------+
-| adb              |  Permet de piloter les smartphones Android                                           |
-+------------------+--------------------------------------------------------------------------------------+
-| gateway-sms      |  Permet d'envoyer ou recevoir des SMS                                                |
-+------------------+--------------------------------------------------------------------------------------+
++ ------------------ + ------------------------------ -------------------------------------------------- ------ +
+| sikulix-server | Interactions with heavy applications |
++ ------------------ + ------------------------------ -------------------------------------------------- ------ +
+| selenium3-server | Allows you to control the latest generation web browsers |
++ ------------------ + ------------------------------ -------------------------------------------------- ------ +
+| selenium2-server | Allows you to control web browsers |
++ ------------------ + ------------------------------ -------------------------------------------------- ------ +
+| soapui | Allows you to run SoapUI tests |
++ ------------------ + ------------------------------ -------------------------------------------------- ------ +
+| adb | Allows you to control Android smartphones |
++ ------------------ + ------------------------------ -------------------------------------------------- ------ +
+| gateway-sms | Send or receive SMS |
++ ------------------ + ------------------------------ -------------------------------------------------- ------ +
 
-.. note:: L'utilisation de l'agent ``Selenium3-Server`` nécessiste au minimum d'avoir ``Java 8`` sur le poste.
+.. note :: Using the `` Selenium3-Server`` agent requires at least `` Java 8`` on the machine.
 
-
-Sondes
+Probes
 ------
 
-Les sondes sont disponibles dans la boîte à outils. Le but principal est de récupérer 
-automatiquement des logs (trace réseaux, fichiers) durant l'exécution d'un test.
+The probes are available in the toolbox. The main goal is to recover
+automatically logs (network trace, files) during the execution of a test.
 
-+----------------+------------------------------------------------------------------------------------------+
-| textual        |  Permet de faire suivre des fichiers de logs sur Windows ou Linux (tailf)                |
-+----------------+------------------------------------------------------------------------------------------+
-| network        |  Prise de traces réseaux, sonde basée sur tcpdump sur linux, ou tshark sur Windows       |
-+----------------+------------------------------------------------------------------------------------------+
-| file           |  Récupération de fichiers de configuration sur Windows ou Linux                          |
-+----------------+------------------------------------------------------------------------------------------+
++ ---------------- + -------------------------------- -------------------------------------------------- -------- +
+| textual | Allows follow-up of log files on Windows or Linux (tailf) |
++ ---------------- + -------------------------------- -------------------------------------------------- -------- +
+| network | Take network traces, probe based on tcpdump on linux, or tshark on Windows |
++ ---------------- + -------------------------------- -------------------------------------------------- -------- +
+| file | Recovery of configuration files on Windows or Linux |
++ ---------------- + -------------------------------- -------------------------------------------------- -------- +
 
-L'utilisation d'une sonde dans un test est à définir dans les propriétés.
-
+The use of a probe in a test is to be defined in the properties.
  
-.. note:: L'agent ``dummy`` est à utiliser comme base pour le développement d'un nouvel agent.
+.. note :: The `` dummy`` agent is to be used as a basis for developing a new agent.

@@ -1,80 +1,80 @@
 ﻿Requirements
 =================
 
-Serveur
+Server
 ------
 
-Pour l'instant le serveur ne peut être exécuté que sur un environnement Linux.
-Il est possible de l'exécuter sur un environnement virtuel ou physique.
+For now the server can only be run on a Linux environment.
+It can be run on a virtual or physical environment.
 
-+---------------------+------------+------------+
-|Caractéristiques     |   Minimum  | Recommandé |
-+---------------------+------------+------------+
-| OS                  | CentOS 6.5+ ou 7.x      |
-+---------------------+------------+------------+
-| Python              |    2.6     |    2.7     |
-+---------------------+------------+------------+
-| Arch                |         x86_64          |
-+---------------------+------------+------------+
-| Mémoire             |    4Go     |  8 Go      |
-+---------------------+------------+------------+
-| CPU                 |   2 Coeurs |  4 coeurs  |
-+---------------------+------------+------------+
-| Disque              |    ~10Go   |   ~50Go    |
-+---------------------+------------+------------+
-| Réseau              |   100Mb/s  |  1 Gbit/s  |
-+---------------------+------------+------------+
-| Nombre Utilisateur  |     2      |     5      |
-+---------------------+------------+------------+
++ --------------------- + ------------ + ------------ +
+Features | Minimum | Recommended |
++ --------------------- + ------------ + ------------ +
+| OS | CentOS 6.5+ or 7.x |
++ --------------------- + ------------ + ------------ +
+| Python | 2.6 | 2.7 |
++ --------------------- + ------------ + ------------ +
+| Arch | x86_64 |
++ --------------------- + ------------ + ------------ +
+| Memory | 4GB | 8 GB |
++ --------------------- + ------------ + ------------ +
+| CPU | 2 Hearts | 4 hearts |
++ --------------------- + ------------ + ------------ +
+| Disk | ~ 10GB | ~ 50GB |
++ --------------------- + ------------ + ------------ +
+| Network | 100Mb / s | 1 Gbit / s |
++ --------------------- + ------------ + ------------ +
+| User Number | 2 | 5 |
++ --------------------- + ------------ + ------------ +
 
-.. note:: Le support de Python 3.x est cours de développement.
+.. note :: Python 3.x support is under development.
 
-Client
+Customer
 ------
 
-Le client peut être exécuté sur un environnement Windows ou Linux.
+The client can be run on a Windows or Linux environment.
 
-+-----------------+---------------------------+---------------------------+
-|Caractéristiques |   Minimum                 | Recommandé                |
-+-----------------+---------------------------+---------------------------+
-| OS              | Windows 7+                | Windows 10+               |
-|                 | Linux CentOS 6.5+         | CentOS7+ ou Ubuntu 17+    |
-+-----------------+---------------------------+---------------------------+
-| Arch            |                     x86_64                            |
-+-----------------+---------------------------+---------------------------+
-| Mémoire         |      4Go                  |     8Go                   |
-+-----------------+---------------------------+---------------------------+
-| Disque          |        ~1Go               |         ~2Go              |
-+-----------------+---------------------------+---------------------------+
++ ----------------- + --------------------------- + --- ------------------------ +
+Features | Minimum | Recommended |
++ ----------------- + --------------------------- + --- ------------------------ +
+| OS | Windows 7+ | Windows 10+ |
+| | Linux CentOS 6.5+ | CentOS7 + or Ubuntu 17+ |
++ ----------------- + --------------------------- + --- ------------------------ +
+| Arch | x86_64 |
++ ----------------- + --------------------------- + --- ------------------------ +
+| Memory | 4GB | 8GB |
++ ----------------- + --------------------------- + --- ------------------------ +
+| Disk | ~ 1GB | ~ 2GB |
++ ----------------- + --------------------------- + --- ------------------------ +
 
 .. note::
 
- L'architecture 32-bit n'est plus supportée depuis la version 17.0.0.  
- Cependant il est toujours possible de compiler les sources sur un environnement 32bits. 
+  The 32-bit architecture is no longer supported since version 17.0.0.
+  However it is still possible to compile the sources on a 32bits environment.
 
-.. important:: Les plugins pour le client ne sont disponibles que pour l'environnement Windows.
- 
-Boite à outils
+.. important :: The plugins for the client are only available for the Windows environment.
+
+Toolbox
 ------------
 
-La boite à outils peut être exécutée sur un environnement Windows ou Linux.
+The toolbox can be run on a Windows or Linux environment.
 
-+-----------------+---------------------------+---------------------------+
-|Caractéristiques |   Minimum                 | Recommandé                |
-+-----------------+---------------------------+---------------------------+
-| OS              | Windows 7+                | Windows 10+               |
-|                 | Linux CentOS 6.5+         | CentOS7+ ou Ubuntu 17+    |
-+-----------------+---------------------------+---------------------------+
-| Arch            |                     x86_64                            |
-+-----------------+---------------------------+---------------------------+
-| Mémoire         |      4Go                  |     8Go                   |
-+-----------------+---------------------------+---------------------------+
-| Disque          |                    ~1Go                               |
-+-----------------+---------------------------+---------------------------+
++ ----------------- + --------------------------- + --- ------------------------ +
+Features | Minimum | Recommended |
++ ----------------- + --------------------------- + --- ------------------------ +
+| OS | Windows 7+ | Windows 10+ |
+| | Linux CentOS 6.5+ | CentOS7 + or Ubuntu 17+ |
++ ----------------- + --------------------------- + --- ------------------------ +
+| Arch | x86_64 |
++ ----------------- + --------------------------- + --- ------------------------ +
+| Memory | 4GB | 8GB |
++ ----------------- + --------------------------- + --- ------------------------ +
+| Disk | ~ 1GB |
++ ----------------- + --------------------------- + --- ------------------------ +
 
 .. note::
 
- L'architecture 32-bit n'est plus supportée depuis la version 17.0.0. 
- Cependant il est toujours possible de compiler les sources sur un environnement 32bits. 
+  The 32-bit architecture is no longer supported since version 17.0.0.
+  However it is still possible to compile the sources on a 32bits environment.
 
-.. important:: Les plugins pour le client ne sont disponibles que pour l'environnement Windows.
+.. important :: The plugins for the client are only available for the Windows environment.

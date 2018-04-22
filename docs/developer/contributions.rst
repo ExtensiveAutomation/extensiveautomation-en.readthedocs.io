@@ -1,23 +1,23 @@
-Contributions
+contributions
 =============
 
-Développement solution
+Solution development
 ----------------------
 
-Client graphique
+Graphic client
 ~~~~~~~~~~~~~~
 
-**Environnement x64 win py3.6 qt5**
+** Environment x64 win py3.6 qt5 **
 
-.. tip:: Environnement recommandé.
+.. tip :: Recommended environment.
 
-Pour préparer son environnement de développement, il est nécessaire de récupérer et d'installer les logiciels suivants:
- - Python 3.6.3 64bits
- - Git-2.15.0-64-bit.exe
- - TortoiseGit-2.5.0.0-64bit.msi
- - InnoSetup 5.5.9 – http://www.jrsoftware.org/isdl.php
+To prepare its development environment, it is necessary to recover and install the following software:
+  - Python 3.6.3 64bits
+  - Git-2.15.0-64-bit.exe
+  - TortoiseGit-2.5.0.0-64bit.msi
+  - InnoSetup 5.5.9 - http://www.jrsoftware.org/isdl.php
 
-D'ajouter les paquets Python supplémentaires avec la commande ``pip``
+Add additional Python packages with the `` pip`` command
 
 .. code-block:: bash
 
@@ -25,40 +25,40 @@ D'ajouter les paquets Python supplémentaires avec la commande ``pip``
 	> py -m pip install pyqt5
 	> py -m pip install qscintilla
 	
-Et de récupérer les sources du client depuis le dépôt sur github.
+And retrieve the sources of the client since the deposit on github.
 	
 .. code-block:: bash
 
 	python Main.py
     
-.. warning:: Windows XP n'est pas supporté dans ce mode.
+.. warning :: Windows XP is not supported in this mode.
 
-**Environnement x64 win py3.4 qt4**
+** x64 environment win py3.4 qt4 **
 
-.. warning:: Cet environnement de développement n'est plus recommandé.
+.. warning :: This development environment is no longer recommended.
 
-Pour préparer son environnement de développement, il est nécessaire de récupérer et installer les logiciels suivants:
- - Python 3.4.4 64bits
- - PyQt 4.11.4
- - Git-2.15.0-64-bit.exe
- - TortoiseGit-2.5.0.0-64bit.msi
- - InnoSetup 5.5.9 – http://www.jrsoftware.org/isdl.php
+To prepare its development environment, it is necessary to recover and install the following software:
+  - Python 3.4.4 64bits
+  - PyQt 4.11.4
+  - Git-2.15.0-64-bit.exe
+  - TortoiseGit-2.5.0.0-64bit.msi
+  - InnoSetup 5.5.9 - http://www.jrsoftware.org/isdl.php
 
-D'installer les paquets Python supplémentaires avec la commande ``pip``
+Install additional Python packages with the `` pip`` command
 
 .. code-block:: bash
 
 	> C:\Windows\system32>py -3.4 -m pip install py2exe Cx_Freeze pyinstaller pylint
     
 
-.. warning::
-    Une modification est à effectuer dans la librairie py2exe.
-    Editer le fichier `C:\Python34\Lib\site-packages\py2exe\icons.py`
-    Rechercher la ligne `if iconheader.idCount` et modifier la valeur 10 par 14.
+.. warning ::
+     A modification is to be done in the py2exe library.
+     Edit the `C: \ Python34 \ Lib \ site-packages \ py2exe \ icons.py` file
+     Look for the `if iconheader.idCount` line and change the value 10 to 14.
 
-**Environnement x64 centos py2.7 qt4**
+** Environment x64 centos py2.7 qt4 **
 
-Préparation de son environnement de développement sur un système Linux CentOS 6 ou 7.
+Preparation of the development environment on a Linux CentOS 6 or 7 system.
 
 .. code-block:: bash
 
@@ -73,7 +73,7 @@ Préparation de son environnement de développement sur un système Linux CentOS
 	pip install dpkt
 	pip install cx_freeze
 	
-Récupération des sources du client depuis le dépôt sur github.
+Download of the client's sources since the deposit on github.
 
 .. code-block:: bash
 
@@ -90,9 +90,9 @@ Récupération des sources du client depuis le dépôt sur github.
 	python Main.py
     
 
-**Environnement x64 ubuntu py3.5 qt5**
+** x64 environment ubuntu py3.5 qt5 **
 
-Préparation de son environnement de développement sur un système Linux Ubuntu 17.04
+Preparing your development environment on a Ubuntu 17.04 Linux system
 
 .. code-block:: bash
 
@@ -106,7 +106,7 @@ Préparation de son environnement de développement sur un système Linux Ubuntu
 
 	sudo pip install dpkt
     
-Récupérer les sources du client depuis le dépôt sur github.
+Retrieve the client's sources from the github repository.
 
 .. code-block:: bash
 
@@ -124,24 +124,24 @@ Récupérer les sources du client depuis le dépôt sur github.
 	python3 Main.py
     
 
-Boite à outils 
+Toolbox
 ~~~~~~~~~~~~~~
 
-**Environnement x64 win py3.6 qt5 (recommandé)**
+** Environment x64 win py3.6 qt5 (recommended) **
 
-Pour préparer son environnement de développement, il est nécessaire de récupérer et installer les logiciels suivants:
- - Python 3.6.3 64bits
- - Git-2.15.0-64-bit.exe
- - TortoiseGit-2.5.0.0-64bit.msi
- - InnoSetup 5.5.9 – http://www.jrsoftware.org/isdl.php
-
+To prepare its development environment, it is necessary to recover and install the following software:
+  - Python 3.6.3 64bits
+  - Git-2.15.0-64-bit.exe
+  - TortoiseGit-2.5.0.0-64bit.msi
+  - InnoSetup 5.5.9 - http://www.jrsoftware.org/isdl.php
+  
 .. code-block:: bash
 
 	> py -m pip install pyinstaller pylint
 	> py -m pip install pyqt5
 	> py -m pip install qscintilla
     
-Installer les librairies utilisées par les différents agents:
+Install the libraries used by the different agents:
 
 .. code-block:: bash
 
@@ -150,22 +150,22 @@ Installer les librairies utilisées par les différents agents:
 	> py -3.6 -m pip install pymssql-2.1.3-cp36-cp36m-win_amd64.whl
     
 
-Installer la librairie selenium dédié pour la solution:
+Install the dedicated selenium library for the solution:
 
 .. code-block:: bash
 
 	> c:\Python36\python.exe setup.py install
     
-**Environnement x64 win py3.4 qt4**
+** x64 environment win py3.4 qt4 **
 
-Pour préparer son environnement de développement, il est nécessaire de récupérer et installer les logiciels suivants:
- - Python 3.4.4 64bits
- - PyQt 4.11.4
- - Git-2.15.0-64-bit.exe
- - TortoiseGit-2.5.0.0-64bit.msi
- - InnoSetup 5.5.9 – http://www.jrsoftware.org/isdl.php
+To prepare its development environment, it is necessary to recover and install the following software:
+  - Python 3.4.4 64bits
+  - PyQt 4.11.4
+  - Git-2.15.0-64-bit.exe
+  - TortoiseGit-2.5.0.0-64bit.msi
+  - InnoSetup 5.5.9 - http://www.jrsoftware.org/isdl.php
     
-Installer les librairies utilisées par les différents agents:
+Install the libraries used by the different agents:
 
 .. code-block:: bash
 
@@ -173,17 +173,17 @@ Installer les librairies utilisées par les différents agents:
 	> py -3.4 -m pip install requests PyMySQL psycopg2 pymssql paramiko 
     
 
-Installer la librairie selenium dédiée pour la solution:
+Install the dedicated selenium library for the solution:
 
 .. code-block:: bash
 
 	> c:\Python34\python.exe setup.py install
     
-**Environnement x64 centos py3.5 qt5**
+** Environment x64 centos py3.5 qt5 **
 
-Préparation de son environnement de développement sur un système Linux CentOS 6 ou 7.
+Preparation of its development environment on a Linux CentOS 6 or 7 system.
 
-Installer la librairie Qt5 (binding python)
+Install the Qt5 library (binding python)
 
 .. code-block:: bash
 
@@ -198,7 +198,7 @@ Installer la librairie Qt5 (binding python)
 	cd ../..
 	
 
-Installer les librairies additionnelles 
+Install additional libraries
 
 .. code-block:: bash
 
@@ -211,20 +211,20 @@ Installer les librairies additionnelles
 	cd selenium-3.7.0/
 	sudo python3 setup.py install
 	
-Récupérer les sources du client depuis le dépôt sur github.
-	
-Exécution de la boite à outils en mode graphique
+Retrieve the client's sources from the github repository.
+
+Running the toolbox in graphical mode
 
 .. code-block:: bash
 
 	python3 Systray.py
     
 
-**Environnement x64 centos py2.7 qt4**
+** Environment x64 centos py2.7 qt4 **
 
-Préparation de son environnement de développement sur un système Linux CentOS 6 ou 7.
+Preparation of its development environment on a Linux CentOS 6 or 7 system.
 
-Installer les librairies additionnelles 
+Install additional libraries
 
 .. code-block:: bash
 
@@ -239,7 +239,7 @@ Installer les librairies additionnelles
 	python setup.py install
 	
 
-Installer la librairie Qt4 (binding python)
+Install the Qt4 library (binding python)
 
 .. code-block:: bash
 
@@ -253,23 +253,23 @@ Installer la librairie Qt4 (binding python)
 	Building translations resources...
 	cd ../..
 	
-Récupérer les sources du client depuis le dépôt sur github.
-	
-Exécution de la boite à outil en mode graphique
+Retrieve the client's sources from the github repository.
+
+Running the toolbox in graphical mode
 
 .. code-block:: bash
 
 	python Systray.py
 	
 
-Serveur 
+Server
 ~~~~~~~
 
-**Environnement x64 centos py2.7**
+** Environment x64 centos py2.7 **
 
-Préparation de son environnement de développement sur un système Linux CentOS 6.5 et plus.
+Preparation of its development environment on a Linux CentOS 6.5 and above.
 
-Installation des paquets systèmes
+Installing system packages
 
 .. code-block:: bash
   
@@ -321,7 +321,7 @@ Installation des paquets systèmes
   postgresql-devel
   
 
-Installation des librairies python
+Installing python libraries
 
 .. code-block:: bash
   
@@ -387,27 +387,27 @@ Installation des librairies python
   pygit
   
 
-Développement plugins
+Plugins development
 ----------------------
 
-Adaptateur
+Adapter
 ~~~~~~~~~~
 
-L'ajout d'une adaptateur s'effectue en utilisant le client graphique.
-Il faut aller dans le dépôt ``Modules Listing > Adapters`` et faire un clic droit sur l'arborescence pour ajouter un adaptateur.
+Adding an adapter is done using the graphical client.
+You have to go to the `` Modules Listing> Adapters`` repository and right-click on the tree to add an adapter.
 
 .. image:: /_static/images/client/client_adapters.png
 
-Pour mettre à disposition l'adaptateur pour les tests, il faut éditer le fichier ``__init__.py`` et ajouter les lignes 
-suivantes:
+To make the adapter available for testing, you need to edit the `` __init __. Py`` file and add the lines
+following:
 
 .. code-block:: python
   
   import Example
   __HELPER__.append("Example") 
   
-Pour faire apparaitre l'adaptateur dans la documentation accessible depuis le client graphique, il faut 
-utiliser le décorateur ``@doc_public`` devant les fonctions que l'on souhaite documenter.
+To make the adapter appear in the documentation accessible from the graphical client, it is necessary to
+use the decorator `` @ doc_public`` in front of the functions that one wishes to document.
 
 .. code-block:: python
   
@@ -419,26 +419,26 @@ utiliser le décorateur ``@doc_public`` devant les fonctions que l'on souhaite d
     def connect(self, timeout=5.0):
   
 
-.. tip:: L'adaptateur ``Dummy`` est à utiliser comme base de développement.
+.. tip :: The `` Dummy`` adapter is to be used as a basis for development.
 
-Librairie
+Libraries
 ~~~~~~~~~
 
-L'ajout d'une librairie s'effectue en utilisant le client graphique.
-Il faut aller dans le dépôt `Modules Listing > Libraries` et faire un clic droit sur l'arborescence pour ajouter une librairie.
+Adding a library is done using the graphical client.
+You have to go to the `Modules Listing> Libraries` repository and right-click on the tree to add a library.
 
 .. image:: /_static/images/client/client_libraries.png
 
-Pour mettre à disposition la librairie pour les tests, il faut éditer le fichier ``__init__.py`` et ajouter les lignes 
-suivantes:
+To make the library available for testing, you need to edit the `` __init __. Py`` file and add the lines
+following:
 
 .. code-block:: python
   
   import Example
   __HELPER__.append("Example") 
   
-Pour faire apparaitre la librairie dans la documentation accessible depuis le client graphique, il faut 
-utiliser le décorateur ``@doc_public`` devant les fonctions que l'on souhaite documenter.
+To make the library appear in the documentation accessible from the graphical client, it is necessary to
+use the decorator `` @ doc_public`` in front of the functions that one wishes to document.
 
 .. code-block:: python
   
@@ -450,26 +450,26 @@ utiliser le décorateur ``@doc_public`` devant les fonctions que l'on souhaite d
     def connect(self, timeout=5.0):
   
 
-.. tip:: La librairie ``Dummy`` est à utiliser comme base de développement.
+.. tip :: The `` Dummy`` library is to be used as a basis for development.
 
-SDK Boite à outils
+SDK Toolbox
 ~~~~~~~~~~~~~~
 
-**Environnement Linux**
+** Linux environment **
 
-.. tip:: Il est conseillé d'utiliser le plugin ``dummy`` comme base de développement de votre agent ou sonde.
+.. tip :: It is recommended to use the `` dummy`` plugin as a basis for developing your agent or probe.
 
-En utilisant comme base l'agent ou la sonde ``dummy``, il faut ensuite :
- - mettre à jour la variable ``__TYPE__`` pour indiquer le nom de l'agent ou la sonde
- - changer le nom de la classe avec le nom de votre agent ou sonde. 
- - mettre à jour le fichier ``__init__`` pour importer votre agent ou sonde.
+Using as a basis the agent or probe `` dummy``, then:
+  - update the variable `` __TYPE__`` to indicate the name of the agent or the probe
+  - change the name of the class with the name of your agent or probe.
+  - update the `` __init__`` file to import your agent or probe.
+  
+** Windows environment **
 
-**Environnement Windows**
+The SDK for plugin creation is retrieved from github.
+It is possible to copy the plugin `` Dummy`` and use it as a base.
 
-Le SDK pour la création de plugin se récupère depuis github.
-Il est possible de copier le plugin ``Dummy`` et de l'utiliser comme base.
-
-Le type et le nom du plugin est à configurer dans le fichier `config.json`
+The type and name of the plugin is to be configured in the `config.json` file
 
 .. code-block:: json
   
@@ -480,7 +480,7 @@ Le type et le nom du plugin est à configurer dans le fichier `config.json`
                 }
   }
   
-L'auteur se définit dans le fichier ``MyPlugin.py``.
+The author is defined in the `` MyPlugin.py`` file.
 
 .. code-block:: python
   
@@ -489,49 +489,49 @@ L'auteur se définit dans le fichier ``MyPlugin.py``.
   # email of the main developer
   __EMAIL__ = 'd.machard@gmail.com'
   
-La construction du plugin en binaire s'effectue en appelant le script ``MakeExe3.bat``.
+Building the plugin in binary is done by calling the `` MakeExe3.bat`` script.
 
-.. tip: 
-  Il est possible d'exécuter le plugin sans le client en activant le mode debug.
-  
+.. tip:
+   It is possible to run the plugin without the client by activating the debug mode.
+   
   .. code-block: bash
       
     # debug mode
     DEBUGMODE=True
 
-SDK Client
+Customer SDK
 ~~~~~~~~~~~~
 
-Le client supporte l'ajout de plugins. La création d'un plugin nécessite:
- - d'utiliser le SDK
- - de définir son type 
+The client supports adding plugins. Creating a plugin requires:
+  - to use the SDK
+  - to define its type
  
-Liste des types de plugins possibles:
+List of possible plugins types:
 
-+-------------------+------------------------------------------------------------+
-|Type               |   Description                                              |
-+-------------------+------------------------------------------------------------+
-|basic              |   Plugin pour ajouter un raccourci sur la page d'accueil   |
-+-------------------+------------------------------------------------------------+
-|recorder-app       |   Export/import de données dans l'assistant de conception  |
-+-------------------+------------------------------------------------------------+
-|recorder-web       |   Export/import de données dans l'assistant de conception  |
-+-------------------+------------------------------------------------------------+
-|recorder-framework |   Export/import de données dans l'assistant de conception  |
-+-------------------+------------------------------------------------------------+
-|recorder-android   |   Export/import de données dans l'assistant de conception  |
-+-------------------+------------------------------------------------------------+
-|recorder-system    |   Export/import de données dans l'assistant de conception  |
-+-------------------+------------------------------------------------------------+
-|remote-tests       |   Export/import de données dans les tests distants         |
-+-------------------+------------------------------------------------------------+
-|test-results       |   Export des résultats de tests et rapports                |
-+-------------------+------------------------------------------------------------+
++ ------------------- + ----------------------------- ------------------------------- +
+| Type | Description |
++ ------------------- + ----------------------------- ------------------------------- +
+| basic | Plugin to add a shortcut on the home page |
++ ------------------- + ----------------------------- ------------------------------- +
+recorder-app | Export / import data in the design wizard |
++ ------------------- + ----------------------------- ------------------------------- +
+recorder-web | Export / import data in the design wizard |
++ ------------------- + ----------------------------- ------------------------------- +
+recorder-framework | Export / import data in the design wizard |
++ ------------------- + ----------------------------- ------------------------------- +
+recorder-android | Export / import data in the design wizard |
++ ------------------- + ----------------------------- ------------------------------- +
+recorder-system | Export / import data in the design wizard |
++ ------------------- + ----------------------------- ------------------------------- +
+remote-tests | Export / import of data in remote tests |
++ ------------------- + ----------------------------- ------------------------------- +
+test-results | Exporting test results and reports |
++ ------------------- + ----------------------------- ------------------------------- +
 
-Le SDK pour la création de plugin se récupère depuis github.
-Il est possible de copier le plugin ``Dummy`` et de l'utiliser comme base de développement.
+The SDK for plugin creation is retrieved from github.
+It is possible to copy the plugin `` Dummy`` and use it as a basis for development.
 
-Le type et le nom du plugin est à configurer dans le fichier ``config.json``
+The type and name of the plugin is to be configured in the `` config.json`` file
 
 .. code-block:: json
   
@@ -543,7 +543,7 @@ Le type et le nom du plugin est à configurer dans le fichier ``config.json``
                 }
   }
   
-L'auteur se définit dans le fichier ``MyPlugin.py``.
+The author is defined in the `` MyPlugin.py`` file.
 
 .. code-block:: python
   
@@ -552,26 +552,26 @@ L'auteur se définit dans le fichier ``MyPlugin.py``.
   # email of the main developer
   __EMAIL__ = 'd.machard@gmail.com'
   
-La construction du plugin en binaire s'effectue en appelant le script ``MakeExe3.bat``.
+Building the plugin in binary is done by calling the `` MakeExe3.bat`` script.
 
-L'échange de donnée entre le plugin et le client s'effectue avec des messages de type ``JSON``.
+The exchange of data between the plugin and the client is done with messages of `` JSON`` type.
 
-  1. Envoie de donnée au client:
-
+  1. Send data to the customer:
+   
      .. code-block:: python
         
         self.core().sendMessage( cmd='import', data = {"my message": "hello"} )
   
-  2. Réception des données depuis le client:
+  2. Receiving data from the client:
 
      .. code-block:: python
         
         class MainPage(QWidget):
            def insertData(self, data):
            
-Pour faciliter le troubleshooting, il est possible d'ajouter des traces depuis le plugin.
+To facilitate troubleshooting, it is possible to add traces from the plugin.
 
- 1. Ajouter des traces dans la fenêtre graphique dédiée:
+ 1. Add traces to the dedicated graphics window:
 
   .. code-block:: python
     
@@ -580,7 +580,7 @@ Pour faciliter le troubleshooting, il est possible d'ajouter des traces depuis l
     self.core().debug().addLogSuccess("my success message" )
     
 
- 2. Ajouter des traces dans les fichiers de logs:
+ 2. Add traces to log files:
 
   .. code-block:: python
 
@@ -590,17 +590,17 @@ Pour faciliter le troubleshooting, il est possible d'ajouter des traces depuis l
   
 
 .. tip::
-  Il est possible d'exécuter le plugin sans le client en activant le mode debug.
+  It is possible to run the plugin without the client by activating the debug mode.
   
   .. code-block: bash
       
     # debug mode
     DEBUGMODE=True
 
-Documentations
+Documentation
 --------------
 
-La documentation est stockée sur github dans le `dépôt <https://github.com/ExtensiveTesting/extensivetesting-fr.readthedocs.io>`_.
-Il est possible de contribuer en faisant une demande de participation au dépôt.
+The documentation is stored on github in the `repository <https://github.com/ExtensiveAutomation/extensiveautomation.readthedocs.io>` _.
+It is possible to contribute by applying for participation in the deposit.
 
-La documentation est générée par le service `readthedocs <https://readthedocs.org/>`_.
+The documentation is generated by the `readthedocs <https://readthedocs.org/>` _ service.

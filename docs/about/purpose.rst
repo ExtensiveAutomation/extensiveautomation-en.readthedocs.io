@@ -1,12 +1,12 @@
-Extensive Testing
+Extensive Automation
 =================
 
-Welcome on the Extensive Testing project.
+Welcome on the Extensive Automation project.
 
 Concepts
 --------
 
-ExtensiveTesting is a test and deployment automation framework for integration, regression and end-to-end usages.
+ExtensiveAutomation is a test and deployment automation framework for integration, regression and end-to-end usages.
 The framework provided a rich and collaborative workspace environment.
 The installation is also simplified and some others great tools are integrated on it (selenium, sikuli)
 
@@ -36,7 +36,7 @@ License
 
 
 This environment is open source, and is freely available under the LGPL 2.1 version.
-All source code is available in github (https://github.com/ExtensiveTesting).
+All source code is available in github (https://github.com/ExtensiveAutomation).
 
 Author
 ------
@@ -52,6 +52,6 @@ Contact
 
 If you have any questions, you can contact me with:
  - email d.machard@gmail.com
- - twitter https://twitter.com/Extensive_Tests
+ - twitter https://twitter.com/Extensive_Auto
  - from the google forum https://groups.google.com/forum/#!forum/extensive-testing-users
- - github https://github.com/ExtensiveTesting 
+ - github https://github.com/ExtensiveAutomation

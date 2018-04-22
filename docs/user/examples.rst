@@ -1,73 +1,73 @@
 Tests examples
 =================
 
-Cas de test (unit)
+Testcase (unit)
 -----------
 
-Cet exemple montre comment utiliser un cas de test simple.
-Un cas de test se compose de 4 sections exécutées automatiquement par le framework de test ainsi que les paramètres de tests associés.
+This example shows how to use a test case.
+A test case consists of 4 sections automatically executed by the test framework as well as associated test parameters.
 
-.. image:: /_static/images/client/exemple_testunit.png
+.. image :: /_static/images/client/exemple_testunit.png
 
-Cas de test (suite)
+Testcase (suite)
 -----------
 
-Une suite de tests permet d'éxécuter à la suite plusieurs cas de test.
-L'exemple montre comment boucler sur un cas de test tout en modifiant les données entrantes.
+A test suite allows you to run several test cases afterwards.
+The example shows how to loop on a test case while modifying the incoming data.
 
-.. image:: /_static/images/client/exemple_testsuite.png
+.. image :: /_static/images/client/exemple_testsuite.png
 
-Il est donc possible d'ajouter autant d'arguments que nécessaire au niveau de la fonction ``execute()``
-et de les ajouter à l'identique au niveau des 4 sections.
+It is therefore possible to add as many arguments as necessary to the `` execute () `` function
+and add them identically to the level of the 4 sections.
 
-.. note:: Il est possible d'ajouter un préfixe au niveau du cas du test en utilisant l'argument ``prefix``.
+.. note :: It is possible to add a prefix at the test case level using the `` prefix`` argument.
 
-Variables de test
+variables
 ----------------
 
-Les variables sont utilisables depuis un test, il en existe plusieurs types.
-L'exemple ci-dessous montre comment récupérer un paramètre depuis son test.
+The variables can be used from a test, there are several types.
+The example below shows how to retrieve a parameter from its test.
 
-Un paramètre de test peut être récupéré au niveau du test en utilisant la fonction `input`.
-Le nom du paramètre à récupérer est à préciser.
+A test parameter can be retrieved at the test level using the `input` function.
+The name of the parameter to be recovered is to be specified.
 
-.. image:: /_static/images/client/exemple_variables.png
+.. image :: /_static/images/client/exemple_variables.png
 
-.. tip: Essayez de prendre l'habitude de mettre systématiquement en variable l'ensemble des valeurs présentes dans le test pour faciliter la maintenance.
+.. tip: Try to get in the habit of systematically changing all the values present in the test to facilitate maintenance.
 
-Scénario
+Scenario
 --------
 
-Un scénario permet d'exécuter plusieurs cas de tests à la suite avec des conditions de résultats entre eux.
-Il est possible de surcharger les paramètres de tests au niveau du scénario.
+A scenario allows you to run several test cases one after the other with result conditions between them.
+It is possible to override the test parameters at the scenario level.
 
-.. image:: /_static/images/client/exemple_testplan.png
+.. image :: /_static/images/client/exemple_testplan.png
 
-Campagne de test
+Test campaign
 ----------------
 
-Une campagne permet d'exécuter plusieurs scénarios. Il est possible de surcharger les paramètres de tests
-au niveau des paramètres de la campagne.
+A campaign allows you to run multiple scenarios. It is possible to overload the test parameters
+at the campaign settings level.
 
 .. image:: /_static/images/client/exemple_testglobal.png
 
 Rest API
 --------
 
-Pour écrire un test d'api REST, il est conseillé:
- - d'utiliser le test réutilisable ``/Snippets/Protocols/04_Send_JSON``
- - de décrire le serveur cible en JSON (ip/port destination, support du http)
-
-
-Exemple:
+To write a REST API test, it is recommended:
+  - to use the reusable test `` / Snippets / Protocols / 04_Send_JSON``
+  - describe the target server in JSON (ip / destination port, http support)
+  
+Example:
  
-Le test appelle le service ``httpbin.org`` en https et appelle le service ``ip`` qui permet d'obtenir l'ip réelle du client en json.
+The test calls the `` httpbin.org`` service in https and calls the `` ip`` service to get the client's actual ip in json.
 
 .. image:: /_static/images/examples/rest_api.png
 
-Le scénario se décompose en plusieurs étapes:
- 1. Préparation de l'environnement: description de l'environnement testé (adresse, port réseaux, etc...)
-    L'environnement est configuré dans le paramètre `ENVIRONMENT` du test `PREPARE ENVIRONMENT` (Id=5)
+The scenario breaks down into several stages:
+  1. Preparation of the environment: description of the tested environment (address, network port, etc.)
+     The environment is configured in the `ENVIRONMENT` parameter of the` PREPARE ENVIRONMENT` test (Id = 5)
+     
    .. code-block:: json
    
        {
@@ -95,40 +95,41 @@ Le scénario se décompose en plusieurs étapes:
         },
         "DATASET": [    ]
         }
- 2. Si la préparation de l'environnement ne fonctionne pas alors le scénario est arrété en appelant le test
- réutilisable ``Snippets/Do/02_Terminate`` (Id=16)
+  2. If the environment preparation does not work then the scenario is stopped by calling the test
+  reusable `` Snippets / Do / 02_Terminate`` (Id = 16)
 
- 3. On envoie une requête REST et on décrit la réponse attendue en utilisant le test réutilisable ``/Snippets/Protocols/04_Send_JSON`` (Id=30). 
- Si cette étape ne fonctionne pas alors on annule le test (Id=31)
+  3. A REST request is sent and the expected response is described using the reusable test `` / Snippets / Protocols / 04_Send_JSON`` (Id = 30).
+  If this step does not work then we cancel the test (Id = 31)
  
- La réponse reçue est vérifiée par le framework et ce qui a été décrit par le testeur dans le paramètre ``HTTP_RSP_BODY``
- 
+  The response received is verified by the framework and what was described by the tester in the `` HTTP_RSP_BODY`` parameter
+  
  .. code-block:: json
  
    origin		[!CAPTURE:EXTERNAL_IP:]
    
- La configuration indique qu'il faut vérifier dans la réponse que la clé `origin` est présente et 
- d'enregistrer la valeur dans le cache avec la clé ``EXTERNAL_IP``
+  The configuration indicates that the response must verify that the `origin` key is present and
+  save the value in the cache with the `` EXTERNAL_IP`` key
  
- 4. On affiche la valeur reçue dans la réponse avec le test réutilisable ``Snippets/Cache/02_Log_Cache`` (Id=32)
- 
-.. note:: L'exemple présenté ci-dessous est disponible en totalité dans les échantillons de test: ``/Samples/Web_API/001_httpbin_rest.tpx``.
+  4. The value received in the response is displayed with the reusable test `` Snippets / Cache / 02_Log_Cache`` (Id = 32)
 
-Contrôles SSH
+.. note:: The example presented below is available in full in the test samples:
+          ``/Samples/Web_API/001_httpbin_rest.tpx``.
+
+SSH controls
 -------------
 
-Pour écrire un test SSH, il est conseillé:
- - d'utiliser le test réutilisable ``/Snippets/Protocols/01_Send_SSH``
- - de décrire le serveur cible en JSON (ip, compte, mot de passe à minima)
-
+To write an SSH test, it is advisable:
+  - to use the reusable test `` / Snippets / Protocols / 01_Send_SSH``
+  - to describe the target server in JSON (ip, account, password at least)
+  
 .. image:: /_static/images/examples/ssh.png
 
-Le test se décompose en plusieurs étapes:
- 1. Chargement de la description (ip, compte, mot de passe) de la machine cible dans le cache
- 2. Appel au test générique ``/Snippets/Protocols/01_Send_SSH`` pour récupérer la version du serveur
-    La version (si trouvée à l'écran) est sauvegardée dans le cache avec la clé `SERVER_VERSION`
-    Si la version n'est pas trouvée, le test part en erreur.
-    
+The test is broken down into several stages:
+  1. Loading the description (ip, account, password) of the target machine into the cache
+  2. Calling the `` / Snippets / Protocols / 01_Send_SSH`` generic test to retrieve the server version
+     The version (if found on the screen) is saved in the cache with the `SERVER_VERSION` key
+     If the version is not found, the test goes into error.
+     
    .. code-block:: bash
   
      # checking server version
@@ -136,58 +137,58 @@ Le test se décompose en plusieurs étapes:
      .*Server version: [!CAPTURE:SERVER_VERSION:]\n.*
      
    
- 3. Affichage de la version depuis le cache.
+3. View the version from the cache.
 
-.. note:: L'exemple complet est disponible dans les échantillons de tests ``/Self Testing/SYSTEM/000_System.tpx``.
+.. note :: The complete example is available in the test samples `` / Self Testing / SYSTEM / 000_System.tpx``.
 
-Navigateurs Internet
+Web browsers
 --------------------
 
-Pour écrire un test d'application web, il faut:
- - obligatoirement déployer un agent ``selenium`` sur un poste disposant d'un navigateur firefox, chrome, internet explorer ou edge
- - avoir accès au code source de la page web depuis son navigateur
- - avoir des connaissances en xpath
- - connaître les bases du code HTML
+To write a web application test, you must:
+  - obligatorily deploy a `` selenium`` agent on a post with a firefox, chrome, internet explorer or edge browser
+  - have access to the source code of the web page from his browser
+  - have knowledge of xpath
+  - know the basics of HTML
 
-L'approche préconisée pour écrire les tests web est la suivante:
- - identifier le nombre de pages affichées à scripter (et la réutilisation possible de ces pages)
- - identifier les différents enchaînements de pages pour créer les scénarios
- - identifier les parcours utilisateurs 
-
-Pour exécuter ce type de test, il faut absolument déclarer l'agent qui sera utilisé
+The recommended approach for writing web tests is as follows:
+  - identify the number of pages displayed to script (and the possible reuse of these pages)
+  - identify the different sequence of pages to create the scenarios
+  - identify user paths
+  
+To perform this type of test, you must declare the agent that will be used
 
 .. image:: /_static/images/examples/selenium_agent.png
 
-L'écriture des tests se réalise à travers l'assistant. Il permet de décrire les différentes étapes
-et de générer le test unit équivalent. Les enchaînements de pages sont à décrire dans les tests plans.
-Le parcours utilisateur est à définir dans un test global.
+The writing of the tests is done through the assistant. It allows to describe the different stages
+and generate the equivalent unit test. The sequence of pages are to be described in the flat tests.
+The user path is to be defined in a global test.
 
-La solution préconise aussi de n'utiliser que des xpath pour identifier des élements HTML.
+The solution also recommends using only xpath to identify HTML elements.
 
 .. image:: /_static/images/examples/web_xpath.png
 
-L'exemple ci-dessous montre comment créer un compte Google en utilisant un nom et un prénom aléatoires.
+The example below shows how to create a Google Account using a random name and first name.
 
 .. image:: /_static/images/examples/web.png
 
-Exemple de résultat:
+Example of result:
 
 .. image:: /_static/images/examples/selenium_random_data.png
 
 .. tip:: 
   
-  Il est possible d'utiliser les outils de développement des navigateurs pour valider les xpaths.
+  It is possible to use browser development tools to validate xpaths.
   
   .. image:: /_static/images/examples/firefox_console_xpath.png
   
-.. note:: L'exemple présenté ci-dessous est disponible en totalité dans les échantillons de test ``/Samples/Tests_Gui/Selenium/``.
+.. note:: The example presented below is available in full in the test samples ``/Samples/Tests_Gui/Selenium/``.
 
 .. note::
   
-  Selenium3  nécessite au minimum Java 8 sur le poste client.
+  Selenium3 requires at least Java 8 on the client machine.
   
   +--------------+---------------------+-----------+
-  | Navigateurs  |   Version Selenium  |   Gecko   |
+  | Browsers     |   Version Selenium  |   Gecko   |
   +--------------+---------------------+-----------+
   | Firefox <47  |   Selenium  2       |   Non     |
   +--------------+---------------------+-----------+
@@ -199,29 +200,29 @@ Exemple de résultat:
   +--------------+---------------------+-----------+
 
 
-Mobile Android
+Android mobile
 --------------
 
-Pour écrire le test d'une application mobile, il faut:
- - Avoir un téléphone mobile Android connecté en USB sur un PC
- - Déployer un agent ``adb`` sur un poste avec un mobile android connecté dessus.
- - Avoir accès à la description xml des applications depuis l'agent
+To write the test of a mobile application, you must:
+  - Have an Android mobile phone connected in USB on a PC
+  - Deploy an adb agent on a computer with an android mobile connected to it.
+  - Have access to the xml description of applications from the agent
 
-La connexion de l'agent ``adb`` sur le mobile android nécessite d'accepter la clé RSA.
+Connecting the adb agent on the android mobile requires accepting the RSA key.
 
 .. image:: /_static/images/examples/mobile_rsa.png
 
-Après connexion, l'agent affiche un aperçu de l'écran sur le pc, il est possible de parcourir 
-l'interface depuis l'agent et d'avoir les élements XML disponibles dans la page.
+After login, the agent displays a preview of the screen on the pc, it is possible to browse
+the interface from the agent and have the XML elements available in the page.
 
 .. image:: /_static/images/toolbox/toolbox_mobile.png
  
-L'écriture des tests se réalise avec l'assistant. Il permet de décrire les différentes étapes
-et de générer le test unit équivalent. Il est indispensable de se baser sur l'agent ``adb`` pour 
-avoir la liste des  élements et attributs XML disponibles.
+The writing of the tests is done with the assistant. It allows to describe the different stages
+and generate the equivalent unit test. It is essential to rely on the adb agent for
+have the list of available XML elements and attributes.
 
 .. image:: /_static/images/examples/assistant_android.png
 
-.. note:: L'exemple complet est disponible dans les échantillons de tests ``/Samples/Tests_Mobiles/03_PlayStore.tux``.
+.. note:: The complete example is available in test samples``/Samples/Tests_Mobiles/03_PlayStore.tux``.
 
-.. important:: L'activation du mode ``debogage USB`` est obligatoire sur le téléphone.
+.. important:: Enabling USB `debug` mode is required on the phone.

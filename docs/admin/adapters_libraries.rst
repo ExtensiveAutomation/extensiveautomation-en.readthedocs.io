@@ -1,14 +1,14 @@
-Adaptateurs et librairies
+Adapters and libraries
 ========================
 
-La version des adaptateurs (ou librairies) à utiliser par défaut pour un test
-peut être configurés. Il est aussi possible d'utiliser plusieurs versions d'adaptateurs (ou librairies) en parallèle sur un test. 
+The version of the adapters (or libraries) to use by default for a test
+can be configured. It is also possible to use multiple versions of adapters (or libraries) in parallel on a test.
 
-Il est donc conseiller de définir:
- - une version par défaut à utiliser
- - mais aussi une version générique
+It is therefore advisable to define:
+  - a default version to use
+  - but also a generic version
 
-La séparation en version par défaut ou générique permet 
-de faire évoluer vos adaptateurs (ou librairies) indépendamment 
-des adaptateurs (ou librairies) open source.
+Separation in default or generic version allows
+to evolve your adapters (or libraries) independently
+open source adapters (or libraries)
   
