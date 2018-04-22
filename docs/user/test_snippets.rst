@@ -6,9 +6,9 @@ The interest of reusable tests
   - reuse the tests
   - limit scripting to design scenarios
 
-These types of tests are to be used in `` test plane`` mode.
+These types of tests are to be used in ``test plan`` mode.
 
-Shared data
+Shared data between tests
 -----------------
 
 Add in the cache a new data
@@ -16,7 +16,7 @@ Add in the cache a new data
    
 .. important:: path of the reusable test ``/Snippets/Cache/01_Set_Cache.tux``
 
-This reusable test consists of saving a value in the available data cache during the execution of a test.
+This reusable test consists of saving a value in the data cache during the execution of a test.
 
 Parameter(s) to configure:
 
@@ -26,12 +26,12 @@ Parameter(s) to configure:
 | DATAS           |   Contains the list of backup valuesr             |
 +-----------------+-----------------------------------------------------------+
 
-The `` DATAS`` parameter contains the list of values to save with the format:
+The ``DATAS`` parameter contains the list of values to save with the format:
 
 .. code-block:: bash
   
-  # mon commentaire
-  [!TO:CACHE:<MA_CLE>:];ma valeur
+  # my comment
+  [!TO:CACHE:<MA_CLE>:];my value
   
 
 Example
@@ -60,7 +60,7 @@ Parameter(s) to configure:
 +-----------------+-----------------------------------------------------------------------+
 |Parameters       |   Description                                                         |
 +-----------------+-----------------------------------------------------------------------+
-| MESSAGES        |   Contains the list of parameters to log in the test             |
+| MESSAGES        |   Contains the list of parameters to log in the test                  |
 +-----------------+-----------------------------------------------------------------------+
  
 .. code-block:: bash
@@ -96,7 +96,7 @@ Parameter(s) to configure:
 +-----------------+------------------------------------------------+
 |Parameters       |   Description                                  |
 +-----------------+------------------------------------------------+
-| CHECKING        | List of values to check in the cache    |
+| CHECKING        | List of values to check in the cache           |
 +-----------------+------------------------------------------------+
 
 Operators available:
@@ -104,22 +104,22 @@ Operators available:
 +-----------------+-----------------------------------------------------------------------+
 |Parameters       |   Description                                                         |
 +-----------------+-----------------------------------------------------------------------+
-| contains | Check if the value contains a string |
-+ ----------------- + ------------------------------- ---------------------------------------- +
-| matches | Check if the value matches the regular expression |
-+ ----------------- + ------------------------------- ---------------------------------------- +
-| == | Check if the value equals |
-+ ----------------- + ------------------------------- ---------------------------------------- +
-| ! = | Check if the value is different from |
-+ ----------------- + ------------------------------- ---------------------------------------- +
-| > | Check if the value is greater than |
-+ ----------------- + ------------------------------- ---------------------------------------- +
-| <| Check if the value is less than |
-+ ----------------- + ------------------------------- ---------------------------------------- +
-| > = | Check if the value is greater than |
-+ ----------------- + ------------------------------- ---------------------------------------- +
-| <= | Check if the value is less than |
-+ ----------------- + ------------------------------- ---------------------------------------- +
+| contains        | Check if the value contains a string                                  |
++-----------------+-----------------------------------------------------------------------+
+| matches         | Check if the value matches the regular expression                     |
++-----------------+-----------------------------------------------------------------------+
+| ==              | Check if the value equals                                             |
++-----------------+-----------------------------------------------------------------------+
+| ! =             | Check if the value is different from                                  |
++-----------------+-----------------------------------------------------------------------+
+| >               | Check if the value is greater than                                    |
++-----------------+-----------------------------------------------------------------------+
+| <               | Check if the value is less than                                       |
++-----------------+-----------------------------------------------------------------------+
+| > =             | Check if the value is greater than                                    |
++-----------------+-----------------------------------------------------------------------+
+| <=              | Check if the value is less than                                       |
++-----------------+-----------------------------------------------------------------------+
 
 .. code-block:: bash
   
@@ -134,19 +134,19 @@ Delete entry from the cache
 
 .. important:: path of the reusable test ``/Snippets/Cache/02_Delete_Cache.tux``
 
-This reusable test is used to delete a key and its associated value in the cache.
+This reusable test is used to delete a entry in the cache according to the key.
 
 Parameter(s) to configure:
 
 +-----------------+------------------------------------------+
 |Parameters       |   Description                            |
 +-----------------+------------------------------------------+
-| MESSAGES        |  List of keys to delete              |
+| MESSAGES        |  List of keys to delete                  |
 +-----------------+------------------------------------------+
  
 .. code-block:: bash
   
-  # supprime la clé EXEMPLE du cache
+  # delete the key EXEMPLE from the cache
   [!FROM:CACHE:EXEMPLE:]
    
 
@@ -155,7 +155,7 @@ Parameter(s) to configure:
 Basics actions
 ----------------
 
-Test hold
+Hold on a test
 ~~~~~~~~~~~~~~
 
 .. important:: path of the reusable test ``/Snippets/Do/01_Wait.tux``
@@ -164,36 +164,36 @@ This reusable test allows you to wait for xx seconds while the test runs.
 
 Parameter(s) to configure:
 
-+-----------------+-------------------+
-|Parameters       |   Description     |
-+-----------------+-------------------+
++-----------------+---------------------+
+|Parameters       |   Description       |
++-----------------+---------------------+
 | DURATION        | duration in seconds |
-+-----------------+-------------------+
++-----------------+---------------------+
 
 Stop a test
 ~~~~~~~~~~~~~~
 
 .. important:: path of the reusable test ``/Snippets/Do/02_Terminate.tux``
 
-This reusable test makes it possible to force the stopping of a scenario in the event of an error.
-A message explaining the shutdown can be specified with the `` STOP_TEST_MSG`` parameter.
+This reusable test makes it possible to force the stopping of a scenario on error occurences.
 
-.. note :: It is possible to customize the stop message by setting the variable `` STOP_TEST_MSG``.
+.. note :: It is possible to customize the stop message by setting the variable ``STOP_TEST_MSG``.
 
 Load test environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. important:: path of the reusable test ``/Snippets/Do/03_Initilize.tux``
-This reusable test is used to load the data in its test environment into the cache
+
+This reusable test is used to load the test environment data into the cache
 (ip addresses, server access account, etc.).
 
 An environment is described with 4 levels:
-  - `` environment``
-  - `` clusteeur``
-  - `` knot``
-  - `` instance``
+  - ``environment``
+  - ``cluster``
+  - ``node``
+  - ``instance``
   
-An "environment" may consist of one or more clusters.
+An ``environment`` may consist of one or more clusters.
 
 .. code-block:: json
   
@@ -205,7 +205,7 @@ An "environment" may consist of one or more clusters.
   }
   
 
-A `` cluster`` consists of a list of nodes.
+A ``cluster`` consists of a list of nodes.
 
 .. code-block:: json
   
@@ -217,7 +217,7 @@ A `` cluster`` consists of a list of nodes.
   }
   
 
-A `` node`` consists of one or more instances.
+A ``node`` consists of one or more instances.
 
 .. code-block:: json
   
@@ -229,7 +229,7 @@ A `` node`` consists of one or more instances.
   }
   
 
-An "instance" is made up of several keys / values.
+An ``instance`` is made up of several keys / values.
 
 .. code-block:: json
   
@@ -249,12 +249,12 @@ Parameter(s) to configure:
 +-----------------+-----------------------------------------------------------------------------------------+
 |Parameters       |   Description                                                                           |
 +-----------------+-----------------------------------------------------------------------------------------+
-| ENVIRONMENT     |  Link to a shared variable or directly contains `` JSON``.             |
+| ENVIRONMENT     |  Link to a shared variable or directly contains ``JSON``.                               |
 +-----------------+-----------------------------------------------------------------------------------------+
        
 Example of a test environment containing an http server with an instance of type rest.
-After loading into the cache, the REST instance is accessible by using the `` NODE_HTTP_REST`` key.
-All keys in `` COMMON`` are automatically copied to each instance.
+After loading into the cache, the REST instance is accessible by using the ``NODE_HTTP_REST`` key.
+All keys in ``COMMON`` are automatically copied to each instance.
 
 .. code-block:: json
   
@@ -285,7 +285,7 @@ All keys in `` COMMON`` are automatically copied to each instance.
   }
   
 
-The `` DATASET`` key can contain datasets.
+The ``DATASET`` key can contain datasets.
 
 Data Generators
 -----------
@@ -300,46 +300,47 @@ This reusable test is used to generate a hash of a value and store it in the cac
 Parameter(s) to configure:
 
 +-----------------+----------------------------------------------------------+
-|Parameters       |   Description                                            |
+|Parameters       | Description                                              |
 +-----------------+----------------------------------------------------------+
-| DATA_IN | Hash character string |
-+ ----------------- + ------------------------------- --------------------------- +
-| CACHE_KEY | Key name |
-+ ----------------- + ------------------------------- --------------------------- +
-| SHA | Type of hash realize (sha1, sha256, sha512) |
-+ ----------------- + ------------------------------- --------------------------- +
+| DATA_IN         | Hash character string                                    |
++-----------------+----------------------------------------------------------+
+| CACHE_KEY       | Key name                                                 |
++-----------------+----------------------------------------------------------+
+| SHA             | Type of hash realize (sha1, sha256, sha512)              |
++-----------------+----------------------------------------------------------+
 
 Hash MD5
 ~~~~~~~~~
 
 .. important:: path of the reusable test ``/Snippets/Generators/01_Gen_Md5.tux``
 
-Ce test réutilisable permet de générer un hash md5 d'une valeur et de la stocker dans le cache.
+This reusable test is used to generate md5 hash and store it in the cache.
+
 
 Parameter(s) to configure:
 
 +-----------------+--------------------------------------------------------------+
 |Parameters       |   Description                                                |
 +-----------------+--------------------------------------------------------------+
-| DATA_IN | Hash character string |
-+ ----------------- + ------------------------------- ------------------------------- +
-| CACHE_KEY | Name of the key or the result will be saved in the cache |
-+ ----------------- + ------------------------------- ------------------------------- +
+| DATA_IN         | Hash character string                                        |
++-----------------+--------------------------------------------------------------+
+| CACHE_KEY       | Name of the key or the result will be saved in the cache     |
++-----------------+--------------------------------------------------------------+
 
 UUID
 ~~~~
 
 .. important:: path of the reusable test ``/Snippets/Generators/01_Gen_Uuid.tux``
 
-This reusable test is used to generate an id uuid and store it in the cache.
+This reusable test is used to generate an uuid and store it in the cache.
 
 Parameter(s) to configure:
 
 +-----------------+-----------------------------------------------------------+
 |Paramètres       |   Description                                             |
 +-----------------+-----------------------------------------------------------+
-| CACHE_KEY | Name of the key to save the result in the cache |
-+ ----------------- + ------------------------------- ---------------------------- +
+| CACHE_KEY       | Name of the key to save the result in the cache           |
++-----------------+-----------------------------------------------------------+
  
 BASE64
 ~~~~~~
@@ -350,19 +351,19 @@ This reusable test is used to encode or decode a string and store the result in 
 
 Parameter(s) to configure:
 
-+-----------------+------------------------------------------------------------------------------------+
-|Parameters       |   Description                                                                      |
-+-----------------+------------------------------------------------------------------------------------+
-| CACHE_KEY | Name of the key to save the result in the cache |
-+ ----------------- + ------------------------------- -------------------------------------------------- --- +
-| DECODE | Set to True to encode |
-+ ----------------- + ------------------------------- -------------------------------------------------- --- +
-| ENCODE | To set to True to decode |
-+ ----------------- + ------------------------------- -------------------------------------------------- --- +
-| URLSAFE | Set to True if the result after encoding is to be used in an url |
-+ ----------------- + ------------------------------- -------------------------------------------------- --- +
-| STR_BASE64 | Character string to encode / decode |
-+ ----------------- + ------------------------------- -------------------------------------------------- --- +
++-------------------+----------------------------------------------------------------------------------------+
+|Parameters         |   Description                                                                          |
++-------------------+----------------------------------------------------------------------------------------+
+| CACHE_KEY         | Name of the key to save the result in the cache                                        |
++-------------------+----------------------------------------------------------------------------------------+
+| DECODE            | Set to True to encode                                                                  |
++-------------------+----------------------------------------------------------------------------------------+
+| ENCODE            | To set to True to decode                                                               |
++-------------------+----------------------------------------------------------------------------------------+
+| URLSAFE           | Set to True if the result after encoding is to be used in an url                       |
++-------------------+----------------------------------------------------------------------------------------+
+| STR_BASE64        | Character string to encode / decode                                                    |
++-------------------+----------------------------------------------------------------------------------------+
 
 GZIP
 ~~~~
@@ -376,14 +377,14 @@ Parameter(s) to configure:
 +-----------------+-------------------------------------------------------------+
 |Parameters       |   Description                                               |
 +-----------------+-------------------------------------------------------------+
-| CACHE_KEY | Key name |
-+ ----------------- + ------------------------------- ------------------------------ +
-| COMPRESS | To set to True to compress |
-+ ----------------- + ------------------------------- ------------------------------ +
-| UNCOMPRESS | Set to True to decompress |
-+ ----------------- + ------------------------------- ------------------------------ +
-| STR_GZIP | Character string to compress / decompress |
-+ ----------------- + ------------------------------- ------------------------------ +
+| CACHE_KEY       | Key name                                                    |
++-----------------+-------------------------------------------------------------+
+| COMPRESS        | To set to True to compress                                  |
++-----------------+-------------------------------------------------------------+
+| UNCOMPRESS      | Set to True to decompress                                   |
++-----------------+-------------------------------------------------------------+
+| STR_GZIP        | Character string to compress / decompress                   |
++-----------------+-------------------------------------------------------------+
 
 Networks protocols
 ------------------
@@ -394,19 +395,19 @@ SSH
 .. important:: path of the reusable test ``/Snippets/Protocols/01_Send_SSH.tsx``
 
 This reusable test is used to send a sequence of ssh commands.
-It is used in conjunction with the reusable test `` / Snippets / Do / 03_Initilize.tux`` to load an environment into the cache.
+It is used in conjunction with the reusable test `` /Snippets/Do/03_Initilize.tux`` to load an environment into the cache.
 
 Parameter(s) to configure:
 
 +-----------------+----------------------------------------------------------+
 |Parameters       |   Description                                            |
 +-----------------+----------------------------------------------------------+
-| SERVERS | List of servers to contact |
-+ ----------------- + ------------------------------- --------------------------- +
-| COMMANDS | Lists of Commands to Run on the Remote Machine |
-+ ----------------- + ------------------------------- --------------------------- +
-| TIMEOUT_CONNECT | Max time to connect to the remote machine |
-+ ----------------- + ------------------------------- --------------------------- +
+| SERVERS         | List of servers to contact                               |
++-----------------+----------------------------------------------------------+
+| COMMANDS        | Lists of Commands to Run on the Remote Machine           |
++-----------------+----------------------------------------------------------+
+| TIMEOUT_CONNECT | Max time to connect to the remote machine                |
++-----------------+----------------------------------------------------------+
 
 The `COMMANDS` parameter is waiting for one or more blocks of 4 lines.
 Each block must respect the following formalism:
@@ -418,8 +419,8 @@ Each block must respect the following formalism:
 .. warning:: Each block will be executed even if the previous one is in error.
     
 The following example performs the following actions:
-  1. Send 3 pings on the remote machine whose ip is stored in the `` DEST_HOST`` cache
-  2. Verification of having the message on the screen indicating that the 3 packets have been sent. Then the mddev value is stored in the cache with the `` STATS`` key
+  1. Send 3 pings on the remote machine whose ip is stored in the ``DEST_HOST`` cache
+  2. Verification of having the message on the screen indicating that the 3 packets have been sent. Then the mddev value is stored in the cache with the ``STATS`` key
   3. The second block clears the screen by sending the clear command.
   4. Finally the test is waiting to find the prompt on the screen
   
@@ -438,11 +439,11 @@ The following example performs the following actions:
 
 .. note:: 
    By default, the test waits for a maximum of 20 seconds to find the expected string.
-   This value can be configured with the `` TIMEOUT`` parameter.
+   This value can be configured with the ``TIMEOUT`` parameter.
   
 .. note:: 
    By default, the test waits 10 seconds to connect to the remote server.
-   This value can be configured with the `` TIMEOUT_CONNECT`` parameter.
+   This value can be configured with the ``TIMEOUT_CONNECT`` parameter.
 
 HTTP
 ~~~~
@@ -450,31 +451,31 @@ HTTP
 .. important:: path of the reusable test ``/Snippets/Protocols/01_Send_HTTP.tsx``
 
 This reusable test makes it possible to send an HTTP request by checking the response received.
-It is used in conjunction with the reusable test `` / Snippets / Do / 03_Initilize.tux`` which loads an environment into the cache.
+It is used in conjunction with the reusable test ``/Snippets/Do/03_Initilize.tux`` which loads an environment into the cache.
 
 Parameter (s) to configure to set the destination:
 
 +-----------------+----------------------------------------------------------+
 |Parameters       |   Description                                            |
 +-----------------+----------------------------------------------------------+
-| SERVERS | List of servers to contact |
-+ ----------------- + ------------------------------- --------------------------- +
-| TIMEOUT_CONNECT | Max time to connect to the remote machine |
-+ ----------------- + ------------------------------- --------------------------- +
+| SERVERS         | List of servers to contact                               |
++-----------------+----------------------------------------------------------+
+| TIMEOUT_CONNECT | Max time to connect to the remote machine                |
++-----------------+----------------------------------------------------------+
 
 Parameter (s) to configure the HTTP request to send:
 
 +-----------------+---------------------------------+
 |Parameters       |   Description                   |
 +-----------------+---------------------------------+
-| HTTP_REQ_BODY | Body of the query |
-+ ----------------- + ------------------------------- - +
-| HTTP_REQ_HEADERS | List of headers to add |
-+ ----------------- + ------------------------------- - +
-| HTTP_REQ_METHOD | HTTP method (GET, POST, etc.) |
-+ ----------------- + ------------------------------- - +
-| HTTP_REQ_URI | Call URI |
-+ ----------------- + ------------------------------- - +
+| HTTP_REQ_BODY   | Body of the query               |
++-----------------+---------------------------------+
+| HTTP_REQ_HEADERS| List of headers to add          |
++-----------------+---------------------------------+
+| HTTP_REQ_METHOD | HTTP method (GET, POST, etc.)   |
++-----------------+---------------------------------+
+| HTTP_REQ_URI    | Call URI |
++-----------------+---------------------------------+
 
 .. image:: /_static/images/examples/snippets_http_req.png
 
@@ -483,16 +484,16 @@ Parameter (s) to configure the expected HTTP response (and which will allow to c
 +-------------------+----------------------------------------------------+
 |Parameters         |   Description                                      |
 +-------------------+----------------------------------------------------+
-| HTTP_RSP_BODY | Body of the expected answer. |
-+ ------------------- + ----------------------------- ----------------------- +
-| HTTP_RSP_CODE | The expected HTTP code. 200 by default |
-+ ------------------- + ----------------------------- ----------------------- +
-| HTTP_RSP_HEADERS | List of expected headers |
-+ ------------------- + ----------------------------- ----------------------- +
-| HTTP_RSP_PHRASE | The expected HTTP sentence. OK by default |
-+ ------------------- + ----------------------------- ----------------------- +
-| HTTP_RSP_VERSION | The expected HTTP version. HTTP / 1. [0 | 1] default |
-+ ------------------- + ----------------------------- ----------------------- +
+| HTTP_RSP_BODY     | Body of the expected answer.                       |
++-------------------+----------------------------------------------------+
+| HTTP_RSP_CODE     | The expected HTTP code. 200 by default             |
++-------------------+----------------------------------------------------+
+| HTTP_RSP_HEADERS  | List of expected headers                           |
++-------------------+----------------------------------------------------+
+| HTTP_RSP_PHRASE   | The expected HTTP sentence. OK by default          |
++-------------------+----------------------------------------------------+
+| HTTP_RSP_VERSION  | The expected HTTP version. HTTP / 1. [0|1] default |
++-------------------+----------------------------------------------------+
 
 .. image:: /_static/images/examples/snippets_http_rsp.png
 

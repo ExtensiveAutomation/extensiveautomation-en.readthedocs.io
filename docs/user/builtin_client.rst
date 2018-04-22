@@ -3,7 +3,7 @@ Client
 
 The client allows to write and execute automatic tests but also to analyze
 the results in real time or deferred. It also allows you to share tests in a simple and effective way.
-To use the client, you must have a user account and be able to connect to the test server (tcp / 443).
+To use the client, you must have a user account and be able to connect to the test server (tcp/443).
 
 The client can also be used to develop extensions (adapters and libraries)
 to communicate with the system to be tested or piloted.
@@ -11,11 +11,12 @@ to communicate with the system to be tested or piloted.
 Finally the graphical interface changes according to the level of access:
   - tester level: write / execute tests, and analyze the results
   - admin level: access to all features
+  - monitor level: read only access
 
 The interface is divided into 3 main parts:
   - the workspace
   - the analyzer
-  - the Explorer
+  - the server explorer
 
 .. image :: /_static/images/client/workspace.png
    
@@ -36,21 +37,21 @@ Deposit of tests
 
 The client provides access to the two test repositories: remote and local.
 
-The `` remote repository`` allows to store its tests on the test server, so to share them with other users.
+The ``remote repository`` allows to store its tests on the test server, so to share them with other users.
 The tree consists of files and directories. Test management can be done from the client.
 The tests can be organized by project if necessary.
 
 .. image :: /_static/images/client/workspace_remote_tests.png
 
-.. note :: The `` Common`` project contains re-usable tests and various examples.
+.. note :: The ``Common`` project contains re-usable tests and various examples.
 
-.. note :: The directories `` Recycle`` and `` Sandbox`` are reserved directories, delete them is impossible.
+.. note :: The directories ``Recycle`` and ``Sandbox`` are reserved directories, delete them is impossible.
 
 .. note :: It is possible to open a test by dragging and dropping the file to the writing space.
 
-The ** local repository ** gives the possibility to store his tests on his post, so not shared.
+The **local repository** gives the possibility to store his tests on his post, so not shared.
 This feature is not enabled by default because it is not in the philosophy of the solution to use it.
-Nevertheless the deposit can be activated through the customer's preferences.
+Nevertheless the deposit can be activated through the user's preferences.
 
 .. warning :: Some features are missing in the local repository, its use is not recommended!
 
@@ -62,11 +63,7 @@ which will be stored there too. These extensions are organized by version.
 
 .. image :: /_static/images/client/workspace_remote_adapters.png
 
-.. note :: The extensions are developed in `` Python``.
-
-..
-  You need an explanation of the reasons for creating a new extension, how to do it,
-  and how to integrate it in the repository, how to manage them (versions), the rules of nomenclature
+.. note :: The extensions are developed in ``Python``.
 
 Tests properties
 ~~~~~~~~~~~~~~~~~~~~
@@ -77,7 +74,7 @@ Available properties are:
   - incoming and outgoing variables
   - the definition of agents and probes used by the test
  
-The `` Test properties> Test Data> Inputs`` window contains the list of variables accessible from the test.
+The ``Test properties> Test Data> Inputs`` window contains the list of variables accessible from the test.
 Adding variables can be done by right clicking 'Add parameter'.
 
 .. image :: /_static/images/client/workspace_tests_properties_inputs.png
@@ -92,7 +89,7 @@ Adding variables can be done by right clicking 'Add parameter'.
 Graphic design
 ~~~~~~~~~~~~~~~~~~~~
 
-The design of a test in graphical form is possible with the `` abstract`` type test.
+The design of a test in graphical form is possible with the ``abstract`` type test.
 This design mode does not require any knowledge in development.
 
 .. image :: /_static/images/client/workspace_new_test_abstract.png
@@ -104,21 +101,21 @@ Right click on the drawing area to choose the element to add.
 Textual design
 ~~~~~~~~~~~~~~~~~~~~
 
-The design of a `` scripting`` test is possible with `` unit`` testd and `` continued``.
+The design of a ``scripting`` test is possible with ``unit`` and ``suite``.
 This design mode requires knowledge in development, i.e. python.
 
 .. image :: /_static/images/client/workspace_new_test_unit_suite.png
 
-The `` unit`` test is a test case. It is divided into 4 sections automatically called by the framework.
+The ``unit`` test is a test case. It is divided into 4 sections automatically called by the framework.
 
 .. image :: /_static/images/client/workspace_test_unit.png
 
-The "suite" test represents one or more test cases. This type of test allows you to run the same
+The ``suite`` test represents one or more test cases. This type of test allows you to run the same
 test case by changing the input parameters.
 
 .. image :: /_static/images/client/workspace_test_suite.png
 
-.. note :: The `` Ctrl + F`` shortcut allows you to search for text in your tests.
+.. note :: The ``Ctrl + F`` shortcut allows you to search for text in your tests.
 
 Assisted design
 ~~~~~~~~~~~~~~~~~~~
@@ -140,15 +137,15 @@ Conditional design
 
 Conditional design allows you to build scenarios or test campaigns.
 This approach does not require developing knowledge.
-To perform this type of test, it is necessary to create a new `` plan`` or `` global`` test.
+To perform this type of test, it is necessary to create a new ``plan`` or ``global`` test.
 
 .. image :: /_static/images/client/workspace_new_test_plan_global.png
 
-The test "plan" makes it possible to write test scenarios by including tests of the type "abstract", "unit" or "suite".
+The test ``plan`` makes it possible to write test scenarios by including tests of the type ``abstract``, ``unit`` or ``suite``.
 
 .. image :: /_static/images/client/workspace_test_plan.png
 
-The "global" test is used to describe test campaigns by including tests "plan", "abstract", "unit" or "suite".
+The ``global`` test is used to describe test campaigns by including tests ``plan``, ``abstract``, ``unit`` or ``suite``.
 
 .. note :: It is possible to override the test parameters.
 
@@ -166,7 +163,7 @@ The analyzer
 -----------
 
 The analyzer makes it possible to follow the execution of a test in real time or deferred.
-It makes it possible to display all the events of the test and to facilitate the analysis of the good progress or the errors.
+It makes it possible to display all the events of the test and to facilitate the analysis of the errors.
 
 .. image :: /_static/images/client/analyseur.png
 
@@ -192,9 +189,9 @@ Different types of events are possible (column event type):
   - MATCH-STOPPED
   - MATCH-EXCEEDED
 
-.. note :: Filtering on the `` ERROR`` event allows you to quickly see why the test is in error.
+.. note :: Filtering on the ``ERROR`` event allows you to quickly see why the test is in error.
 
-.. note :: The `` SEND | RECEIVED`` filter is used to display messages sent or received by the system to be tested / piloted.
+.. note :: The ``SEND | RECEIVED`` filter is used to display messages sent or received by the system to be tested / piloted.
 
 Detailed view
 ~~~~~~~~~~~~~
@@ -231,20 +228,20 @@ Two types of reports are available:
 Settings
 ----------------------------
 
-Customer behavior can be changed through the customer's preferences.
+Client behavior can be changed through the user's preferences.
 
 .. image :: /_static/images/client/preferences.png
 
-.. note :: Preferences are stored in the `` settings.ini`` file.
+.. note :: Preferences are stored in the ``settings.ini`` file.
 
 Complements
 -----------
 
-It is possible to add plugins in the client. Plugins are to be added to the `` Plugins`` directory.
+It is possible to add plugins in the client. Plugins are to be added to the ``Plugins`` directory.
 
 .. image :: /_static/images/client/plugins_client_install.png
 
-Plugins are accessible in the `` Plugins`` menu after restarting the client.
+Plugins are accessible in the ``Plugins`` menu after restarting the client.
 
 .. image :: /_static/images/client/ite_plugins_menu.png
 
@@ -253,7 +250,7 @@ Plugins are accessible in the `` Plugins`` menu after restarting the client.
 HP ALM plugin
 ~~~~~~~~~~~~~~
 
-The `` HP ALM`` plugin allows you to export tests and results from the Extensive Client to HP ALM QualityCenter.
+The ``HP ALM`` plugin allows you to export tests and results from the Extensive Client to HP ALM QualityCenter.
 This approach makes it possible to be independent with respect to QC.
 
 The configuration of the plugin is done in the page `` Settings``, it is necessary to configure at least:
@@ -280,7 +277,7 @@ It just provides a link to the web interface of its favorite Jenkins.
 Shell Recorder Plugin
 ~~~~~~~~~~~~~~~~~~~~~~
 
-The `` Shell Recorder`` plugin allows you to import a sequence of shell commands into the design wizard and generate the associated test.
+The ``Shell Recorder`` plugin allows you to import a sequence of shell commands into the design wizard and generate the associated test.
 It allows to replay easily a sequence of commands.
 
 The first step is to import an ssh session (from a putty terminal for example) from the clipboard
@@ -294,7 +291,7 @@ If the prompt is not detected, it can be changed manually.
 SeleniumIDE Plugin
 ~~~~~~~~~~~~~~~~~~
 
-The use of the `` SeleniumIDE`` plugin involves basic use. It can convert a file saved with the SeleniumIDE plugin of firefox
+The use of the ``SeleniumIDE`` plugin involves basic use. It can convert a file saved with the SeleniumIDE plugin of firefox
 in the design assistant.
 
 .. tip :: It is more efficient to use the live assistant to be in tune with the philosophy of the solution.

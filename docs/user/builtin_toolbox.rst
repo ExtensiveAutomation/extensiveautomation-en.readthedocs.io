@@ -39,7 +39,7 @@ More
 The toolbox can be enriched with new plugins.
 
 To do this, follow the procedure described in the chapter `Contributions> Development plugins> Toolboxes`.
-Plugins are to be dropped into the `` Plugins`` directory.
+Plugins are to be dropped into the ``Plugins`` directory.
 
 .. image :: /_static/images/toolbox/toolbox_plugins_install.png
 

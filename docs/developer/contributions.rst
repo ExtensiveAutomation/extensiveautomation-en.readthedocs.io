@@ -7,7 +7,7 @@ Solution development
 Graphic client
 ~~~~~~~~~~~~~~
 
-** Environment x64 win py3.6 qt5 **
+**Environment x64 win py3.6 qt5**
 
 .. tip :: Recommended environment.
 
@@ -44,7 +44,7 @@ To prepare its development environment, it is necessary to recover and install t
   - TortoiseGit-2.5.0.0-64bit.msi
   - InnoSetup 5.5.9 - http://www.jrsoftware.org/isdl.php
 
-Install additional Python packages with the `` pip`` command
+Install additional Python packages with the ``pip`` command
 
 .. code-block:: bash
 
@@ -53,7 +53,7 @@ Install additional Python packages with the `` pip`` command
 
 .. warning ::
      A modification is to be done in the py2exe library.
-     Edit the `C: \ Python34 \ Lib \ site-packages \ py2exe \ icons.py` file
+     Edit the `C:\Python34\Lib\site-packages\py2exe\icons.py` file
      Look for the `if iconheader.idCount` line and change the value 10 to 14.
 
 ** Environment x64 centos py2.7 qt4 **
@@ -73,7 +73,7 @@ Preparation of the development environment on a Linux CentOS 6 or 7 system.
 	pip install dpkt
 	pip install cx_freeze
 	
-Download of the client's sources since the deposit on github.
+Download the client's sources from the deposit on github.
 
 .. code-block:: bash
 
@@ -90,7 +90,7 @@ Download of the client's sources since the deposit on github.
 	python Main.py
     
 
-** x64 environment ubuntu py3.5 qt5 **
+**x64 environment ubuntu py3.5 qt5**
 
 Preparing your development environment on a Ubuntu 17.04 Linux system
 
@@ -127,7 +127,7 @@ Retrieve the client's sources from the github repository.
 Toolbox
 ~~~~~~~~~~~~~~
 
-** Environment x64 win py3.6 qt5 (recommended) **
+**Environment x64 win py3.6 qt5 (recommended)**
 
 To prepare its development environment, it is necessary to recover and install the following software:
   - Python 3.6.3 64bits
@@ -156,9 +156,9 @@ Install the dedicated selenium library for the solution:
 
 	> c:\Python36\python.exe setup.py install
     
-** x64 environment win py3.4 qt4 **
+**x64 environment win py3.4 qt4**
 
-To prepare its development environment, it is necessary to recover and install the following software:
+To prepare its development environment, it is necessary to retrieve and install the following packages:
   - Python 3.4.4 64bits
   - PyQt 4.11.4
   - Git-2.15.0-64-bit.exe
@@ -179,7 +179,7 @@ Install the dedicated selenium library for the solution:
 
 	> c:\Python34\python.exe setup.py install
     
-** Environment x64 centos py3.5 qt5 **
+**Environment x64 centos py3.5 qt5**
 
 Preparation of its development environment on a Linux CentOS 6 or 7 system.
 
@@ -220,7 +220,7 @@ Running the toolbox in graphical mode
 	python3 Systray.py
     
 
-** Environment x64 centos py2.7 qt4 **
+**Environment x64 centos py2.7 qt4**
 
 Preparation of its development environment on a Linux CentOS 6 or 7 system.
 
@@ -265,7 +265,7 @@ Running the toolbox in graphical mode
 Server
 ~~~~~~~
 
-** Environment x64 centos py2.7 **
+**Environment x64 centos py2.7**
 
 Preparation of its development environment on a Linux CentOS 6.5 and above.
 
@@ -394,11 +394,11 @@ Adapter
 ~~~~~~~~~~
 
 Adding an adapter is done using the graphical client.
-You have to go to the `` Modules Listing> Adapters`` repository and right-click on the tree to add an adapter.
+You have to go to the ``Modules Listing> Adapters`` repository and right-click on the tree to add an adapter.
 
 .. image:: /_static/images/client/client_adapters.png
 
-To make the adapter available for testing, you need to edit the `` __init __. Py`` file and add the lines
+To make the adapter available for testing, you need to edit the ``__init __. Py`` file and add the lines
 following:
 
 .. code-block:: python
@@ -407,7 +407,7 @@ following:
   __HELPER__.append("Example") 
   
 To make the adapter appear in the documentation accessible from the graphical client, it is necessary to
-use the decorator `` @ doc_public`` in front of the functions that one wishes to document.
+use the decorator ``@doc_public`` in front of the functions that one wishes to document.
 
 .. code-block:: python
   
@@ -419,7 +419,7 @@ use the decorator `` @ doc_public`` in front of the functions that one wishes to
     def connect(self, timeout=5.0):
   
 
-.. tip :: The `` Dummy`` adapter is to be used as a basis for development.
+.. tip :: The ``Dummy`` adapter is to be used as a basis for development.
 
 Libraries
 ~~~~~~~~~
@@ -429,7 +429,7 @@ You have to go to the `Modules Listing> Libraries` repository and right-click on
 
 .. image:: /_static/images/client/client_libraries.png
 
-To make the library available for testing, you need to edit the `` __init __. Py`` file and add the lines
+To make the library available for testing, you need to edit the ``__init __. Py`` file and add the lines
 following:
 
 .. code-block:: python
@@ -438,7 +438,7 @@ following:
   __HELPER__.append("Example") 
   
 To make the library appear in the documentation accessible from the graphical client, it is necessary to
-use the decorator `` @ doc_public`` in front of the functions that one wishes to document.
+use the decorator ``@doc_public`` in front of the functions that one wishes to document.
 
 .. code-block:: python
   
@@ -450,24 +450,24 @@ use the decorator `` @ doc_public`` in front of the functions that one wishes to
     def connect(self, timeout=5.0):
   
 
-.. tip :: The `` Dummy`` library is to be used as a basis for development.
+.. tip :: The ``Dummy`` library is to be used as a basis for development.
 
 SDK Toolbox
 ~~~~~~~~~~~~~~
 
 ** Linux environment **
 
-.. tip :: It is recommended to use the `` dummy`` plugin as a basis for developing your agent or probe.
+.. tip :: It is recommended to use the ``dummy`` plugin as a basis for developing your agent or probe.
 
-Using as a basis the agent or probe `` dummy``, then:
-  - update the variable `` __TYPE__`` to indicate the name of the agent or the probe
+Using as a basis the agent or probe ``dummy``, then:
+  - update the variable ``__TYPE__`` to indicate the name of the agent or the probe
   - change the name of the class with the name of your agent or probe.
-  - update the `` __init__`` file to import your agent or probe.
+  - update the ``__init__`` file to import your agent or probe.
   
 ** Windows environment **
 
 The SDK for plugin creation is retrieved from github.
-It is possible to copy the plugin `` Dummy`` and use it as a base.
+It is possible to copy the plugin ``Dummy`` and use it as a base.
 
 The type and name of the plugin is to be configured in the `config.json` file
 
@@ -480,7 +480,7 @@ The type and name of the plugin is to be configured in the `config.json` file
                 }
   }
   
-The author is defined in the `` MyPlugin.py`` file.
+The author is defined in the ``MyPlugin.py`` file.
 
 .. code-block:: python
   
@@ -489,7 +489,7 @@ The author is defined in the `` MyPlugin.py`` file.
   # email of the main developer
   __EMAIL__ = 'd.machard@gmail.com'
   
-Building the plugin in binary is done by calling the `` MakeExe3.bat`` script.
+Building the plugin in binary is done by calling the ``MakeExe3.bat`` script.
 
 .. tip:
    It is possible to run the plugin without the client by activating the debug mode.
@@ -508,28 +508,28 @@ The client supports adding plugins. Creating a plugin requires:
  
 List of possible plugins types:
 
-+ ------------------- + ----------------------------- ------------------------------- +
-| Type | Description |
-+ ------------------- + ----------------------------- ------------------------------- +
-| basic | Plugin to add a shortcut on the home page |
-+ ------------------- + ----------------------------- ------------------------------- +
-recorder-app | Export / import data in the design wizard |
-+ ------------------- + ----------------------------- ------------------------------- +
-recorder-web | Export / import data in the design wizard |
-+ ------------------- + ----------------------------- ------------------------------- +
-recorder-framework | Export / import data in the design wizard |
-+ ------------------- + ----------------------------- ------------------------------- +
-recorder-android | Export / import data in the design wizard |
-+ ------------------- + ----------------------------- ------------------------------- +
-recorder-system | Export / import data in the design wizard |
-+ ------------------- + ----------------------------- ------------------------------- +
-remote-tests | Export / import of data in remote tests |
-+ ------------------- + ----------------------------- ------------------------------- +
-test-results | Exporting test results and reports |
-+ ------------------- + ----------------------------- ------------------------------- +
++---------------------+---------------------------------------------------------------+
+| Type                | Description                                                   |
++---------------------+---------------------------------------------------------------+
+| basic               | Plugin to add a shortcut on the home page                     |
++---------------------+---------------------------------------------------------------+
+| recorder-app        | Export/import data in the design wizard                       |
++---------------------+---------------------------------------------------------------+
+| recorder-web        | Export/import data in the design wizard                       |
++---------------------+---------------------------------------------------------------+
+| recorder-framework  | Export/import data in the design wizard                       |
++---------------------+---------------------------------------------------------------+
+| recorder-android    | Export/import data in the design wizard                       |
++---------------------+---------------------------------------------------------------+
+| recorder-system     | Export/import data in the design wizard                       |
++---------------------+---------------------------------------------------------------+
+| remote-tests        | Export/import of data in remote tests                         |
++---------------------+---------------------------------------------------------------+
+| test-results        | Exporting test results and reports                            |
++---------------------+---------------------------------------------------------------+
 
 The SDK for plugin creation is retrieved from github.
-It is possible to copy the plugin `` Dummy`` and use it as a basis for development.
+It is possible to copy the plugin ``Dummy`` and use it as a basis for development.
 
 The type and name of the plugin is to be configured in the `` config.json`` file
 
@@ -543,7 +543,7 @@ The type and name of the plugin is to be configured in the `` config.json`` file
                 }
   }
   
-The author is defined in the `` MyPlugin.py`` file.
+The author is defined in the ``MyPlugin.py`` file.
 
 .. code-block:: python
   
@@ -552,9 +552,9 @@ The author is defined in the `` MyPlugin.py`` file.
   # email of the main developer
   __EMAIL__ = 'd.machard@gmail.com'
   
-Building the plugin in binary is done by calling the `` MakeExe3.bat`` script.
+Building the plugin in binary is done by calling the ``MakeExe3.bat`` script.
 
-The exchange of data between the plugin and the client is done with messages of `` JSON`` type.
+The exchange of data between the plugin and the client is done with messages of ``JSON`` type.
 
   1. Send data to the customer:
    

@@ -10,7 +10,7 @@ The solution is based on different types of tests for:
 Test Abstract
 -------------
 
-The `` test abstract`` (tax) allows you to write a test case with several steps.
+The ``test abstract`` (tax) allows you to write a test case with several steps.
 This format is oriented graphic modeling so does not require any knowledge in development.
 
 .. image:: /_static/images/testlibrary/tax.png
@@ -18,7 +18,7 @@ This format is oriented graphic modeling so does not require any knowledge in de
 Test Unit
 ---------
 
-The `` test unit`` (tux) allows you to write a test case with several steps.
+The ``test unit`` (tux) allows you to write a test case with several steps.
 This format is oriented development.
 
 .. image:: /_static/images/testlibrary/tux.png
@@ -28,7 +28,7 @@ This format is oriented development.
 Test Suite
 ---------
 
-The `` test suite`` (tsx) allows you to write several test cases with several steps.
+The ``test suite`` (tsx) allows you to write several test cases with several steps.
 This format is oriented development.
 
 .. image:: /_static/images/testlibrary/tsx.png
@@ -38,7 +38,7 @@ This format is oriented development.
 Test Plan
 ----------
 
-The `` plan test`` (tpx) allows you to write test cases.
+The ``plan test`` (tpx) allows you to write test cases.
 The design is realized by nesting the tests `abstract`,` unit` and `suite`
 This test format requires no knowledge in development.
 
@@ -47,7 +47,7 @@ This test format requires no knowledge in development.
 Test Global
 ----------
 
-The `` global test`` (tgx) allows you to write test campaigns.
+The ``global test`` (tgx) allows you to write test campaigns.
 The preparation of the campaigns is carried out by importing the tests `plans`.
 
 .. image:: /_static/images/testlibrary/tgx.png

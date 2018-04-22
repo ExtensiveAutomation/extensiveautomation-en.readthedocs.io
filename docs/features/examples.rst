@@ -4,7 +4,7 @@
 SSH adapter
 --------------
 
-The `` SSH`` adapter allows you to connect to remote servers using the SSH protocol.
+The ``SSH`` adapter allows you to connect to remote servers using the SSH protocol.
 
 The configuration of the adapter consists of indicating at least:
   - the ip address of the remote server
@@ -15,7 +15,7 @@ The adapter supports the following features:
   - authentication by username and password
   - key exchange authentication
  
-Example of configuring the adapter in the `` prepared`` section of the test.
+Example of configuring the adapter in the ``prepared`` section of the test.
 
 .. code-block:: python
   
@@ -62,24 +62,24 @@ Example to send a command on a remote machine:
    SSH replies can be split into several events (this depends on the network).
    We must be careful when waiting for a specific response, the use of a buffer may be necessary in this case.
 
-.. note :: Examples are available in the `` / Samples / Tests_Adapters / 05_SSH.tsx`` sample.
+.. note :: Examples are available in the ``/Samples/Tests_Adapters/05_SSH.tsx`` sample.
 
 HTTP adapter
 --------------
 
-The `` HTTP`` adapter is used to send requests and inspect associated responses to a web server.
+The ``HTTP`` adapter is used to send requests and inspect associated responses to a web server.
 
 The configuration of the adapter consists of indicating at least:
   - the ip address of the remote server
   - the remote server port (default 80)
  
 The adapter supports the following features:
-  - encryption `` tls`` of the communication
-  - the use of `` socks4, 5`` proxy and http
-  - `` digest`` or `` basic`` authentication
-  - reassembly of responses `` chunked``
+  - encryption ``tls`` of the communication
+  - the use of ``socks4, 5`` proxy and http
+  - ``digest`` or ``basic`` authentication
+  - reassembly of responses ``chunked``
  
-Example of configuring the adapter in the `` prepared`` section of the test.
+Example of configuring the adapter in the ``prepared`` section of the test.
 
 .. code-block:: python
   
@@ -93,7 +93,7 @@ Example of configuring the adapter in the `` prepared`` section of the test.
                                             agentSupport=input('SUPPORT_AGENT')
                                         )
 
-Example to send a `` GET`` type query and a response with the `` 200`` code.
+Example to send a ``GET`` type query and a response with the ``200`` code.
 
 .. code-block:: python
   
@@ -108,7 +108,7 @@ Example to send a `` GET`` type query and a response with the `` 200`` code.
   else:
     self.step1.setPassed(actual="http response OK") 
   
-Example to send a `` GET`` type query and wait for a response that meets the following criteria:
+Example to send a ``GET`` type query and wait for a response that meets the following criteria:
   - the version must end with 1.1
   - the code must not contain the value 200
   - the sentence must not contain the text `Testing`
@@ -137,13 +137,13 @@ Example to send a `` GET`` type query and wait for a response that meets the fol
 Telnet adapter
 --------------
 
-The `` Telnet`` adapter is used to connect to machines with a telnet interface.
+The ``Telnet`` adapter is used to connect to machines with a telnet interface.
 
 The configuration of the adapter consists of indicating at least:
   - the ip address of the remote server
   - the remote server port (default 23)
  
-Example of configuring the adapter in the `` prepared`` section of the test.
+Example of configuring the adapter in the ``prepared`` section of the test.
 
 .. code-block:: python
   
@@ -189,14 +189,14 @@ Example to send data to the remote server
 
 .. warning: telnet responses can be split into multiple events, so be careful when
 search for a particular text. To guard against this problem, we must add an intermediary buffer, there is a
-complete example with the `` Catalyst`` adapter.
+complete example with the ``Catalyst`` adapter.
 
-.. note :: An example is available in the test samples `` / Samples / Tests_Adapters / 12_Telnet.tsx``.
+.. note :: An example is available in the test samples ``/Samples/Tests_Adapters/12_Telnet.tsx``.
 
 MySQL adapter
 --------------
 
-The `` MySQL`` adapter allows you to connect to a remote database.
+The ``MySQL`` adapter allows you to connect to a remote database.
 
 The configuration of the adapter consists of indicating at least:
   - the ip address of the remote server
@@ -204,7 +204,7 @@ The configuration of the adapter consists of indicating at least:
   - the user name
   - the associated password
  
-Example of configuring the adapter in the `` prepared`` section of the test.
+Example of configuring the adapter in the ``prepared`` section of the test.
 
 .. code-block:: python
   
@@ -238,7 +238,7 @@ Example to execute an SQL query in the database:
   rsp = self.ADP_MYSQL.hasReceivedRow(timeout=input('TIMEOUT'))
   
 
-.. note :: An example is available in the `` / Samples / Tests_Adapters / 15_Database.tsx`` test samples.
+.. note :: An example is available in the ``/Samples/Tests_Adapters/15_Database.tsx`` test samples.
 
 SNMP adapter
 --------------
@@ -249,7 +249,7 @@ The configuration of the adapter consists of indicating at least:
   - the listening address
   - the listening port
  
-Example of configuring the adapter in the `` prepared`` section of the test.
+Example of configuring the adapter in the ``prepared`` section of the test.
 
 .. code-block:: python
   
@@ -292,13 +292,13 @@ Example to wait for the reception of an alarm:
   if trap is None:  Test(self).interrupt("trap expected not received")
   
 
-.. note :: An example is available in the `` / Samples / Tests_Adapters / 18_SNMP.tsx`` test samples.
+.. note :: An example is available in the ``/Samples/Tests_Adapters/18_SNMP.tsx`` test samples.
 
     
 FTP adapter (s)
 --------------
 
-The `` FTP`` adapter allows you to connect to remote servers and supports the following functions:
+The ``FTP`` adapter allows you to connect to remote servers and supports the following functions:
   - TLS connection
   - Download or recover files or directories
   - Add / delete and rename files or directories
@@ -310,7 +310,7 @@ The configuration of the adapter consists of indicating at least:
   - the username to login
   - the password
  
-Example of configuring the adapter in the `` prepared`` section of the test.
+Example of configuring the adapter in the ``prepared`` section of the test.
 
 .. code-block:: python
   
@@ -375,12 +375,12 @@ Example to detect a file in a directory with a regular expression:
   if found is None: Trace(self).error("file not found")
   
 
-.. note :: An example is available in the test samples `` / Samples / Tests_Adapters / 21_Ftp.tsx``.
+.. note :: An example is available in the test samples ``/Samples/Tests_Adapters/21_Ftp.tsx``.
 
 SFTP adapter
 ---------------
 
-The `` SFTP`` adapter allows you to connect to servers with an SSH interface.
+The ``SFTP`` adapter allows you to connect to servers with an SSH interface.
 The following features are supported:
   - Download or recover files or directories
   - Add / delete and rename files or directories
@@ -392,7 +392,7 @@ The configuration of the adapter consists of indicating at least:
   - the username to login
   - the password
  
-Example of configuring the adapter in the `` prepared`` section of the test.
+Example of configuring the adapter in the ``prepared`` section of the test.
 
 .. code-block:: python
   
@@ -454,16 +454,16 @@ Example to detect a file in a directory with a regular expression:
   if found is None: Trace(self).error("file not found")
   
 
-.. note :: An example is available in the test samples `` / Samples / Tests_Adapters / 22_Sftp.tsx``.
+.. note :: An example is available in the test samples ``/Samples/Tests_Adapters/22_Sftp.tsx``.
 
 ChartJS librairies
 -------------------
 
-The `` ChartJs`` adapter, based on the javascript library of the same name, allows you to
+The ``ChartJs`` adapter, based on the javascript library of the same name, allows you to
 generate graphics that can be integrated into an html page.
 The main interest of this library is to be able to integrate graphs in the test report.
 
-Example configuration of the library in the `` prepared`` section of the test.
+Example configuration of the library in the ``prepared`` section of the test.
 
 .. code-block:: python
   
@@ -506,7 +506,7 @@ The chart is automatically inserted into the advanced report.
 Custom test parameter
 -------------------
 
-The `` custom`` parameter is used to construct values calling other variables.
+The ``custom`` parameter is used to construct values calling other variables.
 
 For example, consider a test containing the following 2 variables:
   - DEST_IP with the value 192.168.1.1
@@ -514,12 +514,12 @@ For example, consider a test containing the following 2 variables:
 
 .. image :: /_static/images/examples/custom_inputs.png
  
-The `` custom`` type will allow us to build a 3rd variable
+The ``custom`` type will allow us to build a 3rd variable
   - DEST_URL with the value
  
     .. image :: /_static/images/examples/custom_config.png
 
-The keyword `` [! INPUT: <VARIABLE_NAME:] `` allows calling another incoming variable.
+The keyword ``[! INPUT: <VARIABLE_NAME:]`` allows calling another incoming variable.
 The framework will replace at the time of execution of the test the various keywords with the associated value.
 We will obtain the value https://192.168.1.1:8080/welcome for the variable DEST_URL.
 
@@ -539,7 +539,7 @@ Example of result after execution:
 Parameter of "alias" tests
 -------------------
 
-The `` alias`` parameter can be used to define a new name for an already existing parameter.
+The ``alias`` parameter can be used to define a new name for an already existing parameter.
 This mechanism can be used in `` plan test`` to avoid overloading all parameters with the same name.
 
 Example of use
@@ -565,9 +565,9 @@ Example of use
 When executing the above scenario, test 1, 2 and 3 are automatically set to 2 seconds for the TIMEOUT_A parameter.
 This is the behavior provided by the test framework.
 
-** How to do if you want the test 2 to keep the value 30 seconds against the test 1 and 2 inherit the value of the scenario? **
+**How to do if you want the test 2 to keep the value 30 seconds against the test 1 and 2 inherit the value of the scenario?**
 
-You have to use an `` alias`` parameter, they are not overloaded by the framework.
+You have to use an ``alias`` parameter, they are not overloaded by the framework.
 
   1. Before execution
    ::
@@ -591,8 +591,8 @@ You have to use an `` alias`` parameter, they are not overloaded by the framewor
 Dataset test parameter
 -------------------
 
-The `` dataset`` parameter is used to import `` tdx`` files.
-A `` dataset`` file is just a text file, it can be created from the graphical client and saved to the remote test repository.
+The ``dataset`` parameter is used to import ``tdx`` files.
+A ``dataset`` file is just a text file, it can be created from the graphical client and saved to the remote test repository.
 
 .. image:: /_static/images/client/client_new_tdx.png 
 
@@ -619,7 +619,7 @@ Example to read the variable:
 "Shared" test setting
 -------------------
 
-The `` shared`` parameters are added from the web interface or from the REST API.
+The ``shared`` parameters are added from the web interface or from the REST API.
 They are shared and accessible by all the tests of the same project. The expected value
 for this parameter is of `` JSON`` type.
 
@@ -627,12 +627,12 @@ A selection window in the graphical client allows you to select the parameter to
 
 .. image:: /_static/images/examples/client_params_shared.png
 
-In the example below, the `` MY_SERVER`` test parameter contains the value of the `` IP`` key present in the variable
-shared `` MY_SERVER`` which is itself present in the `` Common`` project.
+In the example below, the ``MY_SERVER`` test parameter contains the value of the ``IP`` key present in the variable
+shared ``MY_SERVER`` which is itself present in the ``Common`` project.
 
 .. image:: /_static/images/examples/client_param_shared.png
 
-.. tip :: To have a test parameter that contains a list of elements, use the `` list-shared`` type.
+.. tip :: To have a test parameter that contains a list of elements, use the ``list-shared`` type.
 
 Using a probe
 -------------------
@@ -641,7 +641,7 @@ To use a probe, you need 2 things:
   - Deploy the toolbox and start the desired probe.
   - Declare the probe in the test.
  
-To select the probe in the test, it must be activated and configured in the test (tab `` Miscellaneous> Probes``)
+To select the probe in the test, it must be activated and configured in the test (tab ``Miscellaneous> Probes``)
 
 .. image:: /_static/images/examples/probe_tab.png
 
@@ -663,12 +663,12 @@ To use an agent, you need two things:
   - Declare the agent in the test
   - Configure the adapter to use the agent.
 
-Agents are to be declared from the client in the tab `` Miscellaneous> Agents``
+Agents are to be declared from the client in the tab ``Miscellaneous> Agents``
 
 .. image:: /_static/images/examples/client_properties_agent.png
 
 
-Enabling agent mode on adapters is done with the `` agentSupport`` and `` agent`` arguments.
+Enabling agent mode on adapters is done with the ``agentSupport`` and ``agent`` arguments.
 
 .. code-block:: python
   

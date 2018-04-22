@@ -5,10 +5,10 @@ Connection to the server
 ------------------------------
 
 After the oppening of the client, the first step is to connect to the remote server.
-To do that, you new an account and the remote address.
+To do that, you need an account and the remote address of your automation server.
 
-The connection windows is available from the ``Get Started > Connect`` menu or from the welcome tabulation.
-If the connection is successfull, the user can be see the remote tests availables.
+The connection window is available from the ``Get Started > Connect`` menu or from the welcome tabulation.
+If the connection is successfull, the user can see all remote tests available.
 
 .. image:: /_static/images/client/client_connect.png
 
@@ -27,7 +27,7 @@ The first utilization consists to create a very simple testcase and display a pa
    
    .. image:: /_static/images/client/client_new_param.png
 
-3. Change the test at the `` definition`` section to display the value of the parameter.
+3. Change the test in the ``definition`` section to display the value of the parameter.
    
    .. image:: /_static/images/client/client_new_trace.png
    
@@ -38,22 +38,22 @@ The first utilization consists to create a very simple testcase and display a pa
        
      .. image:: /_static/images/client/check_syntax.png
    
-4. Save the test in the repository with the name "Test_A" in the `` Sandbox`` directory
+4. Save the test in the repository with the name "Test_A" in the ``Sandbox`` directory
    
    .. image:: /_static/images/client/client_new_save.png
 
 Write a scenario
 ----------------------
 
-.. note:: This mini guide assumes that you have followed the chapter `` Writing a script test``.
+.. note:: This mini guide assumes that you have followed the chapter ``Writing a script test``.
 
 The following example explains how to create its first scenario with an overload of test variables.
 
-1. Create a `` Plan`` type test.
+1. Create a ``Plan`` type test.
 
    .. image:: /_static/images/client/client_new_tpx.png
 
-2. Insert test "Test_A" in the scenario. Click on the `` Insert Child`` button and select the `Test_A` test.
+2. Insert test "Test_A" in the scenario. Click on the ``Insert Child`` button and select the `Test_A` test.
 
    .. image:: /_static/images/client/client_new_insert.png
 
@@ -61,7 +61,7 @@ The following example explains how to create its first scenario with an overload
 
    .. image:: /_static/images/client/client_new_insert_again.png
 
-4. Save the scenario in the test repository with the name "Scenario_A" in the `` Sandbox`` directory.
+4. Save the scenario in the test repository with the name "Scenario_A" in the ``Sandbox`` directory.
 
 5. Add the parameter MON_PARAMETRE with the value "goodbye" at the scenario level.
 
@@ -73,17 +73,17 @@ The following example explains how to create its first scenario with an overload
 Execute a test
 -------------------
 
-.. note:: This mini guide assumes that you have followed the chapters `Writing a script test` and` Writing a scenario`.
+.. note:: This mini guide assumes that you have followed the chapters `Writing a script test` and `Writing a scenario`.
 
-You can run a test by clicking the `` Execute`` button.
-Open the `Test_A` and` Scenario_A` tests and run them.
+You can run a test by clicking the ``Execute`` button.
+Open the `Test_A` and `Scenario_A` tests and run them.
 
 .. image:: /_static/images/client/client_execute.png
 
 Analyse des résultats
 ---------------------
 
-.. note:: This mini guide assumes that you have followed the chapters `Writing a script test` and` Writing a scenario`.
+.. note:: This mini guide assumes that you have followed the chapters `Writing a script test` and `Writing a scenario`.
 
 The first analysis window shows the execution of the test "Test_A" and in particular the message "hello".
 
@@ -112,6 +112,6 @@ Best practices
 .. tip::
 
    To facilitate the maintenance of your tests and make them reusable,
-    you should not have hard value in your test.
-    It is necessary to systematically put them in test parameters, it is done for.
+   you should not have hard value in your test.
+   It is necessary to systematically put them in test parameters, it is done for.
    

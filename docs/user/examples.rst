@@ -17,10 +17,10 @@ The example shows how to loop on a test case while modifying the incoming data.
 
 .. image :: /_static/images/client/exemple_testsuite.png
 
-It is therefore possible to add as many arguments as necessary to the `` execute () `` function
+It is therefore possible to add as many arguments as necessary to the ``execute ()`` function
 and add them identically to the level of the 4 sections.
 
-.. note :: It is possible to add a prefix at the test case level using the `` prefix`` argument.
+.. note :: It is possible to add a prefix at the test case level using the ``prefix`` argument.
 
 variables
 ----------------
@@ -32,8 +32,6 @@ A test parameter can be retrieved at the test level using the `input` function.
 The name of the parameter to be recovered is to be specified.
 
 .. image :: /_static/images/client/exemple_variables.png
-
-.. tip: Try to get in the habit of systematically changing all the values present in the test to facilitate maintenance.
 
 Scenario
 --------
@@ -55,18 +53,18 @@ Rest API
 --------
 
 To write a REST API test, it is recommended:
-  - to use the reusable test `` / Snippets / Protocols / 04_Send_JSON``
+  - to use the reusable test ``/Snippets/Protocols/04_Send_JSON``
   - describe the target server in JSON (ip / destination port, http support)
   
 Example:
  
-The test calls the `` httpbin.org`` service in https and calls the `` ip`` service to get the client's actual ip in json.
+The test calls the ``httpbin.org`` service in https and calls the ``ip`` service to get the client's actual ip in json.
 
 .. image:: /_static/images/examples/rest_api.png
 
 The scenario breaks down into several stages:
   1. Preparation of the environment: description of the tested environment (address, network port, etc.)
-     The environment is configured in the `ENVIRONMENT` parameter of the` PREPARE ENVIRONMENT` test (Id = 5)
+     The environment is configured in the `ENVIRONMENT` parameter of the `PREPARE ENVIRONMENT` test (Id = 5)
      
    .. code-block:: json
    
@@ -95,38 +93,38 @@ The scenario breaks down into several stages:
         },
         "DATASET": [    ]
         }
+        
   2. If the environment preparation does not work then the scenario is stopped by calling the test
-  reusable `` Snippets / Do / 02_Terminate`` (Id = 16)
+  reusable ``Snippets/Do/02_Terminate`` (Id = 16)
 
-  3. A REST request is sent and the expected response is described using the reusable test `` / Snippets / Protocols / 04_Send_JSON`` (Id = 30).
+  3. A REST request is sent and the expected response is described using the reusable test ``/Snippets/Protocols/04_Send_JSON`` (Id = 30).
   If this step does not work then we cancel the test (Id = 31)
  
-  The response received is verified by the framework and what was described by the tester in the `` HTTP_RSP_BODY`` parameter
+  The response received is verified by the framework and what was described by the tester in the ``HTTP_RSP_BODY`` parameter
   
  .. code-block:: json
  
    origin		[!CAPTURE:EXTERNAL_IP:]
    
   The configuration indicates that the response must verify that the `origin` key is present and
-  save the value in the cache with the `` EXTERNAL_IP`` key
+  save the value in the cache with the ``EXTERNAL_IP`` key
  
-  4. The value received in the response is displayed with the reusable test `` Snippets / Cache / 02_Log_Cache`` (Id = 32)
+  4. The value received in the response is displayed with the reusable test ``Snippets/Cache/02_Log_Cache`` (Id = 32)
 
-.. note:: The example presented below is available in full in the test samples:
-          ``/Samples/Web_API/001_httpbin_rest.tpx``.
+.. note:: The example presented below is available in full in the test samples ``/Samples/Web_API/001_httpbin_rest.tpx``.
 
 SSH controls
 -------------
 
 To write an SSH test, it is advisable:
-  - to use the reusable test `` / Snippets / Protocols / 01_Send_SSH``
+  - to use the reusable test ``/Snippets/Protocols/01_Send_SSH``
   - to describe the target server in JSON (ip, account, password at least)
   
 .. image:: /_static/images/examples/ssh.png
 
 The test is broken down into several stages:
   1. Loading the description (ip, account, password) of the target machine into the cache
-  2. Calling the `` / Snippets / Protocols / 01_Send_SSH`` generic test to retrieve the server version
+  2. Calling the ``/Snippets/Protocols/01_Send_SSH`` generic test to retrieve the server version
      The version (if found on the screen) is saved in the cache with the `SERVER_VERSION` key
      If the version is not found, the test goes into error.
      
@@ -139,13 +137,13 @@ The test is broken down into several stages:
    
 3. View the version from the cache.
 
-.. note :: The complete example is available in the test samples `` / Self Testing / SYSTEM / 000_System.tpx``.
+.. note :: The complete example is available in the test samples ``/Self Testing/SYSTEM/000_System.tpx``.
 
 Web browsers
 --------------------
 
 To write a web application test, you must:
-  - obligatorily deploy a `` selenium`` agent on a post with a firefox, chrome, internet explorer or edge browser
+  - deploy a ``selenium`` agent on a machine with a firefox, chrome, internet explorer or edge browser
   - have access to the source code of the web page from his browser
   - have knowledge of xpath
   - know the basics of HTML

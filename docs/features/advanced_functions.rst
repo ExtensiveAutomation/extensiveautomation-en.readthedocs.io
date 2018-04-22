@@ -8,12 +8,12 @@ Programming of performances
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The scheduler present in the server makes it possible to program the execution of the tests in several ways.
-  - Run the test once in `` x_seconds`` or `` date_time``
+  - Run the test once in ``x_seconds`` or ``date_time``
   - Run the test several times at `date_time`.
-  - Run the test at each `` start time`` at `` finish time``
-  - Run the test every hour at a specific `` hour``
-  - Run the test every day at a precise `` hour``
-  - Run the test once a week the `` day of the week`` at a specific `` hour``
+  - Run the test at each ``start time`` at ``finish time``
+  - Run the test every hour at a specific ``hour``
+  - Run the test every day at a precise ``hour``
+  - Run the test once a week the ``day of the week`` at a specific ``hour``
   
 .. image:: /_static/images/testlibrary/test_scheduling.png
 
@@ -35,7 +35,7 @@ All of its actions can be done from the heavy client or from the API.
 Parallelized executions
 ----------------------
 
-It is possible to run multiple tests in parallel using the `` Grouped`` function
+It is possible to run multiple tests in parallel using the ``Grouped`` function
 This function is available from the heavy client or from the API.
 
 There are 2 options of executions:
@@ -122,7 +122,7 @@ The observer test must be used to make the connection between the different adap
 
 .. important :: The use of adapters in shared mode is mandatory.
 
-.. note :: An example is available in the `` / Samples / Tests_Non_Sequential`` test samples.
+.. note :: An example is available in the ``/Samples/Tests_Non_Sequential`` test samples.
 
 Distributed executions
 ----------------------
