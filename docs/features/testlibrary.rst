@@ -171,7 +171,7 @@ Example to add text to an already existing log file
 Cache
 ~~~~~
 
-The test framework allows caching of data in the key / value form.
+The test framework allows caching of data in the key/value form.
 This function may be necessary to share data between tests when writing a scenario for example.
 
 .. image:: /_static/images/testlibrary/client_cache.png

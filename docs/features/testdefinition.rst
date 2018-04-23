@@ -1,4 +1,4 @@
-Typical tests definitions
+Tests definitions
 ============
 
 The solution is based on different types of tests for:

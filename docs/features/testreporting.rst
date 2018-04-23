@@ -23,7 +23,7 @@ During the execution of a test, the framework captures all the events generated 
 The events are then converted and stored in a message called ``template``.
 
 A ``template`` is split into one or more ``layers``.
-A ``layer`` is defined by a set of key / value. The value of a layer
+A ``layer`` is defined by a set of key/value. The value of a layer
 can be another layer too.
 
 .. image:: /_static/images/testlibrary/template_message.png

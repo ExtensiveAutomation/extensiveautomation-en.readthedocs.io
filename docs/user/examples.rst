@@ -7,7 +7,7 @@ Testcase (unit)
 This example shows how to use a test case.
 A test case consists of 4 sections automatically executed by the test framework as well as associated test parameters.
 
-.. image :: /_static/images/client/exemple_testunit.png
+.. image:: /_static/images/client/exemple_testunit.png
 
 Testcase (suite)
 -----------
@@ -15,12 +15,12 @@ Testcase (suite)
 A test suite allows you to run several test cases afterwards.
 The example shows how to loop on a test case while modifying the incoming data.
 
-.. image :: /_static/images/client/exemple_testsuite.png
+.. image:: /_static/images/client/exemple_testsuite.png
 
-It is therefore possible to add as many arguments as necessary to the ``execute ()`` function
+It is therefore possible to add as many arguments as necessary to the ``execute()`` function
 and add them identically to the level of the 4 sections.
 
-.. note :: It is possible to add a prefix at the test case level using the ``prefix`` argument.
+.. note:: It is possible to add a prefix at the test case level using the ``prefix`` argument.
 
 variables
 ----------------
@@ -221,6 +221,6 @@ have the list of available XML elements and attributes.
 
 .. image:: /_static/images/examples/assistant_android.png
 
-.. note:: The complete example is available in test samples``/Samples/Tests_Mobiles/03_PlayStore.tux``.
+.. note:: The complete example is available in test samples ``/Samples/Tests_Mobiles/03_PlayStore.tux``.
 
 .. important:: Enabling USB `debug` mode is required on the phone.

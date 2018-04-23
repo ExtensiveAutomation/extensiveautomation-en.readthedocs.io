@@ -8,7 +8,7 @@ For now the server can only be run on a Linux environment.
 It can be run on a virtual or physical environment.
 
 +-----------------------+--------------+--------------+
-Features                | Minimum      | Recommended  |
+| Features              | Minimum      | Recommended  |
 +-----------------------+--------------+--------------+
 | OS                    | CentOS 6.5+ or 7.x          |
 +-----------------------+--------------+--------------+
@@ -60,7 +60,7 @@ Toolbox
 The toolbox can be run on a Windows or Linux environment.
 
 +-------------------+-----------------------------+------------------------------+
-Features            | Minimum                     | Recommended                  |
+| Features          | Minimum                     | Recommended                  |
 +-------------------+-----------------------------+------------------------------+
 | OS                | Windows 7+                  | Windows 10+                  |
 |                   | Linux CentOS 6.5+           | CentOS7+ or Ubuntu 17+       |

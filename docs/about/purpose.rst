@@ -53,5 +53,5 @@ Contact
 If you have any questions, you can contact me with:
  - email d.machard@gmail.com
  - twitter https://twitter.com/Extensive_Auto
- - from the google forum https://groups.google.com/forum/#!forum/extensive-testing-users
+ - from the google forum https://groups.google.com/forum/#!forum/extensive-automation-users
  - github https://github.com/ExtensiveAutomation

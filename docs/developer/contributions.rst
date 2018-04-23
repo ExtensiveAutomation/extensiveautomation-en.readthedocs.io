@@ -1,4 +1,4 @@
-contributions
+Contributions
 =============
 
 Solution development
@@ -52,11 +52,11 @@ Install additional Python packages with the ``pip`` command
     
 
 .. warning ::
-     A modification is to be done in the py2exe library.
+     A update must be done in the py2exe library.
      Edit the `C:\Python34\Lib\site-packages\py2exe\icons.py` file
      Look for the `if iconheader.idCount` line and change the value 10 to 14.
 
-** Environment x64 centos py2.7 qt4 **
+**Environment x64 centos py2.7 qt4**
 
 Preparation of the development environment on a Linux CentOS 6 or 7 system.
 
@@ -455,7 +455,7 @@ use the decorator ``@doc_public`` in front of the functions that one wishes to d
 SDK Toolbox
 ~~~~~~~~~~~~~~
 
-** Linux environment **
+**Linux environment**
 
 .. tip :: It is recommended to use the ``dummy`` plugin as a basis for developing your agent or probe.
 
@@ -464,7 +464,7 @@ Using as a basis the agent or probe ``dummy``, then:
   - change the name of the class with the name of your agent or probe.
   - update the ``__init__`` file to import your agent or probe.
   
-** Windows environment **
+**Windows environment**
 
 The SDK for plugin creation is retrieved from github.
 It is possible to copy the plugin ``Dummy`` and use it as a base.

@@ -395,7 +395,7 @@ SSH
 .. important:: path of the reusable test ``/Snippets/Protocols/01_Send_SSH.tsx``
 
 This reusable test is used to send a sequence of ssh commands.
-It is used in conjunction with the reusable test `` /Snippets/Do/03_Initilize.tux`` to load an environment into the cache.
+It is used in conjunction with the reusable test ``/Snippets/Do/03_Initilize.tux`` to load an environment into the cache.
 
 Parameter(s) to configure:
 
@@ -404,7 +404,7 @@ Parameter(s) to configure:
 +-----------------+----------------------------------------------------------+
 | SERVERS         | List of servers to contact                               |
 +-----------------+----------------------------------------------------------+
-| COMMANDS        | Lists of Commands to Run on the Remote Machine           |
+| COMMANDS        | List of commands to run on the remote machine            |
 +-----------------+----------------------------------------------------------+
 | TIMEOUT_CONNECT | Max time to connect to the remote machine                |
 +-----------------+----------------------------------------------------------+

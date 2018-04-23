@@ -9,7 +9,7 @@ Server
 
 The server logs are stored on ``/opt/xtc/current/Var/Logs/``.
 The logs are set in ``INFO`` mode by default.
-The DEBUG level can be activated from the `` settings.ini`` file.
+The DEBUG level can be activated from the ``settings.ini`` file.
 
 .. code-block::
     [Trace]
