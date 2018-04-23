@@ -39,7 +39,7 @@ Test Plan
 ----------
 
 The ``plan test`` (tpx) allows you to write test cases.
-The design is realized by nesting the tests `abstract`,` unit` and `suite`
+The design is realized by nesting the tests `abstract`, `unit` and `suite`
 This test format requires no knowledge in development.
 
 .. image:: /_static/images/testlibrary/tpx.png

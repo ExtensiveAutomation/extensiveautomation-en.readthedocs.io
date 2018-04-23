@@ -37,7 +37,7 @@ A test case is divided into sub-steps.
 A step is defined by:
   - a summary of the action to be carried out
   - the detailed description of the action to be carried out
-  the description of the expected result to validate the step.
+  - the description of the expected result to validate the step.
 
 The definition of the test steps must be done in the ``description`` section:
 
@@ -61,11 +61,11 @@ Example to set the result to ``PASS`` or ``FAILED``
   
   self.step1.setFailed(actual="error to run the step")
 
-.. warning :: Do not forget to start a step with the function ``start`` otherwise it is not possible to put the result.
+.. warning:: Do not forget to start a step with the function ``start`` otherwise it is not possible to put the result.
 
-.. note :: Do not forget to specify the result of a step, otherwise it will be considered as ``UNDEFINED``.
+.. note:: Do not forget to specify the result of a step, otherwise it will be considered as ``UNDEFINED``.
 
-.. important :: A step set to ``FAILED`` can not become ``PASS`` thereafter in a test.
+.. important:: A step set to ``FAILED`` can not become ``PASS`` thereafter in a test.
 
 Cancellation of a test
 -------------------
@@ -241,7 +241,7 @@ Interaction with the tester
 ---------------------------
 
 The framework makes it possible to write semi-automatic tests, ie in interaction mode.
-This function can be interesting for a test in question / answer mode (eg configuration of a device)
+This function can be interesting for a test in interactive mode (eg configuration of a device)
 
 Example asking the name of the person:
 
@@ -379,7 +379,7 @@ Import / export settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The test parameters can be exported to a dedicated ``testconfig`` (tcx) file type.
-It is therefore possible to work / prepare the parameters without having the test.
+It is therefore possible to prepare the parameters without having the test.
 
 .. image :: /_static/images/client/client_testconfig_export.png
 

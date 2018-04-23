@@ -13,7 +13,7 @@ Automatic mode
      - access to official repositories is available
      - using a Linux CentOS 6/7 or RedHat system
      
-Installation of the solution can be done using the `` install.sh`` script in the tar.gz.
+Installation of the solution can be done using the ``install.sh`` script in the tar.gz.
 If the prerequisites are respected then the installation will be done in automatic mode, that is to say that the missing packets
 will be recovered automatically.
 
@@ -69,9 +69,9 @@ Example to check if the server is working properly.
 
 The server is accessible at the address indicated at the end of the installation.
 It is possible to use no fault accounts to connect:
-  - user `` admin``
-  - user `` test``
-  - user `` monitor``
+  - user ``admin``
+  - user ``test``
+  - user ``monitor``
  
 .. note :: The default accounts do not have a password.
 
@@ -128,9 +128,9 @@ Example to check if the server is working properly.
 
 The server is accessible at the address indicated at the end of the installation.
 It is possible to use the default accounts to log in:
-  - user `` admin``
-  - user `` test``
-  - user `` monitor``
+  - user ``admin``
+  - user ``test``
+  - user ``monitor``
  
 .. note :: The default accounts do not have a password.
 
@@ -160,18 +160,18 @@ After retrieving the sources from github you have to recompose the different dir
 | web-client       | </opt..>/Web                  |
 +------------------+-------------------------------+
 
-** Preparation of the database **
+**Preparation of the database**
 
-To initialize the database, execute the "add-bdd.py" scripts available in the `` Scripts / database`` directory.
+To initialize the database, execute the "add-bdd.py" scripts available in the ``/Scripts/database`` directory.
 
-** Starting the server **
+**Starting the server**
 
-Run the `` python run`` scripts available at the root of the `` / opt / xtc / vXXX / `` directory.
+Run the ``python run`` scripts available at the root of the ``/opt/xtc/vXXX/`` directory.
 
 Update
 ~~~~~~~~~~~
 
-The server update is possible by running the script ``. / Update.sh``
+The server update is possible by running the script ``./Update.sh``
 Old tests, adapters and users are automatically migrated.
 
 .. code-block:: bash
@@ -234,7 +234,7 @@ Rollback
 ~~~~~~~~~~~
 
 Backtracking is possible to earlier versions already installed on the server.
-Run the `` rollback.sh`` script with the previous version.
+Run the ``rollback.sh`` script with the previous version.
 
 .. code-block:: bash
 
@@ -256,7 +256,7 @@ Run the `` rollback.sh`` script with the previous version.
 Uninstall
 ~~~~~~~~~~~~~~
 
-Uninstalling the product can be done using the ``. / Uninstall.sh`` script in the installation package.
+Uninstalling the product can be done using the ``./Uninstall.sh`` script in the installation package.
 
 .. code-block:: bash
 
@@ -281,7 +281,7 @@ Uninstalling the product can be done using the ``. / Uninstall.sh`` script in th
 	- Uninstallation completed successfully!
 	=========================================================================
 
-.. note :: It is possible to use the `` force`` mode if an error occurs during the uninstallation.
+.. note :: It is possible to use the ``force`` mode if an error occurs during the uninstallation.
 
 Client
 ------
@@ -335,7 +335,7 @@ The toolbox can be retrieved from the website https://www.extensiveautomation.or
 
 .. image:: /_static/images/webinterface/web_overview_pkgs3.png
 
-Then you have to decompress it and run the `` ExtensiveTestingToolbox.exe`` file
+Then you have to decompress it and run the ``ExtensiveTestingToolbox.exe`` file
 
 .. image:: /_static/images/toolbox/toolbox_portable.png
     

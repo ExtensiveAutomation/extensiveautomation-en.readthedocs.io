@@ -4,7 +4,7 @@ Projects
 The solution is multi-project. It is therefore possible to organize the tests by projects and grant access rights for
 users.
 
-.. note :: The `` Common`` project exists by default, it is accessible by all users and can not be deleted.
+.. note:: The ``Common`` project exists by default, it is accessible by all users and can not be deleted.
 
 Add a project
 -----------------
@@ -22,7 +22,7 @@ This action can be done throught the web interface or the web api.
 
 .. image:: /_static/images/webinterface/delete_project.png
 
-.. note :: If the project is associated with a user, deletion is not allowed.
+.. note:: If the project is associated with a user, deletion is not allowed.
 
 Link a project to a user
 ------------------------

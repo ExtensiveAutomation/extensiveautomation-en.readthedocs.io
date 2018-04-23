@@ -8,7 +8,7 @@ The execution of a test is divided into events, all of these events are stored a
 An event can represent:
  - an action performed by the test framework
  - an action performed by the test
- a data item received by the system to be tested or checked.
+ - a data item received by the system to be tested or checked.
  - data to send to the system to test or control.
 
 Event execution makes it possible to have robust tests thanks to the definition of observation intervals.
@@ -98,11 +98,11 @@ The client can graphically display the comparison made by the framework.
 Definition of the color code:
 
 +-------------------+---------------------------------------------------------------------+
-Green | Perfect match between the value received and expected |
+| Green             | Perfect match between the value received and expected               |
 +-------------------+---------------------------------------------------------------------+
-Red | The value received does not correspond to the expected value |
+| Red               | The value received does not correspond to the expected value        |
 +-------------------+---------------------------------------------------------------------+
-| Yellow | The expected value has not been verified |
+| Yellow            | The expected value has not been verified                            |
 +-------------------+---------------------------------------------------------------------+
 
 Test reports

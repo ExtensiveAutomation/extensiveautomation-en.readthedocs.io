@@ -40,7 +40,7 @@ Example of a test done with the assistant:
   3. Display the first name in the test log
   4. Check from the cache if the first name contains a specific value.
 
-.. image :: /_static/images/client_assistant/aa_basic_test.png
+.. image:: /_static/images/client_assistant/aa_basic_test.png
 
 List of available actions:
 
@@ -78,11 +78,11 @@ Example of a test done with the assistant:
  6. Waiting to detect on the screen the connection prompt
  7. Close the SSH connection.
  
-.. image :: /_static/images/client_assistant/aa_sys_example.png
+.. image:: /_static/images/client_assistant/aa_sys_example.png
 
 List of available actions:
 
-.. note :: In red, the essential actions.
+.. note:: In red, the essential actions.
 
 +--------------------------+--------------------------------------------------------------------+
 | ``OPEN SSH SESSION``     | Open an SSH session                                                |
@@ -98,7 +98,7 @@ List of available actions:
 | ``CHECKING IF SCREEN``   | Check if the screen contains specific text                         |
 +--------------------------+--------------------------------------------------------------------+
 
-.. note :: Using the ``OPEN SSH SESSION`` action is mandatory before you can use the others available.
+.. note:: Using the ``OPEN SSH SESSION`` action is mandatory before you can use the others available.
 
 Tabulation application
 ------------------
@@ -146,7 +146,7 @@ List of available actions:
 +-----------------------------+--------------------------------------------------------------------+
 | MOVE TO POSITION            | Move the cursor to the position (x, y)                             |
 +-----------------------------+--------------------------------------------------------------------+
- 
+
 **Keyboard control**
 
 +-----------------------------+--------------------------------------------------------------------+
@@ -211,12 +211,12 @@ Example of a test done with the assistant:
  2. Click on the HTML element found by the xpath
  3. Find the HTML element found by the xpath and click on it as soon as it is visible on the screen.
  
-.. image :: /_static/images/client_assistant/aa_web_example.png
+.. image:: /_static/images/client_assistant/aa_web_example.png
 
-.. note ::
+.. note::
   It is possible to open multiple browsers in parallel on the same extension to define a new session.
-  The name of the session is defined by the `` OPEN BROWSER`` action.
-  Then use the `` SWITCH TO SESSION`` action to switch sessions.
+  The name of the session is defined by the ``OPEN BROWSER`` action.
+  Then use the ``SWITCH TO SESSION`` action to switch sessions.
 
 Available actions:
 
@@ -225,89 +225,89 @@ Available actions:
 **Browser Control**
 
 +-----------------------------+--------------------------------------------------------------------+
-| ``OPEN BROWSER`` | Open the browser and load the specified url |
+| ``OPEN BROWSER``            | Open the browser and load the specified url                        |
 +-----------------------------+--------------------------------------------------------------------+
-| ``CLOSE BROWSER`` | Closes the browser |
+| ``CLOSE BROWSER``           | Closes the browser                                                 |
 +-----------------------------+--------------------------------------------------------------------+
-| MAXIMIZE BROWSER | Enlarges the browser window |
+| MAXIMIZE BROWSER            | Enlarges the browser window                                        |
 +-----------------------------+--------------------------------------------------------------------+
 
 **Navigation actions**
 
 +-----------------------------+--------------------------------------------------------------------+
-| REFRESH PAGE | Refresh the page |
+| REFRESH PAGE                | Refresh the page                                                   |
 +-----------------------------+--------------------------------------------------------------------+
-| GO BACK | Backspace |
+| GO BACK                     | Backspace                                                          |
 +-----------------------------+--------------------------------------------------------------------+
-| GO FORWARD | Go forward |
+| GO FORWARD                  | Go forward                                                         |
 +-----------------------------+--------------------------------------------------------------------+
-| ACCEPT ALERT | Validate the javascript alert |
+| ACCEPT ALERT                | Validate the javascript alert                                      |
 +-----------------------------+--------------------------------------------------------------------+
-| DISMISS ALERT | Dismiss the javascript alert |
+| DISMISS ALERT               | Dismiss the javascript alert                                       |
 +-----------------------------+--------------------------------------------------------------------+
-| CLOSE CURRENT WINDOW | Closes the current window |
+| CLOSE CURRENT WINDOW        | Closes the current window                                          |
 +-----------------------------+--------------------------------------------------------------------+
-| SWITCH TO NEXT WINDOW | Toggle on next window |
+| SWITCH TO NEXT WINDOW       | Toggle on next window                                              |
 +-----------------------------+--------------------------------------------------------------------+
-| SWITCH TO FRAME | Toggle on the next frame |
+| SWITCH TO FRAME             | Toggle on the next frame                                           |
 +-----------------------------+--------------------------------------------------------------------+
-| SWITCH TO SESSION | Toggles to another selenium session |
+| SWITCH TO SESSION           | Toggles to another selenium session                                |
 +-----------------------------+--------------------------------------------------------------------+
-| SWITCH TO WINDOW | Toggle on the next frame |
+| SWITCH TO WINDOW            | Toggle on the next frame                                           |
 +-----------------------------+--------------------------------------------------------------------+
  
 **javascript actions**
 
 +--------------------------------------+---------------------------------------------------------------------+
-| EXECUTE JAVASCRIPT ON HTML ELEMENT | Allows you to inject javascript script on an html element |
+| EXECUTE JAVASCRIPT ON HTML ELEMENT   | Allows you to inject javascript script on an html element           |
 +--------------------------------------+---------------------------------------------------------------------+
 
 **Actions on html elements**
 
 +---------------------------------------------+--------------------------------------------------------------------------+
-| WAIT HTML ELEMENT | Wait for the appearance of a precise HTML element |
+| WAIT HTML ELEMENT                           | Wait for the appearance of a precise HTML element                        |
 +---------------------------------------------+--------------------------------------------------------------------------+
-| WAIT AND CLICK ON HTML ELEMENT | Wait for the appearance of a precise HTML element and click on it |
+| WAIT AND CLICK ON HTML ELEMENT              | Wait for the appearance of a precise HTML element and click on it        |
 +---------------------------------------------+--------------------------------------------------------------------------+
-| WAIT VISIBLE HTML ELEMENT | Wait for an HTML element to be visible to the user |
+| WAIT VISIBLE HTML ELEMENT                   | Wait for an HTML element to be visible to the user                       |
 +---------------------------------------------+--------------------------------------------------------------------------+
-| WAIT NOT VISIBLE HTML ELEMENT | Wait until an HTML element is not visible to the user |
+| WAIT NOT VISIBLE HTML ELEMENT               | Wait until an HTML element is not visible to the user                    |
 +---------------------------------------------+--------------------------------------------------------------------------+
-| ``WAIT VISIBLE AND CLICK ON HTML ELEMENT`` | Wait for an HTML element to be visible to the user and click on it |
+| ``WAIT VISIBLE AND CLICK ON HTML ELEMENT``  | Wait for an HTML element to be visible to the user and click on it       |
 +---------------------------------------------+--------------------------------------------------------------------------+
-| HOVER ON HTML ELEMENT | Move the mouse cursor over a specific HTML element |
+| HOVER ON HTML ELEMENT                       | Move the mouse cursor over a specific HTML element                       |
 +---------------------------------------------+--------------------------------------------------------------------------+
-| CLICK ON HTML ELEMENT | Click on a specific HTML element |
+| CLICK ON HTML ELEMENT                       | Click on a specific HTML element                                         |
 +---------------------------------------------+--------------------------------------------------------------------------+
-| DOUBLE CLICK ON HTML ELEMENT | Double click on a specific HTML element |
+| DOUBLE CLICK ON HTML ELEMENT                | Double click on a specific HTML element                                  |
 +---------------------------------------------+--------------------------------------------------------------------------+
-| CLEAR TEXT ON HTML ELEMENT | Empty the text on a specific HTML element |
+| CLEAR TEXT ON HTML ELEMENT                  | Empty the text on a specific HTML element                                |
 +---------------------------------------------+--------------------------------------------------------------------------+
-| ``SELECT ITEM BY TEXT`` | Select item according to the text (for combolist or list) |
+| ``SELECT ITEM BY TEXT``                     | Select item according to the text (for combolist or list)                |
 +---------------------------------------------+--------------------------------------------------------------------------+
-| ``SELECT ITEM BY VALUE`` | Select item according to the value attribute (for combolist or list) |
+| ``SELECT ITEM BY VALUE``                    | Select item according to the value attribute (for combolist or list)     |
 +---------------------------------------------+--------------------------------------------------------------------------+
 
 **Text Recovery**
 
 +----------------------------------+--------------------------------------------------------------------+
-| GET TEXT ALERT | Retrieves the text of an alert message javascript |
+| GET TEXT ALERT                   | Retrieves the text of an alert message javascript                  |
 +----------------------------------+--------------------------------------------------------------------+
-| ``GET TEXT FROM HTML ELEMENT`` | Retrieves the text an exact html element |
+| ``GET TEXT FROM HTML ELEMENT``   | Retrieves the text an exact html element                           |
 +----------------------------------+--------------------------------------------------------------------+
-| GET PAGE TITLE | Retrieves the title of the page |
+| GET PAGE TITLE                   | Retrieves the title of the page                                    |
 +----------------------------------+--------------------------------------------------------------------+
-| GET PAGE URL | Get the URL of the page |
+| GET PAGE URL                     | Get the URL of the page                                            |
 +----------------------------------+--------------------------------------------------------------------+
-| GET PAGE SOURCE CODE | Get the source code page |
+| GET PAGE SOURCE CODE             | Get the source code page                                           |
 +----------------------------------+--------------------------------------------------------------------+
 
 **Keyboard simulation**
 
 +---------------------------------+--------------------------------------------------------------------+
-| TYPE KEYBOARD SHORTCUT | Sends a keyboard shortcut to a specific HTML element |
+| TYPE KEYBOARD SHORTCUT          | Sends a keyboard shortcut to a specific HTML element               |
 +---------------------------------+--------------------------------------------------------------------+
-| ``TYPE TEXT ON HTML ELEMENT`` | Sends text on a specific HTML element |
+| ``TYPE TEXT ON HTML ELEMENT``   | Sends text on a specific HTML element                              |
 +---------------------------------+--------------------------------------------------------------------+
 
 Android Tabulation
@@ -332,7 +332,7 @@ Example of a test done with the assistant:
   5. Click on the 'Play Store` app to open it
   6. Wait for the application to open and search the `APPS & GAMES` menu
   7. Click on the text `ENTERTAINMENT`
-  8. Click on the menu 'MOVIES & TV`
+  8. Click on the menu `MOVIES & TV`
   9. Wait for 5 seconds
   10. Research the image
   11. Put the device to sleep.
@@ -344,14 +344,14 @@ Available actions:
 .. note:: In red, mandatory actions.
 
 **Mobile controls**
-	
-+-----------------------------+--------------------------------------------------------------------+
-| ``WAKE UP AND UNLOCK`` | Wake up and unlock the device |
-+-----------------------------+--------------------------------------------------------------------+
-| REBOOT | Restarting the device |
-+-----------------------------+--------------------------------------------------------------------+
-| SLEEP | Paused |
-+-----------------------------+--------------------------------------------------------------------+
+
++--------------------------------+--------------------------------------------------------------------+
+| ``WAKE UP AND UNLOCK``         | Wake up and unlock the device                                      |
++--------------------------------+--------------------------------------------------------------------+
+| REBOOT                         | Restarting the device                                              |
++--------------------------------+--------------------------------------------------------------------+
+| SLEEP                          | Paused                                                             |
++--------------------------------+--------------------------------------------------------------------+
 
 **Texts** 	
 

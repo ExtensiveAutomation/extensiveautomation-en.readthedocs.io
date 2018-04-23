@@ -7,21 +7,21 @@ Logs
 Server
 ~~~~~~~
 
-The server logs are stored on `` / opt / xtc / current / Var / Logs / ``.
-The logs are set in `` INFO`` mode by default.
+The server logs are stored on ``/opt/xtc/current/Var/Logs/``.
+The logs are set in ``INFO`` mode by default.
 The DEBUG level can be activated from the `` settings.ini`` file.
 
 .. code-block::
     [Trace]
     level=DEBUG
 
-.. note :: It is possible to change the level of logs by doing an `` xtcl reload``
+.. note :: It is possible to change the level of logs by doing an ``xtcl reload``
 
 Client
 ~~~~~~~
 
-The client logs are available in `` <Program Files> / Extensive Testing Client / Logs / ``
-The logs are set in `` INFO`` mode by default.
+The client logs are available in ``<Program Files> /Extensive Testing Client/Logs/``
+The logs are set in ``INFO`` mode by default.
 
 The DEBUG level can be activated from the client preferences.
 
@@ -32,10 +32,10 @@ The DEBUG level can be activated from the client preferences.
 Toolbox
 ~~~~~~~~~~~~~~
 
-The logs in the toolbox are available in `` <Program Files> / Extensive Testing Toolbox / Logs / ``
-The logs are set in `` INFO`` mode by default.
+The logs in the toolbox are available in ``<Program Files>/Extensive Testing Toolbox/Logs/``
+The logs are set in ``INFO`` mode by default.
 
-The DEBUG level can be activated from the `` settings.ini`` file.
+The DEBUG level can be activated from the ``settings.ini`` file.
 
 .. code-block::
     [Trace]
@@ -51,8 +51,8 @@ Frequently Asked Questions
 How to change the listening port (tcp / 443) of the server?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~
 
-Edit the `` / etc / httpd / conf.d / extensivetesting.conf`` file and change the listening port of the virtual host 443.
-Do not forget to modify the `` /etc/httpd/conf/httpd.conf`` file to add the new listening port.
+Edit the ``/etc/httpd/conf.d/extensivetesting.conf`` file and change the listening port of the virtual host 443.
+Do not forget to modify the ``/etc/httpd/conf/httpd.conf`` file to add the new listening port.
 
 .. note :: An apache restart is needed.
 
@@ -60,7 +60,7 @@ How to change the connection port of the client?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The destination port can be changed from the client preferences.
-Or directly from the `` settings.ini`` file.
+Or directly from the ``settings.ini`` file.
 
 .. image:: /_static/images/client/preferences_network_ports.png
 
@@ -75,7 +75,7 @@ View the server version?
 What to do if the server installation does not work?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~
 
-The server installation process is logged in an `` install.log`` file in the directory after extracting the package.
+The server installation process is logged in an ``install.log`` file in the directory after extracting the package.
 It is necessary to look for the error messages present in the file.
 
 What if my connection to the server does not work?
@@ -83,19 +83,19 @@ What if my connection to the server does not work?
 
 If the connection from the client to the server does not work, an analysis is necessary.
 
-The first SLR to have is to connect to the server in SSH and execute the `` xtctl status`` command to check if the server is running.
+The first SLR to have is to connect to the server in SSH and execute the ``xtctl status`` command to check if the server is running.
 
 1. If the server is running then check:
   - network connectivity in the client and the server
   - a firewall blocking the https flow (443)
 
 2. If the network connectivity is good and the server is working (or not), check the logs.
-The file is available in the `` / opt / xtc / current / Var / Logs / output.log`` directory. You must look for messages of type `` ERROR``
+The file is available in the ``/opt/xtc/current/Var/Logs/output.log`` directory. You must look for messages of type ``ERROR``
 
 How to fix the error "hping3 is not installed"?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~
 
-This error occurs while running a test when the `` Pinger`` adapter is used.
+This error occurs while running a test when the ``Pinger`` adapter is used.
 Indeed requires to have the hping3 system library installed on the server.
 
 You have to retrieve the sources from https://github.com/antirez/hping and compile them:
@@ -112,8 +112,8 @@ You have to retrieve the sources from https://github.com/antirez/hping and compi
 How to install the server in a specific directory?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~
 
-By default, the server installs in the directory `` / opt / xtc / ``, it is possible to change this directory
-at installation time by changing the `` INSTALL`` key in the `` default.cfg`` file
+By default, the server installs in the directory ``/opt/xtc/``, it is possible to change this directory
+at installation time by changing the ``INSTALL`` key in the ``default.cfg`` file
 
 .. code-block:: bash
   
@@ -123,7 +123,7 @@ Server installation remains stuck on adding external libraries
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Before starting the server installation, check that the yum service is not already running.
-If so, the installation script will remain blocked until `` yum`` is available. This issue
+If so, the installation script will remain blocked until ``yum`` is available. This issue
 Usually happens when the server is installed in graphical mode.
 
 In the logs, we can observe the following error:
@@ -137,7 +137,7 @@ In the logs, we can observe the following error:
       Started: Tue Nov  1 11:09:25 2016 - 00:42 ago
       State  : Sleeping, pid: 3293
 
-To solve this problem, you must stop the program that already uses `` yum``.
+To solve this problem, you must stop the program that already uses ``yum``.
 
 Can not navigate in the web interface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -20,7 +20,7 @@ The creation of a user requires at least the following parameters and can be don
 
 .. note :: Email is used by the solution to send test reports and results.
 
-.. note :: It is possible to configure multiple email addresses for a user by separating them with ``; ``
+.. note :: It is possible to configure multiple email addresses for a user by separating them with ``;``
 
 Delete a user
 ----------------------

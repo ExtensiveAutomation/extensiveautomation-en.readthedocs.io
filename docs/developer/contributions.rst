@@ -17,7 +17,7 @@ To prepare its development environment, it is necessary to recover and install t
   - TortoiseGit-2.5.0.0-64bit.msi
   - InnoSetup 5.5.9 - http://www.jrsoftware.org/isdl.php
 
-Add additional Python packages with the `` pip`` command
+Add additional Python packages with the ``pip`` command
 
 .. code-block:: bash
 
@@ -33,7 +33,7 @@ And retrieve the sources of the client since the deposit on github.
     
 .. warning :: Windows XP is not supported in this mode.
 
-** x64 environment win py3.4 qt4 **
+**x64 environment win py3.4 qt4**
 
 .. warning :: This development environment is no longer recommended.
 

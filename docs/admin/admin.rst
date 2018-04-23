@@ -4,7 +4,7 @@
 Start/Stop of the server
 ~~~~~~~~~~~~~~~~~~~~~~
 
-The server can be controled with the following command``xtctl``.
+The server can be controled with the following command ``xtctl``.
 This command enables to
  - start or stop the server
  - check the status
@@ -123,7 +123,7 @@ Automatic backups
 ~~~~~~~~~~~~~~~~~~~~~~
   
 The solution make a backup of all tests, adapters and libraries every days.
-Backups are stored in the folder ``opt/xtc/current/Var/Backups``.
+Backups are stored in the folder ``/opt/xtc/current/Var/Backups``.
 
 The interval of backup can be configured from the section ``Backups`` in the file ``settings.ini``.
 

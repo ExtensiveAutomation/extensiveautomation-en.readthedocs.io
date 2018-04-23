@@ -540,7 +540,7 @@ Parameter of "alias" tests
 -------------------
 
 The ``alias`` parameter can be used to define a new name for an already existing parameter.
-This mechanism can be used in `` plan test`` to avoid overloading all parameters with the same name.
+This mechanism can be used in ``plan test`` to avoid overloading all parameters with the same name.
 
 Example of use
 
@@ -621,7 +621,7 @@ Example to read the variable:
 
 The ``shared`` parameters are added from the web interface or from the REST API.
 They are shared and accessible by all the tests of the same project. The expected value
-for this parameter is of `` JSON`` type.
+for this parameter is of ``JSON`` type.
 
 A selection window in the graphical client allows you to select the parameter to be used in the test.
 

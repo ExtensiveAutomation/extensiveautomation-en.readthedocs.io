@@ -105,7 +105,7 @@ Data base
 +-----------------+----------------+---------------------------------------------------------------------------------+
 | Microsoft SQL   | database       | Communication with a base of type Microsoft SQL                                 |
 +-----------------+----------------+---------------------------------------------------------------------------------+
-| MySQL           | database       | Communication with a MySQL / MariaDB database                                   |
+| MySQL           | database       | Communication with a MySQL/MariaDB database                                     |
 +-----------------+----------------+---------------------------------------------------------------------------------+
 | PostgreSQL      | database       | Communication with a PostgreSQL database                                        |
 +-----------------+----------------+---------------------------------------------------------------------------------+
