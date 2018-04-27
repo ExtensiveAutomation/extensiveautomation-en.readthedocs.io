@@ -142,3 +142,14 @@ Scheduler type:
  - 7: weekly
  - 6: daily
  - 5: hourly
+ 
+Crontab scripts
+~~~~~~~~~~~~~~~~~~~~
+
+``cron.backup-tables``: this script allows to save the tables of the solution
+
+``cron.cleanup-backups``: this script allows you to delete backups older than 14 days.
+The number of days is configurable.
+
+``cron.cleanup-testsresult``: this script allows you to delete results older than 30 days.
+The number of days is configurable.
