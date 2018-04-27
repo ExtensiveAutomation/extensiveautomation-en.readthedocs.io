@@ -153,3 +153,13 @@ The number of days is configurable.
 
 ``cron.cleanup-testsresult``: this script allows you to delete results older than 30 days.
 The number of days is configurable.
+
+Security banner
+~~~~~~~~~~~~~~~~
+
+It is possible to configure a security banner on the web interface of the server and on the
+portable client login window.
+
+For this you have to configure the file ``BANNER`` present in
+  - in the ``/opt/xtc/current/Web/`` web directory for the server
+  - the connection of the execution file for the graphical client.
