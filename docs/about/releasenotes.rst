@@ -6,7 +6,31 @@ Current version
 
 .. note::
 
- **Version 18.0.0 available since 02/11/2018**
+ **Version 19.0.0 available since 08/05/2018**
+ 
+ - New name ExtensiveAutomation for the solution
+ - All tests files are stored in XML by default (no more zlib compression) 
+ - Bugs fixes and improvement in REST API
+ - Initial docker support
+ - Python 2.6 no more supported on server side
+ - Cache preview from the client during test writing
+ - Simplification of tests parameters with "text" and "json"
+ - SQL queries optimization on server side
+ - Begin to support python 3.5 on server side
+ - The client is no more embedded in the server side by default
+ - New feature to set a security banner on login page of the web interface and app client
+ - Update of selenium in 3.13.0
+ - New major version for the app client
+ - New major version for the toolbox 
+
+A detailed release notes is available in the installation package.
+
+Previous versions
+-------------------
+
+..
+
+ **Version 18.0.0 released on 02/11/2018**
  
  - API XmlRPC is removed from the server
  - Big improvment of the API REST
@@ -18,14 +42,9 @@ Current version
  - Update of selenium in 3.9.0
  - The toolbox is no more embedded in the server side by default
 
-A detailed release notes is available in the installation package.
-
-Previous versions
--------------------
-
 ..
 
- **Version 17.1.0 released on 22/10/2017**
+ **Version 17.1.0 released on 10/22/2017**
  
  - Improvment in the REST api
  - New features in the test framework library
@@ -35,7 +54,7 @@ Previous versions
 
 ..
 
- **Version 17.0.0 released on 04/06/2017**
+ **Version 17.0.0 released on 06/04/2017**
  
  - 64bits support by default for the client and toolbox
  - New major features in the test framework library
@@ -45,7 +64,7 @@ Previous versions
 
 ..
  
- **Version 16.1.0 released on 30/03/2017**
+ **Version 16.1.0 released on 03/30/2017**
  
  - Several bugs fixed
  - Improvment of the graphical interface of the client

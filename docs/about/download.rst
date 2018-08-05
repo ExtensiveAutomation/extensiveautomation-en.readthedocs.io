@@ -7,7 +7,8 @@ The solution is made of several components.
 The solution can be downloaded from the website https://www.extensiveautomation.org
 
 The server is available throught a ``tar.gz`` file, the following package are also integrated:
- - graphical client (in portable mode only)
+ - Test framework
+ - Scheduler
  - Adapters and libraries
 
 The graphical client is available in 2 modes:

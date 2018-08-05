@@ -330,7 +330,7 @@ List of supported tools:
 +--------------------+---------------------------------------------------------------+
 | HP ALM QC          | Test run, ticket creation. Version 12 minimum                 |
 +--------------------+---------------------------------------------------------------+
-| ExtensiveTesting   | Test execution, variable creation                             |
+| ExtensiveAutomation| Test execution, variable creation                             |
 +--------------------+---------------------------------------------------------------+
 | Jenkins            | Running tests before or after a build                         |
 +--------------------+---------------------------------------------------------------+

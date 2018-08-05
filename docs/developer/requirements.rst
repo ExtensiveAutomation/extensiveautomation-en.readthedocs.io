@@ -10,9 +10,9 @@ It can be run on a virtual or physical environment.
 +-----------------------+--------------+--------------+
 | Features              | Minimum      | Recommended  |
 +-----------------------+--------------+--------------+
-| OS                    | CentOS 6.5+ or 7.x          |
+| OS                    | CentOS 7.x                  |
 +-----------------------+--------------+--------------+
-| Python                | 2.6          | 2.7          |
+| Python                | 2.7                         |
 +-----------------------+--------------+--------------+
 | Arch                  | x86_64                      |
 +-----------------------+--------------+--------------+
@@ -28,6 +28,10 @@ It can be run on a virtual or physical environment.
 +-----------------------+--------------+--------------+
 
 .. note :: Python 3.x support is under development.
+
+.. note:: Centos 6.6 can be used but with python 2.7 minimum
+
+.. note:: The server can be used on other Linux system, but the integration must be done manually.
 
 Customer
 ------

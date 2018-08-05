@@ -503,10 +503,10 @@ The chart is automatically inserted into the advanced report.
 .. image:: /_static/images/examples/report_chart.png
 
   
-Custom test parameter
+"Text" parameter
 -------------------
 
-The ``custom`` parameter is used to construct values calling other variables.
+The ``text`` parameter is used to construct values calling other variables.
 
 For example, consider a test containing the following 2 variables:
   - DEST_IP with the value 192.168.1.1
@@ -514,7 +514,7 @@ For example, consider a test containing the following 2 variables:
 
 .. image :: /_static/images/examples/custom_inputs.png
  
-The ``custom`` type will allow us to build a 3rd variable
+The ``text`` type will allow us to build a 3rd variable
   - DEST_URL with the value
  
     .. image :: /_static/images/examples/custom_config.png
@@ -535,8 +535,12 @@ Example of result after execution:
 
 .. image:: /_static/images/examples/custom_example_cache.png
 
+"Json" parameter
+-------------------
 
-Parameter of "alias" tests
+todo
+
+"alias" parameter
 -------------------
 
 The ``alias`` parameter can be used to define a new name for an already existing parameter.
@@ -587,8 +591,27 @@ You have to use an ``alias`` parameter, they are not overloaded by the framework
      ---> Test 3 (TIMEOUT_A(int)=2 seconds)
      
 
+"global" parameter
+-------------------
 
-Dataset test parameter
+The ``global`` parameters are added from the web interface or from the REST API.
+They are global and accessible by all the tests in the same project. The expected value
+for this parameter is of ``JSON`` type.
+
+A selection window in the graphical client allows you to select the parameter to be used in the test.
+
+.. image:: /_static/images/examples/client_params_shared.png
+
+In the example below, the ``MY_SERVER`` test parameter contains the value of the ``IP`` key present in the variable
+global ``MY_SERVER`` which is itself present in the ``Common`` project.
+
+.. image:: /_static/images/examples/client_param_shared.png
+
+.. tip :: To have a test parameter that contains a list of elements, use the ``list-global`` type.
+
+
+
+"Dataset" parameter
 -------------------
 
 The ``dataset`` parameter is used to import ``tdx`` files.
@@ -616,24 +639,7 @@ Example to read the variable:
   for d in input('DATA').splitlines():
       Trace(self).info( d ) 
   
-"Shared" test setting
--------------------
-
-The ``shared`` parameters are added from the web interface or from the REST API.
-They are shared and accessible by all the tests of the same project. The expected value
-for this parameter is of ``JSON`` type.
-
-A selection window in the graphical client allows you to select the parameter to be used in the test.
-
-.. image:: /_static/images/examples/client_params_shared.png
-
-In the example below, the ``MY_SERVER`` test parameter contains the value of the ``IP`` key present in the variable
-shared ``MY_SERVER`` which is itself present in the ``Common`` project.
-
-.. image:: /_static/images/examples/client_param_shared.png
-
-.. tip :: To have a test parameter that contains a list of elements, use the ``list-shared`` type.
-
+  
 Using a probe
 -------------------
 

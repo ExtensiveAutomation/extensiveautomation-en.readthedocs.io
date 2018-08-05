@@ -19,7 +19,7 @@ Use the following command to start the server ``xtctl start``.
   Checking database                                          [  OK  ]
   Saving current adapters                                    [  OK  ]
   Saving current libraries                                   [  OK  ]
-  Starting Extensive Testing                                 [  OK  ]
+  Starting Extensive Automation                              [  OK  ]
   
   
 Use the following command to stop the server ``xtctl stop``.
@@ -29,7 +29,7 @@ Use the following command to stop the server ``xtctl stop``.
   # xtctl stop
   Saving current adapters                                    [  OK  ]
   Saving current libraries                                   [  OK  ]
-  Stopping Extensive Testing                                 [  OK  ]
+  Stopping Extensive Automation                              [  OK  ]
   
 
 .. tip::
@@ -39,10 +39,10 @@ Use the following command to stop the server ``xtctl stop``.
   .. code-block:: bash
     
     # tailf /opt/xtc/current/Var/Log/output.log
-    2014-12-06 11:00:54,092 - INFO - Extensive Testing successfully started (in 14 sec.)
+    2014-12-06 11:00:54,092 - INFO - Extensive Automation successfully started (in 14 sec.)
     ...
     2014-12-06 10:58:51,810 - INFO - Stopping server
-    2014-12-06 10:58:51,911 - INFO - Extensive Testing successfully stopped!
+    2014-12-06 10:58:51,911 - INFO - Extensive Automation successfully stopped!
   
   
 Server status's
@@ -85,8 +85,8 @@ to make it available to all.
 .. code-block:: bash
   
   ./xtctl deploy
-  Deploying clients.(ExtensiveTestingClient_X.X.X_Setup.exe)
-  Deploying tools.(ExtensiveTestingToolbox_X.X.X_Setup.exe)
+  Deploying clients.(ExtensiveAutomationClient_X.X.X_Setup.exe)
+  Deploying tools.(ExtensiveAutomationToolbox_X.X.X_Setup.exe)
   Deploying portable clients... (No client)
   Deploying portable tools... (No client)
 

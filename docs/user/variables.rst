@@ -1,8 +1,8 @@
-Reusable variables
+Global variables
 =======================
 
-Reusable variables (or shared variables) are sued to describe test environment.
-Variables are accesible from a test from the pamarater of the type ``shared`` or ``shared-list``.
+Global variables (or shared variables) are sued to describe test environment.
+Variables are accesible from a test from the pamarater of the type ``global`` or ``list-global``.
 
 Add/delete a variable
 -----------------

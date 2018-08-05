@@ -24,10 +24,14 @@ All files handled by the server are stored in the ``/opt/xtc/current/`` director
 
 ::
   
-  Core/
+  ServerEngine/
+  ServerControls/
+  ServerInterfaces/
+  ServerRepositories/
   Libs/
   Scripts/
   Packages/
+  TestCreatorLib/
   TestExecutorLib/
   TestInterop/
   SutAdapters/
@@ -113,7 +117,7 @@ The algorithm used:
 File format
 -------------------
 
-The tests are in zipped ``XML`` format. There are several test formats:
+The tests are in ``XML`` format. There are several test formats:
   - Test Abstract Xml
   - Xml Test Unit
   - Xml Test Suite

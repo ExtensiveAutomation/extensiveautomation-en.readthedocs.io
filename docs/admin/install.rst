@@ -11,7 +11,7 @@ Automatic mode
    Basic configuration to respect before starting the installation:
      - the network interface is correctly configured on the server
      - access to official repositories is available
-     - using a Linux CentOS 6/7 or RedHat system
+     - using a Linux CentOS 7 or equivalent RedHat system
      
 Installation of the solution can be done using the ``install.sh`` script in the tar.gz.
 If the prerequisites are respected then the installation will be done in automatic mode, that is to say that the missing packets
@@ -23,11 +23,11 @@ Example of installation in automatic mode
 
 	./install.sh
 	Are you sure to install the product? (yes or no) yes
-	======================================================
-	=  - Installation of the ExtensiveTesting product -  =
-	=                    Denis Machard                   =
-	=               www.extensivetesting.org             =
-	======================================================
+	=========================================================
+	=  - Installation of the ExtensiveAutomation product -  =
+	=                    Denis Machard                      =
+	=               www.extensiveautomation.org             =
+	=========================================================
 	* Detecting the operating system (centos 7)                [  OK  ]
 	* Detecting the system architecture (x86_64)               [  OK  ]
 	* Detecting Perl, Python                                   [  OK  ]
@@ -51,8 +51,8 @@ Example of installation in automatic mode
 	* Restarting httpd                                         [  OK  ]
 	* Restarting MySQL/MariaDB                                 [  OK  ]
 	* Restarting postfix                                       [  OK  ]
-	* Adding the ExtensiveTesting database                     [  OK  ]
-	* Starting ExtensiveTesting X.X.X                          [  OK  ]
+	* Adding the ExtensiveAutomation database                  [  OK  ]
+	* Starting ExtensiveAutomation X.X.X                       [  OK  ]
 	=========================================================================
 	- Installation completed successfully!
 	- Continue and go to the web interface (https://XXX.XXX.XXX.XXX/web/index.php)
@@ -89,11 +89,11 @@ Example of installation in custom mode (here, the destination of xtc)
 .. code-block:: bash
 
 	./custom.sh
-	======================================================
-	=  - Installation of the ExtensiveTesting product -  =
-	=                    Denis Machard                   =
-	=               www.extensivetesting.org             =
-	======================================================
+	=========================================================
+	=  - Installation of the ExtensiveAutomation product -  =
+	=                    Denis Machard                      =
+	=               www.extensiveautomation.org             =
+	=========================================================
 	* Detecting the operating system (XXXXXXXX)                [  OK  ]
 	* Detecting the system architecture (XXXXXX)               [  OK  ]
 	* Detecting Perl, Python                                   [  OK  ]
@@ -176,11 +176,11 @@ Old tests, adapters and users are automatically migrated.
 
 .. code-block:: bash
     ./update.sh
-    ================================================
-    =  - Update of the ExtensiveTesting product -  =
-    =              Denis Machard                   =
-    =          www.extensivetesting.org            =
-    ================================================
+    ===================================================
+    =  - Update of the ExtensiveAutomation product -  =
+    =              Denis Machard                      =
+    =          www.extensiveautomation.org            =
+    ===================================================
     * Detecting the operating system                           [  OK  ]
     * Detecting the system architecture                        [  OK  ]
     Current product version X.X.X
@@ -213,15 +213,15 @@ Old tests, adapters and users are automatically migrated.
     * Restarting firewall                                      [  OK  ]
     * Restarting MySQL/MariaDB                                 [  OK  ]
     * Restarting postfix                                       [  OK  ]
-    * Adding the ExtensiveTesting database                     [  OK  ]
-    * Starting the ExtensiveTesting Y.Y.Y                      [  OK  ]
+    * Adding the ExtensiveAutomation database                  [  OK  ]
+    * Starting the ExtensiveAutomation Y.Y.Y                   [  OK  ]
     * Stopping the new version Y.Y.Y                           [  OK  ]
-    * Restoring SUT adapters from X.X.X to Y.Y.Y                  [  OK  ]
-    * Restoring SUT libraries from X.X.X to Y.Y.Y                 [  OK  ]
-    * Restoring database from X.X.X to Y.Y.Y                      [  OK  ]
-    * Updating database model to Y.Y.Y                            [  OK  ]
-    * Restoring tests from X.X.X to Y.Y.Y                         [  OK  ]
-    * Restoring tasks from X.X.X to Y.Y.Y                         [  OK  ]
+    * Restoring SUT adapters from X.X.X to Y.Y.Y               [  OK  ]
+    * Restoring SUT libraries from X.X.X to Y.Y.Y              [  OK  ]
+    * Restoring database from X.X.X to Y.Y.Y                   [  OK  ]
+    * Updating database model to Y.Y.Y                         [  OK  ]
+    * Restoring tests from X.X.X to Y.Y.Y                      [  OK  ]
+    * Restoring tasks from X.X.X to Y.Y.Y                      [  OK  ]
     * Restarting the new version Y.Y.Y                         [  OK  ]
     =========================================================================
     - Update completed successfully!
@@ -239,16 +239,16 @@ Run the ``rollback.sh`` script with the previous version.
 .. code-block:: bash
 
 	./rollback.sh X.X.X
-	==================================================
-	=  - Rollback of the ExtensiveTesting product -  =
-	=                 Denis Machard                  =
-	=            www.extensivetesting.org            =
-	==================================================
+	=====================================================
+	=  - Rollback of the ExtensiveAutomation product -  =
+	=                 Denis Machard                     =
+	=            www.extensiveautomation.org            =
+	=====================================================
 	* Detecting the operating system                           [  OK  ]
 	* Detecting the system architecture                        [  OK  ]
-	* Stopping the ExtensiveTesting server                     [  OK  ]
-	* Rollbacking to ExtensiveTesting-X.X.X                    [  OK  ]
-	* Restarting the ExtensiveTesting server                   [  OK  ]
+	* Stopping the ExtensiveAutomation server                  [  OK  ]
+	* Rollbacking to ExtensiveAutomation-X.X.X                 [  OK  ]
+	* Restarting the ExtensiveAutomation server                [  OK  ]
 	=========================================================================
 	- Rollback completed successfully!
 	=========================================================================
@@ -261,19 +261,19 @@ Uninstalling the product can be done using the ``./Uninstall.sh`` script in the 
 .. code-block:: bash
 
 	./uninstall.sh 
-	===================================================
-	=  - Uninstall of the ExtensiveTesting product -  =
-	=                 Denis Machard                   =
-	=            www.extensivetesting.org             =
-	===================================================
+	======================================================
+	=  - Uninstall of the ExtensiveAutomation product -  =
+	=                 Denis Machard                      =
+	=            www.extensiveautomation.org             =
+	======================================================
 	* Detecting the operating system                           [  OK  ]
 	* Detecting the system architecture                        [  OK  ]
-	* Stopping the ExtensiveTesting server                     [  OK  ]
+	* Stopping the ExtensiveAutomation server                  [  OK  ]
 	* Stopping httpd                                           [  OK  ]
-	* Removing the ExtensiveTesting database                   [  OK  ]
-	* Removing the ExtensiveTesting source                     [  OK  ]
-	* Removing the ExtensiveTesting service                    [  OK  ]
-	* Removing ExtensiveTesting user                           [  OK  ]
+	* Removing the ExtensiveAutomation database                [  OK  ]
+	* Removing the ExtensiveAutomation source                  [  OK  ]
+	* Removing the ExtensiveAutomation service                 [  OK  ]
+	* Removing ExtensiveAutomation user                        [  OK  ]
 	* Restoring php                                            [  OK  ]
 	* Removing httpd configuration                             [  OK  ]
 	* Restarting httpd                                         [  OK  ]
@@ -297,7 +297,7 @@ The client can be retrieved from the website https://www.extensiveautomation.org
 
 .. image:: /_static/images/webinterface/web_overview_pkgs2.png
 
-Then you have to unzip it and run the `ExtensiveTestingClient.exe` file
+Then you have to unzip it and run the `ExtensiveAutomationClient.exe` file
 
 .. image:: /_static/images/client/client_portable.png
     
@@ -335,7 +335,7 @@ The toolbox can be retrieved from the website https://www.extensiveautomation.or
 
 .. image:: /_static/images/webinterface/web_overview_pkgs3.png
 
-Then you have to decompress it and run the ``ExtensiveTestingToolbox.exe`` file
+Then you have to decompress it and run the ``ExtensiveAutomationToolbox.exe`` file
 
 .. image:: /_static/images/toolbox/toolbox_portable.png
     
