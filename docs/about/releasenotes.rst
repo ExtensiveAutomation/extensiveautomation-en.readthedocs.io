@@ -6,6 +6,10 @@ Current version
 
 .. note::
 
+ **Version 19.0.1 available since 08/09/2018**
+ 
+ - Bug fix on deployment server, pip command integration
+ 
  **Version 19.0.0 available since 08/05/2018**
  
  - New name ExtensiveAutomation for the solution
