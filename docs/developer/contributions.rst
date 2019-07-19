@@ -7,29 +7,29 @@ Solution development
 Qt client application
 ~~~~~~~~~~~~~~
 
-Please refer to the README in https://github.com/ExtensiveAutomation/extensiveautomation-appclient/blob/stable/README.md
+Please refer to the `README < https://github.com/ExtensiveAutomation/extensiveautomation-appclient/blob/master/README.md>`_
 
 Toolbox
 ~~~~~~~~~~~~~~
 
-Please refer to the README in https://github.com/ExtensiveAutomation/extensiveautomation-apptoolbox/blob/stable/README.md
+Please refer to the `README < https://github.com/ExtensiveAutomation/extensiveautomation-apptoolbox/blob/master/README.md>`_
 
 Server
 ~~~~~~~
 
-Please refer to the README in https://github.com/ExtensiveAutomation/extensiveautomation-server/blob/stable/README.md
+Please refer to the `README <https://github.com/ExtensiveAutomation/extensiveautomation-server/blob/master/README.md>`_
   
 
 Plugins development for servers
 ----------------------
 
-Please refer to the README in https://github.com/ExtensiveAutomation/extensiveautomation-plugins-server/blob/stable/README.md
+Please refer to the `README <https://github.com/ExtensiveAutomation/extensiveautomation-plugins-server/blob/master/README.md>`_
   
   
 Plugins development for qt client and agents
 ------------------------------------------
 
-Please refer to the README in https://github.com/ExtensiveAutomation/extensiveautomation-plugins-client/blob/stable/README.md
+Please refer to the `README <https://github.com/ExtensiveAutomation/extensiveautomation-plugins-client/blob/master/README.md>`_
   
   
 Documentation

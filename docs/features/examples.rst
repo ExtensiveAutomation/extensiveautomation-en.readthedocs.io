@@ -639,28 +639,6 @@ Example to read the variable:
   for d in input('DATA').splitlines():
       Trace(self).info( d ) 
   
-  
-Using a probe
--------------------
-
-To use a probe, you need 2 things:
-  - Deploy the toolbox and start the desired probe.
-  - Declare the probe in the test.
- 
-To select the probe in the test, it must be activated and configured in the test (tab ``Miscellaneous> Probes``)
-
-.. image:: /_static/images/examples/probe_tab.png
-
-When a probe is activated on a test, running the test automatically initializes the probe.
-
-.. image:: /_static/images/examples/probe_starting.png
-
-After execution, all the files collected by the probe are downloaded to the server and accessible from the graphical client.
-
-.. image:: /_static/images/examples/probe_test_archives.png
-
-.. note :: It is possible to use multiple probes in one test.
-
 Using an agent
 -------------------
 
