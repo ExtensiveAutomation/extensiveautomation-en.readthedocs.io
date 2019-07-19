@@ -80,7 +80,7 @@ Open the `Test_A` and `Scenario_A` tests and run them.
 
 .. image:: /_static/images/client/client_execute.png
 
-Analyse des résultats
+Result analysing
 ---------------------
 
 .. note:: This mini guide assumes that you have followed the chapters `Writing a script test` and `Writing a scenario`.

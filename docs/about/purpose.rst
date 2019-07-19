@@ -6,15 +6,14 @@ Welcome on the Extensive Automation project.
 Concepts
 --------
 
-ExtensiveAutomation is a test and deployment automation framework for integration, regression and end-to-end usages.
+ExtensiveAutomation is a generic automation framework for integration, regression and end-to-end usages.
 The framework provided a rich and collaborative workspace environment.
-The installation is also simplified and some others great tools are integrated on it (selenium, sikuli)
 
 The project have several purposes since the creation:
  - Unify all testing tools in one environnement
  - Provide a complete testing dashboard
- - Make testing easy
- - Testing everything from anywhere.
+ - Make automation easy
+ - Automate everything from anywhere.
  - Provide a user friendly environment.
 
 .. image:: /_static/images/concept.png
@@ -26,8 +25,7 @@ This solution is designed to make a lot of thing like:
  - test automation in integration environment
  - regression test automation
  - end to end test automation
- - deployment automation of virtual or physical machines
- - deployment automation of software application
+ - deployment automation 
 
 .. note:: The solution is written in ``Python`` and also all tests.
 

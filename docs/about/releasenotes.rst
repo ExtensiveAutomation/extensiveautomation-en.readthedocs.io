@@ -6,12 +6,30 @@ Current version
 
 .. note::
 
+ **Version 20.0.0 available since 07/20/2019**
+ 
+ - Image docker available
+ - Rest API: support for CORS feature 
+ - No more automatic installation provided 
+ - Maximum of dependancies with libraries removed
+ - No more plugins provided by default
+ - Probes features removed, replaced by agent
+ - MySQL database removed, replaced by sqlite
+ - Optimization of the framework to reduce the CPU usage
+ - New major version for the Qt client application, user interface improvment
+ - New major version for the toolbox
+ - New major version for the web interface, no more provided by default
+ - Several bugs fixed
+
+A detailed release notes is available in the installation package.
+
+Previous versions
+-------------------
+
+..
  **Version 19.0.1 available since 08/09/2018**
  
  - Bug fix on deployment server, pip command integration
- 
- **Version 19.0.0 available since 08/05/2018**
- 
  - New name ExtensiveAutomation for the solution
  - All tests files are stored in XML by default (no more zlib compression) 
  - Bugs fixes and improvement in REST API
@@ -26,11 +44,6 @@ Current version
  - Update of selenium in 3.13.0
  - New major version for the app client
  - New major version for the toolbox 
-
-A detailed release notes is available in the installation package.
-
-Previous versions
--------------------
 
 ..
 

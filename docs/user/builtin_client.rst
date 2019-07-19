@@ -85,18 +85,6 @@ Adding variables can be done by right clicking 'Add parameter'.
   It is possible to choose the version of the adapters and libraries to use for the test
  
   .. image :: /_static/images/client/workspace_tests_properties.png
-  
-Graphic design
-~~~~~~~~~~~~~~~~~~~~
-
-The design of a test in graphical form is possible with the ``abstract`` type test.
-This design mode does not require any knowledge in development.
-
-.. image :: /_static/images/client/workspace_new_test_abstract.png
-
-Right click on the drawing area to choose the element to add.
-
-.. image :: /_static/images/client/workspace_test_abstract.png
 
 Textual design
 ~~~~~~~~~~~~~~~~~~~~
@@ -141,11 +129,11 @@ To perform this type of test, it is necessary to create a new ``plan`` or ``glob
 
 .. image :: /_static/images/client/workspace_new_test_plan_global.png
 
-The test ``plan`` makes it possible to write test scenarios by including tests of the type ``abstract``, ``unit`` or ``suite``.
+The test ``plan`` makes it possible to write test scenarios by including tests of the type ``unit`` or ``suite``.
 
 .. image :: /_static/images/client/workspace_test_plan.png
 
-The ``global`` test is used to describe test campaigns by including tests ``plan``, ``abstract``, ``unit`` or ``suite``.
+The ``global`` test is used to describe test campaigns by including tests ``plan``, ``unit`` or ``suite``.
 
 .. note :: It is possible to override the test parameters.
 

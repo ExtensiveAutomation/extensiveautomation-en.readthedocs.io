@@ -270,11 +270,13 @@ There are several types of parameters:
 +------------------+-------------------------------------------------------------+
 | Type             | Description use                                             |
 +------------------+-------------------------------------------------------------+
-| str / pwd        | string                                                      |
+| json             | returns a value in JSON format                              |
 +------------------+-------------------------------------------------------------+
 | text             | multiline string                                            |
 +------------------+-------------------------------------------------------------+
-| custom           | advanced parameter                                          |
+| global           | advanced parameter                                          |
++------------------+-------------------------------------------------------------+
+| str / pwd        | string                                                      |
 +------------------+-------------------------------------------------------------+
 | list             | list of strings                                             |
 +------------------+-------------------------------------------------------------+
@@ -318,8 +320,7 @@ There are several types of parameters:
 +------------------+-------------------------------------------------------------+
 | sef-eth          | list of server network interfaces                           |
 +------------------+-------------------------------------------------------------+
-| json             | returns a value in JSON format                              |
-+------------------+-------------------------------------------------------------+
+
 
 The variables are accessible from a test with the ``input (...)`` function
 
@@ -327,9 +328,9 @@ The variables are accessible from a test with the ``input (...)`` function
 
   input('DEBUG')
   
-**The custom parameter**
+**The text parameter**
 
-The ``custom`` type is used to construct parameters that use other parameters or the cache.
+The ``text`` type is used to construct parameters that use other parameters or the cache.
 It is therefore possible to use keywords that will be interpreted by the test framework
 at the time of execution.
 
@@ -348,9 +349,6 @@ List of available keywords:
 The agents
 ~~~~~~~~~~~~~~
 
-
-.. image:: /_static/images/examples/client_properties_agent.png
-
 .. image:: /_static/images/examples/client_agent_support.png
 
 
@@ -365,15 +363,10 @@ The list of agents can be accessed from a test using the ``()`` key mode.
                                             debug=input('DEBUG'),
                                             sslSupport=input('USE_SSL'),
                                             agentSupport=input('SUPPORT_AGENT'), 
-                                            agent=agent('AGENT_SOCKET')
+                                            agent=input('AGENT_SOCKET')
                                            )
-  
-The probes
-~~~~~~~~~~
 
-
-.. image:: /_static/images/examples/probe_tab.png
-
+Define the agent parameter with json like that {'name': 'agent1', 'type': 'socket'}
 
 Import / export settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

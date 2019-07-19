@@ -89,7 +89,7 @@ Example of configuring the adapter in the ``prepared`` section of the test.
                                             destinationIp=input('DST_IP'), 
                                             destinationPort=input('DST_PORT'),
                                             sslSupport = input('SSL_SUPPORT'), 
-                                            agent=agent('AGENT_SOCKET'), 
+                                            agent=input('AGENT_SOCKET'), 
                                             agentSupport=input('SUPPORT_AGENT')
                                         )
 
@@ -215,7 +215,7 @@ Example of configuring the adapter in the ``prepared`` section of the test.
                                         password=input('MYSQL_PWD'), 
                                         debug=input('DEBUG'), 
                                         verbose=input('VERBOSE'),
-                                        agent=agent('AGENT_DB'), 
+                                        agent=input('AGENT_DB'), 
                                         agentSupport=input('SUPPORT_AGENT')
                                         )
   
@@ -258,7 +258,7 @@ Example of configuring the adapter in the ``prepared`` section of the test.
                                                 bindIp=get('SRC_IP'), 
                                                 bindPort=get('SRC_PORT'), 
                                                 debug=get('DEBUG'),
-                                                agent=agent('AGENT_SOCKET'), 
+                                                agent=input('AGENT_SOCKET'), 
                                                 agentSupport=input('SUPPORT_AGENT')
                                                 )
   
@@ -679,7 +679,7 @@ Enabling agent mode on adapters is done with the ``agentSupport`` and ``agent`` 
 .. code-block:: python
   
   agentSupport=input('SUPPORT_AGENT'), 
-  agent=agent('AGENT_SOCKET')
+  agent=input('AGENT_SOCKET')
   
 
 .. code-block:: python
@@ -691,7 +691,7 @@ Enabling agent mode on adapters is done with the ``agentSupport`` and ``agent`` 
                                         debug=input('DEBUG'),
                                         sslSupport=input('USE_SSL'),
                                         agentSupport=input('SUPPORT_AGENT'), 
-                                        agent=agent('AGENT_SOCKET')
+                                        agent=input('AGENT_SOCKET')
                                         )
    
    

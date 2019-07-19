@@ -12,20 +12,19 @@ Basic
 ~~~~~~~~
 
 The basic auth must be used with the api key available through the web interface.
-It's possible to generate a new key in the server, to do that you can use the script ``/opt/xtc/current/Scripts/generate-apikey.py``.
+The re-generation of the api key can be done for now only on the server.
 
 .. code-block:: bash
   
-  ./generate-apikey.py --user=admin
+  ./extensiveautomation --apikey admin
   API Key ID: admin
-  API Key Secret: c025e7a501f144a2e1b40f9f3a91c10a47c8b1d3
-  API Key: YWRtaW46YzAyNWU3YTUwMWYxNDRhMmUxYjQwZjlmM2E5MWMxMGE0N2M4YjFkMw==
+  API Key Secret: d30278d49e4845e45daa748873e2171b14a0c55a
 
 After that, add the header ``Authorization`` in your HTTP request.
 
 .. code-block:: bash
 
-  Authorization: Basic <my_api_key>
+  Authorization: Basic base64(key_id:key_secret)
 
 .. note:: With the basic auth, it's not necessary to call the login function.
 
@@ -85,29 +84,29 @@ Description of most important functions:
 
 **Authentication**
 
-+-------------------------+---------------------------------------------------------------------------------------------------------------+
-|/rest/session/login      | `Details <https://demo.extensiveautomation.org/web/common-api-rest/index.html#api-Session-sessionLogin>`_     |
-+-------------------------+---------------------------------------------------------------------------------------------------------------+
-|/rest/session/logout     | `Details <https://demo.extensiveautomation.org/web/common-api-rest/index.html#api-Session-sessionLogout>`_    |
-+-------------------------+---------------------------------------------------------------------------------------------------------------+
++-------------------------+----------------------------------------------------------------+
+|/rest/session/login      |    |
++-------------------------+----------------------------------------------------------------+
+|/rest/session/logout     |    |
++-------------------------+----------------------------------------------------------------+
 
 **Execute a test**
 
-+-------------------------+-----------------------------------------------------------------------------------------------------------------+
-|/rest/tests/schedule     | `Details <https://demo.extensiveautomation.org/web/tester-api-rest/index.html#api-Tests-testsSchedule>`_        |
-+-------------------------+-----------------------------------------------------------------------------------------------------------------+
-|/rest/tests/schedule/tpg | `Details <https://demo.extensiveautomation.org/web/tester-api-rest/index.html#api-Tests-testsScheduleTpg>`_     |
-+-------------------------+-----------------------------------------------------------------------------------------------------------------+
++-------------------------+------------------------------------------------------------------+
+|/rest/tests/schedule     |    |
++-------------------------+------------------------------------------------------------------+
+|/rest/tests/schedule/tpg |    |
++-------------------------+------------------------------------------------------------------+
 
 **Read the result of a test executed**
 
-+-------------------------+-----------------------------------------------------------------------------------------------------------------+
-|/rest/results/reports    | `Details <https://demo.extensiveautomation.org/web/tester-api-rest/index.html#api-Reports-resultsReports>`_     |
-+-------------------------+-----------------------------------------------------------------------------------------------------------------+
-|/rest/results/status     | `Details <https://demo.extensiveautomation.org/web/tester-api-rest/index.html#api-Results-resultsStatus>`_      |
-+-------------------------+-----------------------------------------------------------------------------------------------------------------+
-|/rest/results/verdict    | `Details <https://demo.extensiveautomation.org/web/tester-api-rest/index.html#api-Results-resultsVerdict>`_     |
-+-------------------------+-----------------------------------------------------------------------------------------------------------------+
++-------------------------+----------------------------------------------------------------------------+
+|/rest/results/reports    |    |
++-------------------------+----------------------------------------------------------------------------+
+|/rest/results/status     |    |
++-------------------------+----------------------------------------------------------------------------+
+|/rest/results/verdict    |    |
++-------------------------+----------------------------------------------------------------------------+
 
 
 

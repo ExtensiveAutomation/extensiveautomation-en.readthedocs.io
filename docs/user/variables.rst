@@ -10,8 +10,6 @@ Add/delete a variable
 The adding or removing of a variable can be done from the web interface or the REST API.
 ``JSON`` must be used in variable. There are autommatically availables from tests in properties.
 
-.. image:: /_static/images/webinterface/read_variable.png
-
 
 Describe environment test
 --------------------------
@@ -74,6 +72,6 @@ Environment declaration ``SAMPLE_ENVIRONMENT``:
 Import/export variables
 ---------------------------
 
-It's possible to export or import in mass the variables from the web interface in CSV format
+It's possible to export or import in mass the variables from REST API in CSV format
 
 .. warning:: Variables are encoded in base64.

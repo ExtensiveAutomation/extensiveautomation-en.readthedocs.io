@@ -7,7 +7,6 @@ The solution consists of several components:
   - A scheduler
   - A graphical client
   - Agents
-  - Probes
  
 .. image:: /_static/images/testlibrary/archi-extensivetesting.png
 
@@ -19,7 +18,7 @@ The server consists of:
   - a scheduler
   - a REST API server
   - the test framework
-  - adapters and libraries
+  - adapters
   - tool extensions
   - a web interface
 
@@ -37,9 +36,3 @@ Agents
 An agent is compulsorily controlled by an adapter via the test server intermediary.
 It allows to deport the communication point with the system to test or control.
 Agents use a single tcp/443 (https) stream to communicate with the server.
-
-Probes
-------
-
-The probes make it possible to recover during the execution of a test the network traces, configuration files or logs.
-Communication with the server only takes place on port tcp/443 (https).

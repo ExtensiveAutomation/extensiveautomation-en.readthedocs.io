@@ -20,31 +20,28 @@ The version is divided into 3 digits (A.B.C)
 Server tree
 -------------------
 
-All files handled by the server are stored in the ``/opt/xtc/current/`` directory.
+All files handled by the server are stored in the ``[....]/Var/`` directory.
 
 ::
   
+  Build/
   ServerEngine/
   ServerControls/
   ServerInterfaces/
   ServerRepositories/
   Libs/
-  Scripts/
-  Packages/
   TestCreatorLib/
   TestExecutorLib/
   TestInterop/
-  SutAdapters/
-  SutLibraries/
   Var/
     Tests/
     TestsResults/
+    SutAdapters/
     Logs/
     Backups/
-  Web/
   
 
-The tests are stored in the ``/opt/xtc/current/Var/Tests/`` directory, they are organized by project ID.
+The tests are stored in the ``[....]/Var/Tests/`` directory, they are organized by project ID.
 
 Data model
 -------------------
@@ -59,14 +56,6 @@ A database is used by the server to store:
 +---------------------------+--------------------------------------------------+
 | Tables                    | Description                                      |
 +---------------------------+--------------------------------------------------+
-| xtc-agents                | Not used                                         |
-+---------------------------+--------------------------------------------------+
-| xtc-agents-stats          | Not used                                         |
-+---------------------------+--------------------------------------------------+
-| xtc-probes                | Not used                                         |
-+---------------------------+--------------------------------------------------+
-| xtc-probes-stats          | Not used                                         |
-+---------------------------+--------------------------------------------------+
 | xtc-config                | Server Configuration                             |
 +---------------------------+--------------------------------------------------+
 | xtc-projects              | List of projects                                 |
@@ -75,29 +64,10 @@ A database is used by the server to store:
 +---------------------------+--------------------------------------------------+
 | xtc-users                 | List of users                                    |
 +---------------------------+--------------------------------------------------+
-| xtc-users-stats           | Connection Statistics                            |
-+---------------------------+--------------------------------------------------+
 | xtc-test-environment      | List of variables in JSON format                 |
 +---------------------------+--------------------------------------------------+
 | xtc-tasks-history         | History of tasks running on the server           |
 +---------------------------+--------------------------------------------------+
-| xtc-scripts-stats         | Statistics on tests run                          |
-+---------------------------+--------------------------------------------------+
-| XTC-testabstracts-stats   | Statistics on tests run                          |
-+---------------------------+--------------------------------------------------+
-| xtc-testcases-stats       | Statistics on tests run                          |
-+---------------------------+--------------------------------------------------+
-| xtc-testsuites-stats      | Statistics on tests run                          |
-+---------------------------+--------------------------------------------------+
-| xtc-testunits-stats       | Statistics on tests run                          |
-+---------------------------+--------------------------------------------------+
-| xtc-testplans-stats       | Statistics on tests run                          |
-+---------------------------+--------------------------------------------------+
-| xtc-testglobals-stats     | Statistics on tests run                          |
-+---------------------------+--------------------------------------------------+
-| xtc-writing-stats         | Statistics on the duration of writing tests      |
-+---------------------------+--------------------------------------------------+
-
 
 Passwords management
 -------------------
@@ -118,7 +88,6 @@ File format
 -------------------
 
 The tests are in ``XML`` format. There are several test formats:
-  - Test Abstract Xml
   - Xml Test Unit
   - Xml Test Suite
   - Xml Test Plan
@@ -136,52 +105,6 @@ The tests are in ``XML`` format. There are several test formats:
             <outputs-parameters>...</ outputs -parameters>
         </properties>
     </file>
-
-**Test Abstract Xml**
-
-.. code-block:: xml
-
-    <?xml version="1.0" encoding="utf-8" ?>
-    <file>
-        <properties>...</properties>
-        <teststeps>
-            <steps>
-                <step>
-                    <id>1</id>
-                    <description>
-                        <type>string</type>
-                        <value>step description</value>
-                    </description>
-                    <summary>
-                        <type>string</type>
-                        <value>step sample</value>
-                    </summary>
-                    <expected>
-                        <type>string</type>
-                        <value>result expected</value>
-                    </expected>
-                </step>
-            </steps>
-        </teststeps>
-        <testadapters><adapters /></testadapters>
-        <testlibraries><libraries /></testlibraries>
-        <testactions>
-            <actions>
-                <action>
-                    <item-id>1</item-id>
-                    <item-text>Start</item-text>
-                    <item-type>2</item-type>
-                    <item-data />
-                    <pos-y>1750.0</pos-y>
-                    <pos-x>2000.0</pos-x>
-                </action>
-            </actions>
-        </testactions>
-        <testaborted><aborted /></testaborted>
-        <testdefinition><![CDATA[pass]]></testdefinition>
-        <testdevelopment>1448190709.095677</testdevelopment>
-    </file>
-    
 
 **Test Unit Xml**
 
@@ -261,7 +184,7 @@ The tests are in ``XML`` format. There are several test formats:
 Storage of test results
 -------------------------------
 
-The test results are stored on the server in the ``/opt/xtc/current/Var/TestsResult`` directory.
+The test results are stored on the server in the ``[....]/Var/TestsResult`` directory.
 
 The results are stored:
   - by the id of the test projects
@@ -378,20 +301,8 @@ Direction of available communications:
 The server logs
 ----------------
 
-The server logs are located in the ``/opt/xtc/current/Var/logs/`` directory.
+The server logs are located in the ``[....]/Var/logs/`` directory.
 
-+----------------------+--------------------------------------------+
-| access_rp.log        | apache logs for reverse access             |
-+----------------------+--------------------------------------------+
-| access_ssl_rp.log    | apache logs for reverse ssl access         |
-+----------------------+--------------------------------------------+
-| access_web.log       | apache logs for web interface access       |
-+----------------------+--------------------------------------------+
-| error_rp.log         | apache error logs for reverse access       |
-+----------------------+--------------------------------------------+
-| error_ssl_rp.log     | apache error logs for reverse ssl access   |
-+----------------------+--------------------------------------------+
-| error_web.log        | apache errors log for web interface access |
 +----------------------+--------------------------------------------+
 | output.log           | server logs                                |
 +----------------------+--------------------------------------------+

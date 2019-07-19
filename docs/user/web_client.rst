@@ -1,12 +1,10 @@
 Web interface
 =============
 
-.. image:: /_static/images/webinterface/tests_center_main_page.png
-
 Tests part
 ------------
 
-Shared variables
+Global variables
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 The shared variables enable to describe your dataset. ``JSON`` format must be used.
@@ -29,7 +27,7 @@ Some parameters must be provided:
 
 .. note:: Tests results can be received by email if the account is configured with an email.
 
-.. warning: Don't forget to change default passwords for ``admin`` and ``tester`` users.
+.. warning: Don't forget to change passwords for default users.
 
 Projects
 ~~~~~~~
@@ -38,8 +36,3 @@ Tests files can be organized per project.
 The adding or removing of a project can be done from the web interface or the REST api.
 
 .. note:: The ``Common`` project exists by default and can be read from all users, this project cannot be removed.
-
-System part
---------------
-
-The system part enable to see the status of the server.

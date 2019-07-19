@@ -21,7 +21,7 @@ Adapters have two modes of use:
 .. note :: The ``Debug`` mode is not enabled by default. It can be activated in case of problem.
 
 .. note ::
-   Examples are available in test samples ``/Samples/Tests_Adapters``
+   Examples are available in test samples ``/Samples/``
   
 List of adapters available by default:
 
@@ -55,6 +55,8 @@ Network Protocols Applications
 
 +----------------+----------------+---------------------------------------------------------------------------------+
 | Adapters       | Agents         | Descriptions                                                                    |
++----------------+----------------+---------------------------------------------------------------------------------+
+| WEB            | curl           | Client with TLS support and proxy                                    |
 +----------------+----------------+---------------------------------------------------------------------------------+
 | HTTP           | socket         | Server and client with TLS support and proxy                                    |
 +----------------+----------------+---------------------------------------------------------------------------------+
@@ -115,7 +117,9 @@ System controls
 +-------------------+----------------+---------------------------------------------------------------------------------+
 | Adapters          | Agents         | Descriptions                                                                    |
 +-------------------+----------------+---------------------------------------------------------------------------------+
-| SSH / SFTP        | ssh            | SSH console                                                                     |
+| SFTP              | ssh            | SSH console                                                                 |
++-------------------+----------------+---------------------------------------------------------------------------------+
+| CLI               | ssh            | Terminal ssh                                                                    |
 +-------------------+----------------+---------------------------------------------------------------------------------+
 | TELNET            | socket         | Customer to send and receive text                                               |
 +-------------------+----------------+---------------------------------------------------------------------------------+
@@ -457,21 +461,3 @@ Third party tools
 +--------------------+------------------------------------------------------------------------------------------+
 
 .. note :: Using the ``Selenium3-Server`` agent requires at least ``Java 8`` on the machine.
-
-Probes
-------
-
-The probes are available in the toolbox. The main goal is to recover
-automatically logs (network trace, files) during the execution of a test.
-
-+------------------+----------------------------------------------------------------------------------------------+
-| textual          | Allows follow-up of log files on Windows or Linux (tailf)                                    |
-+------------------+----------------------------------------------------------------------------------------------+
-| network          | Take network traces, probe based on tcpdump on linux, or tshark on Windows                   |
-+------------------+----------------------------------------------------------------------------------------------+
-| file             | Recovery of configuration files on Windows or Linux                                          |
-+------------------+----------------------------------------------------------------------------------------------+
-
-The use of a probe in a test is to be defined in the properties.
- 
-.. note :: The ``dummy`` agent is to be used as a basis for developing a new agent.

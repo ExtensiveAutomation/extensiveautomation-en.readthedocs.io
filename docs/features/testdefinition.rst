@@ -7,14 +7,6 @@ The solution is based on different types of tests for:
   
 .. image:: /_static/images/testlibrary/testing_approach.png
    
-Test Abstract
--------------
-
-The ``test abstract`` (tax) allows you to write a test case with several steps.
-This format is oriented graphic modeling so does not require any knowledge in development.
-
-.. image:: /_static/images/testlibrary/tax.png
-
 Test Unit
 ---------
 

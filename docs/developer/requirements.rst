@@ -10,7 +10,7 @@ It can be run on a virtual or physical environment.
 +-----------------------+--------------+--------------+
 | Features              | Minimum      | Recommended  |
 +-----------------------+--------------+--------------+
-| OS                    | CentOS 7.x                  |
+| OS                    | Linux                       |
 +-----------------------+--------------+--------------+
 | Python                | 2.7                         |
 +-----------------------+--------------+--------------+
@@ -28,10 +28,6 @@ It can be run on a virtual or physical environment.
 +-----------------------+--------------+--------------+
 
 .. note :: Python 3.x support is under development.
-
-.. note:: Centos 6.6 can be used but with python 2.7 minimum
-
-.. note:: The server can be used on other Linux system, but the integration must be done manually.
 
 Customer
 ------
@@ -67,7 +63,7 @@ The toolbox can be run on a Windows or Linux environment.
 | Features          | Minimum                     | Recommended                  |
 +-------------------+-----------------------------+------------------------------+
 | OS                | Windows 7+                  | Windows 10+                  |
-|                   | Linux CentOS 6.5+           | CentOS7+ or Ubuntu 17+       |
+|                   | Linux                       | Linux                        |
 +-------------------+-----------------------------+------------------------------+
 | Arch              | x86_64                      |                              |
 +-------------------+-----------------------------+------------------------------+

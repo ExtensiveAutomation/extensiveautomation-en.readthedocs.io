@@ -12,15 +12,11 @@ Add a project
 Only an administrator can add a new project.
 Creating a project requires specifying its name and can be done via the web interface or the API
 
-.. image:: /_static/images/webinterface/add_project.png
-
 Delete a project
 ----------------------
 
 Only an administrator can remove a project. 
 This action can be done throught the web interface or the web api.
-
-.. image:: /_static/images/webinterface/delete_project.png
 
 .. note:: If the project is associated with a user, deletion is not allowed.
 
