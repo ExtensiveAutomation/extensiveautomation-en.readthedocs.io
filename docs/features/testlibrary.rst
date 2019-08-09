@@ -128,7 +128,7 @@ A public space is available on the test server. This space makes it possible to 
 
    .. image:: /_static/images/testlibrary/espace_public.png
 
-The files are stored in the ``/opt/xtc/current/Var/Public/`` directory on the server.
+The files are stored in the ``[...]/var/public/`` directory on the server.
 
 .. warning :: This space is common to all projects configured on the server.
 

@@ -1,10 +1,9 @@
 Toolbox
 ==============
 
-The toolbox allows you to start agents or probes on dedicated workstations.
+The toolbox allows you to start agents on dedicated workstations.
 
   - Agents are required to run tests with Selenium on dedicated workstations or to deport the execution of a test.
-  - Probes can be used to retrieve logs automatically during the execution of a test.
 
 .. image :: /_static/images/toolbox/toolbox.png
    
@@ -17,12 +16,12 @@ in the drop-down list. Finally, an agent or probe needs to be registered with th
 An agent will allow you to perform a distributed run of your tests.
 For example, an agent deployed on several machines will allow to run the same test on different environment to test or pilot.
 
-The complete list of available agents and probes are described in the `Server Add-ons> Agents or Probes` chapter.
+The complete list of available agents are described in the `Server Add-ons> Agents` chapter.
 
 .. note :: The agent name or probe must be unique for successful registration.
 
 .. tip ::
-   For a better visibility of the agents or probes available, it is advisable to respect the following formalism
+   For a better visibility of the agents available, it is advisable to respect the following formalism
    for the names:
      [Agent | probe] [Environment] [prénom_testeur] [name] [instance-number]...
     

@@ -6,6 +6,23 @@ Current version
 
 .. note::
 
+ **Version 21.0.0 available since 08/10/2019**
+ 
+ - Full support for python3 on server side and test framework
+ - Windows support for server side execution
+ - Backups folder removed from var, no more needed
+ - Reorganization of the project files with new python import
+ - Merge test interop in sut adapters
+ - New docker image of the server based python3
+ - New distribution for plugins server on pypi
+ - New distribution of the server on pypi
+
+A complete release notes is available in the server package.
+
+Previous versions
+-------------------
+
+..
  **Version 20.0.0 available since 07/20/2019**
  
  - Image docker available
@@ -20,11 +37,6 @@ Current version
  - New major version for the toolbox
  - New major version for the web interface, no more provided by default
  - Several bugs fixed
-
-A detailed release notes is available in the installation package.
-
-Previous versions
--------------------
 
 ..
  **Version 19.0.1 available since 08/09/2018**

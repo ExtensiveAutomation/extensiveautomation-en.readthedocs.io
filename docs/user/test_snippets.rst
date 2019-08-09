@@ -77,7 +77,7 @@ Parameter(s) to configure:
 Reset the cache
 ~~~~~~~~~~~~~~
 
-.. important:: path of the reusable test ``/Snippets/Cache/02_Reset_Cache.tux``
+.. important:: path of the reusable test ``/Snippets/Cache/03_Reset_Cache.tux``
 
 This reusable test makes it possible to totally empty the cache.
 No parameters to configure.
@@ -87,7 +87,7 @@ No parameters to configure.
 Checking a value in the cache
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. important:: path of the reusable test ``/Snippets/Cache/02_Checking_Cache.tux``
+.. important:: path of the reusable test ``/Snippets/Cache/04_Checking_Cache.tux``
 
 This reusable test makes it possible to check the value in a key present in the cache.
 
@@ -312,7 +312,7 @@ Parameter(s) to configure:
 Hash MD5
 ~~~~~~~~~
 
-.. important:: path of the reusable test ``/Snippets/Generators/01_Gen_Md5.tux``
+.. important:: path of the reusable test ``/Snippets/Generators/02_Gen_Md5.tux``
 
 This reusable test is used to generate md5 hash and store it in the cache.
 
@@ -330,7 +330,7 @@ Parameter(s) to configure:
 UUID
 ~~~~
 
-.. important:: path of the reusable test ``/Snippets/Generators/01_Gen_Uuid.tux``
+.. important:: path of the reusable test ``/Snippets/Generators/03_Gen_Uuid.tux``
 
 This reusable test is used to generate an uuid and store it in the cache.
 
@@ -345,7 +345,7 @@ Parameter(s) to configure:
 BASE64
 ~~~~~~
 
-.. important:: path of the reusable test ``/Snippets/Generators/01_Gen_Base64.tux``
+.. important:: path of the reusable test ``/Snippets/Generators/04_Gen_Base64.tux``
 
 This reusable test is used to encode or decode a string and store the result in the cache.
 
@@ -364,27 +364,6 @@ Parameter(s) to configure:
 +-------------------+----------------------------------------------------------------------------------------+
 | STR_BASE64        | Character string to encode / decode                                                    |
 +-------------------+----------------------------------------------------------------------------------------+
-
-GZIP
-~~~~
-
-.. important:: path of the reusable test ``/Snippets/Generators/01_Gen_Gzip.tux``
-
-This reusable test can compress or uncompress a string and store the result in the cache.
-
-Parameter(s) to configure:
-
-+-----------------+-------------------------------------------------------------+
-|Parameters       |   Description                                               |
-+-----------------+-------------------------------------------------------------+
-| CACHE_KEY       | Key name                                                    |
-+-----------------+-------------------------------------------------------------+
-| COMPRESS        | To set to True to compress                                  |
-+-----------------+-------------------------------------------------------------+
-| UNCOMPRESS      | Set to True to decompress                                   |
-+-----------------+-------------------------------------------------------------+
-| STR_GZIP        | Character string to compress / decompress                   |
-+-----------------+-------------------------------------------------------------+
 
 Networks protocols
 ------------------
@@ -448,25 +427,16 @@ The following example performs the following actions:
 HTTP
 ~~~~
 
-.. important:: path of the reusable test ``/Snippets/Protocols/01_Send_HTTP.tsx``
+.. important:: path of the reusable test ``/Snippets/Protocols/02_Send_HTTP_CURL.tsx``
 
 This reusable test makes it possible to send an HTTP request by checking the response received.
-It is used in conjunction with the reusable test ``/Snippets/Do/03_Initilize.tux`` which loads an environment into the cache.
-
-Parameter (s) to configure to set the destination:
-
-+-----------------+----------------------------------------------------------+
-|Parameters       |   Description                                            |
-+-----------------+----------------------------------------------------------+
-| SERVERS         | List of servers to contact                               |
-+-----------------+----------------------------------------------------------+
-| TIMEOUT_CONNECT | Max time to connect to the remote machine                |
-+-----------------+----------------------------------------------------------+
 
 Parameter (s) to configure the HTTP request to send:
 
 +-----------------+---------------------------------+
 |Parameters       |   Description                   |
++-----------------+---------------------------------+
+| HTTP_REQ_HOST   | URL destination                 |
 +-----------------+---------------------------------+
 | HTTP_REQ_BODY   | Body of the query               |
 +-----------------+---------------------------------+
@@ -474,10 +444,6 @@ Parameter (s) to configure the HTTP request to send:
 +-----------------+---------------------------------+
 | HTTP_REQ_METHOD | HTTP method (GET, POST, etc.)   |
 +-----------------+---------------------------------+
-| HTTP_REQ_URI    | Call URI |
-+-----------------+---------------------------------+
-
-.. image:: /_static/images/examples/snippets_http_req.png
 
 Parameter (s) to configure the expected HTTP response (and which will allow to consider the test as valid):
 
@@ -485,6 +451,10 @@ Parameter (s) to configure the expected HTTP response (and which will allow to c
 |Parameters         |   Description                                      |
 +-------------------+----------------------------------------------------+
 | HTTP_RSP_BODY     | Body of the expected answer.                       |
++-------------------+----------------------------------------------------+
+| HTTP_RSP_BODY_JSON| JSON expected in the answer with json path         |
++-------------------+----------------------------------------------------+
+| HTTP_RSP_BODY_XML | XML expected in the answer with xpath              |
 +-------------------+----------------------------------------------------+
 | HTTP_RSP_CODE     | The expected HTTP code. 200 by default             |
 +-------------------+----------------------------------------------------+
@@ -501,116 +471,6 @@ Parameter (s) to configure the expected HTTP response (and which will allow to c
   The use of regular expressions is possible to check or save a value in the body of the answer or in the headers.
   
   .. image:: /_static/images/examples/snippets_http_capture.png
-
-.. note: It's possible to execute the test several type with a list of servers.
-
-XML
-~~~
-
-.. important:: path of the reusable test ``/Snippets/Protocols/01_Send_XML.tsx``
-
-This snippet enable to send HTTP request with ``XML`` in body. The response can be checked too.
-This snippet should be used with ``/Snippets/Do/03_Initilize.tux`` to load the test environment in the cache.
-
-Parameter(s) to configure the remote destination:
-
-+-----------------+----------------------------------------------------------+
-|Parameters       |  Description                                             |
-+-----------------+----------------------------------------------------------+
-| SERVERS         |  List of servers to test                                 |
-+-----------------+----------------------------------------------------------+
-| TIMEOUT_CONNECT |  Timeout to connect on the remote machine                |
-+-----------------+----------------------------------------------------------+
-
-Parameter (s) to configure the HTTP request to send:
-
-+-----------------+---------------------------------+
-|Parameters       |   Description                   |
-+-----------------+---------------------------------+
-| HTTP_REQ_BODY   | Request body                    |
-+-----------------+---------------------------------+
-| HTTP_REQ_HEADERS| List of headers to add          |
-+-----------------+---------------------------------+
-| HTTP_REQ_METHOD | HTTP method (GET, POST, etc..)  |
-+-----------------+---------------------------------+
-| HTTP_REQ_URI    | URI                             |
-+-----------------+---------------------------------+
-
-Parameter(s) to configure the expected HTTP response (and the test will be pass in this case):
-
-+--------------------+----------------------------------------------------+
-|Parameters          |   Description                                      |
-+--------------------+----------------------------------------------------+
-| HTTP_RSP_BODY      | Xpaths to check                                    |
-+--------------------+----------------------------------------------------+
-| HTTP_RSP_CODE      | HTTP code expected. 200 by default                 |
-+--------------------+----------------------------------------------------+
-| HTTP_RSP_HEADERS   | List of expected headers                           |
-+--------------------+----------------------------------------------------+
-| HTTP_RSP_NAMESPACES| List of namespaces                                 |
-+--------------------+----------------------------------------------------+
-| HTTP_RSP_PHRASE    | HTTP phrase expected. OK by default                |
-+--------------------+----------------------------------------------------+
-| HTTP_RSP_VERSION   | HTTP version expected. HTTP/1.[0|1] by default     |
-+--------------------+----------------------------------------------------+
-
-.. warning:: The test will be failed if the response does not content XML.
-
-.. note: It's possible to run several time the test if a list of server is provided.
-
-
-JSON
-~~~~
-
-.. important:: path of the reusable test ``/Snippets/Protocols/01_Send_JSON.tsx``
-
-This snippet enable to send a HTTP request with JSON in body and to check the associated response.
-This snippet should be used with ``/Snippets/Do/03_Initilize.tux`` to load the test environment in the cache.
-
-Parameter(s) to configure to set the remote machine:
-
-+-----------------+----------------------------------------------------------+
-|Parameters       |   Description                                            |
-+-----------------+----------------------------------------------------------+
-| SERVERS         |  List of remote machine to reach                         |
-+-----------------+----------------------------------------------------------+
-| TIMEOUT_CONNECT |  Timeout of connection with the remote machine           |
-+-----------------+----------------------------------------------------------+
-
-Parameter(s) to configure the request to send:
-
-+-----------------+---------------------------------+
-|Parameters       |   Description                   |
-+-----------------+---------------------------------+
-| HTTP_REQ_BODY   | Request body                    |
-+-----------------+---------------------------------+
-| HTTP_REQ_HEADERS| List of header to add           |
-+-----------------+---------------------------------+
-| HTTP_REQ_METHOD | HTTP method  (GET, POST, etc..) |
-+-----------------+---------------------------------+
-| HTTP_REQ_URI    | URI to call                     |
-+-----------------+---------------------------------+
-
-
-Parameter(s) to configure the expected response (and the test will be pass in this case):
-
-+-------------------+----------------------------------------------------+
-|Parameters         |   Description                                      |
-+-------------------+----------------------------------------------------+
-| HTTP_RSP_BODY     | List of xpath to check                             |
-+-------------------+----------------------------------------------------+
-| HTTP_RSP_CODE     | HTTP code expected. 200 by default                 |
-+-------------------+----------------------------------------------------+
-| HTTP_RSP_HEADERS  | List of header expected                            |
-+-------------------+----------------------------------------------------+
-| HTTP_RSP_PHRASE   | HTTP phrase expected. OK by default                |
-+-------------------+----------------------------------------------------+
-| HTTP_RSP_VERSION  | HTTP version expected. HTTP/1.[0|1] by default     |
-+-------------------+----------------------------------------------------+
-
-.. warning:: The test will be failed if the response does not content JSON.
-
-.. note: It's possible to run several time the test if a list of server is provided.
 
 User Interface
 ---------------------

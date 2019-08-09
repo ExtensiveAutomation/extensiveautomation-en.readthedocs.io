@@ -4,24 +4,24 @@
 Start/Stop of the server
 ~~~~~~~~~~~~~~~~~~~~~~
 
-The server can be controled with the following command ``./extensiveautomation``.
+If installation has been done with the pip command then the server can be controled with the following command ``./extensiveautomation``.
 This command enables to
  - start or stop the server
  - check the status
  - display the version
 
-Use the following command to start the server ``./extensiveautomation start``.
+Use the following command to start the server ``./extensiveautomation --start``.
  
 .. code-block:: bash
   
-  # ./extensiveautomation start
+  # ./extensiveautomation --start
   
   
-Use the following command to stop the server ``./extensiveautomation stop``.
+Use the following command to stop the server ``./extensiveautomation --stop``.
 
 .. code-block:: bash
   
-  # ./extensiveautomation stop
+  # ./extensiveautomation --stop
   
 
 .. tip::
@@ -30,7 +30,7 @@ Use the following command to stop the server ``./extensiveautomation stop``.
    
   .. code-block:: bash
     
-    # tailf [....]/Var/Log/output.log
+    # tailf [....]/var/logs/output.log
     2014-12-06 11:00:54,092 - INFO - Extensive Automation successfully started (in 14 sec.)
     ...
     2014-12-06 10:58:51,810 - INFO - Stopping server
@@ -65,9 +65,7 @@ Parameters are separated in several sections:
  - Server
  - Bind
  - Misc
- - MySql
+ - Database
  - Trace
- - Backups
- - Default
  - Supervision
  - Users_Session

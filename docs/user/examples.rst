@@ -53,9 +53,8 @@ Rest API
 --------
 
 To write a REST API test, it is recommended:
-  - to use the reusable test ``/Snippets/Protocols/04_Send_JSON``
-  - describe the target server in JSON (ip / destination port, http support)
-  
+  - to use the reusable test ``/Snippets/Protocols/02_Send_HTTP_CURL``
+
 Example:
  
 The test calls the ``httpbin.org`` service in https and calls the ``ip`` service to get the client's actual ip in json.

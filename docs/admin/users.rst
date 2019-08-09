@@ -6,6 +6,8 @@ The solution is multi-user, 3 users exists by default:
  - ``Tester``
  - ``Monitor``
 
+.. note:: The default password is ``password``
+
 .. note:: Don't forget to disable default accounts in a production environment.
 
 Add user

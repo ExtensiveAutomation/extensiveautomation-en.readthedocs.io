@@ -7,7 +7,7 @@ Logs
 Server
 ~~~~~~~
 
-The server logs are stored on ``[....]/Var/Logs/``.
+The server logs are stored on ``[....]/var/logs/``.
 The logs are set in ``INFO`` mode by default.
 The DEBUG level can be activated from the ``settings.ini`` file.
 
@@ -61,22 +61,22 @@ View the server version?
 
 .. code-block:: bash
 
-    ./extensiveautomation version
-    Server version: 20.0.0
+    ./extensiveautomation --version
+    Server version: 21.0.0
     
 What if my connection to the server does not work?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~
 
 If the connection from the client to the server does not work, an analysis is necessary.
 
-The first thing to do is to connect to the server in SSH and execute the ``extensiveautomation status`` command to check if the server is running.
+The first thing to do is to connect to the server in SSH and execute the ``./extensiveautomation --status`` command to check if the server is running.
 
 1. If the server is running then check:
   - network connectivity in the client and the server
   - a firewall blocking the https flow (443)
 
 2. If the network connectivity is good and the server is working (or not), check the logs.
-The file is available in the ``[....]/Var/Logs/output.log`` directory. You must look for messages of type ``ERROR``
+The file is available in the ``[....]/var/logs/output.log`` directory. You must look for messages of type ``ERROR``
 
 How to fix the error "hping3 is not installed"?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~

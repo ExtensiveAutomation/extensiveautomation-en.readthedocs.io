@@ -6,11 +6,6 @@ Server
 
 Please refer to the README in `github <https://github.com/ExtensiveAutomation/extensiveautomation-server/blob/master/README.md>`_
 
-Plugins for server
---------------
-
-Please refer to the README in `github <https://github.com/ExtensiveAutomation/extensiveautomation-plugins-server/blob/master/README.md>`_
-
 Web Client
 ----------
 

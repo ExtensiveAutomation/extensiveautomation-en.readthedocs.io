@@ -20,28 +20,26 @@ The version is divided into 3 digits (A.B.C)
 Server tree
 -------------------
 
-All files handled by the server are stored in the ``[....]/Var/`` directory.
+All files handled by the server are stored in the ``[....]/var/`` directory.
 
 ::
   
-  Build/
-  ServerEngine/
-  ServerControls/
-  ServerInterfaces/
-  ServerRepositories/
-  Libs/
-  TestCreatorLib/
-  TestExecutorLib/
-  TestInterop/
-  Var/
-    Tests/
-    TestsResults/
-    SutAdapters/
-    Logs/
-    Backups/
-  
+  scripts/
+  serverengine/
+  servercontrols/
+  serverinterfaces/
+  serverrepositories/
+  libs/
+  testcreatorlib
+  testexecutorlib/
+  sutadapters/
+  var/
+    tests/
+    testsresult/
+    logs/
+    tasks/
 
-The tests are stored in the ``[....]/Var/Tests/`` directory, they are organized by project ID.
+The tests are stored in the ``[....]/var/tests/`` directory, they are organized by project ID.
 
 Data model
 -------------------
@@ -102,7 +100,6 @@ The tests are in ``XML`` format. There are several test formats:
         <properties>
             <descriptions>...</descriptions>
             <inputs-parameters>...</inputs-parameters>
-            <outputs-parameters>...</ outputs -parameters>
         </properties>
     </file>
 
@@ -184,7 +181,7 @@ The tests are in ``XML`` format. There are several test formats:
 Storage of test results
 -------------------------------
 
-The test results are stored on the server in the ``[....]/Var/TestsResult`` directory.
+The test results are stored on the server in the ``[....]/var/testsresult`` directory.
 
 The results are stored:
   - by the id of the test projects
@@ -199,7 +196,7 @@ Organization of the results:
         - Répertoire: <yyyy-mm-dd>
             - Répertoire: <yyyy-mm-dd_hh:mm:ss.testid.testname.username>
                 - Fichier: TESTPATH 
-                - Fichier: test.out
+                - Fichier: test.log
                 - Fichier: test.ini
                 - Fichier: <testname>_<replayid>.hdr
                 - Fichier: <testname>_<replayid>_<result>_<nbcomments>.trv
@@ -215,7 +212,7 @@ Organization of the results:
 Description of files:
 
   - ``TESTPATH`` contains the full path for the test result
-  - ``test.out`` contains the internal logs of the test, to be used to debug the test framework
+  - ``test.log`` contains the internal logs of the test, to be used to debug the test framework
   - ``test.ini`` contains test-specific parameters
   - ``<testname>_<replayid>.hdr`` represents the header of the test result
   - ``<testname>_<replayid>_<result>_<nbcomments>.trv`` contains all the events generated during the execution of the tests
@@ -301,7 +298,7 @@ Direction of available communications:
 The server logs
 ----------------
 
-The server logs are located in the ``[....]/Var/logs/`` directory.
+The server logs are located in the ``[....]/var/logs/`` directory.
 
 +----------------------+--------------------------------------------+
 | output.log           | server logs                                |

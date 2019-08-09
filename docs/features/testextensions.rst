@@ -20,10 +20,21 @@ Adapters have two modes of use:
 
 .. note :: The ``Debug`` mode is not enabled by default. It can be activated in case of problem.
 
-.. note ::
-   Examples are available in test samples ``/Samples/``
-  
+.. note :: Tests axamples are provided in each plugins
+ 
 List of adapters available by default:
+
++----------------+----------------+---------------------------------------------------------------------------------+
+| Adapters       | Agents         | Descriptions                                                                    |
++----------------+----------------+---------------------------------------------------------------------------------+
+| CLI            | ssh            | Sniffer to send and receive ARP packets                                         |
++----------------+----------------+---------------------------------------------------------------------------------+
+| WEB            | curl           | Sniffer to send and receive ICMP packets                                        |
++----------------+----------------+---------------------------------------------------------------------------------+
+| GUI            | selenium2-server or selenium3-server or adb or sikulixserver | UI interactions                   |
++----------------+----------------+---------------------------------------------------------------------------------+
+
+Others adapters but not provided by default:
 
 Network Protocols
 ~~~~~~~~~~~~~~~~~~~~
@@ -144,24 +155,6 @@ Telecom Protocols
 +----------------+----------------+---------------------------------------------------------------------------------+
 | RTP            | socket         | Module for sending and receiving audio and video streams                        |
 +----------------+----------------+---------------------------------------------------------------------------------+
-Bookstores
-----------
-
-A library makes it possible to quickly make available functions for
-  - support data encryption methods
-  - support existing compression formats
-  - support authentication functions
-  - manipulate the different format of date, time and units
-  - support codecs (XML, JSON, etc ...)
-  - support data hash functions
-
-A library does not communicate directly with the system to be tested or piloted. It is used:
-  - directly from the tests
-  - from the adapters.
-
-.. tip :: If several adapters need the same functions, it is advisable to factor them in a library.
-
-List of libraries available by default:
 
 Encryption
 ~~~~~~~~~~
@@ -180,9 +173,6 @@ Encryption
 | RSA         | RSA Key Generator                       |
 +-------------+-----------------------------------------+
 
-.. note:: 
-  An example is available in test samples ``/Samples/Tests_Libraries/02_Ciphers``
-  
 Codecs
 ~~~~~~
 
@@ -200,9 +190,6 @@ Codecs
 | XML            | Encode or decode text in XML format              |
 +----------------+--------------------------------------------------+
 
-.. note:: 
-  An example is available in test samples ``/Samples/Tests_Libraries/03_Codecs``
-
 Compression
 ~~~~~~~~~~
 
@@ -210,9 +197,6 @@ Compression
 | GZIP     | Compression or decompression in GZIP format        |
 +----------+----------------------------------------------------+
 
-.. note:: 
-  An example is available in test samples ``/Samples/Tests_Libraries/09_Compression``
-  
 Hashing
 ~~~~~~~~~~
 
@@ -228,9 +212,6 @@ Hashing
 | CRC32      | Checksum Generator                          |
 +------------+---------------------------------------------+
 
-.. note:: 
-  An example is available in test samples ``/Samples/Tests_Libraries/05_Hashing``
-  
 Identifiant
 ~~~~~~~~~~
 
@@ -240,9 +221,6 @@ Identifiant
 | UUIDS              | UUID Generator (Universally Unique IDentifier) |
 +--------------------+------------------------------------------------+
 
-.. note:: 
-  An example is available in test samples ``/Samples/Tests_Libraries/07_Identifiers``
-  
 Média
 ~~~~~
 
@@ -262,9 +240,6 @@ Média
 | Waves          | Simple wave generator                   |
 +----------------+-----------------------------------------+
 
-.. note:: 
-  An example is available in test samples ``/Samples/Tests_Libraries/04_Media``
-
 Date
 ~~~~
 
@@ -272,9 +247,7 @@ Date
 | Today              | Retrieves today's date                   |
 +--------------------+------------------------------------------+
 
-.. note:: 
-  An example is available in test samples ``/Samples/Tests_Libraries/11_Date``
-  
+ 
 Security
 ~~~~~~~~~~
 
@@ -294,9 +267,6 @@ Security
 | JWT           | Decode or encode tokens                                 |
 +---------------+---------------------------------------------------------+
 
-.. note:: 
-  An example is available in test samples ``/Samples/Tests_Libraries/01_Security``
-  
 Time
 ~~~~~
 
@@ -304,9 +274,7 @@ Time
 | Timestamp          | Generate a timestamp or convert to a readable value                        |
 +--------------------+----------------------------------------------------------------------------+
 
-.. note:: 
-  An example is available in test samples ``/Samples/Tests_Libraries/06_Time``
-  
+
 Units
 ~~~~~~
 
@@ -314,19 +282,8 @@ Units
 | Bytes              | Convert fromtes to readable                                   |
 +--------------------+---------------------------------------------------------------+
 
-.. note:: 
-  An example is available in test samples ``/Samples/Tests_Libraries/08_Units``
-  
 Third party tools
 ---------------
-
-The product comes at the base with a number of plugins to interface with
-other existing tools (defect tracking, test management, etc.).
-
-These plugins can be used directly from a test.
-
-List of supported tools:
-
 +--------------------+---------------------------------------------------------------+
 | Git                | Clone / commit file on remote repository                      |
 +--------------------+---------------------------------------------------------------+
@@ -361,18 +318,12 @@ Example of use:
      |                                   v
      + <-------- Push the result --------+
     
-    
-.. note ::
-   An example is available in the test samples ``/Samples/Tests_Interop/02_HP_QC``
-   
+
 Jenkins
 ~~~~~~
 
 This plugin allows to launch a build from the Extensive solution.
 
-.. note ::
-   An example is available in test samples ``/Samples/Tests_Interop/06_Jenkins``
-  
 VSphere
 ~~~~~~
 
@@ -380,34 +331,22 @@ This plugin allows you to control a VMware virtual environment. It can be used f
   - create virtual machines automatically
   - remove machines
 
-.. note ::
-   An example is available in test samples ``/Samples/Tests_Interop/05_VSphere``
-
-ExtensiveTesting
+ExtensiveAutomation
 ~~~~~~~~~~~~~~~~
 
 This plugin makes it possible to make a link between several environment (dev, integration, qualification) by allowing
 to run tests from one environment to another.
-
-.. note ::
-   An example is available in test samples ``/Samples/Tests_Interop/03_ExtensiveTesting``
 
 Jira
 ~~~~
 
 This plugin makes it possible to create tickets following the execution of a test in the tool Jira.
 
-.. note ::
-   An example is available in test samples ``/Samples/Tests_Interop/01_Jira``
-
 Git
 ~~~~
 
 This plugin allows you to recover or push files from a source repository.
 It can be used as a prerequisite for a test.
-
-.. note ::
-   An example is available in test samples ``/Samples/Tests_Interop/04_Git``
 
 Agents
 ------

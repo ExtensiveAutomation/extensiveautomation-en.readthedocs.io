@@ -10,6 +10,11 @@ The server is available throught several types of packages:
  - from sources
  - docker image
  - tar.gz
+ - on pypi package
+
+Plugins for server are available through:
+ - source on github
+ - on pypi package
 
 The graphical client is available in portable version.
 

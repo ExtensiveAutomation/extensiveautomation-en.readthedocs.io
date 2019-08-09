@@ -16,7 +16,7 @@ The re-generation of the api key can be done for now only on the server.
 
 .. code-block:: bash
   
-  ./extensiveautomation --apikey admin
+  python extensiveautomation.py --apikey admin
   API Key ID: admin
   API Key Secret: d30278d49e4845e45daa748873e2171b14a0c55a
 

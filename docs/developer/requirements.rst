@@ -10,9 +10,9 @@ It can be run on a virtual or physical environment.
 +-----------------------+--------------+--------------+
 | Features              | Minimum      | Recommended  |
 +-----------------------+--------------+--------------+
-| OS                    | Linux                       |
+| OS                    | Linux or Windows            |
 +-----------------------+--------------+--------------+
-| Python                | 2.7                         |
+| Python                | 2.7  or 3.x                 |
 +-----------------------+--------------+--------------+
 | Arch                  | x86_64                      |
 +-----------------------+--------------+--------------+
@@ -26,8 +26,6 @@ It can be run on a virtual or physical environment.
 +-----------------------+--------------+--------------+
 | User Number           | 2            | 5            |
 +-----------------------+--------------+--------------+
-
-.. note :: Python 3.x support is under development.
 
 Customer
 ------

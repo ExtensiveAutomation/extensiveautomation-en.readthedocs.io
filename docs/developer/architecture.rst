@@ -19,13 +19,12 @@ The server consists of:
   - a REST API server
   - the test framework
   - adapters
-  - tool extensions
   - a web interface
 
 Graphic Client
 ----------------
 
-The graphical client uses a single tcp/443 (https) stream between the client and the server.
+The graphical client uses a single tcp/8080 (https) stream between the client and the server.
 The stream is bidirectional and the client can:
   - make calls to the server's REST API
   - receive events from the server via WebSockets.
@@ -35,4 +34,4 @@ Agents
 
 An agent is compulsorily controlled by an adapter via the test server intermediary.
 It allows to deport the communication point with the system to test or control.
-Agents use a single tcp/443 (https) stream to communicate with the server.
+Agents use a single tcp/8080 (https) stream to communicate with the server.
