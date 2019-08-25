@@ -6,6 +6,27 @@ Current version
 
 .. note::
 
+ **Version 21.0.0 available since 08/25/2019**
+ 
+ - No more return settings file content from rest api
+ - Continue code cleanup
+ - Disable email test result notification on Windows platform
+ - Variables encryption database has been removed, prefer another way to do it.
+ - Salt used on user's password is now re-generated each time during database creation
+ - Folders for projects are automatically created if missing during start of the server
+ - Users manager: default users can be now removed
+ - Cleanup on the model of the user table
+ - Default users, projects, and global variables can be now modified from json files
+ - Support remote ldap simple bind and ntlm authentication for user session 
+ - Test library: test manipulator feature removed
+
+A complete release notes is available in the server package.
+
+Previous versions
+-------------------
+
+..
+
  **Version 21.0.0 available since 08/10/2019**
  
  - Full support for python3 on server side and test framework
@@ -17,12 +38,8 @@ Current version
  - New distribution for plugins server on pypi
  - New distribution of the server on pypi
 
-A complete release notes is available in the server package.
-
-Previous versions
--------------------
-
 ..
+
  **Version 20.0.0 available since 07/20/2019**
  
  - Image docker available
@@ -39,6 +56,7 @@ Previous versions
  - Several bugs fixed
 
 ..
+
  **Version 19.0.1 available since 08/09/2018**
  
  - Bug fix on deployment server, pip command integration
