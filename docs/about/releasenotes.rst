@@ -6,7 +6,20 @@ Current version
 
 .. note::
 
- **Version 21.0.0 available since 08/25/2019**
+ **Version 22.0.0 available since 09/20/2019**
+ 
+ - Some bugs fixed on the rest API
+ - PEP8 support
+ - New function to return all tasks from the rest API
+
+A complete release notes is available in the server package.
+
+Previous versions
+-------------------
+
+..
+
+ **Version 21.1.0 available since 08/25/2019**
  
  - No more return settings file content from rest api
  - Continue code cleanup
@@ -19,11 +32,6 @@ Current version
  - Default users, projects, and global variables can be now modified from json files
  - Support remote ldap simple bind and ntlm authentication for user session 
  - Test library: test manipulator feature removed
-
-A complete release notes is available in the server package.
-
-Previous versions
--------------------
 
 ..
 
