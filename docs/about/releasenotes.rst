@@ -6,16 +6,24 @@ Current version
 
 .. note::
 
- **Version 22.0.0 available since 09/20/2019**
+ **Version 21.3.0 available since 10/02/2019**
  
- - Some bugs fixed on the rest API
- - PEP8 support
- - New function to return all tasks from the rest API
+ - New function to get run details from REST API
+ - New integration tests added in the github worflow
+ - Project access granted to all projects for administrator
 
 A complete release notes is available in the server package.
 
 Previous versions
 -------------------
+
+..
+
+ **Version 21.2.0 available since 09/20/2019**
+ 
+ - Some bugs fixed on the rest API
+ - PEP8 support
+ - New function to return all tasks from the rest API
 
 ..
 
