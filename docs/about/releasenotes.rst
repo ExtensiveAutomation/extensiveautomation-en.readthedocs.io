@@ -6,16 +6,26 @@ Current version
 
 .. note::
 
- **Version 21.3.0 available since 10/02/2019**
+ **Version 21.4.0 available since 10/28/2019**
  
- - New function to get run details from REST API
- - New integration tests added in the github worflow
- - Project access granted to all projects for administrator
+ - test framework: info messages added on technical error 
+ - test framework: task duration added in raw event
+ - some errors messages improved
+ - new specific python module for variables management
 
 A complete release notes is available in the server package.
 
 Previous versions
 -------------------
+
+..
+
+ **Version 21.3.0 available since 10/02/2019**
+ 
+ - New function to get run details from REST API
+ - New integration tests added in the github worflow
+ - Project access granted to all projects for administrator
+ - Some bugs fixed 
 
 ..
 
