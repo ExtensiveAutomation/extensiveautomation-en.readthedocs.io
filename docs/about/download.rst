@@ -4,7 +4,7 @@ Download
 A complete release is generated every two months or less and each component can also evolve at its own rate. 
 The solution is made of several components.
 
-The solution can be downloaded from the website https://www.extensiveautomation.org
+The solution can be downloaded from github https://github.com/ExtensiveAutomation
 
 The server is available throught several types of packages:
  - from sources
